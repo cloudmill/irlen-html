@@ -22,9 +22,9 @@ html {
 }
 
 body {
-  @include f-main();
+  // @include f-main();
   color: $color-black;
-  @include fsl(20px, 130%);
+  @include fsl(16px, 140%);
 }
 
 img {
