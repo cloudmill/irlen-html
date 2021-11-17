@@ -1,0 +1,112 @@
+.footer {
+  margin-top: 100px;
+
+  border-top: 1px solid $color-light-gray;
+  background: $color-white;
+
+  &__inner {
+    padding: 60px 0;
+  }
+
+  &__top {
+    border-bottom: 1px solid $color-light-gray;
+  }
+  &__top-row {
+    display: flex;
+  }
+  &__top-col {
+    flex-shrink: 0;
+
+    width: calc(#{$col-part-d} * 3);
+
+    &:last-child {
+      width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include fsl(18px, 100%);
+  }
+
+  &__list {}
+
+  &__item {
+    
+    &:not(:first-child) {
+      margin-top: 5px;
+    }
+  }
+  &__link {
+    @include fsl(14px, 120%);
+  }
+
+  &__body {
+    border-bottom: 1px solid $color-light-gray;
+  }
+
+  &__contacts {
+    display: flex;
+  }
+  &__contacts-item {
+    flex-shrink: 0;
+    width: calc(#{$col-part-d} * 2);
+
+    &:last-child {
+      width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+    }
+  }
+  &__contacts-link {
+    @include fsl(16px, 140%);
+  }
+  &__contacts-label {
+    @include fsl(14px, 140%);
+    color: $color-gray;
+  }
+
+  &__btn {
+    margin-top: 40px;
+  }
+
+  &__bot {
+    margin: 20px 0;
+
+    display: flex;
+    align-items: center;
+  }
+  &__bot-col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 4);
+    }
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 6);
+    }
+    &:nth-child(3) {
+      width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+    }
+  }
+  &__bot-lable {
+    color: $color-gray;
+    @include fsl(13px, 120%);
+  }
+  
+  &__policy {
+    display: flex;
+  }
+  &__policy-link {
+    @include fsl(13px, 120%);
+    &:not(:first-child) {
+      margin-left: 34px;
+    }
+  }
+
+  &__corp {
+    @include fsl(13px, 120%);
+  }
+  &__corp-link {
+    color: $color-blue;
+  }
+}

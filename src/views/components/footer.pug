@@ -1,0 +1,57 @@
+mixin footer 
+  .footer
+    .container
+      .footer__top 
+        .footer__inner 
+          .footer__top-row 
+            .footer__top-col 
+              .footer__title
+                |Каталог продукции
+              .footer__title
+                |Интернет-магазин
+            .footer__top-col 
+              .footer__title 
+                |Услуги
+              ul.footer__list 
+                each item in ['Подбор инструмента', 'Сервис', 'Инжиниринг', 'Обучение', 'Склад запасных частей Cosen', 'Лизинг']
+                  li.footer__item 
+                    a.footer__link(href="#") 
+                      |#{item}
+            .footer__top-col 
+              .footer__title 
+                |Клиентам
+              ul.footer__list 
+                each item in ['Оплата', 'Доставка', 'Возврат',]
+                  li.footer__item 
+                    a.footer__link(href="#") 
+                      |#{item}
+            .footer__top-col 
+              ul.footer__list 
+                each item in ['О нас', 'Производители', 'Статьи', 'Контакты', 'Новости',]
+                  li.footer__item 
+                    a.footer__link(href="#") 
+                      |#{item}
+      .footer__body
+        .footer__inner 
+          ul.footer__contacts
+            each item in data.contacts 
+              li.footer__contacts-item 
+                a.footer__contacts-link(href="#") 
+                  |#{item.phone}
+                .footer__contacts-label 
+                  |#{item.city}
+          .footer__btn 
+            |button
+      .footer__bot 
+        .footer__bot-col
+          .footer__bot-label 
+            |© 2021 АО «ИРЛЕН-ИНЖИНИРИНГ»
+        .footer__bot-col
+          .footer__policy 
+            a.footer__policy-link(href="#")
+              |Политика конфиденциальности
+            a.footer__policy-link(href="#")
+              |СОУТ
+        .footer__bot-col
+          .footer__corp 
+            |Сделано в #[a.footer__corp-link(href="#") CloudMill]
