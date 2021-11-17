@@ -1,0 +1,23 @@
+mixin aside 
+  .aside 
+    - for (j = 0; j < 3; j++)
+      .aside__card
+        .aside__container 
+          .aside__title 
+            |Материал детали
+          ul.aside__list.aside__inner
+            - for (i = 0; i < 3; i++)
+              li.aside__item 
+                .checkbox 
+                  label.checkbox__label
+                    input.checkbox__input(type="checkbox")
+                    .checkbox__box 
+                      .checkbox__icon
+                    .checkbox__text 
+                      |Углеродистая сталь
+          .aside__button.aside__inner
+            .button-show 
+              .button-show__text 
+                |Показать еще
+              .button-show__icon 
+                +arrow-svg

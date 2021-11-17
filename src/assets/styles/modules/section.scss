@@ -32,4 +32,15 @@
       width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
     }
   }
+
+  &__button {
+    margin-top: 48px;
+    padding: 14px 0;
+
+    display: flex;
+    justify-content: center;
+
+    background: $color-white;
+    border-radius: 4px;
+  }
 }

@@ -1,0 +1,42 @@
+.checkbox {
+  $comp: &;
+
+  &__label {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    &:checked {
+      ~#{$comp}__box {
+        background: black;
+      }
+    }
+  }
+
+  &__box {
+    $size: 24px;
+
+    width: $size;
+    height: $size;
+
+    border-radius: 4px;
+    border: 1px solid $color-light-gray;
+    transition: $transition;
+  }
+
+  &__text {
+    margin-left: 12px;
+    @include fsl(14px, 140%);
+  }
+}

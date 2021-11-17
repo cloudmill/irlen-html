@@ -8,4 +8,9 @@
   color: $color-white;
   @include fsl(16px, 140%);
   cursor: pointer;
+
+  &--md {
+    padding: 8px 16px;
+    @include fsl(14px, 140%);
+  }
 }

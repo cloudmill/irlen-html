@@ -1,0 +1,10 @@
+.button-show {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  &__text {
+    margin-right: 9px;
+  }
+}

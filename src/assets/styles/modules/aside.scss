@@ -1,0 +1,40 @@
+.aside {
+
+  &__card {
+    border-radius: 4px;
+    background: $color-white;
+
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+
+  &__container {
+    padding: 20px;
+  }
+
+  &__inner {
+    margin-top: 20px;
+  }
+
+  &__title {
+    @include fsl(16px, 120%);
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+
+  &__button {
+    padding: 7px 0;
+
+    display: flex;
+    justify-content: center;
+    
+    background: $color-darken-white;
+    border-radius: 4px;
+  }
+}
