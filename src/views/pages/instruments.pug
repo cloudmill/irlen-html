@@ -1,0 +1,31 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+
+block content 
+  .instruments-page 
+    section.section.section--first 
+      .container 
+        +navigation(page = 'Инструменты')
+    section.section 
+      .container 
+        .instruments-page__tabs
+          each item, i in ['Корпусной режущий инструмент', 'Осевой режущий инструмент', 'Вспомогательный инструмент для фрезерных станков с ЧПУ', 'Вспомогательный инструмент для токарных станков с ЧПУ', 'Приспособления', 'Аксессуары для инструмента']
+            .instruments-page__tabs-item(class=(i === 0 ? 'instruments-page__tabs-item--active' : ''))
+              .instruments-page__tabs-text 
+                |#{item}
+    each item, i in ['Корпусной режущий инструмент', 'Осевой режущий инструмент', 'Вспомогательный инструмент для фрезерных станков с ЧПУ', 'Вспомогательный инструмент для токарных станков с ЧПУ', 'Аксессуары для инструмента', ]
+      section.section(class=(i === 4 ? 'section--last' : ''))
+        .container 
+          h2.section__title 
+            |#{item}
+          .instruments-page__grid 
+            - for (j = 0; j < 10; j++)
+              a.instruments-page__card(href="#") 
+                .instruments-page__card-container 
+                  .instruments-page__card-icon 
+                    +big-arrow-svg.instruments-page__card-svg 
+                .instruments-page__card-title 
+                  |Пластины для точения
+                .instruments-page__card-text 
+                  |Твердосплавные пластины наиболее универсальны в использовании

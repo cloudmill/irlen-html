@@ -25,6 +25,7 @@ body {
   // @include f-main();
   color: $color-black;
   @include fsl(16px, 140%);
+  background: $color-darken-white;
 }
 
 img {
@@ -36,25 +37,13 @@ img {
 //   font-weight: 500;
 // }
 
-// h1 {
-//   @include fsl(26px);
-//   @media (min-width: $breakpoint-t) {
-//     @include fsl(40px);
-//   }
-//   @media (min-width: $breakpoint-l) {
-//     @include fsl(50px);
-//   }
-// }
+h1 {
+  @include fsl(40px, 100%);
+}
 
-// h2 {
-//   @include fsl(22px);
-//   @media (min-width: $breakpoint-t) {
-//     @include fsl(26px);
-//   }
-//   @media (min-width: $breakpoint-l) {
-//     @include fsl(35px);
-//   }
-// }
+h2 {
+  @include fsl(32px, 100%);
+}
 
 // h3 {
 //   @include fsl(18px);

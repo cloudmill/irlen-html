@@ -1,7 +1,9 @@
 .main-page {
 
   &__intro {
-    margin-top: 175px;
+    padding-top: 175px;
+
+    background-color: $color-white;
   }
 
   &__icon {
@@ -82,7 +84,7 @@
   }
 
   &__features {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
 
     display: flex;
     justify-content: space-between;

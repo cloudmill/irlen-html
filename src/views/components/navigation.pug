@@ -1,0 +1,10 @@
+mixin navigation 
+  ul.breadcrumbs 
+    li.breadcrumbs__item 
+      a.breadcrumbs__link(href="#") 
+        |Главная
+    li.breadcrumbs__item 
+      .breadcrumbs__text 
+        |#{attributes.page}
+  h1 
+    |#{attributes.page}

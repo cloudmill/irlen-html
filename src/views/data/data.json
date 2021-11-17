@@ -51,5 +51,16 @@
       "title": "Лизинг",
       "url": "service-6.jpg"
     }
+  ],
+  "instruments": [
+    {
+      "title": "Корпусной режущий инструмент",
+      "items": [
+        {
+          "title": "asd",
+          "text": "asddsa"
+        }
+      ]
+    }
   ]
 }

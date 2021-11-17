@@ -1,0 +1,33 @@
+.breadcrumbs {
+  margin-bottom: 24px;
+
+  display: flex;
+
+  &__item {
+    @include fsl(14px, 110%);
+
+    &:not(:last-child) {
+      position: relative;
+      z-index: 0;
+      margin-right: 24px;
+
+      &::before {
+        content: ">";
+        position: absolute;
+        top: 50%;
+        right: -16px;
+        transform: translateY(-50%);
+
+        // @include fsl(14px, 110%);
+      }
+    }
+  }
+
+  &__link {
+    color: $color-gray;
+    
+  }
+  &__text {
+    // @include fsl(14px, 110%);
+  }
+}
