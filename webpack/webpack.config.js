@@ -103,6 +103,7 @@ module.exports = env => {
 								data: {
 									menu: require('../src/views/data/menu.json'),
 									index: require('../src/views/data/index.json'),
+									data: require('../src/views/data/data.json'),
 								}
 							}
 						}
@@ -184,16 +185,16 @@ module.exports = env => {
 						['gifsicle', {interlaced: true}],
 						['mozjpeg', { quality: 70 }],
 						['optipng', {optimizationLevel: 5}],
-						[
-							'svgo',
-							{
-								plugins: [
-									{
-										removeViewBox: false,
-									},
-								],
-							},
-						],
+						// [
+						// 	'svgo',
+						// 	{
+						// 		plugins: [
+						// 			{
+						// 				removeViewBox: false,
+						// 			},
+						// 		],
+						// 	},
+						// ],
 					],
 				},
 			}),

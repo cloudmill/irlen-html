@@ -1,4 +1,8 @@
+include ../components/header
 
+include ../components/svg
+
+include ../components/grid-test
 
 doctype html
 html(lang='en')
@@ -13,11 +17,12 @@ html(lang='en')
     meta(name="format-detection", content="address=no")
 
 
-  body(class="page-" + pageName)
-    //- grid-test
+  body.body
+    +grid-test
 
     .wrapper
       block header
+        +header
 
       main.main
         block content
