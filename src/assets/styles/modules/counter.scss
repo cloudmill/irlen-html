@@ -1,0 +1,48 @@
+.counter {
+  $size: 50px;
+
+  display: flex;
+  align-items: center;
+
+  &__item {
+
+    width: $size;
+    height: $size;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $color-light-gray;
+    cursor: pointer;
+    transition: $transition;
+
+    &:first-child {
+      border-radius: 14px 0 0 14px;
+    }
+
+    &:last-child {
+      border-radius: 0 14px 14px 0;
+    }
+  }
+
+  &__icon {
+    @include fsl(22px, 110%);
+  }
+
+  &__number {
+    $width: 110px;
+
+    width: $width;
+    height: $size;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $color-light-gray;
+    border-left: none;
+    border-right: none;
+    @include fsl(16px, 110%);
+  }
+}

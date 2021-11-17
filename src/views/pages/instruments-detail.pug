@@ -1,0 +1,28 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/button
+include ../components/aside
+include ../components/product-card
+
+block content 
+  .instruments-page 
+    section.section.section--first 
+      .container 
+        +navigation(items = ['Инструменты'] page='Пластины для точения')
+    section.section.section--last
+      .container 
+        .instruments-page__panel 
+          .instruments-page__panel-col
+            .instruments-page__panel-text 
+              |Твердосплавные пластины наиболее универсальны в использовании
+          .instruments-page__panel-col  
+            +button 
+              |Материалы для скачивания
+        .section__block 
+          .section__row 
+            .section__col
+            .section__col
+              .instruments-page__container 
+                - for (i = 0; i < 12; i++)
+                  +product-card

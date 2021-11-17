@@ -84,4 +84,28 @@
     margin-top: 8px;
     @include fsl(14px, 140%);
   }
+
+  &__panel {
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+
+    background: $color-white;
+    border-radius: 4px;
+  }
+  &__panel-col {
+    flex-shrink: 0;
+    &:nth-child(1) {
+      margin-left: calc(#{$col-part-d} * 2);
+      width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+  }
 }

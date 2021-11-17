@@ -1,0 +1,106 @@
+.product-card {
+
+  border-radius: 4px;
+  overflow: hidden;
+  background: $color-white;
+
+  &__inner {
+    padding: 20px;
+
+  }
+
+  &__container {
+    position: relative;
+    z-index: 0;
+  }
+
+  &__top {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__logo {
+    max-width: 64px;
+    display: block;
+  }
+
+  &__label {
+    color: $color-gray;
+    @include fsl(12px, 140%);
+  }
+  
+  &__title {
+    margin-top: 4px;
+    @include fsl(16px, 110%);
+  }
+
+  &__info {
+    margin-top: 20px;
+
+  }
+
+  &__item {
+    padding-bottom: 8px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid $color-light-gray;
+
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+
+  &__text {
+    @include fsl(14px, 110%);
+  }
+
+  &__price {
+    margin-top: 20px;
+    display: flex;
+  }
+  &__price-price {
+    @include fsl(20px, 110%);
+  }
+  &__price-old {
+    margin-left: 12px;
+
+    color: $color-gray;
+    @include fsl(14px, 110%);
+    text-decoration: line-through;
+  }
+
+  &__bot {
+    margin-top: 20px;
+    
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    padding: 12px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: $color-blue;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__svg {
+    width: 28px;
+    height: 25px;
+
+    path {
+      stroke: $color-white;
+    }
+  }
+}

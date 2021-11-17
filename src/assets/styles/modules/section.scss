@@ -12,4 +12,24 @@
   &__title {
     margin-bottom: 48px;
   }
+
+  &__block {
+    margin-top: 20px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    }
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
+    }
+  }
 }

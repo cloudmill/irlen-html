@@ -1,0 +1,43 @@
+include ./counter
+
+mixin product-card 
+  .product-card 
+    .product-card__container 
+      img(src="assets/images/product.jpg", alt="")
+      .product-card__top 
+        img.product-card__logo(src="assets/images/product-logo.png", alt="")
+        .product-card__label 
+          |Артикул: 9353014BTC
+    .product-card__inner
+      .product-card__label 
+        |1 шт. в наличии
+      .product-card__title 
+        |Раскатник R-D TICN 376 ISO2X M14X2 2P
+      .product-card__info 
+        ul.product-card__list
+          li.product-card__item 
+            .product-card__label
+              |Резьба
+            .product-card__text
+              |M10x1.5
+          li.product-card__item 
+            .product-card__label
+              |Длина раскатника - L
+            .product-card__text
+              |9353014BTC
+          li.product-card__item 
+            .product-card__label
+              |Размер стороны квадрата - K
+            .product-card__text
+              |M10x1.5
+      .product-card__price 
+        .product-card__price-price 
+          |€ 93.42
+        .product-card__price-old
+          |€ 103.55
+      .product-card__bot 
+        .product-card__count 
+          +counter
+        .product-card__button 
+          +cart-svg.product-card__svg
+
