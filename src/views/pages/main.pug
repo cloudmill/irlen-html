@@ -1,0 +1,43 @@
+extends ../layouts/master.pug
+
+include ../components/service-card
+
+block content 
+  .main-page 
+    section.main-page__intro
+      .container
+        .main-page__media
+          .main-page__media-col 
+            a.main-page__media-link(href="#") 
+              .main-page__media-container 
+                img.main-page__media-container(src="assets/images/hero-1.jpg", alt="")
+              .main-page__media-icon 
+                +big-arrow-svg
+            .main-page__media-content 
+              .main-page__media-title 
+                |Каталог продукции
+              .main-page__media-text 
+                |Станки и оборудование
+          .main-page__media-col 
+            a.main-page__media-link(href="#") 
+              .main-page__media-container 
+                img.main-page__media-container(src="assets/images/hero-2.jpg", alt="")
+              .main-page__media-icon 
+                +big-arrow-svg
+            .main-page__media-content 
+              .main-page__media-title 
+                |Интернет-магазин
+              .main-page__media-text 
+                |Инструмент и приспособления
+        .main-page__services 
+          each item in data.services
+            .main-page__services-item 
+              a.service-card(href="#") 
+                .service-card__container 
+                  h4.service-card__title 
+                    |#{item.title}
+                  .service-card__image 
+                    img(src="assets/images/" + item.url, alt="")
+                .service-card__icon 
+                  +big-arrow-svg.service-card__svg
+        .main-page__features

@@ -25,5 +25,31 @@
       "phone": "8 800 444-60-98",
       "city": "Россия, звонок бесплатный"
     }
+  ],
+  "services": [
+    {
+      "title": "Подбор инструмента",
+      "url": "service-1.jpg"
+    },
+    {
+      "title": "Ленточные пилы",
+      "url": "service-2.jpg"
+    },
+    {
+      "title": "Сервис",
+      "url": "service-3.jpg"
+    },
+    {
+      "title": "Инжиниринг",
+      "url": "service-4.jpg"
+    },
+    {
+      "title": "Обучение",
+      "url": "service-5.jpg"
+    },
+    {
+      "title": "Лизинг",
+      "url": "service-6.jpg"
+    }
   ]
 }
