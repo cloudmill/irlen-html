@@ -32,49 +32,49 @@ img {
   max-height: 100%;
 }
 
-h1, h2, h3, h4, h5 {
-  font-weight: 500;
-}
+// h1, h2, h3, h4, h5 {
+//   font-weight: 500;
+// }
 
-h1 {
-  @include fsl(26px);
-  @media (min-width: $breakpoint-t) {
-    @include fsl(40px);
-  }
-  @media (min-width: $breakpoint-l) {
-    @include fsl(50px);
-  }
-}
+// h1 {
+//   @include fsl(26px);
+//   @media (min-width: $breakpoint-t) {
+//     @include fsl(40px);
+//   }
+//   @media (min-width: $breakpoint-l) {
+//     @include fsl(50px);
+//   }
+// }
 
-h2 {
-  @include fsl(22px);
-  @media (min-width: $breakpoint-t) {
-    @include fsl(26px);
-  }
-  @media (min-width: $breakpoint-l) {
-    @include fsl(35px);
-  }
-}
+// h2 {
+//   @include fsl(22px);
+//   @media (min-width: $breakpoint-t) {
+//     @include fsl(26px);
+//   }
+//   @media (min-width: $breakpoint-l) {
+//     @include fsl(35px);
+//   }
+// }
 
-h3 {
-  @include fsl(18px);
-  @media (min-width: $breakpoint-t) {
-    @include fsl(22px);
-  }
-  @media (min-width: $breakpoint-l) {
-    @include fsl(26px);
-  }
-}
+// h3 {
+//   @include fsl(18px);
+//   @media (min-width: $breakpoint-t) {
+//     @include fsl(22px);
+//   }
+//   @media (min-width: $breakpoint-l) {
+//     @include fsl(26px);
+//   }
+// }
 
-h4 {
-  @include fsl(16px);
-  @media (min-width: $breakpoint-t) {
-    @include fsl(18px);
-  }
-  @media (min-width: $breakpoint-l) {
-    @include fsl(20px);
-  }
-}
+// h4 {
+//   @include fsl(16px);
+//   @media (min-width: $breakpoint-t) {
+//     @include fsl(18px);
+//   }
+//   @media (min-width: $breakpoint-l) {
+//     @include fsl(20px);
+//   }
+// }
 
 ul,
 ol {

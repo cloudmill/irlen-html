@@ -1,7 +1,5 @@
 extends ../layouts/master.pug
 
-include ../components/service-card
-
 block content 
   .main-page 
     section.main-page__intro
@@ -41,3 +39,60 @@ block content
                 .service-card__icon 
                   +big-arrow-svg.service-card__svg
         .main-page__features
+          .main-page__features-col 
+            .main-page__features-row 
+              .main-page__features-item
+                .main-page__features-title 
+                  |с 1990 года
+                p.main-page__features-text 
+                  |Успешно реализуем металлообрабатывающее оборудование во всех регионах РФ и странах СНГ
+              .main-page__features-item
+                .main-page__features-title 
+                  |>13 000
+                p.main-page__features-text 
+                  |Позиций инструмента в наличии на нашем складе
+          .main-page__features-col
+            .main-page__features-row 
+              .main-page__features-item
+                .main-page__features-card 
+                  .main-page__features-icon 
+                    +features-1-svg.main-page__features-svg
+                  p.main-page__features-text 
+                    |Оказываем гарантийное и послегарантийное обслуживание
+              .main-page__features-item
+                .main-page__features-card 
+                  .main-page__features-icon 
+                    +features-2-svg.main-page__features-svg
+                  p.main-page__features-text 
+                    |Большой склад запасных частей для ленточнопильных станков Cosen и станков с ЧПУ в Санкт-Петербурге
+    section.main-page__section 
+      .container 
+        h3.main-page__section-title 
+          |Акции и скидки на инструмент
+        ul.main-page__section-list
+          - for (i = 0; i < 3; i++)
+            li.main-page__section-item 
+              a.main-page__discont(href="#") 
+                .main-page__discont-container 
+                  .main-page__discont-label
+                    .discont 
+                      .discont__text 
+                        |‑30%
+                  h4.main-page__discont-title 
+                    |Cкидка 30% на весь ассортимент фрез OSAWA серии HF871
+                  p.main-page__text 
+                    |Предлагаем попробовать высокопроизводительные фрезы HF по цене фрез G2. Срок акции с 10.09.2021 по 31.12.2021.
+                .main-page__icon 
+                  +big-arrow-svg.main-page__svg
+        a.main-page__link(href="#") 
+          .main-page__link-col
+            .main-page__link-container 
+              h3.main-page__link-title 
+                |Материалы для скачивания
+              p.main-page__link-text 
+                |Каталоги, буклеты, методички
+            .main-page__icon 
+              +big-arrow-svg.main-page__svg
+          .main-page__link-col
+            .main-page__link-img
+              img(src="assets/images/main-link.jpg", alt="")

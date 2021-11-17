@@ -3,6 +3,21 @@
   &__intro {
     margin-top: 175px;
   }
+
+  &__icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__svg {
+    path {
+      stroke: $color-black;
+    }
+  }
   
   &__media {
     margin-bottom: 60px;
@@ -65,4 +80,134 @@
       margin-left: calc(#{$col-gap-d});
     }
   }
+
+  &__features {
+    margin-bottom: 60px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+  &__features-col {
+    flex-shrink: 0;
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+
+    &:nth-child(1) {
+      padding-top: 40px;
+
+      border-top: 1px solid $color-light-gray;
+    }
+  }
+  &__features-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__features-item {
+    width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+  }
+  &__features-title {
+    margin-bottom: 40px;
+
+    color: $color-blue;
+    @include fsl(32px, 100%);
+  }
+  &__features-text {
+    @include fsl(16px, 140%);
+  }
+  &__features-card {
+    padding: 20px;
+
+    height: 100%;
+
+    background: $color-darken-white;
+    border-radius: 4px;
+  }
+  &__features-icon {
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__features-svg {
+    height: 65px;
+  }
+
+  &__section {
+    padding: 60px 0;
+
+    background: $color-darken-white;
+  }
+  &__section-title {
+    margin-bottom: 40px;
+
+    @include fsl(40px, 100%);
+  }
+  &__section-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__discont {
+    position: relative;
+    z-index: 0;
+
+    display: block;
+    width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+
+    background: $color-white;
+    border-radius: 4px;
+  }
+  &__discont-container {
+    padding: 20px;
+  }
+  &__discont-label {
+    margin-bottom: 12px;
+    display: flex;
+  }
+  &__discont-title {
+    margin-bottom: 12px;
+    @include fsl(18px, 120%);
+  }
+  &__discont-text {
+    @include fsl(14px, 140%);
+  }
+  
+  &__link {
+    margin-top: 60px;
+
+    display: flex;
+
+    border-radius: 4px;
+    overflow: hidden;
+    background: $color-white;
+  }
+  &__link-col {
+    flex-shrink: 0;
+    &:nth-child(1) {
+      position: relative;
+      z-index: 0;
+
+      width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+    }
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 4);
+    }
+  }
+  &__link-container {
+    padding: 24px;
+  }
+  &__link-title {
+    margin-bottom: 12px;
+    @include fsl(40px, 100%);
+  }
+  &__link-text {
+    @include fsl(18px, 140%);
+  }
+  &__link-img {
+    display: flex;
+    align-items: center;
+
+    border-radius: 4px 0 0 4px;
+    overflow: hidden;
+  }  
 }
