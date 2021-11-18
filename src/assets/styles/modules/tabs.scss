@@ -1,0 +1,19 @@
+.tabs {
+  display: flex;
+
+  background: $color-white;
+  border-radius: 4px;
+
+  &__item {
+    padding: 14px 24px;
+
+    transition: $transition;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &--active {
+      background: $color-blue;
+      color: $color-white;
+    }
+  }
+}

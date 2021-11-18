@@ -1,0 +1,32 @@
+.panel {
+  $comp: &;
+
+  padding: 20px;
+
+  display: flex;
+
+  background: $color-white;
+  border-radius: 4px;
+
+  &--big {
+    #{$comp}__col {
+
+      &:nth-child(2) {
+        width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+      }
+    }
+  } 
+
+  &__col {
+    flex-shrink: 0;
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 2);
+    }
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    }
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+  }
+}

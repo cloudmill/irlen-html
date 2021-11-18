@@ -1,0 +1,11 @@
+.arrow-icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  
+  &__svg {
+    path {
+      stroke: $color-black;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/equip-card
+
+block content 
+  .equip-page 
+    section.section.section--first 
+      .container 
+        +navigation(page='Оборудование')
+    section.section.section--last 
+      .container 
+        ul.equip-page__list
+          - for (j = 0; j < 4; j++)
+            li.equip-page__list-item 
+              a.equip-page__card(href="#") 
+                .equip-page__card-row 
+                  .equip-page__card-col
+                    .equip-page__card-image 
+                      img(src="assets/images/equip-1.jpg", alt="")
+                  .equip-page__card-col
+                    .equip-page__card-container
+                      .equip-page__card-title 
+                        |Токарные станки с ЧПУ
+                      ul.equip-page__card-list 
+                        - for (i = 0; i < 4; i++)
+                          li.equip-page__card-item 
+                            |С направляющими качения 
+                          li.equip-page__card-item 
+                            |Роботизированные с направляющими качения токарно-фрезерные с направляющими качения 
+                    .arrow-icon
+                      +big-arrow-svg.arrow-icon__svg
+        .section__block
+          .equip-page__grid 
+            - for (i = 0; i < 6; i++)
+              +equip-card
