@@ -1,0 +1,23 @@
+.docs-card {
+  display: block;
+  background: $color-white;
+  border-radius: 4px;
+
+  &__container {
+    padding: 20px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__label {
+    @include fsl(10px, 140%);
+  }
+
+  &__text {
+    margin-top: 20px;
+    @include fsl(14px, 140%);
+  }
+}

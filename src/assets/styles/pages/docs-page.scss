@@ -1,0 +1,33 @@
+.docs-page {
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__col {
+
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include fsl(18px, 140%);
+  }
+
+  &__image {
+    max-width: 135px;
+    display: block;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+}
