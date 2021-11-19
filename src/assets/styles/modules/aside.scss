@@ -37,4 +37,14 @@
     background: $color-darken-white;
     border-radius: 4px;
   }
+
+  &__text {
+    @include fsl(14px, 140%);
+  }
+
+  &__count {
+    padding-left: 8px;
+    @include fsl(12px, 140%);
+    color: $color-gray;
+  }
 }

@@ -1,0 +1,10 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+
+block content 
+  .cart-page 
+    section.section.section--first 
+      .container 
+        +navigation(page='Корзина')
+    section.section.section--last

@@ -1,0 +1,45 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/product-card
+include ../components/aside
+include ../components/button
+
+
+block content 
+  .search-page 
+    section.section.section--first 
+      .container 
+        +navigation(page='Результаты поиска')
+    section.section.section--last 
+      .container 
+        form.search-page__search(action="/") 
+          .search-page__row
+            .search-page__col 
+              input.search-page__input(type="text")
+            .search-page__col 
+              +button
+                |Поиск
+        .section__row.margin-top
+          .section__col
+            .aside 
+              each item in data.searchAside
+                .aside__card
+                  .aside__container 
+                    .aside__title 
+                      |#{item.title} 
+                      span.aside__count 
+                        |#{item.count}
+                    ul.aside__list.aside__inner
+                      each el in item.items
+                        li.aside__item 
+                          |#{el.text}
+                          span.aside__count 
+                            |#{el.count}
+                    
+          .section__col
+            .search-page__grid 
+              - for (i = 0; i < 12; i++)
+                +product-card
+        .search-page__result.margin-top.margin-top--md
+          |Поиск не дал результатов
