@@ -1,6 +1,7 @@
 extends ../layouts/master.pug
 
 include ../components/navigation
+include ../components/button
 
 block content 
   .cart-page 
@@ -8,3 +9,56 @@ block content
       .container 
         +navigation(page='Корзина')
     section.section.section--last
+      .container 
+        .cart-page__row 
+          .cart-page__col 
+            .cart-page__panel 
+              .cart-page__panel-icon 
+                +warning-svg
+              .cart-page__panel-content 
+                .cart-page__panel-title 
+                  |Действует программа лояльности
+                .cart-page__panel-text 
+                  |#[a.cart-page__panel-link(href="#") Авторизуйтесь], чтобы узнать свой уровень цен.
+          .cart-page__col 
+            .cart-page__card 
+              .cart-page__card-top
+                .cart-page__card-title 
+                  |Ваш заказ
+                .cart-page__warning
+                  .cart-page__warning-row 
+                    .cart-page__warning-col
+                      .cart-page__warning-icon 
+                        +warning-svg.cart-page__warning-svg
+                    .cart-page__warning-col
+                      .cart-page__warning-title 
+                        |Внимание!
+                      .cart-page__warning-text 
+                        |При заказе прямым клиентом на сумму от 30 000 ₽ доставка по г. Санкт-Петербург бесплатна. Акция действует до конца 2021 года
+                .cart-page__card-label 
+                  |товары
+              .cart-page__card-body 
+                - for (i = 0; i < 3; i++)
+                  .cart-page__card-item 
+                    .cart-page__label 
+                      |Позиций: 22
+                    .cart-page__card-row 
+                      .cart-page__card-col
+                        p 
+                          |Сумма, €
+                      .cart-page__card-col
+                        .cart-page__card-text 
+                          |1222.45
+              .cart-page__card-bot
+                .cart-page__card-row 
+                  .cart-page__card-col
+                    .cart-page__card-price 
+                      |Итого, ₽
+                  .cart-page__card-col
+                    .cart-page__card-price 
+                      |89 0000
+                .cart-page__card-caption 
+                  |Цена с НДС по курсу ЦА на 25.06.2021
+                .cart-page__card-btn 
+                  +button.button--wide 
+                    |Перейти к оформлению

@@ -1,16 +1,21 @@
 .button {
   padding: 14px 22px;
 
-  display: block;
+  display: flex;
+  justify-content: center;
 
   background: $color-blue;
   border-radius: 4px;
   color: $color-white;
-  @include fsl(16px, 140%);
+  // @include fsl(16px, 140%);
   cursor: pointer;
 
   &--md {
     padding: 8px 16px;
     @include fsl(14px, 140%);
+  }
+
+  &--wide {
+    width: 100%;
   }
 }
