@@ -3,6 +3,7 @@ extends ../layouts/master.pug
 include ../components/navigation
 include ../components/button
 include ../components/tabs
+include ../components/model-tabs
 
 
 block content 
@@ -23,11 +24,8 @@ block content
               |Материалы для скачивания
         .equip-page__wrapper.margin-top
           +tabs(tabs = ['Leadwell серия T', 'Leadwell серия LTC', 'Leadwell серия T/LTC'])
-        .equip-page__tabs.margin-top.margin-top--md 
-          .equip-page__tabs-item.equip-page__tabs-item--active 
-            |Модели
-          .equip-page__tabs-item 
-            |Возможные опции
+        .margin-top.margin-top--md 
+          +model-tabs(items = ['Модели', 'Возможные опции'])
     section.section.section--white.section--table.margin-top.margin-top--md 
       table.equip-page__table.margin-top
         thead.equip-page__table-head 
@@ -42,11 +40,8 @@ block content
                 td.equip-page__table-cell 
                   |#{item}
       .container 
-        .equip-page__tabs.equip-page__inner
-          .equip-page__tabs-item.equip-page__tabs-item--active 
-            |Модели
-          .equip-page__tabs-item 
-            |Возможные опции
+        .equip-page__inner
+          +model-tabs(items = ['Модели', 'Возможные опции'])
       table.equip-page__table.margin-top.margin-top--md 
         thead.equip-page__table-head 
           tr 

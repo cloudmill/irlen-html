@@ -1,0 +1,53 @@
+.booking-page {
+
+  &__inner {
+    margin-top: 40px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+  }
+  &__button-icon {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__button-svg {
+    transform: rotate(90deg);
+  }
+  &__button-text {
+    @include fsl(14px, 140%);
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__col {
+    flex-shrink: 0;
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    }
+
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    }
+  }
+  
+  &__form {}
+  &__form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__form-item {
+    flex-shrink: 0;
+    width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+  }
+
+  &__title {
+    @include fsl(24px, 120%);
+  }
+
+}

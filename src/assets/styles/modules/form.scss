@@ -1,0 +1,31 @@
+.form {
+
+  &__input {
+    padding: 15px 12px;
+    width: 100%;
+
+    background: $color-white;
+    border: 1px solid $color-light-gray;
+    border-radius: 4px;
+    @include fsl(14px, 140%);
+    @include placeholder {
+      color: $color-black;
+    }
+  }
+  
+  &__textarea {
+    padding: 15px 12px;
+
+    width: 100%;
+    min-height: 100px;
+
+    @include fsl(14px, 140%);
+    border-radius: 4px;
+    border: 1px solid $color-light-gray;
+    background: $color-white;
+    resize: none;
+    @include placeholder {
+      color: $color-black;
+    }
+  }
+}

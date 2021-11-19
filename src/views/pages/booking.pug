@@ -1,0 +1,46 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/button
+include ../components/model-tabs
+
+block content 
+  .booking-page.cart-page 
+    section.section.section--first 
+      .container 
+        +navigation(page='Оформить заказ')
+        a.booking-page__button.booking-page__inner(href="#") 
+          .booking-page__button-icon
+            +arrow-svg.booking-page__button-svg
+          .booking-page__button-text
+            |Вернуться в корзину
+        .booking-page__inner 
+          +model-tabs(items = ['Физическое лицо', 'Юридическое лицо'])
+    section.section.section--default.section--last
+      .container
+        form.form.margin-top.margin-top--md(action="/") 
+          .booking-page__row 
+            .booking-page__col
+              .booking-page__form 
+                .booking-page__form-row 
+                  .booking-page__form-item
+                    input.form__input(type="text" placeholder="Имя*")
+                  .booking-page__form-item
+                    input.form__input(type="text" placeholder="Телефон*")
+                .booking-page__form-row.section__block
+                  .booking-page__form-item
+                    input.form__input(type="email" placeholder="E-mail*")
+              .booking-page__title.margin-top.margin-top--xl
+                |Способ доставки
+              .margin-top.margin-top--md 
+                +model-tabs(items = ['Транспортная компания', 'Самовывоз'])
+              .booking-page__text.margin-top.margin-top--md 
+                |Мы организуем доставку при помощи транспортной компании, стоимость доставки будет включена в цену товара.
+              .booking-page__form.margin-top.margin-top--md 
+                .booking-page__form-row 
+                  .booking-page__form-item
+                    input.form__input(type="text" placeholder="Имя*")
+                  .booking-page__form-item
+                    input.form__input(type="text" placeholder="Телефон*")
+                textarea.form__textarea.section__block(placeholder="Комментарий")
+            .booking-page__col

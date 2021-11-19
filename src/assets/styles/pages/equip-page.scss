@@ -154,24 +154,4 @@
     color: $color-gray;
     @include fsl(12px, 140%);
   }
-
-  &__tabs {
-    display: flex;
-  }
-  &__tabs-item {
-    padding-bottom: 12px;
-
-    border-bottom: 1px solid transparent;
-    transition: $transition;
-    cursor: pointer;
-
-    &:not(:first-child) {
-      margin-left: 24px;
-    }
-
-    &--active {
-      color: $color-blue;
-      border-color: $color-blue;
-    }
-  }
 }

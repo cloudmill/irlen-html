@@ -1,0 +1,6 @@
+mixin model-tabs 
+  .model-tabs 
+    each item, index in attributes.items
+      .model-tabs__item(class=(index === 0 ? 'model-tabs__item--active' : ''))
+        |#{item}
+    
