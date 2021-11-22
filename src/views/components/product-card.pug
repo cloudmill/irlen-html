@@ -1,7 +1,7 @@
 include ./counter
 
 mixin product-card 
-  .product-card 
+  .product-card(class=attributes.class)
     .product-card__container 
       img(src="assets/images/product.jpg", alt="")
       .product-card__top 

@@ -4,6 +4,10 @@
   overflow: hidden;
   background: $color-white;
 
+  &--responsive {
+    width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+  }
+
   &__inner {
     padding: 20px;
 
