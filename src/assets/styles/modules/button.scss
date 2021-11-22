@@ -15,6 +15,10 @@
     @include fsl(14px, 140%);
   }
 
+  &--xl {
+    padding: 14px 45px;
+  }
+
   &--wide {
     width: 100%;
   }

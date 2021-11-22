@@ -1,0 +1,8 @@
+mixin category-card 
+  a.category-card(href="#") 
+    .category-card__container 
+      img(src="assets/images/" + attributes.url, alt="")
+      .arrow-icon 
+        +big-arrow-svg.arrow-icon__svg
+    .category-card__title 
+      |#{attributes.title}

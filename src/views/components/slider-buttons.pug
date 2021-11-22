@@ -1,0 +1,8 @@
+mixin slider-buttons 
+  .slider-buttons(class = attributes.class) 
+    .slider-buttons__item 
+      .slider-buttons__button(data-slider-button = attributes.prev)
+        +big-arrow-svg.slider-buttons__svg.slider-buttons__left
+    .slider-buttons__item 
+      .slider-buttons__button(data-slider-button = attributes.next)
+        +big-arrow-svg.slider-buttons__svg.slider-buttons__right

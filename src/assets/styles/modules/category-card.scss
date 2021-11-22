@@ -1,0 +1,23 @@
+.category-card {
+  display: block;
+  width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+
+  &__container {
+    position: relative;
+    z-index: 0;
+    padding: 30px 40px;
+
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: $color-white;
+    border-radius: 4px;
+  }
+
+  &__title {
+    margin-top: 12px;
+  }
+}
+

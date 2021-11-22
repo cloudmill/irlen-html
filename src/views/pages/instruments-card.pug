@@ -1,0 +1,116 @@
+extends ../layouts/master.pug
+
+include ../components/docs-card
+include ../components/button
+include ../components/counter
+include ../components/category-card
+include ../components/slider-buttons
+
+
+block content 
+  .instruments-card.docs-page 
+    section.instruments-card__section
+      .container
+        .instruments-card__section-row 
+          .instruments-card__section-col
+            .instruments-card__section-breadcrumbs 
+              ul.breadcrumbs 
+                each item in ['Главная', 'Инструменты', 'Раскатники']
+                  li.breadcrumbs__item 
+                    a.breadcrumbs__link(href="#") 
+                      |#{item}
+                li.breadcrumbs__item 
+                  .breadcrumbs__text 
+                    |Раскатник r-d 371 iso2x m 4x0.7 2p
+            .instruments-card__section-slider
+            .instruments-card__section-buttons
+          .instruments-card__section-col
+            .instruments-card__section-info
+              h1.instruments-card__section-title 
+                |Сверло 118N MM14.00 D1897 HSS Osawa
+              p.instruments-card__section-text 
+                |Серия 118N - сверхкороткие сверла общего применения из быстрорежущей стали.
+              .instruments-card__section-inner.margin-top.margin-top--md 
+                .instruments-card__section-item 
+                  .instruments-card__section-label 
+                    |Артикул
+                  .instruments-card__section-text 
+                    |P118N1275
+                .instruments-card__section-item 
+                  .instruments-card__section-label 
+                    |наличие
+                  .instruments-card__section-text 
+                    |10 шт.
+              .instruments-card__price.margin-top.margin-top--md
+                .instruments-card__price-col
+                  .instruments-card__price-price 
+                    |€ 17.79
+                  .instruments-card__price-old 
+                    |€ 20.55
+                .instruments-card__price-col
+                  .discont 
+                    .discont__text 
+                      |Распродажа
+              .instruments-card__section-panel.margin-top.margin-top--md 
+                .loyalty-card.loyalty-card--small
+                  .loyalty-card__icon 
+                    +warning-svg
+                  .loyalty-card__content 
+                    .loyalty-card__title 
+                      |Для юридических лиц действует программа лояльности.
+                    .loyalty-card__text 
+                      |#[a.loyalty-card__link(href="#") Авторизуйтесь], чтобы узнать свой уровень цен.
+            .instruments-card__bot
+              .instruments-card__bot-row 
+                .instruments-card__bot-col
+                  .instruments-card__bot-label 
+                    |итого
+                  .instruments-card__bot-num 
+                    |€ 345
+                .instruments-card__bot-col
+                  +counter.counter--md
+                .instruments-card__bot-col
+                  +button.button--xl
+                    |Добавить в корзину
+    section.instruments-card__block 
+      .container 
+        .instruments-card__block-row 
+          .instruments-card__block-col
+            h2.instruments-card__inner
+              |Характеристики
+            ul.instruments-card__block-list 
+              - for (i = 0; i < 6; i++)
+                li.instruments-card__block-item 
+                  .instruments-card__block-text 
+                    |Диаметр - D(h8)	
+                  .instruments-card__block-text 
+                    |14.00мм
+          .instruments-card__block-col
+            .instruments-card__block-image 
+              img(src="assets/images/instruments-card.jpg", alt="")
+    section.section 
+      .container
+        h2.instruments-card__inner
+          |Характеристики
+        .docs-page__grid
+          - for (i = 0; i < 3; i++)
+            +docs-card
+    section.section 
+      .container 
+        .instruments-card__row 
+          h2 
+            |Аналогичные товары
+          .instruments-card__buttons  
+            +slider-buttons
+        .slider 
+    section.section.section--last 
+      .container 
+        .instruments-card__row.instruments-card__inner
+          h2 
+            |Сопутствующие категории товаров
+          .instruments-card__buttons  
+            +slider-buttons
+        .slider 
+          +category-card(title = 'Cверлильно-фрезерные головки VDI' url = 'category-1.jpg')
+          +category-card(title = 'Резьбонарезные головки VDI' url = 'category-2.jpg')
+          +category-card(title = 'Токарные цанговые патроны' url = 'category-3.jpg')
