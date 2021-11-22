@@ -40,8 +40,20 @@
     @include fsl(24px, 120%);
   }
 
+  &__text {
+    max-width: 539px;
+  }
+
   &__container {
     padding: 20px;
+  }
+
+  &__form {
+
+    &.disabled {
+      opacity: .4;
+      pointer-events: none;
+    }
   }
 
   &__block {}
