@@ -35,19 +35,52 @@
       width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
     }
   }
-  
-  &__form {}
-  &__form-row {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__form-item {
-    flex-shrink: 0;
-    width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
-  }
 
   &__title {
     @include fsl(24px, 120%);
   }
 
+  &__container {
+    padding: 20px;
+  }
+
+  &__block {}
+  &__block-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__block-col {
+    flex-shrink: 0;
+    width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+  }
+  &__block-title {
+    margin: 40px 0 20px;
+    text-transform: uppercase;
+    @include fsl(12px, 120%);
+  }
+
+  &__item {
+    display: flex;
+  }
+  &__item-col {
+    
+    &:nth-child(2) {
+      margin-left: 16px;
+    }
+  }
+  &__item-icon {
+    margin-top: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item-num {
+    margin-bottom: 4px;
+    @include fsl(24px, 120%);
+  }
+  &__item-label {
+    @include fsl(14px, 140%);
+    color: $color-gray;
+  }
 }

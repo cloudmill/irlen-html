@@ -1,0 +1,23 @@
+.success-page {
+
+  &__section {
+    margin-top: 220px;
+    margin-bottom: 119px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    @include fsl(18px, 140%);
+  }
+
+  &__icon {
+    margin-top: 50px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -23,6 +23,12 @@
     color: $color-gray;
   }
 
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__panel {
     padding: 16px;
 

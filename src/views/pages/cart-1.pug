@@ -1,0 +1,13 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/button
+
+block content 
+  .cart-page 
+    section.section.section--first 
+      .container 
+        +navigation(page='Корзина')
+    section.section.section--last
+      .cart-page__icon
+        +cart-empty-svg

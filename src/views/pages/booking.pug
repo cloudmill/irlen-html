@@ -22,25 +22,82 @@ block content
           .booking-page__row 
             .booking-page__col
               .booking-page__form 
-                .booking-page__form-row 
-                  .booking-page__form-item
+                .booking-page__block-row 
+                  .booking-page__block-col
                     input.form__input(type="text" placeholder="Имя*")
-                  .booking-page__form-item
+                  .booking-page__block-col
                     input.form__input(type="text" placeholder="Телефон*")
-                .booking-page__form-row.section__block
-                  .booking-page__form-item
+                .booking-page__block-row.section__block
+                  .booking-page__block-col
                     input.form__input(type="email" placeholder="E-mail*")
               .booking-page__title.margin-top.margin-top--xl
                 |Способ доставки
               .margin-top.margin-top--md 
                 +model-tabs(items = ['Транспортная компания', 'Самовывоз'])
-              .booking-page__text.margin-top.margin-top--md 
-                |Мы организуем доставку при помощи транспортной компании, стоимость доставки будет включена в цену товара.
-              .booking-page__form.margin-top.margin-top--md 
-                .booking-page__form-row 
-                  .booking-page__form-item
-                    input.form__input(type="text" placeholder="Имя*")
-                  .booking-page__form-item
-                    input.form__input(type="text" placeholder="Телефон*")
-                textarea.form__textarea.section__block(placeholder="Комментарий")
+              .booking-page__block
+                .booking-page__block-item.margin-top.margin-top--md 
+                  .booking-page__text
+                    |Мы организуем доставку при помощи транспортной компании, стоимость доставки будет включена в цену товара.
+                  .booking-page__form.margin-top.margin-top--md 
+                    .booking-page__block-row 
+                      .booking-page__block-col
+                        input.form__input(type="text" placeholder="Имя*")
+                      .booking-page__block-col
+                        input.form__input(type="text" placeholder="Телефон*")
+                    textarea.form__textarea.section__block(placeholder="Комментарий")
+                //- .booking-page__block-item.margin-top.margin-top--md 
+                  .booking-page__block-row 
+                    .booking-page__block-col
+                      .booking-page__item 
+                        .booking-page__item-col
+                          .booking-page__item-icon 
+                            +location-svg
+                        .booking-page__item-col
+                          .booking-page__item-text 
+                            |Старожиловская улица, 9
+                    .booking-page__block-col
+                      .booking-page__item 
+                        .booking-page__item-col
+                          .booking-page__item-icon 
+                            +clock-svg
+                        .booking-page__item-col
+                          .booking-page__item-text 
+                            |09:00 – 17:00
+                  .booking-page__block-title 
+                    |Если возникнут сложности
+                  .booking-page__block-row 
+                    .booking-page__block-col
+                      .booking-page__item 
+                        .booking-page__item-col
+                          .booking-page__item-icon
+                            +phone-svg
+                        .booking-page__item-col
+                          .booking-page__item-num 
+                            |8 800 444-60-98
+                          .booking-page__item-label 
+                            |Бесплатно по России
+                    .booking-page__block-col
+                      .booking-page__item 
+                        .booking-page__item-col
+                          .booking-page__item-icon
+                            +phone-svg
+                        .booking-page__item-col
+                          .booking-page__item-num 
+                            |8 812 600-60-98
+                          .booking-page__item-label 
+                            |Многоканальный
             .booking-page__col
+              .cart-page__card 
+                .booking-page__container 
+                  .cart-page__card-row 
+                    .cart-page__card-col
+                      .cart-page__card-price 
+                        |Итого, ₽
+                    .cart-page__card-col
+                      .cart-page__card-price 
+                        |89 0000
+                  .cart-page__card-caption 
+                    |Цена с НДС по курсу ЦА на 25.06.2021
+                  .cart-page__card-btn 
+                    +button.button--wide 
+                      |Перейти к оформлению
