@@ -1,0 +1,25 @@
+.features-list {
+
+  &__item {
+    position: relative;
+    padding-left: 43px;
+
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+
+    &::before {
+      $size: 11px;
+
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+
+      width: $size;
+      height: $size;
+
+      background: $color-blue;
+    }
+  }
+}

@@ -6,7 +6,7 @@ mixin navigation
     if(attributes.items)
       each item in attributes.items
         li.breadcrumbs__item 
-          .breadcrumbs__text 
+          a.breadcrumbs__link(href="#")
             |#{item}
     li.breadcrumbs__item 
       .breadcrumbs__text 

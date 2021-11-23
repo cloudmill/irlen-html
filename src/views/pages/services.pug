@@ -1,0 +1,26 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+
+block content 
+  .services-page
+    section.section.section--first 
+      .container 
+        +navigation(page='Услуги')
+    section.section.section--last
+      .container
+        .grid-container.grid-container--2
+          - for (i = 0; i < 6; i++)
+            a.services-page__card(href="#") 
+              .services-page__card-row 
+                .services-page__card-col
+                  .services-page__card-image
+                    img(src="assets/images/service-page-1.jpg", alt="")
+                .services-page__card-col
+                  .services-page__card-container 
+                    .services-page__card-title 
+                      |Подбор инструмента
+                    .services-page__card-text 
+                      |Высококвалифицированные консультации по подбору инструмента
+                  .services-page__card-icon 
+                    +big-arrow-svg.services-page__card-svg
