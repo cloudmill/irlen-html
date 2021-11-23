@@ -1,0 +1,22 @@
+.tooltip {
+  
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+
+  &__span {
+    padding-left: 4px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  &__container {
+    display: none;
+  }
+}

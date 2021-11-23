@@ -32,5 +32,11 @@ mixin accordion
           .accordion__content-col
             .accordion__text 
               |1 шт.
-            .accordion__price 
-              |€ 93.42
+            .tooltip
+              .accordion__price.tooltip__row 
+                |€ 93.42
+                span.tooltip__span
+                  .tooltip__icon 
+                    +tooltip-svg
+              .tooltip__container   
+                |Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?

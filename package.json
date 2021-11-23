@@ -73,6 +73,7 @@
     "scrollmagic": "^2.0.8",
     "select2": "^4.0.13",
     "swiper": "^6.6.1",
+    "tippy.js": "^6.2.5",
     "velocity-animate": "^1.5.2"
   }
 }

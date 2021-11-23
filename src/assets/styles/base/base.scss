@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  // @include f-main();
+  @include f-main();
   color: $color-black;
   @include fsl(16px, 140%);
   background: $color-darken-white;
