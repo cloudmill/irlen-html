@@ -1,0 +1,83 @@
+extends ../layouts/master.pug
+
+include ../components/docs-card
+include ../components/button
+include ../components/counter
+include ../components/category-card
+include ../components/slider-buttons
+include ../components/product-card
+
+
+block content 
+  .instruments-card.equip-detail
+    section.instruments-card__section
+      .container
+        .instruments-card__section-row.equip-detail__inner
+          .instruments-card__section-col
+            .instruments-card__section-breadcrumbs 
+              ul.breadcrumbs 
+                each item in ['Главная', 'Оборудование', 'Токарные станки с ЧПУ']
+                  li.breadcrumbs__item 
+                    a.breadcrumbs__link(href="#") 
+                      |#{item}
+                li.breadcrumbs__item 
+                  .breadcrumbs__text 
+                    |Токарно-карусельный станок Leadwell VTL-1000 ATC
+            .equip-detail__image
+              img.instruments-card__section-img(src="assets/images/equip-detail.jpg", alt="")
+          .instruments-card__section-col
+            .instruments-card__section-info
+              h1.instruments-card__section-title 
+                |Токарно-карусельный станок Leadwell VTL-1000 ATC
+              p.instruments-card__section-text 
+                |Служит для обработки деталей типа диск и колесо среднего и крупного размера. Вертикальная компоновка станка облегчает загрузку/выгрузку заготовок. Большие модели оснащены в базовом исполнении редуктором.
+              .instruments-card__section-inner.margin-top.margin-top--md 
+                .instruments-card__section-item 
+                  .instruments-card__section-label 
+                    |Производитель
+                  .instruments-card__section-text 
+                    |Leadwell
+            .equip-detail__panel 
+              .equip-detail__panel-row 
+                .equip-detail__panel-col
+                  p.equip-detail__panel-text
+                    |Задать вопрос или оставить заявку на подготовку коммерческого предложения
+                .equip-detail__panel-col
+                  +button
+                    |Оставить заявку
+    section.instruments-card__block 
+      .container 
+        h2.instruments-card__inner
+          |Характеристики
+        - for (x = 0; x < 4; x++)
+          .equip-detail__block(class=(x === 0 ? "" : 'margin-top'))
+            h4.equip-detail__title 
+              |Рабочий диапазон
+            ul.equip-detail__list 
+              - for (i = 0; i < 4; i++)
+                li.equip-detail__list-item 
+                  .equip-detail__list-text 
+                    |Перемещение по оси X, мм
+                  .equip-detail__list-text 
+                    |300
+    section.section 
+      .container 
+        .instruments-card__row.instruments-card__inner
+          h2 
+            |Аксессуары
+        .swiper-container.swiper-container--visible--mobile.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='1' data-slider-prev='1' data-slider-next='2')
+          .swiper-wrapper 
+            - for (i = 0; i < 3; i++)
+              .swiper-slide
+                +category-card(title = 'Cверлильно-фрезерные головки VDI' url = 'category-1.jpg')
+              .swiper-slide
+                +category-card(title = 'Резьбонарезные головки VDI' url = 'category-2.jpg')
+              .swiper-slide
+                +category-card(title = 'Токарные цанговые патроны' url = 'category-3.jpg')
+    section.section.section--last 
+      .container
+        h2.instruments-card__inner
+          |Документация
+        .grid-container
+          - for (i = 0; i < 2; i++)
+            +docs-card
