@@ -1,0 +1,62 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/tabs
+include ../components/accordion
+include ../components/model-tabs
+
+block content 
+  .profile-page.main-page
+    section.section.section--first 
+      .container 
+        +navigation(page='Профиль')
+    section.section.section--last
+      .container 
+        .row 
+          .row__col
+            +tabs.tabs--column(tabs = ['Заказы', 'Cкидка', 'Мои данные',])
+          .row__col
+            +model-tabs( items = ['Текущие заказы', 'Все заказы'])
+            h2.margin-top.margin-top--xl 
+              |Список заказов пуст
+            .main-page__media.main-page__media--small.margin-top
+              .main-page__media-col 
+                a.main-page__media-link(href="#") 
+                  .main-page__media-container 
+                    img.main-page__media-container(src="assets/images/hero-1.jpg", alt="")
+                  .main-page__media-icon 
+                    +big-arrow-svg
+                .main-page__media-content 
+                  .main-page__media-title 
+                    |Каталог продукции
+                  .main-page__media-text 
+                    |Станки с ЧПУ, ленточнопильные станки, шлифовальные станки, гидравлические прессы и прочее оборудование
+              .main-page__media-col 
+                a.main-page__media-link(href="#") 
+                  .main-page__media-container 
+                    img.main-page__media-container(src="assets/images/hero-2.jpg", alt="")
+                  .main-page__media-icon 
+                    +big-arrow-svg
+                .main-page__media-content 
+                  .main-page__media-title 
+                    |Интернет-магазин
+                  .main-page__media-text 
+                    |Режущий инструмент, вспомогательный инструмент, аксессуары для инструмента и приспособления
+            section.section 
+              .profile-page__accordion 
+                .profile-page__accordion-col
+                  .profile-page__accordion-label 
+                    |Заказ
+                .profile-page__accordion-col
+                  .profile-page__accordion-label 
+                    |Дата обновления заказа
+                .profile-page__accordion-col
+                  .profile-page__accordion-label 
+                    |Статус
+                .profile-page__accordion-col
+                  .profile-page__accordion-label 
+                    |Сумма заказа
+              ul.profile-page__accordion-list.section__block
+                - for (i = 0; i < 3; i++)
+                  li.profile-page__accordion-item
+                    +accordion

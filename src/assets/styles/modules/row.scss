@@ -1,0 +1,19 @@
+.row {
+
+  display: flex;
+  justify-content: space-between;
+
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+      }
+    }
+
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+    }
+  }
+}

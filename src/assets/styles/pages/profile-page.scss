@@ -1,0 +1,26 @@
+.profile-page {
+
+  &__accordion {
+    display: flex;
+  }
+  &__accordion-col {
+    flex-shrink: 0;
+    width: calc(#{$col-part-d} * 2);
+
+    &:last-child {
+      width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+    }
+  }
+  &__accordion-label {
+    color: $color-gray;
+    @include fsl(12px, 120%);
+    text-transform: uppercase;
+  }
+  &__accordion-list {}
+  &__accordion-item {
+
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+}
