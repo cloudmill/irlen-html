@@ -1,7 +1,23 @@
 .slider-buttons {
+  $comp: &;
   --size: 64px;
 
   display: flex;
+
+  &--small {
+    --size: 44px;
+
+    #{$comp}__button {
+      background: $color-light-gray;
+    }
+
+    #{$comp}__svg {
+      width: 15px;
+      path {
+        stroke: $color-black;
+      }
+    }
+  }
 
   &__item {
     &:not(:first-child) {

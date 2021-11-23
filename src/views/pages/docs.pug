@@ -26,7 +26,7 @@ block content
             .docs-page__text 
               |Общие документы
           .docs-page__col 
-        .docs-page__grid.margin-top.margin-top--md 
+        .grid-container.margin-top.margin-top--md 
           - for (i = 0; i < 3; i++)
             +docs-card
     each item in ['Leadwell CNC machines mfg., corp.', 'Force One machinery', 'SFM', 'GSM', 'POLY GIM']
@@ -40,7 +40,7 @@ block content
                 |Общие документы
             .docs-page__col   
               img.docs-page__image(src="assets/images/docs-1.jpg", alt="")
-          .docs-page__grid.margin-top.margin-top--md 
+          .grid-container.margin-top.margin-top--md 
             - for (i = 0; i < 3; i++)
               +docs-card
     section.section.section--last.margin-top

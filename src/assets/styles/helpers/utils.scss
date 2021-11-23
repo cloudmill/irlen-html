@@ -9,3 +9,13 @@
     margin-top: 60px;
   }
 }
+
+.grid-container {
+  --itemsCount: 4;
+  --gap: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(var(--itemsCount), 1fr);
+  column-gap: var(--gap);
+  row-gap: var(--gap);
+}

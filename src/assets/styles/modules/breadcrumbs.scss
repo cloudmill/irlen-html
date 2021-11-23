@@ -1,21 +1,25 @@
 .breadcrumbs {
+  margin-top: -8px;
   margin-bottom: 24px;
 
   display: flex;
+  flex-wrap: wrap;
 
   &__item {
+    margin-top: 8px;
+    margin-right: 8px;
     @include fsl(14px, 110%);
 
-    &:not(:last-child) {
+    &:not(:first-child) {
       position: relative;
       z-index: 0;
-      margin-right: 24px;
+      margin-left: 16px;
 
       &::before {
         content: ">";
         position: absolute;
         top: 50%;
-        right: -16px;
+        left: -16px;
         transform: translateY(-50%);
 
         // @include fsl(14px, 110%);
