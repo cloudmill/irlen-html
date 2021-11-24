@@ -3,6 +3,7 @@ extends ../layouts/master.pug
 include ../components/navigation
 include ../components/button
 include ../components/aside
+include ../components/modals
 include ../components/product-card
 
 block content 
@@ -18,7 +19,7 @@ block content
             .panel__text 
               |Твердосплавные пластины наиболее универсальны в использовании
           .panel__col  
-            +button 
+            .button(data-fancy-button='10')
               |Материалы для скачивания
         .section__block 
           .section__row 
@@ -34,3 +35,4 @@ block content
                     |Показать еще
                   .button-show__icon 
                     +arrow-svg
+  +docs-modal

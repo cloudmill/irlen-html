@@ -1,6 +1,8 @@
 .login-modal {
   margin-top: 80px;
 
+  display: none;
+
   &__container {
     padding: 60px;
 
@@ -18,10 +20,44 @@
   }
 }
 
+.docs-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 760px;
+  height: 100%;
+  display: none;
+  
+  background: $color-white;
+
+  &__container {
+    padding: 40px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+  }
+}
+
 .fancybox-slide--html .fancybox-close-small {
   top: 10px;
   right: 10px;
 
   background: $color-darken-white;
   border-radius: 4px;
+}
+
+
+/* Custom animation slide-in-out */
+.fancybox-fx-slide-in-out.fancybox-slide--previous {
+  transform: translateX(100%);
+}
+
+.fancybox-fx-slide-in-out.fancybox-slide--next {
+  transform: translateX(100%);
+}
+
+.fancybox-fx-slide-in-out.fancybox-slide--current {
+  transform: translateX(0);
 }

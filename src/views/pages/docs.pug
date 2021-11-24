@@ -9,14 +9,30 @@ block content
   .docs-page 
     section.section.section--first 
       .container 
-        +navigation(page='ТДокументация')
+        +navigation(page='Документация')
     section.section
       .container 
         .docs-page__row 
           .docs-page__col
             +tabs(tabs = ['Оборудование', 'Инструменты'])
           .docs-page__col
-            |selects
+            .docs-page__selects(data-select-parent='') 
+              .docs-page__selects-item 
+                .select-wrapper 
+                  .select
+                    select.select__select(data-select-placeholder='Выберите категорию' style='width: 100%' data-select-control='')
+                      option(value='' disabled selected)
+                      each item in data.selectValues.cat
+                        option(value=item)
+                          |#{item} 
+              .docs-page__selects-item 
+                .select-wrapper 
+                  .select.disabled(data-select-controlled='')
+                    select.select__select(data-select-placeholder='Выберите бренд' style='width: 100%')
+                      option(value='' disabled selected)
+                      each item in data.selectValues.brand
+                        option(value=item)
+                          |#{item} 
     section.section.section--md
       .container 
         .docs-page__row 

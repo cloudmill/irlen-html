@@ -1,4 +1,5 @@
 include ./model-tabs
+include ./docs-card
 
 mixin login-modal 
   .login-modal(data-fancy-modal='1')
@@ -15,3 +16,12 @@ mixin login-modal
         .form__item 
           button.button.button--wide
             |Отправить
+
+mixin docs-modal 
+  .docs-modal(data-fancy-modal='10')
+    .docs-modal__container 
+      h3.docs-modal__title 
+        |Материалы для скачивания
+      .grid-container.grid-container--2
+        - for (x = 0; x < 6; x++)
+          +docs-card

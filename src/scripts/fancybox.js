@@ -22,7 +22,8 @@ import '@fancyapps/fancybox';
 
       switch (id) {
         case 10:
-          $.fancybox.defaults.touch = true;
+          $.fancybox.defaults.animationEffect = 'slide-in-out'
+          $.fancybox.defaults.animationDuration = 500
           break
         default:
           $.fancybox.defaults.closeExisting = true;
