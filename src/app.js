@@ -2,6 +2,7 @@ import 'Styles/_app.scss';
 
 import 'scripts/swipers.js';
 import 'scripts/accordion.js';
+import 'scripts/fancybox.js';
 import 'scripts/tooltip.js';
 import { FormChanger } from 'scripts/form-changer'
 

@@ -1,0 +1,27 @@
+.login-modal {
+  margin-top: 80px;
+
+  &__container {
+    padding: 60px;
+
+    width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+
+    background: $color-white;
+    border-radius: 4px;
+  }
+
+  &__inner {
+    margin-bottom: 24px;
+
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  top: 10px;
+  right: 10px;
+
+  background: $color-darken-white;
+  border-radius: 4px;
+}
