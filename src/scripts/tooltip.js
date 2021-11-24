@@ -8,7 +8,7 @@ $(() => {
 
     tippy(tooltipMark[0],  {
       content: tooltipContent,
-      trigger: 'click',
+      // trigger: 'click',
       appendTo: $('.main')[0],
       offset: [0, 6],
     });

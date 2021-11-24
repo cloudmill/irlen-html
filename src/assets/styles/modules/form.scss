@@ -1,5 +1,19 @@
 .form {
 
+  &--disabled {
+
+    .profile-page__form-grid {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    .profile-page__button {
+      display: flex;
+    }
+    .profile-page__form-buttons {
+      display: none;
+    }
+  }
+
   &__input {
     padding: 15px 12px;
     width: 100%;

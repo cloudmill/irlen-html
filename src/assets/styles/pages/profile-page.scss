@@ -23,4 +23,143 @@
       margin-top: 8px;
     }
   }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+    }
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+    }
+  }
+
+  &__panel {
+    padding: 20px;
+
+    background: $color-white;
+    border-radius: 4px;
+  }
+  &__panel-label {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    @include fsl(12px, 120%);
+  }
+  &__panel-title {
+    margin-bottom: 40px;
+    font-weight: 500;
+    @include fsl(24px, 120%);
+  }
+  &__panel-discont {
+    display: flex;
+  }
+
+  &__info {}
+  &__info-title {
+    margin-bottom: 16px;
+    
+    @include fsl(18px, 120%);
+  }
+  &__info-contacts {
+    margin-top: 16px;
+    display: flex;
+  }
+  &__info-col {
+    
+    &:nth-child(1) {
+      flex-shrink: 0;
+      width: calc(#{$col-part-d} * 2);
+    }
+  }
+  &__info-link {
+    @include fsl(20px, 140%);
+    font-weight: 500;
+  }
+  &__info-label {
+    color: $color-gray;
+  }
+  &__info-time {
+    font-weight: 500;
+    @include fsl(14px, 140%);
+    font-weight: 500;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__form-col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    }
+
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+    }
+  }
+  &__form-grid {
+    --gridCount: 2;
+    --rowGap: 24px;
+    --colGap: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(var(--gridCount), 1fr);
+    row-gap: var(--rowGap);
+    column-gap: var(--colGap);
+  }
+  &__form-item {
+
+    &:last-child {
+      grid-column: -1/2;
+    }
+  }
+  &__form-label {
+    margin-bottom: 12px;
+  }
+  &__form-buttons {
+    display: flex;
+  }
+  &__form-btn {
+
+    &:not(:first-child) {
+      margin-left: 12px;
+    }
+  }
+
+  &__buttons {
+    margin-top: 40px;
+    display: flex;
+  }
+
+  &__button {
+    padding: 8px 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+
+    background: $color-white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    margin-left: 10px;
+    @include fsl(14px, 140%);
+  }
 }

@@ -23,12 +23,23 @@
     #{$comp}__text {
       @include fsl(12px, 140%);
     }
+
+    #{$comp}__svg {
+      --size: 25px;
+
+      width: var(--size);
+      height: var(--size);
+    }
   }
   
   &__icon {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &--start {
+      align-items: flex-start;
+    }
   }
   &__content {
     margin-left: 40px;
