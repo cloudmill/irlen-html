@@ -1,5 +1,74 @@
 {
-  "routing": [],
+  "routing": [
+    {
+      "href": "main",
+      "page": "Главная"
+    },
+    {
+      "href": "instruments",
+      "page": "Инструмент"
+    },
+    {
+      "href": "instruments-detail",
+      "page": "Инструмент детальная"
+    },
+    {
+      "href": "instruments-card",
+      "page": "Инструмент карточка"
+    },
+    {
+      "href": "instruments-card-1",
+      "page": "Инструмент карточка 2"
+    },
+    {
+      "href": "equip",
+      "page": "Оборудование"
+    },
+    {
+      "href": "equip-detail",
+      "page": "Оборудование детальная"
+    },
+    {
+      "href": "equip-cat",
+      "page": "Оборудование детальная 2"
+    },
+    {
+      "href": "equip-cat-1",
+      "page": "Оборудование детальная 2"
+    },
+    {
+      "href": "docs",
+      "page": "Скачиваемые материалы"
+    },
+    {
+      "href": "search",
+      "page": "Результаты поиска"
+    },
+    {
+      "href": "cart",
+      "page": "Корзина"
+    },
+    {
+      "href": "cart-1",
+      "page": "Корзина пустая"
+    },
+    {
+      "href": "booking",
+      "page": "Оформление заказа"
+    },
+    {
+      "href": "booking-1",
+      "page": "Оформление заказа 2"
+    },
+    {
+      "href": "profile",
+      "page": "ЛК"
+    },
+    {
+      "href": "services",
+      "page": "Услуги"
+    }
+  ],
   "contacts": [
     {
       "phone": "8 812 600-60-98",

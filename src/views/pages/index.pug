@@ -1,5 +1,17 @@
 extends ../layouts/master.pug
 
+include ../components/button
+
+block header
+
 block content 
-  .test 
-    |asd
+  .container 
+    .pages 
+      ul.pages__list 
+        each item in data.routing
+          li.pages__item 
+            a.button(href="") 
+              |#{item.page}
+
+
+block footer
