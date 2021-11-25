@@ -2,6 +2,57 @@ include ./model-tabs
 include ./docs-card
 
 mixin login-modal 
+  -
+    var ddata = {
+      user: [
+        {
+          type: 'text',
+          placeholder: 'Имя',
+        },
+        {
+          type: 'email',
+          placeholder: 'E-mail',
+        },
+        {
+          type: 'password',
+          placeholder: 'Пароль',
+        },
+        {
+          type: 'password',
+          placeholder: 'Повторите пароль',
+        },
+      ],
+      corp: [
+        {
+          type: 'email',
+          placeholder: 'E-mail*',
+        },
+        {
+          type: 'password',
+          placeholder: 'Пароль*',
+        },
+        {
+          type: 'password',
+          placeholder: 'Повторите пароль*',
+        },
+        {
+          type: 'text',
+          placeholder: 'Название компании*',
+        },
+        {
+          type: 'text',
+          placeholder: 'ИНН*',
+        },
+        {
+          type: 'text',
+          placeholder: 'Телефон*',
+        },
+        {
+          type: 'text',
+          placeholder: 'Имя*',
+        },
+      ]
+    }
   .login-modal(data-fancy-modal='1')
     .login-modal__container(data-tabs-parent='')
       h3.login-modal__inner 
@@ -26,7 +77,7 @@ mixin login-modal
           .login-modal__inner
             .checkbox 
               label.checkbox__label
-                input.checkbox__input(type="checkbox" checked)
+                input.checkbox__input(type="checkbox" checked data-login-checkbox='')
                 .checkbox__box 
                   .checkbox__icon
                 .tooltip
@@ -37,15 +88,27 @@ mixin login-modal
                         +tooltip-svg
                   .tooltip__container   
                     |Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?
+          .login-modal__form.active(data-form-corp='')
+            each item in ddata.corp 
+              .form__item 
+                input.form__input(type=item.type placeholder=item.placeholder) 
+            .form__item 
+              textarea.form__textarea(placeholder="Комментарий")
+          .login-modal__form(data-form-user='')
+            each item in ddata.user
+              .form__item 
+                input.form__input(type=item.type placeholder=item.placeholder) 
           .form__item 
-            input.form__input(type="email" placeholder='E-mail') 
-          .form__item 
-            input.form__input(type="password" placeholder="Пароль") 
-          .form__item 
-            input.form__input(type="password" placeholder="Пароль") 
+            .checkbox.checkbox--start
+              label.checkbox__label
+                input.checkbox__input(type="checkbox")
+                .checkbox__box 
+                  .checkbox__icon
+                .checkbox__text
+                  |Согласен на обработку персональных данных в соответствии с #[a.checkbox__link(href="#") политикой конфиденциальности]
           .form__item 
             button.button.button--wide(data-form-button='1')
-              |Отправить
+              |Зарегистрироваться
     .response(data-response="1")
 
 mixin docs-modal 

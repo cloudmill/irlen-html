@@ -1,6 +1,13 @@
 .checkbox {
   $comp: &;
 
+  &--start {
+
+    #{$comp}__label {
+      align-items: flex-start;
+    }
+  }
+
   &__label {
     position: relative;
 
@@ -29,6 +36,7 @@
 
     width: $size;
     height: $size;
+    flex-shrink: 0;
 
     border-radius: 4px;
     border: 1px solid $color-light-gray;
@@ -38,5 +46,10 @@
   &__text {
     margin-left: 12px;
     @include fsl(14px, 140%);
+  }
+
+  &__link {
+    color: $color-blue;
+
   }
 }

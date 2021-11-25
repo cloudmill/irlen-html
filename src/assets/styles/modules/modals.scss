@@ -18,6 +18,14 @@
     display: flex;
     justify-content: center;
   }
+
+  &__form {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
 }
 
 .docs-modal {

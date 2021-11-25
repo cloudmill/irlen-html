@@ -33,6 +33,7 @@
     border: 1px solid $color-light-gray;
     border-radius: 4px;
     @include fsl(14px, 140%);
+    @include f-main();
     @include placeholder {
       color: $color-black;
     }
@@ -49,6 +50,7 @@
     border: 1px solid $color-light-gray;
     background: $color-white;
     resize: none;
+    @include f-main();
     @include placeholder {
       color: $color-black;
     }
