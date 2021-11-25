@@ -1,0 +1,61 @@
+.range {
+
+  &__top {
+    margin-bottom: 20px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: calc(50% - 5px);
+  }
+
+  &__label {
+    padding: 9px 12px;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid $color-light-gray;
+    border-radius: 4px;
+  }
+
+  &__text {
+    color: $color-gray;
+    @include fsl(12px, 120%);
+  }
+
+  &__input {
+    margin-left: 12px;
+
+    width: 100%;
+
+    @include fsl(16px, 140%);
+    border: none;
+  }
+
+  .noUi-handle {
+    --size: 23px;
+
+    right: calc(var(--size) / 2 * -1);
+
+    width: var(--size);
+    height: var(--size);
+
+    border-radius: 50%;
+    border: 2px solid $color-light-gray;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  .noUi-target {
+    height: 10px;
+    background: $color-light-gray;
+    border: none;
+  }
+  .noUi-connect {
+    background: $color-blue;
+  }
+}

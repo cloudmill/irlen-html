@@ -21,3 +21,23 @@ mixin aside
                 |Показать еще
               .button-show__icon 
                 +arrow-svg
+    if (attributes.range)
+      - for (x = 0; x < 2; x++)
+        .aside__card(data-range-block='')
+          .aside__container 
+            .aside__title 
+              |Материал детали
+            .range.aside__inner
+              .range__top 
+                .range__row 
+                  .range__item 
+                    label.range__label
+                      span.range__text 
+                        |от
+                      input.range__input(type="text" data-input-start='')
+                  .range__item 
+                    label.range__label
+                      span.range__text 
+                        |до
+                      input.range__input(type="text" data-input-end='')
+              .range__range
