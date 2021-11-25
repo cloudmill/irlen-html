@@ -1,4 +1,5 @@
 .header {
+  $comp: &;
 
   position: fixed;
   z-index: 1000;
@@ -185,12 +186,60 @@
   }
 
   &__user {
+    position: relative;
+    z-index: 0;
     margin-left: 20px;
 
+    &.loged:hover {
+      #{$comp}__user-links {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+  &__user-icon {
     display: flex;
     align-items: center;
     justify-content: center;
 
     cursor: pointer;
+  }
+  &__user-links {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    padding-top: 25px;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: $transition;
+  }
+  &__user-container {
+    width: 210px;
+
+    background: $color-white;
+    border-radius: 4px;
+  }
+  &__user-top {
+    padding: 12px 20px;
+
+    border-bottom: 1px solid $color-light-gray;
+  }
+  &__user-name {
+    font-weight: 500;
+    line-height: 120%;
+  }
+  &__user-list {
+    padding: 12px 20px;
+  }
+  &__user-item {
+
+    &:not(:first-child) {
+      margin-top: 4px;
+    }
+  }
+  &__user-link {
+    @include fsl(14px, 140%);
+    transition: $transition;
   }
 }

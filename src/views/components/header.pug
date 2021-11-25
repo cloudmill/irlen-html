@@ -62,4 +62,15 @@ mixin header
                 .header__cart-count 
                   |5
               .header__user(data-fancy-button='1')
-                +user-svg
+                .header__user-icon
+                  +user-svg
+                .header__user-links 
+                  .header__user-container
+                    .header__user-top
+                      .header__user-name 
+                        |Кирилл
+                    ul.header__user-list 
+                      each item in ['Заказы', 'Cкидка', 'Мои данные', 'Выйти']
+                        li.header__user-item
+                          a.header__user-link(href="#") 
+                            |#{item}
