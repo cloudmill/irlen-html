@@ -10,7 +10,7 @@ block content
       ul.pages__list 
         each item in data.routing
           li.pages__item 
-            a.button(href="") 
+            a.button(href=item.href) 
               |#{item.page}
 
 

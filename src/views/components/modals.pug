@@ -8,14 +8,15 @@ mixin login-modal
         |Войти
       .login-modal__inner 
         +model-tabs(items = ['Есть аккаунт', 'Регистрация'])
-      form.form(action="/")
+      form.form(action="/" data-form='1')
         .form__item 
           input.form__input(type="email" placeholder='E-mail') 
         .form__item 
           input.form__input(type="password" placeholder="Пароль") 
         .form__item 
-          button.button.button--wide
+          button.button.button--wide(data-form-button='1')
             |Отправить
+    .response(data-response="1")
 
 mixin docs-modal 
   .docs-modal(data-fancy-modal='10')

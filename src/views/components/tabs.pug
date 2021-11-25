@@ -1,5 +1,5 @@
 mixin tabs 
-  .tabs(class=attributes.class)
+  .tabs(class=attributes.class data-tabs='')
     each item, i in attributes.tabs 
-      .tabs__item(class=(i === 0 ? 'tabs__item--active' : ''))
+      .tabs__item(class=(i === 0 ? 'active' : '') data-tabs-item='')
         |#{item}
