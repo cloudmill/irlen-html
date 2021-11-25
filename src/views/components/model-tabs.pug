@@ -1,5 +1,5 @@
 mixin model-tabs 
-  .model-tabs(data-tabs='')
+  .model-tabs(class=attributes.class data-tabs='')
     each item, index in attributes.items
       .model-tabs__item(class=(index === 0 ? 'active' : '') data-tabs-item='')
         |#{item}

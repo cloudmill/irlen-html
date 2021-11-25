@@ -3,19 +3,49 @@ include ./docs-card
 
 mixin login-modal 
   .login-modal(data-fancy-modal='1')
-    .login-modal__container 
+    .login-modal__container(data-tabs-parent='')
       h3.login-modal__inner 
         |Войти
       .login-modal__inner 
-        +model-tabs(items = ['Есть аккаунт', 'Регистрация'])
-      form.form(action="/" data-form='1')
-        .form__item 
-          input.form__input(type="email" placeholder='E-mail') 
-        .form__item 
-          input.form__input(type="password" placeholder="Пароль") 
-        .form__item 
-          button.button.button--wide(data-form-button='1')
-            |Отправить
+        .model-tabs(data-real-tabs='')
+          .model-tabs__item.active(data-tabs-item='')
+            |Есть аккаунт
+          .model-tabs__item(data-tabs-item='')
+            |Регистрация
+      .tabs-block.active(data-tabs-block='')
+        form.form(action="/" data-form='123')
+          .form__item 
+            input.form__input(type="email" placeholder='E-mail') 
+          .form__item 
+            input.form__input(type="password" placeholder="Пароль") 
+          .form__item 
+            button.button.button--wide(data-form-button='123')
+              |Отправить
+      .tabs-block(data-tabs-block='')
+        form.form(action="/" data-form='1')
+          .login-modal__inner
+            .checkbox 
+              label.checkbox__label
+                input.checkbox__input(type="checkbox" checked)
+                .checkbox__box 
+                  .checkbox__icon
+                .tooltip
+                  .checkbox__text.tooltip__row
+                    |Юридическое лицо
+                    span.tooltip__span
+                      .tooltip__icon 
+                        +tooltip-svg
+                  .tooltip__container   
+                    |Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?
+          .form__item 
+            input.form__input(type="email" placeholder='E-mail') 
+          .form__item 
+            input.form__input(type="password" placeholder="Пароль") 
+          .form__item 
+            input.form__input(type="password" placeholder="Пароль") 
+          .form__item 
+            button.button.button--wide(data-form-button='1')
+              |Отправить
     .response(data-response="1")
 
 mixin docs-modal 

@@ -1,34 +1,42 @@
 
 export class Tabs {
-  constructor(selector) {
-    this.roots = document.querySelectorAll(selector)
+  constructor(selector, manual) {
+    this.roots = selector
     
     if (this.roots) {
-      this.rootsTabs = []
-      this.roots.forEach(item => {
-        this.rootsTabs.push(item.querySelectorAll('[data-tabs-item]'))
-      })
-      this.init()
+      this.rootsTabs = this.roots.querySelectorAll('[data-tabs-item]')
+
+      this.init(manual)
     }
   }
 
-  init() {
-    this.roots.forEach((item, index) => {
-      item.addEventListener('click', (e) => {
-        const target = e.target.closest('[data-tabs-item]')
-        if (target) {
-          this.setActive(target, index)
-        }
-      })
-    }) 
+  init(manual) {
+    this.roots.addEventListener('click', (e) => {
+      const target = e.target.closest('[data-tabs-item]')
+
+      if (target) {
+        this.setActive(target, manual)
+      }
+    })
   }
 
-  setActive(newItem, index) {
-    this.rootsTabs[index].forEach(item => {
+  setActive(newItem, manual) {
+    if (manual) {
+      const parent = this.roots.closest('[data-tabs-parent]')
+      this.tabsBlock = parent.querySelectorAll('[data-tabs-block]')
+    }
+
+    this.rootsTabs.forEach((item, i) => {
       if (item !== newItem) {
         item.classList.remove('active')
+        if (manual) {
+          this.tabsBlock[i].classList.remove('active')
+        }
       } else {
         item.classList.add('active');
+        if (manual) {
+          this.tabsBlock[i].classList.add('active')
+        }
       }
     })
   }

@@ -48,4 +48,27 @@
     @include fsl(12px, 140%);
     color: $color-gray;
   }
+
+  &__btn {
+    margin-top: 8px;
+    padding: 10px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: $color-white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &__btn-text {
+    color: $color-gray;
+    @include fsl(14px, 140%);
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

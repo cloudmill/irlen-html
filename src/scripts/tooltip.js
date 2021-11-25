@@ -11,6 +11,7 @@ $(() => {
       // trigger: 'click',
       appendTo: $('.main')[0],
       offset: [0, 6],
+      zIndex: 999999,
     });
   });
 });

@@ -34,10 +34,16 @@ mixin aside
                     label.range__label
                       span.range__text 
                         |от
-                      input.range__input(type="text" data-input-start='')
+                      input.range__input(type="number" data-input-start='')
                   .range__item 
                     label.range__label
                       span.range__text 
                         |до
-                      input.range__input(type="text" data-input-end='')
+                      input.range__input(type="number" data-input-end='')
               .range__range
+    if (attributes.clear)
+      .aside__btn(data-clear-button='')
+        .aside__icon 
+          +trash-svg 
+        .aside__btn-text 
+          |Очистить выбранное
