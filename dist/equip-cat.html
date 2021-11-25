@@ -154,16 +154,16 @@
 								<div class="panel__col"><a class="button" href="#">Материалы для скачивания</a></div>
 							</div>
 							<div class="equip-page__wrapper margin-top">
-								<div class="tabs">
-									<div class="tabs__item tabs__item--active">Leadwell серия T</div>
-									<div class="tabs__item">Leadwell серия LTC</div>
-									<div class="tabs__item">Leadwell серия T/LTC</div>
+								<div class="tabs" data-tabs="">
+									<div class="tabs__item active" data-tabs-item="">Leadwell серия T</div>
+									<div class="tabs__item" data-tabs-item="">Leadwell серия LTC</div>
+									<div class="tabs__item" data-tabs-item="">Leadwell серия T/LTC</div>
 								</div>
 							</div>
 							<div class="margin-top margin-top--md">
-								<div class="model-tabs">
-									<div class="model-tabs__item model-tabs__item--active">Модели</div>
-									<div class="model-tabs__item">Возможные опции</div>
+								<div class="model-tabs" data-tabs="">
+									<div class="model-tabs__item active" data-tabs-item="">Модели</div>
+									<div class="model-tabs__item" data-tabs-item="">Возможные опции</div>
 								</div>
 							</div>
 						</div>
@@ -289,9 +289,9 @@
 						</table>
 						<div class="container">
 							<div class="equip-page__inner">
-								<div class="model-tabs">
-									<div class="model-tabs__item model-tabs__item--active">Модели</div>
-									<div class="model-tabs__item">Возможные опции</div>
+								<div class="model-tabs" data-tabs="">
+									<div class="model-tabs__item active" data-tabs-item="">Модели</div>
+									<div class="model-tabs__item" data-tabs-item="">Возможные опции</div>
 								</div>
 							</div>
 						</div>
@@ -499,17 +499,18 @@
 			<div class="login-modal__container">
 				<h3 class="login-modal__inner">Войти</h3>
 				<div class="login-modal__inner">
-					<div class="model-tabs">
-						<div class="model-tabs__item model-tabs__item--active">Есть аккаунт</div>
-						<div class="model-tabs__item">Регистрация</div>
+					<div class="model-tabs" data-tabs="">
+						<div class="model-tabs__item active" data-tabs-item="">Есть аккаунт</div>
+						<div class="model-tabs__item" data-tabs-item="">Регистрация</div>
 					</div>
 				</div>
-				<form class="form" action="/">
+				<form class="form" action="/" data-form="1">
 					<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" /></div>
 					<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" /></div>
-					<div class="form__item"><button class="button button--wide">Отправить</button></div>
+					<div class="form__item"><button class="button button--wide" data-form-button="1">Отправить</button></div>
 				</form>
 			</div>
+			<div class="response" data-response="1"></div>
 		</div>
 	</body>
 

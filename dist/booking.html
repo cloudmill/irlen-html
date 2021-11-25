@@ -146,9 +146,9 @@
 								<div class="booking-page__button-text">Вернуться в корзину</div>
 							</a>
 							<div class="booking-page__inner">
-								<div class="model-tabs">
-									<div class="model-tabs__item model-tabs__item--active">Физическое лицо</div>
-									<div class="model-tabs__item">Юридическое лицо</div>
+								<div class="model-tabs" data-tabs="">
+									<div class="model-tabs__item active" data-tabs-item="">Физическое лицо</div>
+									<div class="model-tabs__item" data-tabs-item="">Юридическое лицо</div>
 								</div>
 							</div>
 						</div>
@@ -169,9 +169,9 @@
 										</div>
 										<div class="booking-page__title margin-top margin-top--xl">Способ доставки</div>
 										<div class="margin-top margin-top--md">
-											<div class="model-tabs">
-												<div class="model-tabs__item model-tabs__item--active">Транспортная компания</div>
-												<div class="model-tabs__item">Самовывоз</div>
+											<div class="model-tabs" data-tabs="">
+												<div class="model-tabs__item active" data-tabs-item="">Транспортная компания</div>
+												<div class="model-tabs__item" data-tabs-item="">Самовывоз</div>
 											</div>
 										</div>
 										<div class="booking-page__block">
@@ -291,17 +291,18 @@
 			<div class="login-modal__container">
 				<h3 class="login-modal__inner">Войти</h3>
 				<div class="login-modal__inner">
-					<div class="model-tabs">
-						<div class="model-tabs__item model-tabs__item--active">Есть аккаунт</div>
-						<div class="model-tabs__item">Регистрация</div>
+					<div class="model-tabs" data-tabs="">
+						<div class="model-tabs__item active" data-tabs-item="">Есть аккаунт</div>
+						<div class="model-tabs__item" data-tabs-item="">Регистрация</div>
 					</div>
 				</div>
-				<form class="form" action="/">
+				<form class="form" action="/" data-form="1">
 					<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" /></div>
 					<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" /></div>
-					<div class="form__item"><button class="button button--wide">Отправить</button></div>
+					<div class="form__item"><button class="button button--wide" data-form-button="1">Отправить</button></div>
 				</form>
 			</div>
+			<div class="response" data-response="1"></div>
 		</div>
 	</body>
 
