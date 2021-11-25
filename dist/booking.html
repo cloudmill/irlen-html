@@ -119,10 +119,25 @@
 											</svg></div>
 										<div class="header__cart-count">5</div>
 									</a>
-									<div class="header__user" data-fancy-button="1"><svg width="31" height="33" viewbox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<circle cx="15.5" cy="6.73376" r="5.5" stroke="#121212" stroke-width="2"></circle>
-											<path d="M25 31.2338H30V30.7338C30 22.7256 23.5081 16.2338 15.5 16.2338V16.2338C7.49187 16.2338 1 22.7256 1 30.7338V31.2338H6" stroke="#121212" stroke-width="2"></path>
-										</svg></div>
+									<div class="header__user" data-fancy-button="1">
+										<div class="header__user-icon"><svg width="31" height="33" viewbox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="15.5" cy="6.73376" r="5.5" stroke="#121212" stroke-width="2"></circle>
+												<path d="M25 31.2338H30V30.7338C30 22.7256 23.5081 16.2338 15.5 16.2338V16.2338C7.49187 16.2338 1 22.7256 1 30.7338V31.2338H6" stroke="#121212" stroke-width="2"></path>
+											</svg></div>
+										<div class="header__user-links">
+											<div class="header__user-container">
+												<div class="header__user-top">
+													<div class="header__user-name">Кирилл</div>
+												</div>
+												<ul class="header__user-list">
+													<li class="header__user-item"><a class="header__user-link" href="#">Заказы</a></li>
+													<li class="header__user-item"><a class="header__user-link" href="#">Cкидка</a></li>
+													<li class="header__user-item"><a class="header__user-link" href="#">Мои данные</a></li>
+													<li class="header__user-item"><a class="header__user-link" href="#">Выйти</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -306,7 +321,7 @@
 				<div class="tabs-block" data-tabs-block="">
 					<form class="form" action="/" data-form="1">
 						<div class="login-modal__inner">
-							<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" checked="checked" />
+							<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" checked="checked" data-login-checkbox="" />
 									<div class="checkbox__box">
 										<div class="checkbox__icon"></div>
 									</div>
@@ -316,10 +331,31 @@
 									</div>
 								</label></div>
 						</div>
-						<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" /></div>
-						<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" /></div>
-						<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" /></div>
-						<div class="form__item"><button class="button button--wide" data-form-button="1">Отправить</button></div>
+						<div class="login-modal__form active" data-form-corp="">
+							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" /></div>
+							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль*" /></div>
+							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль*" /></div>
+							<div class="form__item"><input class="form__input" placeholder="Название компании*" /></div>
+							<div class="form__item"><input class="form__input" placeholder="ИНН*" /></div>
+							<div class="form__item"><input class="form__input" placeholder="Телефон*" /></div>
+							<div class="form__item"><input class="form__input" placeholder="Имя*" /></div>
+							<div class="form__item"><textarea class="form__textarea" placeholder="Комментарий"></textarea></div>
+						</div>
+						<div class="login-modal__form" data-form-user="">
+							<div class="form__item"><input class="form__input" placeholder="Имя" /></div>
+							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" /></div>
+							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" /></div>
+							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль" /></div>
+						</div>
+						<div class="form__item">
+							<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+									<div class="checkbox__box">
+										<div class="checkbox__icon"></div>
+									</div>
+									<div class="checkbox__text">Согласен на обработку персональных данных в соответствии с <a class="checkbox__link" href="#">политикой конфиденциальности</a></div>
+								</label></div>
+						</div>
+						<div class="form__item"><button class="button button--wide" data-form-button="1">Зарегистрироваться</button></div>
 					</form>
 				</div>
 			</div>
