@@ -46,6 +46,7 @@
   }
   &__title {
     margin-bottom: 8px;
+    font-weight: 500;
   }
   &__text {
     @include fsl(14px, 140%);

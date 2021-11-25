@@ -1,4 +1,6 @@
 .discont {
+  $comp: &;
+
   padding: 1px 11px;
   position: relative;
   z-index: 0;
@@ -16,6 +18,13 @@
 
     color: $color-white;
     @include fsl(43px, 140%);
+  }
+
+  &--small {
+    padding: 5px 10px;
+    #{$comp}__text {
+      @include fsl(13px, 140%);
+    }
   }
 
   &__text {

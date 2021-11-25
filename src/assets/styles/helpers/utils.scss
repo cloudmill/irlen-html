@@ -23,3 +23,7 @@
     --itemsCount: 2;
   }
 }
+
+.nav-title {
+  width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
+}

@@ -34,4 +34,9 @@
     background: $color-white;
     color: $color-black;
   }
+
+  &--outline {
+    padding: 14px 0;
+    border: 1px solid $color-light-gray
+  }
 }

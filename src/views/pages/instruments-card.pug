@@ -52,12 +52,18 @@ block content
                     |10 шт.
               .instruments-card__price.margin-top.margin-top--md
                 .instruments-card__price-col
-                  .instruments-card__price-price 
-                    |€ 17.79
+                  .tooltip.tooltip--start
+                    .instruments-card__price-price.tooltip__row
+                      |€ 17.79
+                      span.tooltip__span
+                        .tooltip__icon 
+                          +tooltip-svg
+                    .tooltip__container   
+                      |Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?
                   .instruments-card__price-old 
                     |€ 20.55
                 .instruments-card__price-col
-                  .discont 
+                  .discont.discont--small
                     .discont__text 
                       |Распродажа
               .instruments-card__section-panel.margin-top.margin-top--md 
@@ -100,7 +106,7 @@ block content
     section.section 
       .container
         h2.instruments-card__inner
-          |Характеристики
+          |Документация
         .grid-container
           - for (i = 0; i < 3; i++)
             +docs-card

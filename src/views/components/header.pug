@@ -8,7 +8,7 @@ mixin header
           ul.header__list 
             each item in data.contacts 
               li.header__item 
-                a.header__link(href="#") 
+                a.header__link(href="tel:" + item.phone) 
                   |#{item.phone}
                 .header__label 
                   |#{item.city}

@@ -35,6 +35,7 @@
   &__card-title {
     margin-bottom: 12px;
     @include fsl(18px, 120%);
+    font-weight: 500;
   }
   &__card-text {
     @include fsl(14px, 140%);

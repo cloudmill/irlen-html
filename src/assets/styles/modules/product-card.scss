@@ -41,6 +41,7 @@
   &__title {
     margin-top: 4px;
     @include fsl(16px, 110%);
+    font-weight: 500;
   }
 
   &__info {
@@ -71,6 +72,7 @@
   }
   &__price-price {
     @include fsl(20px, 110%);
+    font-weight: 500;
   }
   &__price-old {
     margin-left: 12px;

@@ -31,8 +31,14 @@ mixin product-card
             .product-card__text
               |M10x1.5
       .product-card__price 
-        .product-card__price-price 
-          |€ 93.42
+        .tooltip
+          .product-card__price-price.tooltip__row  
+            |€ 93.42
+            span.tooltip__span
+              .tooltip__icon 
+                +tooltip-svg
+          .tooltip__container   
+            |Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?
         .product-card__price-old
           |€ 103.55
       .product-card__bot 

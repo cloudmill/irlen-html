@@ -2,6 +2,7 @@ extends ../layouts/master.pug
 
 include ../components/navigation
 include ../components/equip-card
+include ../components/model-tabs
 
 block content 
   .equip-page 
@@ -10,11 +11,7 @@ block content
         +navigation(items=['Оборудование', 'Токарные станки с ЧПУ', 'Токарные станки с ЧПУ с направляющими качения '] page='Токарные станки с ЧПУ с направляющими качения Leadwell серия T')
     section.section.section--last
       .container 
-        .equip-page__tabs
-          .equip-page__tabs-item.equip-page__tabs-item--active 
-            |Модели
-          .equip-page__tabs-item 
-            |Возможные опции
+        +model-tabs(items = ['Модели', 'Возможные опции'])
         .equip-page__grid.equip-page__grid--alt.margin-top.margin-top--md 
           - for (i = 0; i < 12; i++)
             +equip-card.equip-card--sm(noicon = true text = 'Используется для обработки деталей с соотношением длины к диаметру менее 3. При этом, АПТ работает так же, как обычный токарный станок, т.е. без дополнительной поддержки заготовки.')

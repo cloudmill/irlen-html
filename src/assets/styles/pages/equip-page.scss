@@ -46,6 +46,7 @@
   &__card-title {
     margin-bottom: 24px;
     @include fsl(24px, 120%);
+    font-weight: 500;
   }
   &__card-item {
     @include fsl(16px, 140%);
@@ -116,6 +117,8 @@
 
   &__text {
     width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
+    
+    font-weight: 500;
     @include fsl(24px, 120%);
   }
 
@@ -143,6 +146,7 @@
     }
   }
   &__table-cell {
+    padding-right: 36px;
     width: calc(#{$col-part-d} * 2);
 
 

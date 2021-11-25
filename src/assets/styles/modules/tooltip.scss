@@ -1,5 +1,17 @@
 .tooltip {
-  
+  $comp: &;
+
+  &--start {
+
+    #{$comp}__row {
+      align-items: flex-start;
+    }
+
+    #{$comp}__span {
+      margin-top: 5px;
+    }
+  }
+
   &__row {
     display: flex;
     align-items: center;

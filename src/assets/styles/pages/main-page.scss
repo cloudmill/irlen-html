@@ -83,6 +83,7 @@
     margin-bottom: 8px;
 
     @include fsl(40px, 100%);
+    font-weight: 500;
   }
   &__media-text {
     max-width: 450px;
@@ -127,6 +128,7 @@
 
     color: $color-blue;
     @include fsl(32px, 100%);
+    font-weight: 500;
   }
   &__features-text {
     @include fsl(16px, 140%);
@@ -159,6 +161,7 @@
     margin-bottom: 40px;
 
     @include fsl(40px, 100%);
+    font-weight: 500;
   }
   &__section-list {
     display: flex;
@@ -217,6 +220,7 @@
   &__link-title {
     margin-bottom: 12px;
     @include fsl(40px, 100%);
+    font-weight: 500;
   }
   &__link-text {
     @include fsl(18px, 140%);

@@ -12,6 +12,7 @@
     background: transparent;
 
     #{$comp}__item {
+      padding: 20px;
       background: $color-white;
       
       &:not(:first-child) {
@@ -30,7 +31,8 @@
     transition: $transition;
     border-radius: 4px;
     cursor: pointer;
-
+    font-weight: 500;
+    
     &.active {
       background: $color-blue;
       color: $color-white;

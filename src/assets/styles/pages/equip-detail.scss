@@ -24,6 +24,7 @@
   }
   &__panel-text {
     @include fsl(18px, 120%);
+    font-weight: 500;
   }
 
   &__title {
