@@ -67,6 +67,10 @@
     {
       "href": "services",
       "page": "Услуги"
+    },
+    {
+      "href": "services-detail",
+      "page": "Услуги детальная"
     }
   ],
   "contacts": [

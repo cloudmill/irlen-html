@@ -5,7 +5,7 @@
     padding: 20px 20px 0;
 
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, auto);
     column-gap: 66px;
 
     background: $color-white;
@@ -31,7 +31,7 @@
       transition: $transition;
     }
 
-    &--active {
+    &.active {
 
       &::before {
         background: $color-blue;
@@ -46,6 +46,10 @@
     @include fsl(14px, 140%);
     font-weight: 500;
     transition: $transition;
+
+    &--wide {
+      width: 220px;
+    }
   }
 
   &__grid {

@@ -19,6 +19,8 @@
 
   &__logo {
     margin-right: 60px;
+    display: flex;
+    justify-content: center;
   }
 
   &__body {
@@ -103,6 +105,7 @@
 
   &__nav {
     display: flex;
+    align-items: center;
   }
   &__nav-item {
 
@@ -135,6 +138,7 @@
 
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   &__search-icon {
     margin-right: 15px;
