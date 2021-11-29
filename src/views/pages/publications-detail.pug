@@ -1,0 +1,37 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/tabs
+
+block content 
+  .publications-page
+    section.section.section--first.section--last
+      .container 
+        +navigation(items=['Публикации'] page='Участие в выставке «Технофорум-2019»')
+        .publications-page__row 
+          .publications-page__col
+            .publications-page__tag 
+              |Новости
+            .publications-page__content 
+              p.publications-page__content-text 
+                |В период с 21 по 24 октября компания "ИРЛЕН-ИНЖИНИРИНГ" приняла участие в ежегодной международной выставке "Технофорум-2020".
+              p.publications-page__content-text 
+                |Традиционно на выставке были представлены как новинки, так и уже проверенный, хорошо зарекомендовавший себя инструмент ведущих производителей Yamawa, Osawa, NikkoTools.  Посетителям был представлен вспомогательный инструмент фирм Kintek, UFS, StimZet, Evermore и др.
+            .section 
+              .publications-page__slider
+                .publications-page__buttons 
+                  |buttons
+                .swiper-container.swiper-container--visible--mobile.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='10' data-slider-prev='13' data-slider-next='14')
+                  .swiper-wrapper 
+                    - for (i = 0; i < 6; i++)
+                      .swiper-slide 
+                        img.publications-page__slider-img(src="assets/images/publication.jpg", alt="")
+            .section__button  
+              a.publications-page__button(href="#") 
+                .publications-page__button-icon 
+                  +big-arrow-svg.publications-page__button-svg
+                .publications-page__button-text 
+                  |Вернуться
+          .publications-page__col
+            .publications-page__img 
+              img(src="assets/images/publication-2.jpg", alt="")

@@ -1,0 +1,72 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/tabs
+
+block content 
+  .publications-page.main-page
+    section.section.section--first 
+      .container 
+        +navigation(page='Публикации')
+    section.section.section--last
+      .container 
+        .row 
+          .row__col
+            +tabs.tabs--column(tabs = ['Все', 'Новости', 'Мероприятия', 'Производители', 'Статьи'])
+          .row__col
+            .publications-page__grid 
+              - for (i = 0; i < 3; i++)
+                a.main-page__discont(href="#") 
+                  .main-page__discont-container 
+                    .main-page__discont-label
+                      .publications-page__category
+                        |Новости
+                    h4.main-page__discont-title 
+                      |Участие в выставке «Технофорум-2019»
+                    p.main-page__discont-text 
+                      |С 22 октября по 25 октября компания "ИРЛЕН-ИНЖИНИРИНГ" приняла участие в «Технофорум-2018»
+                  .main-page__icon 
+                    +big-arrow-svg.main-page__svg
+                a.main-page__discont(href="#") 
+                  .main-page__discont-container 
+                    .main-page__discont-label
+                      .discont 
+                        .discont__text 
+                          |‑30%
+                    h4.main-page__discont-title 
+                      |Cкидка 30% на весь ассортимент фрез OSAWA серии HF871
+                    p.main-page__discont-text 
+                      |Предлагаем попробовать высокопроизводительные фрезы HF по цене фрез G2. Срок акции с 10.09.2021 по 31.12.2021.
+                  .main-page__icon 
+                    +big-arrow-svg.main-page__svg
+                a.main-page__discont(href="#") 
+                  .main-page__discont-container 
+                    .main-page__discont-label
+                      .publications-page__category
+                        |Новости
+                    h4.main-page__discont-title 
+                      |Выставка "ПТЯ. Обработка металлов. Машиностроение"
+                    .publications-page__card 
+                      -
+                        var ddata = [
+                          {
+                            label: 'Начало',
+                            text: '18.03.2021'
+                          },
+                          {
+                            label: 'окончание',
+                            text: '20.03.2021'
+                          },
+                          {
+                            label: 'Адрес',
+                            text: 'г. Санкт-Петербург, Петербургское шоссе,64/1.'
+                          },
+                        ]
+                      each item in ddata
+                        .publications-page__card-col
+                          .publications-page__card-label
+                            |#{item.label}
+                          .main-page__discont-text
+                            |#{item.text}
+                  .main-page__icon 
+                    +big-arrow-svg.main-page__svg

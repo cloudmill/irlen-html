@@ -1,0 +1,117 @@
+.publications-page {
+
+  &__grid {
+    --colCount: 2;
+    --gap: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(var(--colCount), 1fr);
+    row-gap: var(--gap);
+    column-gap: var(--gap);
+  }
+
+  &__category {
+    padding: 4px 8px;
+
+    display: flex;
+
+    background: $color-darken-white;
+    border-radius: 4px;
+    color: $color-gray;
+    @include fsl(14px, 140%);
+  }
+
+  &__card {
+    display: flex;
+  }
+  &__card-col {
+
+    &:not(:first-child) {
+      margin-left: 28px;
+    }
+  }
+  &__card-label {
+    margin-bottom: 4px;
+
+    color: $color-gray;
+    text-transform: uppercase;
+    @include fsl(12px, 120%);
+  }
+
+  &__row {
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+  &__col {
+    flex-shrink: 0;
+    &:nth-child(1) {
+      padding-left: calc(#{$col-part-d});
+      width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
+    }
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+    }
+  }
+
+  &__tag {
+    padding: 4px 8px;
+
+    display: inline-block;
+
+    background: $color-white;
+    color: $color-gray;
+    border-radius: 4px;
+    @include fsl(14px, 140%);
+  }
+
+  &__content {
+    margin-top: 24px;
+  }
+  &__content-text {
+    @include fsl(18px, 140%);
+
+    &:not(:first-child) {
+      margin-top: 24px;
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__slider {
+    position: relative;
+    z-index: 0;
+  }
+  &__slider-img {
+    display: block;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+  }
+  &__button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__button-svg {
+    width: 12px;
+    transform: rotate(-135deg);
+    path {
+      stroke: $color-black;
+    }
+  }
+  &__button-text {
+    margin-left: 7px;
+
+    @include fsl(14px, 140%);
+  }
+}
