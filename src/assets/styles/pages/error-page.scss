@@ -1,0 +1,42 @@
+.error-page {
+  
+
+  &__inner {
+    padding: 100px 0 70px;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+    &:nth-child(2) {
+      margin-left: 90px;
+    }
+  }
+
+  &__error {
+    margin-bottom: 15px;
+
+    @include fsl(185px, 100%);
+    color: $color-blue;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__buttons {
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-left: 8px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+extends ../layouts/master.pug
+
+include ../components/button
+
+block content 
+  .error-page
+    section.section.section--first.section--last
+      .container 
+        .error-page__inner 
+          .error-page__row 
+            .error-page__col
+              .error-page__error 
+                |404
+              h3.error-page__title 
+                |Страница не найдена
+              .error-page__text 
+                |Но, вы можете перейти в следующие разделы:
+              .error-page__buttons 
+                each item in ['Главная', 'Оборудование', 'Инструмент']
+                  .error-page__item 
+                    +button.button--small.button--white.button--outline
+                      |#{item}
+            .error-page__col
+              .error-page__icon 
+                +error-svg

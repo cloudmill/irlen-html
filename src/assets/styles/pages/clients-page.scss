@@ -1,0 +1,17 @@
+.clients-page {
+
+  &__list {
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-top: 48px;
+    }
+  }
+  
+  &__title {
+    margin-bottom: 16px;
+  }
+}
