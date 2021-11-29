@@ -21,12 +21,28 @@
       width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
     }
   }
+  &__top-item {
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+  &__top-text {
+    max-width: 270px;
+
+    color: $color-gray;
+    @include fsl(12px, 120%);
+  }
 
   &__title {
     margin-bottom: 20px;
 
     @include fsl(18px, 100%);
     font-weight: 500;
+
+    &--sm {
+      margin-bottom: 10px;
+    }
   }
 
   &__list {}
