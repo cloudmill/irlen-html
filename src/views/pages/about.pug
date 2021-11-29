@@ -1,0 +1,79 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/button
+
+block content 
+  .about-page 
+    section.section.section--first 
+      .container 
+        +navigation(page = 'О нас')
+    section.section 
+      .container 
+        .about-page__section 
+          .about-page__section-row 
+            .about-page__section-col
+              .about-page__section-title 
+                |АО «ИРЛЕН-ИНЖИНИРИНГ» г.Санкт-Петербург, с 1990 года, продолжая традиции ЗАО «Ирлен», успешно реализуют металлообрабатывающее оборудование во всех регионах РФ и странах СНГ
+            .about-page__section-col
+              .about-page__section-img 
+                img(src="assets/images/about-main.jpg", alt="")
+    section.section 
+      .container
+        h2
+          |Наше оборудование работает в различных отраслях
+        .about-page__industries.margin-top 
+          .about-page__industries-item 
+            .about-page__industries-container 
+              .about-page__industries-icon 
+                +industries-1-svg
+              .about-page__industries-text 
+                |Нефтегазовая
+          .about-page__industries-item 
+            .about-page__industries-container 
+              .about-page__industries-icon 
+                +industries-2-svg
+              .about-page__industries-text 
+                |Аэрокосмическая промышленность
+          .about-page__industries-item 
+            .about-page__industries-container 
+              .about-page__industries-icon 
+                +industries-3-svg
+              .about-page__industries-text 
+                |Приборостроение
+          .about-page__industries-item 
+            .about-page__industries-container 
+              .about-page__industries-icon 
+                +industries-4-svg
+              .about-page__industries-text 
+                |Военно-промышленный комплекс
+    section.section.section--last 
+      .container 
+        .about-page__services 
+          .about-page__services-item
+            .about-page__services-img 
+              img(src="assets/images/about-service-1.jpg", alt="")
+            .about-page__services-container 
+              p.about-page__services-text
+                |Оказываем услуги поставки и внедрения  оборудования и технологий
+              .about-page__services-btn 
+                +button.button--small.button--white.button--outline
+                  |Подробнее
+          .about-page__services-item
+            .about-page__services-img 
+              img(src="assets/images/about-service-2.jpg", alt="")
+            .about-page__services-container 
+              p.about-page__services-text
+                |Проводим обучение технического персонала (операторов и технологов) работе со станками
+              .about-page__services-btn 
+                +button.button--small.button--white.button--outline
+                  |Подробнее
+          .about-page__services-item
+            .about-page__services-img 
+              img(src="assets/images/about-service-3.jpg", alt="")
+            .about-page__services-container 
+              p.about-page__services-text
+                |Оказываем гарантийное и послегарантийное обслуживание эксплуатируемого оборудования, сертификатов соответствия, гигиенических заключений, подготовка пакета отгрузочных и товаросопроводительных документов
+              .about-page__services-btn 
+                +button.button--small.button--white.button--outline
+                  |Подробнее

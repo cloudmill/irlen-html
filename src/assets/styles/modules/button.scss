@@ -36,8 +36,11 @@
     color: $color-black;
   }
 
-  &--outline {
+  &--lg {
     padding: 14px 0;
+  }
+
+  &--outline {
     border: 1px solid $color-light-gray
   }
 }

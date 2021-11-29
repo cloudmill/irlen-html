@@ -1,0 +1,94 @@
+.about-page {
+
+  &__section {
+    background: $color-white;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  &__section-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__section-col {
+    flex-shrink: 0;
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+
+    &:nth-child(1) {
+      padding: 40px 56px 40px 40px;
+    }
+  }
+  &__section-title {
+    @include fsl(24px, 140%);
+    font-weight: 500;
+  }
+  &__section-img {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__industries {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__industries-item {
+    flex-shrink: 0;
+    width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+  }
+  &__industries-container {
+    padding: 20px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 174px;
+
+    background: $color-white;
+    border-radius: 4px;
+  }
+  &__industries-icon {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__industries-text {
+    text-align: center;
+  }
+
+  &__services {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__services-item {
+    flex-shrink: 0;
+    width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+
+    background: $color-white;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  &__services-img {
+    display: flex;
+    align-items: center;
+    
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  &__services-container {
+    padding: 24px;
+
+    min-height: 276px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__services-text {
+    @include fsl(18px, 120%);
+    font-weight: 500;
+  }
+  &__services-btn {
+    margin-top: 20px;
+  }
+}
