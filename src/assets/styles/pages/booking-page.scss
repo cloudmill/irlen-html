@@ -95,4 +95,45 @@
     @include fsl(14px, 140%);
     color: $color-gray;
   }
+
+  &__product {
+    margin-top: 27px;
+    padding: 20px;
+
+    border-radius: 4px;
+    background: $color-white;
+  }
+  &__product-inner {
+    margin-bottom: 20px;
+    display: flex;
+  }
+  &__product-item {
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+    }
+    &:nth-child(3) {
+      margin-left: 31px;
+    }
+    &:nth-child(4) {
+      margin-left: 83px;
+    }
+  }
+  &__product-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__product-col {
+    flex-shrink: 0;
+
+    &:nth-child(1) {
+      width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+    }
+
+    &:nth-child(2) {
+      width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    }
+  }
+  &__product-text {
+    @include fsl(14px, 140%);
+  }
 }

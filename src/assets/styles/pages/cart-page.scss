@@ -1,4 +1,5 @@
 .cart-page {
+  $comp: &;
 
   &__row {
     display: flex;
@@ -181,6 +182,16 @@
     &:not(:first-child) {
       margin-top: 8px;
     }
+
+    &--sm {
+      margin: 0;
+
+      #{$comp}__item-col {
+        &:nth-child(1) {
+          width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+        }
+      }
+    }
   }
   &__item-row {
     display: flex;
@@ -219,6 +230,7 @@
   }
   &__item-text {
     margin-bottom: 8px;
+    font-weight: 500;
   }
   &__item-label {
     color: $color-gray;

@@ -53,8 +53,14 @@ block content
                         +counter.counter--md
                     .cart-page__item-col
                       .cart-page__item-container 
-                        .cart-page__item-price 
-                          |€ 93.42
+                        .tooltip
+                          .cart-page__item-price.tooltip__row
+                            |€ 93.42
+                            span.tooltip__span
+                              .tooltip__icon 
+                                +tooltip-svg
+                          .tooltip__container   
+                            |Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?
                         .cart-page__item-old 
                           |€ 103.55
                     .cart-page__item-col
