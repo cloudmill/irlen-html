@@ -4,6 +4,9 @@
 
   &__inner {
     padding: 60px 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      
+    }
   }
 
   &__top {
@@ -11,14 +14,29 @@
   }
   &__top-row {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      flex-wrap: wrap;
+    }
   }
   &__top-col {
     flex-shrink: 0;
 
     width: calc(#{$col-part-d} * 3);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
+
+    &:nth-child(3) {
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 50%;
+      }
+    }
 
     &:last-child {
       width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 50%;
+      }
     }
   }
   &__top-item {

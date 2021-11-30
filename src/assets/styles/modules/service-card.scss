@@ -6,12 +6,19 @@
   width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
   min-height: 174px;
   height: 100%;
+  @media (max-width: ($breakpoint - 1px)) {
+    width: 100%;
+    min-height: 110px;
+  }
 
   border: 1px solid $color-light-gray;
   border-radius: 4px;
 
   &__container {
     padding: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 8px 4px 8px 8px;
+    }
 
     height: 100%;
     display: flex;
@@ -21,13 +28,19 @@
 
   &__title {
     @include fsl(18px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 120%);
+    }
   }
 
   &__image {
-    $size: 70px;
+    --size: 70px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --size: 42px;
+    }
 
-    width: $size;
-    height: $size;
+    width: var(--size);
+    height: var(--size);
 
     display: flex;
     align-items: center;
@@ -35,12 +48,21 @@
   }
 
   &__icon {
+    --pad: 10px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --pad: 4px;
+    }
+
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: var(--pad);
+    right: var(--pad);
   }
 
   &__svg {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 13px;
+      height: 14px;
+    }
     path {
       stroke: $color-black;
     }

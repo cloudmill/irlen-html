@@ -61,6 +61,10 @@
       "page": "Оформление заказа 2"
     },
     {
+      "href": "booking-2",
+      "page": "Оформление заказа 3"
+    },
+    {
       "href": "profile",
       "page": "ЛК"
     },
@@ -71,6 +75,30 @@
     {
       "href": "services-detail",
       "page": "Услуги детальная"
+    },
+    {
+      "href": "about",
+      "page": "О нас"
+    },
+    {
+      "href": "publications",
+      "page": "Публикации"
+    },
+    {
+      "href": "publications-detail",
+      "page": "Публикации детальная"
+    },
+    {
+      "href": "404",
+      "page": "404"
+    },
+    {
+      "href": "clients",
+      "page": "Клиентам"
+    },
+    {
+      "href": "contacts",
+      "page": "Контакты"
     }
   ],
   "contacts": [

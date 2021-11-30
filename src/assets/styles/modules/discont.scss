@@ -29,5 +29,6 @@
 
   &__text {
     @include fsl(18px, 140%);
+    font-weight: 500;
   }
 }

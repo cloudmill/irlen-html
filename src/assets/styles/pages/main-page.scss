@@ -3,30 +3,22 @@
 
   &__intro {
     padding-top: 175px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-top: 63px;
+    }
 
     background-color: $color-white;
   }
 
-  &__icon {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  &__svg {
-    path {
-      stroke: $color-black;
-    }
-  }
-  
   &__media {
     margin-bottom: 60px;
 
     display: flex;
     justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 40px;
+      display: block;
+    }
 
     &--small {
       margin-bottom: 0;
@@ -46,6 +38,15 @@
   &__media-col {
     flex-shrink: 0;
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
+
+    &:not(:first-child) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 16px;
+      }
+    }
   }
   &__media-link {
     position: relative;
@@ -60,14 +61,17 @@
     border-radius: 4px;
   }
   &__media-icon {
-    $size: 50px;
+    --size: 50px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --size: 30px;
+    }
     
     position: absolute;
     bottom: 10px;
     right: 10px;
 
-    width: $size;
-    height: $size;
+    width: var(--size);
+    height: var(--size);
 
     display: flex;
     align-items: center;
@@ -76,65 +80,137 @@
     background: $color-blue;
     border-radius: 4px;
   }
+  &__media-svg {
+    width: 13px;
+  }
   &__media-content {
     margin-top: 16px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 8px;
+    }
   }
   &__media-title {
     margin-bottom: 8px;
-
     @include fsl(40px, 100%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 4px;
+      @include fsl(20px, 120%);
+    }
     font-weight: 500;
   }
   &__media-text {
     max-width: 450px;
+    @media (max-width: ($breakpoint - 1px)) {
+      max-width: none;
+      @include fsl(12px, 140%);
+    }
   }
 
   &__services {
     margin-bottom: 60px;
-
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      --gap: 8px;
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: var(--gap);
+      column-gap: var(--gap);
+    }
   }
   &__services-item {
     &:not(:first-child) {
       margin-left: calc(#{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 0;
+      }
     }
   }
 
   &__features {
     padding-bottom: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-bottom: 40px;
+    }
 
     display: flex;
     justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
   }
   &__features-col {
     flex-shrink: 0;
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
 
     &:nth-child(1) {
       padding-top: 40px;
-
+      @media (max-width: ($breakpoint - 1px)) {
+        padding-top: 16px;
+      }
       border-top: 1px solid $color-light-gray;
+
+      #{$comp}__features-item {
+
+        &:not(:first-child) {
+          @media (max-width: ($breakpoint - 1px)) {
+            margin-top: 24px;
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 24px;
+      }
     }
   }
   &__features-row {
     display: flex;
     justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
   }
   &__features-item {
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+    }
   }
   &__features-title {
     margin-bottom: 40px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 8px;
+    }
 
     color: $color-blue;
     @include fsl(32px, 100%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(22px, 100%);
+    }
     font-weight: 500;
   }
   &__features-text {
-    @include fsl(16px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px);
+    }
   }
   &__features-card {
     padding: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 16px;
+
+      display: flex;
+    }
 
     height: 100%;
 
@@ -143,6 +219,12 @@
   }
   &__features-icon {
     margin-bottom: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 0;
+      margin-right: 20px;
+
+      align-items: flex-start;
+    }
 
     display: flex;
     justify-content: center;
@@ -150,10 +232,18 @@
   }
   &__features-svg {
     height: 65px;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 38px;
+      height: 38px;
+    }
   }
 
   &__section {
     padding: 60px 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 24px 0 40px;
+    }
 
     background: $color-darken-white;
   }
@@ -161,11 +251,26 @@
     margin-bottom: 40px;
 
     @include fsl(40px, 100%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 20px;
+      @include fsl(20px, 120%);
+    }
     font-weight: 500;
   }
   &__section-list {
     display: flex;
     justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
+  &__section-item {
+    @media (max-width: ($breakpoint - 1px)) {
+      
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+    }
   }
   
   &__discont {
@@ -175,12 +280,19 @@
     display: block;
     width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
     min-height: 218px;
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+      min-height: auto;
+    }
 
     background: $color-white;
     border-radius: 4px;
   }
   &__discont-container {
     padding: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 16px;
+    }
   }
   &__discont-label {
     margin-bottom: 12px;
@@ -188,15 +300,23 @@
   }
   &__discont-title {
     margin-bottom: 12px;
-    @include fsl(18px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 8px;
+    }
   }
   &__discont-text {
     @include fsl(14px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 140%);
+    }
   }
   
   &__link {
     margin-top: 60px;
-
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 40px;
+      display: block;
+    }
     display: flex;
 
     border-radius: 4px;
@@ -210,27 +330,43 @@
       z-index: 0;
 
       width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
     }
     &:nth-child(2) {
       width: calc(#{$col-part-d} * 4);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
     }
   }
   &__link-container {
     padding: 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 16px;
+    }
   }
   &__link-title {
     margin-bottom: 12px;
     @include fsl(40px, 100%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 8px;
+      max-width: 250px;
+      @include fsl(20px, 120%);
+    }
     font-weight: 500;
   }
   &__link-text {
-    @include fsl(18px, 140%);
+    @media (min-width: $breakpoint) {
+      @include fsl(18px, 140%);
+    }
   }
   &__link-img {
     display: flex;
     align-items: center;
 
-    border-radius: 4px 0 0 4px;
+    border-radius: 4px;
     overflow: hidden;
   }  
 }

@@ -10,7 +10,7 @@ block content
               .main-page__media-container 
                 img.main-page__media-container(src="assets/images/hero-1.jpg", alt="")
               .main-page__media-icon 
-                +big-arrow-svg
+                +big-arrow-svg.main-page__media-svg
             .main-page__media-content 
               .main-page__media-title 
                 |Каталог продукции
@@ -21,7 +21,7 @@ block content
               .main-page__media-container 
                 img.main-page__media-container(src="assets/images/hero-2.jpg", alt="")
               .main-page__media-icon 
-                +big-arrow-svg
+                +big-arrow-svg.main-page__media-svg
             .main-page__media-content 
               .main-page__media-title
                 |Интернет-магазин
@@ -82,8 +82,8 @@ block content
                     |Cкидка 30% на весь ассортимент фрез OSAWA серии HF871
                   p.main-page__discont-text 
                     |Предлагаем попробовать высокопроизводительные фрезы HF по цене фрез G2. Срок акции с 10.09.2021 по 31.12.2021.
-                .main-page__icon 
-                  +big-arrow-svg.main-page__svg
+                .arrow-icon 
+                  +big-arrow-svg.arrow-icon__svg
         a.main-page__link(href="#") 
           .main-page__link-col
             .main-page__link-container 
@@ -91,8 +91,8 @@ block content
                 |Материалы для скачивания
               p.main-page__link-text 
                 |Каталоги, буклеты, методички
-            .main-page__icon 
-              +big-arrow-svg.main-page__svg
+            .arrow-icon 
+              +big-arrow-svg.arrow-icon__svg
           .main-page__link-col
             .main-page__link-img
               img(src="assets/images/main-link.jpg", alt="")

@@ -1,9 +1,22 @@
 .arrow-icon {
+  --pad: 14px;
+  @media (max-width: ($breakpoint - 1px)) {
+    --pad: 11px;
+  }
+
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: var(--pad);
+  right: var(--pad);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
   &__svg {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 14px;
+      height: 15px;
+    }
     path {
       stroke: $color-black;
     }

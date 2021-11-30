@@ -39,6 +39,9 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   @include fsl(40px, 100%);
+  @media (max-width: ($breakpoint - 1px)) {
+    @include fsl(20px);
+  }
 }
 
 h2 {
@@ -49,15 +52,12 @@ h3 {
   @include fsl(24px, 120%);
 }
 
-// h4 {
-//   @include fsl(16px);
-//   @media (min-width: $breakpoint-t) {
-//     @include fsl(18px);
-//   }
-//   @media (min-width: $breakpoint-l) {
-//     @include fsl(20px);
-//   }
-// }
+h4 {
+  @include fsl(14px, 120%);
+  @media (min-width: $breakpoint) {
+    @include fsl(18px);
+  }
+}
 
 ul,
 ol {

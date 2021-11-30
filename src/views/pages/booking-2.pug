@@ -7,7 +7,7 @@ include ../components/model-tabs
 
 block content 
   .booking-page.cart-page 
-    section.section.section--first 
+    section.section.section--first.section--last 
       .container 
         +navigation(page='Оформить заказ')
         a.booking-page__button.booking-page__inner(href="#") 
@@ -15,8 +15,8 @@ block content
             +arrow-svg.booking-page__button-svg
           .booking-page__button-text
             |Вернуться в корзину
-    section.section.section--default.section--last
-      .container
+        h3.booking-page__inner
+          |Ваш заказ
         .booking-page__product-row 
           .booking-page__product-col
             .booking-page__product
@@ -60,14 +60,21 @@ block content
             .cart-page__card 
               .booking-page__container 
                 .cart-page__card-row 
-                  .cart-page__card-col
+                  .booking-page__card-col
                     .cart-page__card-price 
-                      |Итого, ₽
-                  .cart-page__card-col
+                      |Предварительная стоимость, ₽
+                  .booking-page__card-col
                     .cart-page__card-price 
                       |89 0000
                 .cart-page__card-caption 
                   |Цена с НДС по курсу ЦА на 25.06.2021
+                .cart-page__card-row.booking-page__card-inner
+                  .cart-page__card-col
+                    .booking-page__card-text 
+                      |Доставка
+                  .cart-page__card-col
+                    .booking-page__card-text
+                      |Транспортная компания
                 .cart-page__card-btn 
                   +button.button--wide 
-                    |Перейти к оформлению
+                    |Завершить оформление

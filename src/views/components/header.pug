@@ -2,7 +2,7 @@ mixin header
   .header 
     .header__inner 
       a.header__logo(href="#")  
-        +logo-svg 
+        +logo-svg.header__svg
       .header__body 
         .header__top
           ul.header__list 
@@ -74,3 +74,19 @@ mixin header
                         li.header__user-item
                           a.header__user-link(href="#") 
                             |#{item}
+      .header__mobile 
+        .header__mobile-col
+          .header__mobile-search
+            +search-svg.header__search-svg
+        .header__mobile-col
+          a.header__cart(href="#") 
+            .header__cart-icon 
+              +cart-svg.header__cart-svg
+            .header__cart-count 
+              |5
+        .header__mobile-col
+          .header__menu
+            .header__burger
+              span.header__burger-span
+              span.header__burger-span
+              span.header__burger-span

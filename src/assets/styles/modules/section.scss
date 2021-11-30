@@ -1,12 +1,21 @@
 .section {
   margin-top: 80px;
+  @media (max-width: ($breakpoint - 1px)) {
+    
+  }
 
   &--first {
     margin-top: 175px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 63px;
+    }
   }
 
   &--last {
     margin-bottom: 100px;
+    @media (max-width: ($breakpoint - 1px)) {
+      
+    }
   }
 
   &--white {
@@ -28,6 +37,9 @@
 
   &__title {
     margin-bottom: 48px;
+    @media (max-width: ($breakpoint - 1px)) {
+      
+    }
   }
 
   &__block {
