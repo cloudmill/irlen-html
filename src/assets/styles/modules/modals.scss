@@ -35,22 +35,36 @@
 
   width: 760px;
   height: 100%;
+  @media (max-width: ($breakpoint - 1px)) {
+    left: 16px;
+    width: auto;
+  }
   display: none;
   
   background: $color-white;
 
   &__container {
     padding: 40px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 19px 16px;
+    }
   }
 
   &__title {
     margin-bottom: 35px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 16px;
+    }
   }
 }
 
 .fancybox-slide--html .fancybox-close-small {
   top: 10px;
   right: 10px;
+  @media (max-width: ($breakpoint - 1px)) {
+    top: 8px;
+    right: 16px;
+  }
 
   background: $color-darken-white;
   border-radius: 4px;

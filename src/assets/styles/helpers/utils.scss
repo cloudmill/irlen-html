@@ -25,6 +25,10 @@
 
   &--2 {
     --itemsCount: 2;
+    @media (max-width: ($breakpoint - 1px)) {
+      --itemsCount: 1;
+      // --gap: 8px;
+    }
   }
 }
 

@@ -6,9 +6,12 @@
 
   display: block;
 
-  background: $color-white;
   border-radius: 4px;
   overflow: hidden;
+  background: $color-white;
+  @media (max-width: ($breakpoint - 1px)) {
+    background: transparent;
+  }
 
   &--md {
     #{$comp}__title {
@@ -36,15 +39,27 @@
   &__image {
     display: flex;
     align-items: center;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 4px;
+      overflow: hidden;
+    }
   }
 
   &__container {
     padding: 20px 32px 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 16px 0 0;
+    }
   }
 
   &__title {
     margin-bottom: 24px;
     @include fsl(24px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 12px;
+      @include fsl(16px, 120%);
+    }
     font-weight: 500;
   }
 
@@ -54,8 +69,14 @@
   
   &__item {
     color: $color-gray;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 120%);
+    }
     &:not(:first-child) {
       margin-top: 12px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 8px;
+      }
     }
   }
 }
