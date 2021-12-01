@@ -6,6 +6,9 @@
 
   &--responsive {
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+    }
   }
 
   &__inner {

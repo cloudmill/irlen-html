@@ -13,6 +13,10 @@
 .grid-container {
   --itemsCount: 4;
   --gap: 20px;
+  @media (max-width: ($breakpoint - 1px)) {
+    --itemsCount: 1;
+    --gap: 8px;
+  }
 
   display: grid;
   grid-template-columns: repeat(var(--itemsCount), 1fr);

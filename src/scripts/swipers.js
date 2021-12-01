@@ -19,7 +19,7 @@ const BREAKPOINT = 1280;
         let slider_options = {
           slidesPerView: 'auto',
 
-          spaceBetween: 20,
+          spaceBetween: 8,
 
           breakpoints: {
             [BREAKPOINT]: {

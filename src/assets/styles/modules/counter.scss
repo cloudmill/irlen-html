@@ -13,6 +13,9 @@
   &--md {
     #{$comp}__number {
       width: 50px;
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
     }
   }
 

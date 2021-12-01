@@ -10,18 +10,30 @@
 
   &--small {
     max-width: 453px;
+    @media (max-width: ($breakpoint - 1px)) {
+      max-width: auto;
+    }
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
 
     #{$comp}__content {
       margin-left: 16px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 8px;
+      }
     }
 
     #{$comp}__title {
       @include fsl(13px, 140%);
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(11px, 140%);
+      }
     }
 
     #{$comp}__text {
       @include fsl(12px, 140%);
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(10px, 140%);
+      }
     }
 
     #{$comp}__svg {
@@ -36,6 +48,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: ($breakpoint - 1px)) {
+      align-items: flex-start;
+    }
 
     &--start {
       align-items: flex-start;

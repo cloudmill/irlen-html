@@ -1,6 +1,9 @@
 .category-card {
   display: block;
   width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+  @media (max-width: ($breakpoint - 1px)) {
+    width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+  }
 
   &__container {
     position: relative;
@@ -8,6 +11,10 @@
     padding: 30px 40px;
 
     height: 180px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 18px 40px;
+      height: 74px;
+    }
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,6 +25,10 @@
 
   &__title {
     margin-top: 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 8px;
+      @include fsl(12px, 120%);
+    }
     font-weight: 500;
   }
 }

@@ -46,6 +46,9 @@ h1 {
 
 h2 {
   @include fsl(32px, 100%);
+  @media (max-width: ($breakpoint - 1px)) {
+    @include fsl(18px, 120%);
+  }
 }
 
 h3 {

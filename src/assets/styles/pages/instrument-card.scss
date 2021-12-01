@@ -2,21 +2,33 @@
 
   &__inner {
     margin-bottom: 42px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 20px;
+    }
   }
 
   &__section {
     padding-top: 185px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-top: 63px;
+    }
 
     background: $color-white;
     border-bottom: 1px solid $color-light-gray;
   }
   &__section-row {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
     justify-content: space-between;
   }
   &__section-col {
     flex-shrink: 0;
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
 
     &:nth-child(2) {
       display: flex;
@@ -29,36 +41,60 @@
   }
   &__section-slider {
     margin-bottom: 33px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 12px;
+    }
   }
   &__section-buttons {
     margin-bottom: 45px;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
   }
   &__section-info {
     margin-bottom: 52px;
 
     width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
   }
   &__section-title {
     margin-bottom: 16px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 8px;
+    }
   }
   &__section-text {
-
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 140%);
+    }
   }
   &__section-inner {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      justify-content: space-between;
+    }
   }
   &__section-item {
     flex-shrink: 0;
     width: calc(#{$col-part-d} * 2);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: calc(50% - 4px);
+    }
   }
   &__section-label {
     margin-bottom: 10px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 4px;
+    }
+
     text-transform: uppercase;
     color: $color-gray;
     @include fsl(12px, 120%);
-  }
-  &__section-text {
-    @include fsl(16px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(10px, 120%);
+    }
   }
   &__section-img {
     display: block;
@@ -74,66 +110,132 @@
     }
     &:nth-child(2) {
       margin-left: 16px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 32px;
+      }
     }
   }
   &__price-price {
     @include fsl(36px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(24px, 120%);
+    }
   }
   &__price-old {
     margin-left: 16px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 8px;
+    }
     color: $color-gray;
     text-decoration: line-through;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 110%);
+    }
   }
 
   &__bot {
     padding: 20px 130px 20px 40px;
-
     width: calc(100% + 130px);
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0;
+      width: auto;
+    }
 
     border-top: 1px solid $color-light-gray;    
     border-left: 1px solid $color-light-gray;    
+    @media (max-width: ($breakpoint - 1px)) {
+      border: none;
+    }
   }
   &__bot-row {
     display: flex;
     justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      flex-wrap: wrap;
+    }
   }
-  &__bot-lable {
+  &__bot-col {
+    @media (max-width: ($breakpoint - 1px)) {
+      flex-shrink: 0;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        width: calc(50% - 4px);
+      }
+      &:nth-child(2) {
+        padding-right: 16px;
+        order: -1;
+      }
+      
+      &:nth-child(3) {
+        margin-top: 26px;
+        width: 100%;
+      }
+    }
+  }
+  &__bot-label {
     margin-bottom: 4px;
+
     text-transform: uppercase;
     color: $color-gray;
     @include fsl(12px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 0;
+      @include fsl(10px, 120%);
+    }
   }
   &__bot-num {
     @include fsl(24px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px, 110%);
+    }
   }
 
   &__block {
     padding: 80px 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 40px 0;
+    }
 
     background: $color-white;
   }
   &__block-row {
     display: flex;
     justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
   }
   &__block-col {
     flex-shrink: 0;
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
   }
   &__block-item {
     padding-bottom: 14px;
-
     display: flex;
     justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-bottom: 8px;
+      display: block;
+    }
 
     border-bottom: 1px solid $color-light-gray;
 
     &:not(:first-child) {
       margin-top: 24px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 8px;
+      }
     }
   }
   &__block-text {
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: auto;
+    }
 
     @include fsl(14px, 140%);
   }
@@ -149,8 +251,9 @@
     align-items: center;
   }
 
-  &__slider {}
-  &__item {
-
+  &__buttons {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
   }
 }
