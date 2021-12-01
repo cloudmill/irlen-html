@@ -34,6 +34,10 @@
       margin-bottom: 16px;
       @include fsl(16px, 110%);
     }
+
+    #{$comp}__text {
+      color: $color-gray;
+    }
   }
 
   &__image {

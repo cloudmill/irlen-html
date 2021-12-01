@@ -1,6 +1,6 @@
 .container {
   padding: 0 #{$col-pad-d};
   @media (max-width: ($breakpoint - 1px)) {
-    padding: 0 #{$col-gap-m};
+    padding: 0 #{$col-pad-m};
   }
 }

@@ -2,6 +2,9 @@
 
   &__inner {
     margin-top: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 40px;
+    }
   }
 
   &__wrapper {
@@ -117,63 +120,72 @@
     column-gap: var(--gap);
 
     &--alt {
-      grid-template-columns: repeat(4, 1fr);
+      --countItems: 4;
+      @media (max-width: ($breakpoint - 1px)) {
+        --countItems: 1;
+      }
+      // grid-template-columns: repeat(var(--countItems), 1fr);
     }
   }
 
   &__features {
     padding-top: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-top: 12px;
+    }
 
     border-top: 1px solid $color-black;
   }
   &__features-row {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
     justify-content: space-between;
   }
   &__features-col {
     flex-shrink: 0;
     width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
 
     &:nth-child(2) {
       margin-right: calc(#{$col-part-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 40px;
+        margin-right: 0;
+      }
     }
   }
   &__features-title {
     margin-bottom: 32px;
     @include fsl(18px, 120%);
-  }
-  &__features-list {}
-  &__features-item {
-    position: relative;
-    padding-left: 43px;
-
-    &:not(:first-child) {
-      margin-top: 12px;
-    }
-
-    &::before {
-      $size: 11px;
-
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 6px;
-
-      width: $size;
-      height: $size;
-
-      background: $color-blue;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 16px;
+      @include fsl(14px, 120%);
     }
   }
-  &__features-text {
+  &__features-caption {
     margin-bottom: 48px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 24px;
+      @include fsl(12px, 120%);
+    }
+    font-weight: 500;
   }
 
   &__text {
     width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
     
     font-weight: 500;
     @include fsl(24px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px, 120%);
+    }
   }
 
   &__table {}

@@ -4,8 +4,15 @@
     position: relative;
     padding-left: 43px;
 
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 120%);
+    }
+
     &:not(:first-child) {
       margin-top: 12px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 8px;
+      }
     }
 
     &::before {

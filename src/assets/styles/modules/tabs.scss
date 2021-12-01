@@ -6,6 +6,11 @@
   background: $color-white;
   border-radius: 4px;
 
+  @media (max-width: ($breakpoint - 1px)) {
+    overflow-x: scroll;
+    @include scrollbar-hidden;
+  }
+
   &--column {
     flex-direction: column;
 
@@ -18,7 +23,7 @@
       &:not(:first-child) {
         margin-top: 4px;
       }
-
+ 
       &.active {
         background: $color-blue;
       }
@@ -32,6 +37,7 @@
     border-radius: 4px;
     cursor: pointer;
     font-weight: 500;
+    white-space: nowrap;
 
     &.active {
       background: $color-blue;
