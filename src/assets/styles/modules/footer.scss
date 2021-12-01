@@ -5,7 +5,7 @@
   &__inner {
     padding: 60px 0;
     @media (max-width: ($breakpoint - 1px)) {
-      
+      padding: 20px 0;
     }
   }
 
@@ -16,10 +16,14 @@
     display: flex;
     @media (max-width: ($breakpoint - 1px)) {
       flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
   &__top-col {
     flex-shrink: 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 20px;
+    }
 
     width: calc(#{$col-part-d} * 3);
     @media (max-width: ($breakpoint - 1px)) {
@@ -28,14 +32,16 @@
 
     &:nth-child(3) {
       @media (max-width: ($breakpoint - 1px)) {
-        width: 50%;
+        margin-bottom: 0;
+        width: calc(50% - 4px);
       }
     }
 
     &:last-child {
       width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
       @media (max-width: ($breakpoint - 1px)) {
-        width: 50%;
+        margin-bottom: 0;
+        width: calc(50% - 4px);
       }
     }
   }
@@ -50,29 +56,52 @@
 
     color: $color-gray;
     @include fsl(12px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      max-width: auto;
+      @include fsl(10px, 120%);
+    }
   }
 
   &__title {
     margin-bottom: 20px;
 
     @include fsl(18px, 100%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 12px;
+      @include fsl(14px, 100%);
+    }
     font-weight: 500;
 
     &--sm {
       margin-bottom: 10px;
+    }
+
+    &--hidden {
+      visibility: hidden;
+      display: none;
+      @media (max-width: ($breakpoint - 1px)) {
+        display: block;
+      }
     }
   }
 
   &__list {}
 
   &__item {
+    display: flex;
     
     &:not(:first-child) {
-      margin-top: 5px;
+      margin-top: 8px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 5px;
+      }
     }
   }
   &__link {
     @include fsl(14px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 120%);
+    }
   }
 
   &__body {
@@ -81,65 +110,127 @@
 
   &__contacts {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
   }
   &__contacts-item {
     flex-shrink: 0;
     width: calc(#{$col-part-d} * 2);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
 
     &:last-child {
       width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
+    }
+
+    &:not(:first-child) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 12px;
+      }
     }
   }
   &__contacts-link {
     @include fsl(16px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 140%);
+    }
     font-weight: 500;
   }
   &__contacts-label {
     @include fsl(14px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 140%);
+    }
     color: $color-gray;
   }
 
   &__btn {
     margin-top: 40px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 20px;
+    }
+
     display: flex;
   }
 
   &__bot {
     margin: 20px 0;
-
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin: 20px 0 24px;
+      flex-wrap: wrap;
+    }
     align-items: center;
   }
   &__bot-col {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 20px;
+    }
+
     flex-shrink: 0;
 
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 4);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
     }
     &:nth-child(2) {
       width: calc(#{$col-part-d} * 6);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 0;
+        width: 100%;
+        order: -1;
+      }
     }
     &:nth-child(3) {
       width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
     }
   }
-  &__bot-lable {
+  &__bot-label {
     color: $color-gray;
     @include fsl(13px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 120%);
+    }
   }
   
   &__policy {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
   }
   &__policy-link {
+    display: block;
+
     @include fsl(13px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 120%);
+    }
+
     &:not(:first-child) {
       margin-left: 34px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 0;
+        margin-top: 8px;
+      }
     }
   }
 
   &__corp {
     @include fsl(13px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 120%);
+    }
   }
   &__corp-link {
     color: $color-blue;

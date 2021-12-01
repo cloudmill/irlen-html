@@ -1,5 +1,6 @@
 .tooltip {
   $comp: &;
+  --size: 9px;
 
   &--start {
 
@@ -26,6 +27,13 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+  }
+
+  &__svg {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: var(--size);
+      height: var(--size);
+    }
   }
   
   &__container {

@@ -26,4 +26,13 @@
 
 .nav-title {
   width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
+  @media (max-width: ($breakpoint - 1px)) {
+    width: auto;
+  }
+}
+
+.desktop {
+  @media (max-width: ($breakpoint - 1px)) {
+    display: none;
+  }
 }

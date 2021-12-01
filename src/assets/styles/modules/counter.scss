@@ -1,6 +1,11 @@
 .counter {
   $comp: &;
-  $size: 50px;
+  --size: 50px;
+  @media (max-width: ($breakpoint - 1px)) {
+    --size: 30px;
+
+    width: 100%;
+  }
 
   display: flex;
   align-items: center;
@@ -13,9 +18,10 @@
 
   &__item {
 
-    width: $size;
-    height: $size;
+    width: var(--size);
+    height: var(--size);
 
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,13 +41,19 @@
 
   &__icon {
     @include fsl(22px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(18px, 110%);
+    }
   }
 
   &__number {
-    $width: 110px;
+    --width: 110px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --width: 100%;
+    }
 
-    width: $width;
-    height: $size;
+    width: var(--width);
+    height: var(--size);
 
     display: flex;
     align-items: center;
@@ -51,5 +63,8 @@
     border-left: none;
     border-right: none;
     @include fsl(16px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 110%);
+    }
   }
 }

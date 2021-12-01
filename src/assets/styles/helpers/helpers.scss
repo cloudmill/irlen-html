@@ -63,7 +63,7 @@ $col-count-d: 12;
 $col-pad-m: 16px;
 $col-pad-d: 130px;
 
-$col-gap-m: 20px;
+$col-gap-m: 8px;
 $col-gap-d: 20px;
 
 $col-width-m: '((100vw - (#{$col-pad-m} * 2) - (#{$col-gap-m} * #{$col-count-m - 1})) / #{$col-count-m})';

@@ -32,6 +32,8 @@ mixin footer
                     a.footer__link(href="#") 
                       |#{item}
             .footer__top-col 
+              .footer__title.footer__title--hidden
+                |Клиентам
               ul.footer__list 
                 each item in ['О нас', 'Производители', 'Статьи', 'Контакты', 'Новости',]
                   li.footer__item 

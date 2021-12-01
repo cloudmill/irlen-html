@@ -1,14 +1,29 @@
 .breadcrumbs {
   margin-top: -8px;
   margin-bottom: 24px;
+  @media (max-width: ($breakpoint - 1px)) {
+    margin-bottom: 12px;
+    margin-top: 0;
+  }
 
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: ($breakpoint - 1px)) {
+    flex-wrap: nowrap;
+    width: calc(100% + 16px);
+    overflow-x: scroll;
+    @include scrollbar-hidden;
+  }
 
   &__item {
     margin-top: 8px;
     margin-right: 8px;
     @include fsl(14px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 0;
+      @include fsl(12px, 110%);
+      white-space: nowrap;
+    }
 
     &:not(:first-child) {
       position: relative;
@@ -21,17 +36,11 @@
         top: 50%;
         left: -16px;
         transform: translateY(-50%);
-
-        // @include fsl(14px, 110%);
       }
     }
   }
 
   &__link {
     color: $color-gray;
-    
-  }
-  &__text {
-    // @include fsl(14px, 110%);
   }
 }

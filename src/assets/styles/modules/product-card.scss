@@ -10,7 +10,9 @@
 
   &__inner {
     padding: 20px;
-
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 4px 8px 8px;
+    }
   }
 
   &__container {
@@ -19,10 +21,15 @@
   }
 
   &__top {
+    --pad: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --pad: 4px;
+    }
+
     position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
+    top: var(--pad);
+    left: var(--pad);
+    right: var(--pad);
 
     display: flex;
     align-items: flex-start;
@@ -31,23 +38,34 @@
   
   &__logo {
     max-width: 64px;
+    @media (max-width: ($breakpoint - 1px)) {
+      max-width: 32px;
+    }
     display: block;
   }
 
   &__label {
     color: $color-gray;
     @include fsl(12px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(10px, 110%);
+    }
   }
   
   &__title {
     margin-top: 4px;
     @include fsl(16px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(10px, 110%);
+    }
     font-weight: 500;
   }
 
   &__info {
     margin-top: 20px;
-
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
   }
 
   &__item {
@@ -69,10 +87,16 @@
 
   &__price {
     margin-top: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 12px;
+    }
     display: flex;
   }
   &__price-price {
     @include fsl(20px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 110%);
+    }
     font-weight: 500;
   }
   &__price-old {
@@ -80,18 +104,32 @@
 
     color: $color-gray;
     @include fsl(14px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 8px;
+      @include fsl(10px, 110%);
+    }
     text-decoration: line-through;
   }
 
   &__bot {
     margin-top: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 12px;
+    }
     
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
     justify-content: space-between;
   }
 
   &__button {
     padding: 12px 18px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 4px;
+      padding: 6px 17px;
+    }
 
     display: flex;
     align-items: center;
@@ -101,10 +139,24 @@
     border-radius: 4px;
     cursor: pointer;
   }
+  &__button-text {
+    @media (min-width: $breakpoint) {
+      display: none;
+    }
+
+    margin-left: 8px;
+
+    color: $color-white;
+    @include fsl(12px, 140%);
+  }
 
   &__svg {
     width: 28px;
     height: 25px;
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 21px;
+      height: 20px;
+    }
 
     path {
       stroke: $color-white;

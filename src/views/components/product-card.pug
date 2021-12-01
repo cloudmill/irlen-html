@@ -6,7 +6,7 @@ mixin product-card
       img(src="assets/images/product.jpg", alt="")
       .product-card__top 
         img.product-card__logo(src="assets/images/product-logo.png", alt="")
-        .product-card__label 
+        .product-card__label.desktop
           |Артикул: 9353014BTC
     .product-card__inner
       .product-card__label 
@@ -36,7 +36,7 @@ mixin product-card
             |€ 93.42
             span.tooltip__span
               .tooltip__icon 
-                +tooltip-svg
+                +tooltip-svg.tooltip__svg
           .tooltip__container   
             |Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?
         .product-card__price-old
@@ -46,4 +46,6 @@ mixin product-card
           +counter
         .product-card__button 
           +cart-svg.product-card__svg
+          .product-card__button-text 
+            |В корзину
 

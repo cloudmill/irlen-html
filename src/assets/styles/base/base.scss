@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5 {
 h1 {
   @include fsl(40px, 100%);
   @media (max-width: ($breakpoint - 1px)) {
-    @include fsl(20px);
+    @include fsl(20px, 100%);
   }
 }
 

@@ -2,6 +2,9 @@
   $comp: &;
 
   display: flex;
+  @media (max-width: ($breakpoint - 1px)) {
+    flex-wrap: wrap;
+  }
 
   background: $color-white;
   border-radius: 4px;
@@ -11,14 +14,34 @@
     flex-shrink: 0;
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 3);
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 11px;
+        width: calc((#{$col-width-m}));
+      }
     }
     &:nth-child(2) {
       padding: 20px 0;
       width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: 11px 12px 0 8px;
+        width: calc((#{$col-part-m} * 3));
+      }
     }
     &:nth-child(3) {
       padding: 20px 20px 20px 0;
       margin-left: auto;
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: 12px;
+        margin-left: 0;
+        
+        width: 100%;
+      }
+    }
+  }
+
+  &__text {
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 140%);
     }
   }
 
