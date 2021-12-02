@@ -3,6 +3,9 @@
 
   &__inner {
     margin-top: 40px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 24px;
+    }
   }
 
   &__button {
@@ -65,6 +68,9 @@
 
   &__container {
     padding: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 12px;
+    }
   }
 
   &__form {
@@ -165,13 +171,20 @@
 
   &__product {
     padding: 20px;
-
     border-radius: 4px;
     background: $color-white;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+    }
   }
   &__product-inner {
     margin-bottom: 20px;
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
   }
   &__product-item {
     &:nth-child(1) {
@@ -186,8 +199,11 @@
   }
   &__product-row {
     margin-top: 27px;
-
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 16px;
+      display: block;
+    }
     justify-content: space-between;
   }
   &__product-col {
@@ -195,10 +211,17 @@
 
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
     }
 
     &:nth-child(2) {
       width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 24px;
+        width: 100%;
+      }
     }
   }
   &__product-text {
@@ -209,16 +232,32 @@
     flex-shrink: 0;
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
     }
     &:nth-child(2) {
       width: calc(#{$col-width-d} - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
     }
   }
   &__card-inner {
     margin-top: 20px;
   }
+  &__card-row {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+  }
   &__card-text {
     @include fsl(14px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 120%);
+    }
     font-weight: 500;
   }
 }

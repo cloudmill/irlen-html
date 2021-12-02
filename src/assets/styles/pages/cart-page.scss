@@ -238,6 +238,28 @@
       #{$comp}__item-col {
         &:nth-child(1) {
           width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+          @media (max-width: ($breakpoint - 1px)) {
+            width: 100%;
+          }
+        }
+        &:nth-child(3) {
+          @media (max-width: ($breakpoint - 1px)) {
+            margin-left: 0;
+          }
+        }
+        &:nth-child(4) {
+          @media (max-width: ($breakpoint - 1px)) {
+            margin-left: 8px;
+          }
+        }
+      }
+      #{$comp}__item-row {
+        @media (max-width: ($breakpoint - 1px)) {
+          grid-template-areas: 
+            "A A A A"
+            "B B C D"
+            ". . E E"
+          ;
         }
       }
     }
@@ -342,11 +364,17 @@
   &__item-price {
     line-height: 110%;
     font-weight: 500;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 140%);
+    }
   }
   &__item-old {
     margin-top: 4px;
     color: $color-gray;
     @include fsl(12px, 110%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(10px, 140%);
+    }
   }
   &__item-icon {
     display: flex;
