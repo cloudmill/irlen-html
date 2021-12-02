@@ -41,7 +41,7 @@
 
   &__text {
     @media (max-width: ($breakpoint - 1px)) {
-      @include fsl(14px, 140%);
+      @include fsl(12px, 140%);
     }
   }
 

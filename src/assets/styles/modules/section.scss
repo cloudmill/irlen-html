@@ -25,6 +25,9 @@
   &--table {
     margin-top: 0;
     padding-bottom: 100px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-bottom: 60px;
+    }
   }
 
   &--md {

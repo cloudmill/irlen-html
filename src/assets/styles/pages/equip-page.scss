@@ -1,4 +1,5 @@
 .equip-page {
+  $comp: &;
 
   &__inner {
     margin-top: 60px;
@@ -188,7 +189,11 @@
     }
   }
 
-  &__table {}
+  &__table {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
   &__table-head {
     padding: 0 130px;
     display: block;
@@ -223,5 +228,56 @@
   &__table-title {
     color: $color-gray;
     @include fsl(12px, 140%);
+  }
+
+  &__block {
+    
+  }
+  &__block-list {
+    
+    @media (min-width: $breakpoint) {
+      display: none;
+    }
+    border-bottom: 1px solid $color-light-gray;
+  }
+  &__block-item {
+    padding-top: 16px;
+
+    border-top: 1px solid $color-blue;
+  }
+  &__block-top {
+    padding-bottom: 12px;
+    margin: 0 16px;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid $color-light-gray;
+
+    #{$comp}__block-text {
+      margin-left: 10px;
+    }
+  }
+  &__block-caption {
+    color: $color-gray;
+    @include fsl(10px, 140%);
+  }
+  &__block-body {
+    margin: 12px 16px;
+    
+
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 12px;
+    column-gap: 8px;
+  }
+  &__block-label {
+    margin-bottom: 4px;
+
+    color: $color-gray;
+    @include fsl(10px, 140%);
+  }
+  &__block-text {
+    @include fsl(14px, 140%);
   }
 }

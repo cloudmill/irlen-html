@@ -7,6 +7,29 @@ include ../components/model-tabs
 
 
 block content 
+  -
+    var ddata = [
+      {
+        label: 'Макс. длина точения, мм',
+        text: '150'
+      },
+      {
+        label: 'Диаметр патрона, мм',
+        text: '150'
+      },
+      {
+        label: 'Макс. диаметр прутковой заготовки, мм',
+        text: '45'
+      },
+      {
+        label: 'Харакатеристика шпинделя, кВт/об/мин',
+        text: '7.5/6000'
+      },
+      {
+        label: 'Макс. диаметр точения, мм',
+        text: '300'
+      },
+    ]
   .equip-page 
     section.section.section--first 
       .container 
@@ -27,31 +50,63 @@ block content
           +tabs(tabs = ['Leadwell серия T', 'Leadwell серия LTC', 'Leadwell серия T/LTC'])
         .margin-top.margin-top--md 
           +model-tabs(items = ['Модели', 'Возможные опции'])
-    section.section.section--white.section--table.margin-top.margin-top--md 
-      table.equip-page__table.margin-top
-        thead.equip-page__table-head 
-          tr 
-            each item in ['Модель', 'Макс. диаметр точения, мм', 'Макс. длина точения, мм', 'Диаметр патрона, мм', 'Макс. диаметр прутковой заготовки, мм', 'Харакатеристика шпинделя, кВт/об/мин']
-              td.equip-page__table-cell.equip-page__table-title
-                |#{item}
-        tbody.equip-page__table-body  
-          - for (i = 0; i < 13; i++)
-            tr
-              each item in ['T-5i', '300', '150', '150', '45', '7.5/6000']
-                td.equip-page__table-cell 
+    section.section.section--white.section--table
+      .equip-page__block.margin-top.margin-top--md 
+        table.equip-page__table
+          thead.equip-page__table-head 
+            tr 
+              each item in ['Модель', 'Макс. диаметр точения, мм', 'Макс. длина точения, мм', 'Диаметр патрона, мм', 'Макс. диаметр прутковой заготовки, мм', 'Харакатеристика шпинделя, кВт/об/мин']
+                td.equip-page__table-cell.equip-page__table-title
                   |#{item}
+          tbody.equip-page__table-body  
+            - for (i = 0; i < 13; i++)
+              tr
+                each item in ['T-5i', '300', '150', '150', '45', '7.5/6000']
+                  td.equip-page__table-cell 
+                    |#{item}
+        ul.equip-page__block-list 
+          - for (x = 0; x < 8; x++)
+            li.equip-page__block-item
+              .equip-page__block-top 
+                .equip-page__block-caption 
+                  |Модель
+                .equip-page__block-text
+                  |T-5i
+              .equip-page__block-body 
+                each item in ddata
+                  .equip-page__block-cell 
+                    .equip-page__block-label 
+                      |#{item.label}
+                    .equip-page__block-text 
+                      |#{item.text}
       .container 
         .equip-page__inner
           +model-tabs(items = ['Модели', 'Возможные опции'])
-      table.equip-page__table.margin-top.margin-top--md 
-        thead.equip-page__table-head 
-          tr 
-            each item in ['Модель', 'Макс. диаметр точения, мм', 'Макс. длина точения, мм', 'Диаметр патрона, мм', 'Макс. диаметр прутковой заготовки, мм', 'Харакатеристика шпинделя, кВт/об/мин']
-              td.equip-page__table-cell.equip-page__table-title
-                |#{item}
-        tbody.equip-page__table-body  
-          - for (i = 0; i < 13; i++)
-            tr
-              each item in ['LTC-150', '300', '150', '150', '45', '7.5/6000']
-                td.equip-page__table-cell 
+      .equip-page__block.margin-top.margin-top--md 
+        table.equip-page__table
+          thead.equip-page__table-head 
+            tr 
+              each item in ['Модель', 'Макс. диаметр точения, мм', 'Макс. длина точения, мм', 'Диаметр патрона, мм', 'Макс. диаметр прутковой заготовки, мм', 'Харакатеристика шпинделя, кВт/об/мин']
+                td.equip-page__table-cell.equip-page__table-title
                   |#{item}
+          tbody.equip-page__table-body  
+            - for (i = 0; i < 13; i++)
+              tr
+                each item in ['LTC-150', '300', '150', '150', '45', '7.5/6000']
+                  td.equip-page__table-cell 
+                    |#{item}
+        ul.equip-page__block-list 
+          - for (x = 0; x < 8; x++)
+            li.equip-page__block-item
+              .equip-page__block-top 
+                .equip-page__block-caption 
+                  |Модель
+                .equip-page__block-text
+                  |T-5i
+              .equip-page__block-body 
+                each item in ddata
+                  .equip-page__block-cell 
+                    .equip-page__block-label 
+                      |#{item.label}
+                    .equip-page__block-text 
+                      |#{item.text}

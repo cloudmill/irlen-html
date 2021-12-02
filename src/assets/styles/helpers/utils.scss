@@ -3,6 +3,9 @@
 
   &--md {
     margin-top: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 20px;
+    }
   }
 
   &--xl {
