@@ -180,60 +180,149 @@
 									</svg></div>
 								<div class="booking-page__button-text">Вернуться в корзину</div>
 							</a>
+						</div>
+					</section>
+					<section class="section section--default section--last">
+						<div class="container" data-tabs-parent="">
 							<div class="booking-page__inner">
-								<div class="model-tabs" data-tabs="">
+								<div class="model-tabs" data-real-tabs="">
 									<div class="model-tabs__item active" data-tabs-item="">Физическое лицо</div>
 									<div class="model-tabs__item" data-tabs-item="">Юридическое лицо</div>
 								</div>
 							</div>
-						</div>
-					</section>
-					<section class="section section--default section--last">
-						<div class="container">
 							<form class="form margin-top margin-top--md" action="/">
-								<div class="booking-page__row">
-									<div class="booking-page__col">
-										<div class="booking-page__form">
-											<div class="booking-page__block-row">
-												<div class="booking-page__block-col"><input class="form__input" placeholder="Имя*"></div>
-												<div class="booking-page__block-col"><input class="form__input" placeholder="Телефон*"></div>
+								<div class="booking-page__form">
+									<div class="booking-page__row">
+										<div class="booking-page__col">
+											<div class="booking-page__block-item active" data-tabs-block="">
+												<div class="booking-page__block-row">
+													<div class="booking-page__block-col"><input class="form__input" placeholder="Имя*"></div>
+													<div class="booking-page__block-col"><input class="form__input" placeholder="Телефон*"></div>
+												</div>
+												<div class="booking-page__block-row">
+													<div class="booking-page__block-col"><input class="form__input" type="email" placeholder="E-mail*"></div>
+												</div>
 											</div>
-											<div class="booking-page__block-row section__block">
-												<div class="booking-page__block-col"><input class="form__input" type="email" placeholder="E-mail*"></div>
+											<div class="booking-page__block-item" data-tabs-block="">
+												<div class="booking-page__block-row">
+													<div class="booking-page__block-col"><input class="form__input" placeholder="Название компании"></div>
+													<div class="booking-page__block-col"><input class="form__input" placeholder="Юридический адрес"></div>
+												</div>
+												<div class="booking-page__block-row">
+													<div class="booking-page__block-col"><input class="form__input" placeholder="ИНН"></div>
+													<div class="booking-page__block-col"><input class="form__input" placeholder="Почтовый адрес"></div>
+												</div>
+												<div class="booking-page__block-row">
+													<div class="booking-page__block-col"><input class="form__input" placeholder="КПП"></div>
+													<div class="booking-page__block-col"><input class="form__input" placeholder="Руководитель"></div>
+												</div>
+												<div class="booking-page__block-row">
+													<div class="booking-page__block-col"><input class="form__input" placeholder="БИК"></div>
+													<div class="booking-page__block-col"><input class="form__input" placeholder="Рук. действует на основании"></div>
+												</div>
+												<div class="booking-page__block-row">
+													<div class="booking-page__block-col"><input class="form__input" placeholder="Корреспонденский счет"></div>
+													<div class="booking-page__block-col"><input class="form__input" placeholder="Должность руководителя"></div>
+												</div>
 											</div>
-										</div>
-										<div class="booking-page__title margin-top margin-top--xl">Способ доставки</div>
-										<div class="margin-top margin-top--md">
-											<div class="model-tabs" data-tabs="">
-												<div class="model-tabs__item active" data-tabs-item="">Транспортная компания</div>
-												<div class="model-tabs__item" data-tabs-item="">Самовывоз</div>
-											</div>
-										</div>
-										<div class="booking-page__block">
-											<div class="booking-page__block-item margin-top margin-top--md">
-												<div class="booking-page__text">Мы организуем доставку при помощи транспортной компании, стоимость доставки будет включена в цену товара.</div>
-												<div class="booking-page__form margin-top margin-top--md">
-													<div class="booking-page__block-row">
-														<div class="booking-page__block-col"><input class="form__input" placeholder="Имя*"></div>
-														<div class="booking-page__block-col"><input class="form__input" placeholder="Телефон*"></div>
-													</div><textarea class="form__textarea section__block" placeholder="Комментарий"></textarea>
+											<div class="booking-page__title margin-top margin-top--xl">Способ доставки</div>
+											<div class="booking-page__parent" data-tabs-parent="">
+												<div class="margin-top margin-top--md">
+													<div class="model-tabs" data-real-tabs="">
+														<div class="model-tabs__item active" data-tabs-item="">Транспортная компания</div>
+														<div class="model-tabs__item" data-tabs-item="">Самовывоз</div>
+													</div>
+												</div>
+												<div class="booking-page__block margin-top margin-top--md">
+													<div class="booking-page__block-item active" data-tabs-block="">
+														<div class="booking-page__text">Мы организуем доставку при помощи транспортной компании, стоимость доставки будет включена в цену товара.</div>
+														<div class="booking-page__form margin-top margin-top--md">
+															<div class="booking-page__block-row">
+																<div class="booking-page__block-col"><input class="form__input" placeholder="Город доставки*"></div>
+																<div class="booking-page__block-col"><input class="form__input" placeholder="Адрес доставки*"></div>
+															</div><textarea class="form__textarea" placeholder="Комментарий"></textarea>
+														</div>
+													</div>
+													<div class="booking-page__block-item" data-tabs-block="">
+														<div class="booking-page__block-row">
+															<div class="booking-page__block-col">
+																<div class="booking-page__item">
+																	<div class="booking-page__item-col">
+																		<div class="booking-page__item-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path fill-rule="evenodd" clip-rule="evenodd" d="M10 19.4396L10.5481 18.961C15.1572 14.9364 17.5 11.4222 17.5 8.33325C17.5 3.9588 14.0858 0.833252 10 0.833252C5.91421 0.833252 2.5 3.9588 2.5 8.33325C2.5 11.4222 4.84276 14.9364 9.45189 18.961L10 19.4396ZM10 17.2194C6.08884 13.6945 4.16667 10.7076 4.16667 8.33325C4.16667 4.91375 6.80343 2.49992 10 2.49992C13.1966 2.49992 15.8333 4.91375 15.8333 8.33325C15.8333 10.7076 13.9112 13.6945 10 17.2194ZM10 4.16658C12.3012 4.16658 14.1667 6.03206 14.1667 8.33325C14.1667 10.6344 12.3012 12.4999 10 12.4999C7.69881 12.4999 5.83333 10.6344 5.83333 8.33325C5.83333 6.03206 7.69881 4.16658 10 4.16658ZM7.5 8.33325C7.5 6.95254 8.61929 5.83325 10 5.83325C11.3807 5.83325 12.5 6.95254 12.5 8.33325C12.5 9.71396 11.3807 10.8333 10 10.8333C8.61929 10.8333 7.5 9.71396 7.5 8.33325Z" fill="#121212"></path>
+																			</svg></div>
+																	</div>
+																	<div class="booking-page__item-col">
+																		<div class="booking-page__item-text">Старожиловская улица, 9</div>
+																	</div>
+																</div>
+															</div>
+															<div class="booking-page__block-col">
+																<div class="booking-page__item">
+																	<div class="booking-page__item-col">
+																		<div class="booking-page__item-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<g id="24 / time / time">
+																					<path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M9.99992 19.1666C4.93731 19.1666 0.833252 15.0625 0.833252 9.99992C0.833252 4.93731 4.93731 0.833252 9.99992 0.833252C15.0625 0.833252 19.1666 4.93731 19.1666 9.99992C19.1666 15.0625 15.0625 19.1666 9.99992 19.1666ZM9.99992 17.4999C14.1421 17.4999 17.4999 14.1421 17.4999 9.99992C17.4999 5.85778 14.1421 2.49992 9.99992 2.49992C5.85778 2.49992 2.49992 5.85778 2.49992 9.99992C2.49992 14.1421 5.85778 17.4999 9.99992 17.4999ZM14.1666 9.16659H10.8333V4.99992H9.16659V10.8333H14.1666V9.16659Z" fill="#121212"></path>
+																				</g>
+																			</svg></div>
+																	</div>
+																	<div class="booking-page__item-col">
+																		<div class="booking-page__item-text">09:00 – 17:00</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="booking-page__block-title">Если возникнут сложности</div>
+														<div class="booking-page__block-row">
+															<div class="booking-page__block-col">
+																<div class="booking-page__item">
+																	<div class="booking-page__item-col">
+																		<div class="booking-page__item-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<g id="24 / call / call-incoming">
+																					<path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M9.14537 5.21209C9.63367 5.75337 9.47885 6.36657 9.04709 6.94841C8.94473 7.08636 8.82674 7.22228 8.68423 7.37206C8.61583 7.44395 8.5625 7.49801 8.45093 7.60968L7.81196 8.24901C7.72825 8.33271 8.29977 9.47477 9.40893 10.585C10.5175 11.6947 11.6595 12.2666 11.7436 12.1824L12.3821 11.5435C12.7338 11.1916 12.92 11.0217 13.1759 10.8539C13.7078 10.5049 14.2881 10.41 14.7774 10.8476C16.3753 11.9906 17.2795 12.6919 17.7224 13.1522C18.5864 14.0499 18.4732 15.4318 17.7273 16.2201C17.4687 16.4935 17.1408 16.8216 16.7534 17.195C14.4105 19.5393 9.46575 18.1127 5.67616 14.3193C1.88571 10.5252 0.459846 5.57997 2.79789 3.24067C3.21763 2.81433 3.35603 2.676 3.76483 2.2732C4.52593 1.52326 5.97157 1.40583 6.85037 2.27394C7.31262 2.73057 8.04957 3.67877 9.14537 5.21209ZM13.5601 12.7219L12.9214 13.3609C11.8359 14.4471 9.98707 13.5213 8.23081 11.7633C6.47335 10.0041 5.54851 8.15598 6.63447 7.07012L7.27282 6.43141C7.37497 6.32916 7.42169 6.2818 7.47778 6.22285C7.55419 6.14254 7.61698 6.07201 7.66726 6.00959C6.69612 4.65681 6.03595 3.81152 5.68006 3.45995C5.49627 3.27839 5.08472 3.31182 4.93363 3.4607C4.53067 3.85775 4.39822 3.99013 3.98016 4.41472C2.47657 5.91915 3.62762 9.91125 6.85427 13.1411C10.0799 16.3699 14.0714 17.5215 15.5865 16.0058C15.9678 15.638 16.2785 15.3271 16.5176 15.0744C16.6905 14.8917 16.7213 14.5148 16.5225 14.3082C16.1914 13.9642 15.3808 13.3321 13.9811 12.327C13.8791 12.4091 13.7536 12.5282 13.5601 12.7219ZM16.6666 9.16678V7.50011H13.6785L18.0892 3.08937L16.9107 1.91085L12.4999 6.3216V3.33344H10.8333V9.16678H16.6666Z" fill="#121212"></path>
+																				</g>
+																			</svg></div>
+																	</div>
+																	<div class="booking-page__item-col">
+																		<div class="booking-page__item-num">8 800 444-60-98</div>
+																		<div class="booking-page__item-label">Бесплатно по России</div>
+																	</div>
+																</div>
+															</div>
+															<div class="booking-page__block-col">
+																<div class="booking-page__item">
+																	<div class="booking-page__item-col">
+																		<div class="booking-page__item-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<g id="24 / call / call-incoming">
+																					<path id="icon" fill-rule="evenodd" clip-rule="evenodd" d="M9.14537 5.21209C9.63367 5.75337 9.47885 6.36657 9.04709 6.94841C8.94473 7.08636 8.82674 7.22228 8.68423 7.37206C8.61583 7.44395 8.5625 7.49801 8.45093 7.60968L7.81196 8.24901C7.72825 8.33271 8.29977 9.47477 9.40893 10.585C10.5175 11.6947 11.6595 12.2666 11.7436 12.1824L12.3821 11.5435C12.7338 11.1916 12.92 11.0217 13.1759 10.8539C13.7078 10.5049 14.2881 10.41 14.7774 10.8476C16.3753 11.9906 17.2795 12.6919 17.7224 13.1522C18.5864 14.0499 18.4732 15.4318 17.7273 16.2201C17.4687 16.4935 17.1408 16.8216 16.7534 17.195C14.4105 19.5393 9.46575 18.1127 5.67616 14.3193C1.88571 10.5252 0.459846 5.57997 2.79789 3.24067C3.21763 2.81433 3.35603 2.676 3.76483 2.2732C4.52593 1.52326 5.97157 1.40583 6.85037 2.27394C7.31262 2.73057 8.04957 3.67877 9.14537 5.21209ZM13.5601 12.7219L12.9214 13.3609C11.8359 14.4471 9.98707 13.5213 8.23081 11.7633C6.47335 10.0041 5.54851 8.15598 6.63447 7.07012L7.27282 6.43141C7.37497 6.32916 7.42169 6.2818 7.47778 6.22285C7.55419 6.14254 7.61698 6.07201 7.66726 6.00959C6.69612 4.65681 6.03595 3.81152 5.68006 3.45995C5.49627 3.27839 5.08472 3.31182 4.93363 3.4607C4.53067 3.85775 4.39822 3.99013 3.98016 4.41472C2.47657 5.91915 3.62762 9.91125 6.85427 13.1411C10.0799 16.3699 14.0714 17.5215 15.5865 16.0058C15.9678 15.638 16.2785 15.3271 16.5176 15.0744C16.6905 14.8917 16.7213 14.5148 16.5225 14.3082C16.1914 13.9642 15.3808 13.3321 13.9811 12.327C13.8791 12.4091 13.7536 12.5282 13.5601 12.7219ZM16.6666 9.16678V7.50011H13.6785L18.0892 3.08937L16.9107 1.91085L12.4999 6.3216V3.33344H10.8333V9.16678H16.6666Z" fill="#121212"></path>
+																				</g>
+																			</svg></div>
+																	</div>
+																	<div class="booking-page__item-col">
+																		<div class="booking-page__item-num">8 812 600-60-98</div>
+																		<div class="booking-page__item-label">Многоканальный</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="booking-page__col">
-										<div class="cart-page__card">
-											<div class="booking-page__container">
-												<div class="cart-page__card-row">
-													<div class="cart-page__card-col">
-														<div class="cart-page__card-price">Итого, ₽</div>
+										<div class="booking-page__col">
+											<div class="cart-page__card">
+												<div class="booking-page__container">
+													<div class="cart-page__card-row">
+														<div class="cart-page__card-col">
+															<div class="cart-page__card-price">Предварительная стоимость, ₽</div>
+														</div>
+														<div class="cart-page__card-col">
+															<div class="cart-page__card-num">89 0000</div>
+														</div>
 													</div>
-													<div class="cart-page__card-col">
-														<div class="cart-page__card-price">89 0000</div>
-													</div>
+													<div class="cart-page__card-caption">Цена с НДС по курсу ЦА на 25.06.2021</div>
+													<div class="cart-page__card-btn"><a class="button button--wide" href="#">Перейти к оформлению</a></div>
 												</div>
-												<div class="cart-page__card-caption">Цена с НДС по курсу ЦА на 25.06.2021</div>
-												<div class="cart-page__card-btn"><a class="button button--wide" href="#">Перейти к оформлению</a></div>
 											</div>
 										</div>
 									</div>

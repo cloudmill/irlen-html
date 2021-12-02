@@ -182,7 +182,7 @@
 							<div class="cart-page__row">
 								<div class="cart-page__col">
 									<div class="loyalty-card">
-										<div class="loyalty-card__icon"><svg width="45" height="45" viewbox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<div class="loyalty-card__icon"><svg class="loyalty-card__svg" width="45" height="45" viewbox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<rect width="45" height="45" rx="4" fill="#CAFDFA"></rect>
 												<path d="M21.1628 15V21.1345L21.6512 25.7563H23.3488L23.8372 21.1345V15H21.1628ZM24 30V27.1849H21V30H24Z" fill="#121212"></path>
 											</svg></div>
@@ -221,19 +221,22 @@
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
-														<div class="counter counter--md" data-max-count="5">
-															<div class="counter__item counter__item--minus" data-count-minus="">
-																<div class="counter__icon">-</div>
-															</div>
-															<div class="counter__number">150</div>
-															<div class="counter__item counter__item--plus" data-count-plus="">
-																<div class="counter__icon">+</div>
+														<div class="cart-page__counter">
+															<div class="counter counter--md" data-max-count="5">
+																<div class="counter__item counter__item--minus" data-count-minus="">
+																	<div class="counter__icon">-</div>
+																</div>
+																<div class="counter__number">150</div>
+																<div class="counter__item counter__item--plus" data-count-plus="">
+																	<div class="counter__icon">+</div>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
+														<div class="cart-page__item-caption">цена</div>
 														<div class="tooltip">
 															<div class="cart-page__item-price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
 															<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
@@ -243,6 +246,7 @@
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
+														<div class="cart-page__item-caption">итого</div>
 														<div class="cart-page__item-price">€ 1279.2</div>
 													</div>
 												</div>
@@ -266,19 +270,22 @@
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
-														<div class="counter counter--md" data-max-count="5">
-															<div class="counter__item counter__item--minus" data-count-minus="">
-																<div class="counter__icon">-</div>
-															</div>
-															<div class="counter__number">150</div>
-															<div class="counter__item counter__item--plus" data-count-plus="">
-																<div class="counter__icon">+</div>
+														<div class="cart-page__counter">
+															<div class="counter counter--md" data-max-count="5">
+																<div class="counter__item counter__item--minus" data-count-minus="">
+																	<div class="counter__icon">-</div>
+																</div>
+																<div class="counter__number">150</div>
+																<div class="counter__item counter__item--plus" data-count-plus="">
+																	<div class="counter__icon">+</div>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
+														<div class="cart-page__item-caption">цена</div>
 														<div class="tooltip">
 															<div class="cart-page__item-price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
 															<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
@@ -288,6 +295,7 @@
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
+														<div class="cart-page__item-caption">итого</div>
 														<div class="cart-page__item-price">€ 1279.2</div>
 													</div>
 												</div>
@@ -311,19 +319,22 @@
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
-														<div class="counter counter--md" data-max-count="5">
-															<div class="counter__item counter__item--minus" data-count-minus="">
-																<div class="counter__icon">-</div>
-															</div>
-															<div class="counter__number">150</div>
-															<div class="counter__item counter__item--plus" data-count-plus="">
-																<div class="counter__icon">+</div>
+														<div class="cart-page__counter">
+															<div class="counter counter--md" data-max-count="5">
+																<div class="counter__item counter__item--minus" data-count-minus="">
+																	<div class="counter__icon">-</div>
+																</div>
+																<div class="counter__number">150</div>
+																<div class="counter__item counter__item--plus" data-count-plus="">
+																	<div class="counter__icon">+</div>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
+														<div class="cart-page__item-caption">цена</div>
 														<div class="tooltip">
 															<div class="cart-page__item-price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
 															<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
@@ -333,6 +344,7 @@
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
+														<div class="cart-page__item-caption">итого</div>
 														<div class="cart-page__item-price">€ 1279.2</div>
 													</div>
 												</div>
@@ -356,19 +368,22 @@
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
-														<div class="counter counter--md" data-max-count="5">
-															<div class="counter__item counter__item--minus" data-count-minus="">
-																<div class="counter__icon">-</div>
-															</div>
-															<div class="counter__number">150</div>
-															<div class="counter__item counter__item--plus" data-count-plus="">
-																<div class="counter__icon">+</div>
+														<div class="cart-page__counter">
+															<div class="counter counter--md" data-max-count="5">
+																<div class="counter__item counter__item--minus" data-count-minus="">
+																	<div class="counter__icon">-</div>
+																</div>
+																<div class="counter__number">150</div>
+																<div class="counter__item counter__item--plus" data-count-plus="">
+																	<div class="counter__icon">+</div>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
+														<div class="cart-page__item-caption">цена</div>
 														<div class="tooltip">
 															<div class="cart-page__item-price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
 															<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
@@ -378,6 +393,7 @@
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
+														<div class="cart-page__item-caption">итого</div>
 														<div class="cart-page__item-price">€ 1279.2</div>
 													</div>
 												</div>
@@ -401,19 +417,22 @@
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
-														<div class="counter counter--md" data-max-count="5">
-															<div class="counter__item counter__item--minus" data-count-minus="">
-																<div class="counter__icon">-</div>
-															</div>
-															<div class="counter__number">150</div>
-															<div class="counter__item counter__item--plus" data-count-plus="">
-																<div class="counter__icon">+</div>
+														<div class="cart-page__counter">
+															<div class="counter counter--md" data-max-count="5">
+																<div class="counter__item counter__item--minus" data-count-minus="">
+																	<div class="counter__icon">-</div>
+																</div>
+																<div class="counter__number">150</div>
+																<div class="counter__item counter__item--plus" data-count-plus="">
+																	<div class="counter__icon">+</div>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
+														<div class="cart-page__item-caption">цена</div>
 														<div class="tooltip">
 															<div class="cart-page__item-price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
 															<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
@@ -423,6 +442,7 @@
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
+														<div class="cart-page__item-caption">итого</div>
 														<div class="cart-page__item-price">€ 1279.2</div>
 													</div>
 												</div>
@@ -446,19 +466,22 @@
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
-														<div class="counter counter--md" data-max-count="5">
-															<div class="counter__item counter__item--minus" data-count-minus="">
-																<div class="counter__icon">-</div>
-															</div>
-															<div class="counter__number">150</div>
-															<div class="counter__item counter__item--plus" data-count-plus="">
-																<div class="counter__icon">+</div>
+														<div class="cart-page__counter">
+															<div class="counter counter--md" data-max-count="5">
+																<div class="counter__item counter__item--minus" data-count-minus="">
+																	<div class="counter__icon">-</div>
+																</div>
+																<div class="counter__number">150</div>
+																<div class="counter__item counter__item--plus" data-count-plus="">
+																	<div class="counter__icon">+</div>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
+														<div class="cart-page__item-caption">цена</div>
 														<div class="tooltip">
 															<div class="cart-page__item-price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
 															<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
@@ -468,6 +491,7 @@
 												</div>
 												<div class="cart-page__item-col">
 													<div class="cart-page__item-container">
+														<div class="cart-page__item-caption">итого</div>
 														<div class="cart-page__item-price">€ 1279.2</div>
 													</div>
 												</div>
@@ -505,21 +529,13 @@
 												<div class="cart-page__label">Позиций: 22</div>
 												<div class="cart-page__card-row">
 													<div class="cart-page__card-col">
-														<p>Сумма, €</p>
+														<p class="cart-page__caption">Сумма, €</p>
 													</div>
 													<div class="cart-page__card-col">
-														<div class="cart-page__card-text">1222.45</div>
-													</div>
-												</div>
-											</div>
-											<div class="cart-page__card-item">
-												<div class="cart-page__label">Позиций: 22</div>
-												<div class="cart-page__card-row">
-													<div class="cart-page__card-col">
-														<p>Сумма, €</p>
-													</div>
-													<div class="cart-page__card-col">
-														<div class="cart-page__card-text">1222.45</div>
+														<div class="tooltip">
+															<div class="cart-page__card-text tooltip__row">1222.45<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+															<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -527,10 +543,13 @@
 												<div class="cart-page__label">Позиций: 22</div>
 												<div class="cart-page__card-row">
 													<div class="cart-page__card-col">
-														<p>Сумма, €</p>
+														<p class="cart-page__caption">Сумма, €</p>
 													</div>
 													<div class="cart-page__card-col">
-														<div class="cart-page__card-text">1222.45</div>
+														<div class="tooltip">
+															<div class="cart-page__card-text tooltip__row">1222.45<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+															<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -540,7 +559,7 @@
 												<li class="cart-page__card-thing">
 													<div class="cart-page__card-row">
 														<div class="cart-page__card-col">
-															<p>Сумма без скидки, ₽</p>
+															<p class="cart-page__caption">Сумма без скидки, ₽</p>
 														</div>
 														<div class="cart-page__card-col">
 															<div class="cart-page__card-text">- 109 906</div>
@@ -550,7 +569,7 @@
 												<li class="cart-page__card-thing">
 													<div class="cart-page__card-row">
 														<div class="cart-page__card-col">
-															<p>Скидка, ₽</p>
+															<p class="cart-page__caption">Скидка, ₽</p>
 														</div>
 														<div class="cart-page__card-col">
 															<div class="cart-page__card-text">- 20 906</div>
@@ -560,10 +579,10 @@
 											</ul>
 											<div class="cart-page__card-row">
 												<div class="cart-page__card-col">
-													<div class="cart-page__card-price">Итого, ₽</div>
+													<div class="cart-page__card-price">Предварительная стоимость, ₽</div>
 												</div>
 												<div class="cart-page__card-col">
-													<div class="cart-page__card-price">89 0000</div>
+													<div class="cart-page__card-num">89 0000</div>
 												</div>
 											</div>
 											<div class="cart-page__card-caption">Цена с НДС по курсу ЦА на 25.06.2021</div>
