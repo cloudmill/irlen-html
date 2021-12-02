@@ -5,6 +5,24 @@ include ../components/button
 include ../components/model-tabs
 
 block content 
+  -
+    var ddata = [
+      {
+        items: ['Название компании', 'Юридический адрес']
+      },
+      {
+        items: ['ИНН', 'Почтовый адрес']
+      },
+      {
+        items: ['КПП', 'Руководитель']
+      },
+      {
+        items: ['БИК', 'Рук. действует на основании']
+      },
+      {
+        items: ['Корреспонденский счет', 'Должность руководителя']
+      },
+    ]
   .booking-page.cart-page 
     section.section.section--first 
       .container 
@@ -14,98 +32,107 @@ block content
             +arrow-svg.booking-page__button-svg
           .booking-page__button-text
             |Вернуться в корзину
-        .booking-page__inner 
-          +model-tabs(items = ['Физическое лицо', 'Юридическое лицо'])
     section.section.section--default.section--last
-      .container
+      .container(data-tabs-parent='')
+        .booking-page__inner 
+          +model-tabs(items = ['Физическое лицо', 'Юридическое лицо'] real=true)
         form.form.margin-top.margin-top--md(action="/") 
-          .booking-page__row 
-            .booking-page__col
-              .cart-page__panel 
-                .cart-page__panel-icon 
-                  +warning-svg
-                .cart-page__panel-content 
-                  .cart-page__panel-title 
-                    |Действует программа лояльности
-                  .cart-page__panel-text 
-                    |#[a.cart-page__panel-link(href="#") Авторизуйтесь], чтобы узнать свой уровень цен.
-              .booking-page__form.disabled.margin-top.margin-top--xl
-                .booking-page__block-row 
-                  .booking-page__block-col
-                    input.form__input(type="text" placeholder="Имя*")
-                  .booking-page__block-col
-                    input.form__input(type="text" placeholder="Телефон*")
-                .booking-page__block-row.section__block
-                  .booking-page__block-col
-                    input.form__input(type="email" placeholder="E-mail*")
-              .booking-page__title.margin-top.margin-top--xl
-                |Способ доставки
-              .margin-top.margin-top--md 
-                +model-tabs(items = ['Транспортная компания', 'Самовывоз'])
-              .booking-page__block
-                .booking-page__block-item.margin-top.margin-top--md 
-                  .booking-page__text
-                    |Мы организуем доставку при помощи транспортной компании, стоимость доставки будет включена в цену товара.
-                  .booking-page__form.margin-top.margin-top--md.disabled 
+          .booking-page__form.disabled
+            .booking-page__row
+              .booking-page__col
+                .loyalty-card 
+                  .loyalty-card__icon 
+                    +warning-svg.loyalty-card__svg
+                  .loyalty-card__content 
+                    .loyalty-card__title 
+                      |Действует программа лояльности
+                    .loyalty-card__text 
+                      |#[a.loyalty-card__link(href="#") Авторизуйтесь], чтобы узнать свой уровень цен.
+                .booking-page__block.margin-top.margin-top--xl
+                  .booking-page__block-item.active(data-tabs-block='')
                     .booking-page__block-row 
                       .booking-page__block-col
                         input.form__input(type="text" placeholder="Имя*")
                       .booking-page__block-col
                         input.form__input(type="text" placeholder="Телефон*")
-                    textarea.form__textarea.section__block(placeholder="Комментарий")
-                //- .booking-page__block-item.margin-top.margin-top--md 
-                  .booking-page__block-row 
-                    .booking-page__block-col
-                      .booking-page__item 
-                        .booking-page__item-col
-                          .booking-page__item-icon 
-                            +location-svg
-                        .booking-page__item-col
-                          .booking-page__item-text 
-                            |Старожиловская улица, 9
-                    .booking-page__block-col
-                      .booking-page__item 
-                        .booking-page__item-col
-                          .booking-page__item-icon 
-                            +clock-svg
-                        .booking-page__item-col
-                          .booking-page__item-text 
-                            |09:00 – 17:00
-                  .booking-page__block-title 
-                    |Если возникнут сложности
-                  .booking-page__block-row 
-                    .booking-page__block-col
-                      .booking-page__item 
-                        .booking-page__item-col
-                          .booking-page__item-icon
-                            +phone-svg
-                        .booking-page__item-col
-                          .booking-page__item-num 
-                            |8 800 444-60-98
-                          .booking-page__item-label 
-                            |Бесплатно по России
-                    .booking-page__block-col
-                      .booking-page__item 
-                        .booking-page__item-col
-                          .booking-page__item-icon
-                            +phone-svg
-                        .booking-page__item-col
-                          .booking-page__item-num 
-                            |8 812 600-60-98
-                          .booking-page__item-label 
-                            |Многоканальный
-            .booking-page__col
-              .cart-page__card 
-                .booking-page__container 
-                  .cart-page__card-row 
-                    .cart-page__card-col
-                      .cart-page__card-price 
-                        |Итого, ₽
-                    .cart-page__card-col
-                      .cart-page__card-price 
-                        |89 0000
-                  .cart-page__card-caption 
-                    |Цена с НДС по курсу ЦА на 25.06.2021
-                  .cart-page__card-btn 
-                    +button.button--wide 
-                      |Перейти к оформлению
+                    .booking-page__block-row
+                      .booking-page__block-col
+                        input.form__input(type="email" placeholder="E-mail*")
+                  .booking-page__block-item(data-tabs-block='')
+                    each item, i in ddata
+                      .booking-page__block-row
+                        each text in item.items
+                          .booking-page__block-col
+                            input.form__input(type="text" placeholder=text)
+                .booking-page__title.margin-top.margin-top--xl
+                  |Способ доставки
+                .booking-page__parent(data-tabs-parent='')
+                  .margin-top.margin-top--md 
+                    +model-tabs(items = ['Транспортная компания', 'Самовывоз'] real=true)
+                  .booking-page__block.margin-top.margin-top--md 
+                    .booking-page__block-item.active(data-tabs-block='')
+                      .booking-page__text
+                        |Мы организуем доставку при помощи транспортной компании, стоимость доставки будет включена в цену товара.
+                      .booking-page__form.margin-top.margin-top--md 
+                        .booking-page__block-row 
+                          .booking-page__block-col
+                            input.form__input(type="text" placeholder="Город доставки*")
+                          .booking-page__block-col
+                            input.form__input(type="text" placeholder="Адрес доставки*")
+                        textarea.form__textarea(placeholder="Комментарий")
+                    .booking-page__block-item(data-tabs-block='')
+                      .booking-page__block-row 
+                        .booking-page__block-col
+                          .booking-page__item 
+                            .booking-page__item-col
+                              .booking-page__item-icon 
+                                +location-svg
+                            .booking-page__item-col
+                              .booking-page__item-text 
+                                |Старожиловская улица, 9
+                        .booking-page__block-col
+                          .booking-page__item 
+                            .booking-page__item-col
+                              .booking-page__item-icon 
+                                +clock-svg
+                            .booking-page__item-col
+                              .booking-page__item-text 
+                                |09:00 – 17:00
+                      .booking-page__block-title 
+                        |Если возникнут сложности
+                      .booking-page__block-row 
+                        .booking-page__block-col
+                          .booking-page__item 
+                            .booking-page__item-col
+                              .booking-page__item-icon
+                                +phone-svg
+                            .booking-page__item-col
+                              .booking-page__item-num 
+                                |8 800 444-60-98
+                              .booking-page__item-label 
+                                |Бесплатно по России
+                        .booking-page__block-col
+                          .booking-page__item 
+                            .booking-page__item-col
+                              .booking-page__item-icon
+                                +phone-svg
+                            .booking-page__item-col
+                              .booking-page__item-num 
+                                |8 812 600-60-98
+                              .booking-page__item-label 
+                                |Многоканальный
+              .booking-page__col
+                .cart-page__card 
+                  .booking-page__container 
+                    .cart-page__card-row 
+                      .cart-page__card-col
+                        .cart-page__card-price 
+                          |Предварительная стоимость, ₽
+                      .cart-page__card-col
+                        .cart-page__card-num
+                          |89 0000
+                    .cart-page__card-caption 
+                      |Цена с НДС по курсу ЦА на 25.06.2021
+                    .cart-page__card-btn 
+                      +button.button--wide 
+                        |Перейти к оформлению

@@ -55,33 +55,6 @@
     justify-content: center;
   }
 
-  &__panel {
-    padding: 16px;
-
-    display: flex;
-
-    background: $color-white;
-    border-radius: 4px;
-  }
-  &__panel-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  &__panel-content {
-    margin-left: 40px;
-  }
-  &__panel-title {
-    margin-bottom: 8px;
-  }
-  &__panel-text {
-    @include fsl(14px, 140%);
-  }
-  &__panel-link {
-    color: $color-blue;
-    text-decoration: underline;
-  }
-
   &__card {
     background: $color-white;
     border-radius: 4px;

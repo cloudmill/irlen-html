@@ -1,4 +1,5 @@
 .booking-page {
+  $comp: &;
 
   &__inner {
     margin-top: 40px;
@@ -23,25 +24,43 @@
 
   &__row {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
     justify-content: space-between;
   }
   &__col {
     flex-shrink: 0;
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
     }
 
     &:nth-child(2) {
       width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 24px;
+        width: 100%;
+      }
     }
   }
 
   &__title {
+    font-weight: 500;
     @include fsl(24px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px, 120%);
+    }
   }
 
   &__text {
     max-width: 539px;
+    @media (max-width: ($breakpoint - 1px)) {
+      max-width: none;
+      @include fsl(14px, 140%);
+    }
   }
 
   &__container {
@@ -51,24 +70,59 @@
   &__form {
 
     &.disabled {
-      opacity: .4;
-      pointer-events: none;
+      #{$comp}__block {
+        opacity: .4;
+        pointer-events: none;
+      }
+      #{$comp}__text {
+        opacity: 1;
+        pointer-events: all;
+      }
     }
   }
 
   &__block {}
   &__block-row {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
     justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: 8px;
+      }
+    }
   }
   &__block-col {
     flex-shrink: 0;
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: 8px;
+      }
+    }
   }
   &__block-title {
     margin: 40px 0 20px;
-    text-transform: uppercase;
     @include fsl(12px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin: 24px 0 16px;
+      @include fsl(10px, 120%);
+    }
+    text-transform: uppercase;
+  }
+  &__block-item {
+    display: none;
+    &.active {
+      display: block;
+    }
   }
 
   &__item {
@@ -80,6 +134,11 @@
       margin-left: 16px;
     }
   }
+  &__item-text {
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 140%);
+    }
+  }
   &__item-icon {
     margin-top: 2px;
 
@@ -89,11 +148,19 @@
   }
   &__item-num {
     margin-bottom: 4px;
+
+    font-weight: 500;
     @include fsl(24px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px, 120%);
+    }
   }
   &__item-label {
-    @include fsl(14px, 140%);
     color: $color-gray;
+    @include fsl(14px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 120%);
+    }
   }
 
   &__product {

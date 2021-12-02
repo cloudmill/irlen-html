@@ -3,14 +3,24 @@
 
   &__item {
     padding-bottom: 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-bottom: 8px;
+    }
 
     border-bottom: 1px solid transparent;
     transition: $transition;
+    white-space: nowrap;
     cursor: pointer;
     font-weight: 500;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 140%);
+    }
 
     &:not(:first-child) {
       margin-left: 24px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 16px;
+      }
     }
 
     &.active {
