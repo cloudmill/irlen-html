@@ -3,9 +3,12 @@ mixin docs-card
     .docs-card__container 
       .docs-card__row 
         .docs-card__col
-          +doc-svg
+          +doc-svg.docs-card__svg
         .docs-card__col
-          .docs-card__label 
+          .docs-card__label.desktop
             |234 кб
-      .docs-card__text 
-        |Инструкция «Подбор инструмента к токарным станкам»
+      .docs-card__content
+        .docs-card__text 
+          |Инструкция «Подбор инструмента к токарным станкам»
+        .docs-card__label.mobile
+          |234 кб

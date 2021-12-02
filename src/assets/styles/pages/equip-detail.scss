@@ -2,34 +2,55 @@
 
   &__inner {
     margin-bottom: 50px;
+    @media (max-width: ($breakpoint - 1px)) {
+      // margin-bottom: 0;
+    }
   }
 
   &__image {
     margin-top: 79px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 0;
+    }
   }
 
   &__panel {
     padding: 22px 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 12px;
+    }
     background: $color-darken-white;
     border-radius: 4px;
   }
   &__panel-row {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
     justify-content: space-between;
   }
   &__panel-col {
     &:nth-child(1) {
       max-width: 415px;
+      @media (max-width: ($breakpoint - 1px)) {
+        max-width: auto;
+        margin-bottom: 12px;
+      }
     }
   }
   &__panel-text {
     @include fsl(18px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 120%);
+    }
     font-weight: 500;
   }
 
   &__title {
     margin-bottom: 32px;
-    @include fsl(18px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 16px;
+    }
   }
 
   &__list {}
@@ -37,16 +58,33 @@
     padding-bottom: 14px;
 
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-bottom: 8px;
+      display: block;
+    }
     justify-content: space-between;
 
     border-bottom: 1px solid $color-light-gray;
 
     &:not(:first-child) {
       margin-top: 24px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 8px;
+      }
     }
   }
   &__list-text {
     flex-shrink: 0;
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: auto;
+      @include fsl(14px, 140%);
+    }
+
+    &.small {
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(12px, 140%);
+      }
+    }
   }
 }

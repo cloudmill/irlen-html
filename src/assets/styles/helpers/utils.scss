@@ -47,3 +47,9 @@
     display: none;
   }
 }
+
+.mobile {
+  @media (min-width: $breakpoint) {
+    display: none;
+  }
+}

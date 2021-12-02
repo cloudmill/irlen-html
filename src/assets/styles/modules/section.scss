@@ -32,6 +32,9 @@
 
   &--md {
     margin-top: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 32px;
+    }
   }
 
   &--default {

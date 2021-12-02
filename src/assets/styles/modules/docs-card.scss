@@ -8,6 +8,7 @@
     padding: 20px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 12px;
+      display: flex;
     }
   }
 
@@ -16,12 +17,30 @@
     justify-content: space-between;
   }
 
+  &__svg {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 21px;
+      height: 25px;
+    }
+  }
+
   &__label {
     @include fsl(10px, 140%);
+  }
+
+  &__content {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 12px;
+    }
   }
 
   &__text {
     margin-top: 20px;
     @include fsl(14px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 0;
+      margin-bottom: 4px;
+      @include fsl(12px, 140%);
+    }
   }
 }

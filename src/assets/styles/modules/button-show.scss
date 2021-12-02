@@ -6,8 +6,6 @@
 
   &__text {
     margin-right: 9px;
-    @media (max-width: ($breakpoint - 1px)) {
-      // @include fsl(14px, 140%);
-    }
+    @include fsl(14px, 140%);
   }
 }
