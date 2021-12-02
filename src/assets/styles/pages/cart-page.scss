@@ -3,6 +3,9 @@
 
   &__row {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
     justify-content: space-between;
   }
 
@@ -11,17 +14,39 @@
 
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
     }
     &:nth-child(2) {
       width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 24px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__counter {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 124px;
     }
   }
 
   &__label {
     margin-bottom: 8px;
-
     @include fsl(14px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 4px;
+      @include fsl(12px, 140%);
+    }
     color: $color-gray;
+  }
+
+  &__caption {
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 140%);
+    }
   }
 
   &__icon {
@@ -63,17 +88,27 @@
   }
   &__card-top {
     padding: 20px 20px 24px 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 16px 12px;
+    }
+
     border-bottom: 1px solid $color-light-gray;
   }
   &__card-title {
     margin-bottom: 16px;
     @include fsl(18px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 120%);
+    }
   }
   &__card-label {
     margin-top: 24px;
     text-transform: uppercase;
     color: $color-gray;
     @include fsl(12px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(10px, 120%);
+    }
   }
   &__card-body {}
   &__card-item {
@@ -86,22 +121,43 @@
   }
   &__card-text {
     font-weight: 500;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 140%);
+    }
   }
   &__card-bot {
     padding: 24px 20px 20px;
   }
   &__card-price {
+    max-width: 165px;
+
     @include fsl(18px, 120%);
     font-weight: 700;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 120%);
+    }
+  }
+  &__card-num {
+    @include fsl(18px, 120%);
+    font-weight: 700;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(20px, 120%);
+    }
   }
   &__card-caption {
     margin-top: 12px;
-
-    color: $color-gray;
     @include fsl(12px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 8px;
+      @include fsl(10px, 140%);
+    }
+    color: $color-gray;
   }
   &__card-btn {
     margin-top: 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 16px;
+    }
   }
   &__card-list {
     margin-bottom: 24px;
@@ -115,6 +171,9 @@
 
   &__warning {
     padding: 12px 20px 12px 16px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 12px;
+    }
 
     background: $color-white;
     border-radius: 4px;
@@ -126,6 +185,9 @@
   &__warning-col {
     &:nth-child(2) {
       margin-left: 20px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 16px;
+      }
     }
   }
   &__warning-icon {
@@ -141,6 +203,10 @@
   &__warning-title {
     margin-bottom: 2px;
     @include fsl(13px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(11px, 140%);
+    }
+    font-weight: 500;
   }
   &__warning-text {
     @include fsl(12px, 140%);
@@ -148,6 +214,9 @@
 
   &__top {
     margin-bottom: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
   }
   &__top-row {
     display: flex;
@@ -175,9 +244,16 @@
     @include fsl(12px, 120%);
   }
 
+  &__list {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 16px;
+    }
+  }
+
   &__item {
     background: $color-white;
     border-radius: 4px;
+    overflow: hidden;
 
     &:not(:first-child) {
       margin-top: 8px;
@@ -195,6 +271,18 @@
   }
   &__item-row {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-bottom: 12px;
+
+      display: grid;
+      grid-template-areas: 
+        "A A A A"
+        "B B C C"
+        ". . D E"
+      ;
+      grid-template-columns: calc(#{$col-width-m} / 2) calc(#{$col-width-m} / 2) auto auto;
+      row-gap: 12px;
+    }
   }
   &__item-col {
     flex-shrink: 0;
@@ -202,12 +290,30 @@
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 5);
       display: flex;
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+        grid-area: A;
+      }
+    }
+    &:nth-child(2) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 8px;
+        grid-area: C;
+      }
     }
     &:nth-child(3) {
       margin-left: 40px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 8px;
+        grid-area: D;
+      }
     }
     &:nth-child(4) {
       margin-left: 40px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 0;
+        grid-area: E;
+      }
     }
     &:nth-child(5) {
       padding: 20px 20px 20px 0;
@@ -215,26 +321,50 @@
       flex-grow: 1;
       display: flex;
       justify-content: flex-end;
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: 0;
+        flex-grow: 0;
+        justify-content: center;
+        grid-area: B;
+      }
     }
   }
   &__item-image {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: calc(#{$col-part-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: calc(#{$col-width-m});
+      flex-shrink: 0;
+    }
   }
   &__item-container {
     padding: 20px 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0;
+    }
   }
   &__item-content {
     margin-left: 40px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 8px;
+      margin-top: 12px;
+    }
   }
   &__item-text {
     margin-bottom: 8px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 4px;
+      @include fsl(12px, 120%);
+    }
     font-weight: 500;
   }
   &__item-label {
     color: $color-gray;
     @include fsl(12px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(10px, 140%);
+    }
   }
   &__item-price {
     line-height: 110%;
@@ -250,5 +380,17 @@
     // align-items: center;
     justify-content: center;
     cursor: pointer;
+  }
+  &__item-caption {
+    margin-bottom: 8px;
+
+    display: none;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+
+      color: $color-gray;
+      @include fsl(10px, 120%);
+      text-transform: uppercase;
+    }
   }
 }

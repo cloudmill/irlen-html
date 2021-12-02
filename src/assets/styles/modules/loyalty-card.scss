@@ -2,6 +2,9 @@
   $comp: &;
 
   padding: 16px;
+  @media (max-width: ($breakpoint - 1px)) {
+    padding: 12px;
+  }
 
   display: flex;
 
@@ -35,13 +38,6 @@
         @include fsl(10px, 140%);
       }
     }
-
-    #{$comp}__svg {
-      --size: 25px;
-
-      width: var(--size);
-      height: var(--size);
-    }
   }
   
   &__icon {
@@ -58,16 +54,34 @@
   }
   &__content {
     margin-left: 40px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 8px;
+    }
   }
   &__title {
     margin-bottom: 8px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 4px;
+      @include fsl(11px, 140%);
+    }
     font-weight: 500;
   }
   &__text {
     @include fsl(14px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(10px, 140%);
+    }
   }
   &__link {
     color: $color-blue;
     text-decoration: underline;
+  }
+  &__svg {
+    --size: 25px;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      width: var(--size);
+      height: var(--size);
+    }
   }
 }

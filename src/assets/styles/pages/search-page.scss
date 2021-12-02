@@ -10,29 +10,60 @@
 
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 11 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: calc(#{$col-part-m} * 3 - #{$col-gap-m});
+      }
+    }
+    &:nth-child(2) {
+      width: calc(#{$col-width-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: calc(#{$col-width-m});
+      }
     }
   }
 
   &__input {
     padding: 15px 12px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 6px 12px;
+    }
     width: 100%;
 
     @include fsl(14px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 140%);
+    }
     border-radius: 4px;
     border: 1px solid $color-light-gray;
   }
 
+  &__aside {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+
   &__grid {
+    --gap: 20px;
+    --countItems: 3;
+    @media (max-width: ($breakpoint - 1px)) {
+      --gap: 8px;
+      --countItems: 2;
+    }
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
-    column-gap: 20px;
+    grid-template-columns: repeat(var(--countItems), 1fr);
+    row-gap: var(--gap);
+    column-gap: var(--gap);
   }
 
   &__result {
     margin-bottom: 348px;
-
     @include fsl(24px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 242px;
+      @include fsl(16px, 120%);
+    }
     font-weight: 500;
     display: none;
   }
