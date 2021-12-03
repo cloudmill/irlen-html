@@ -58,11 +58,7 @@ mixin login-modal
       h3.login-modal__inner 
         |Войти
       .login-modal__inner 
-        .model-tabs(data-real-tabs='')
-          .model-tabs__item.active(data-tabs-item='')
-            |Есть аккаунт
-          .model-tabs__item(data-tabs-item='')
-            |Регистрация
+        +model-tabs(items = ['Есть аккаунт' , 'Регистрация'] real=true)
       .tabs-block.active(data-tabs-block='')
         form.form(action="/" data-form='123')
           .form__item 

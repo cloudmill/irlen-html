@@ -25,13 +25,22 @@
       
       #{$comp}__media-col {
         width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+        @media (max-width: ($breakpoint - 1px)) {
+          width: 100%;
+        }
       }
       #{$comp}__media-content {
         margin-top: 12px;
+        @media (max-width: ($breakpoint - 1px)) {
+          margin-top: 8px;
+        }
       }
       #{$comp}__media-title {
         margin-bottom: 4px;
         @include fsl(24px, 120%);
+        @media (max-width: ($breakpoint - 1px)) {
+          @include fsl(16px, 120%);
+        }
       }
     }
   }

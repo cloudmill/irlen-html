@@ -14,15 +14,22 @@
   &--small {
     max-width: 453px;
     @media (max-width: ($breakpoint - 1px)) {
-      max-width: auto;
+      max-width: none;
     }
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
 
     #{$comp}__content {
       margin-left: 16px;
       @media (max-width: ($breakpoint - 1px)) {
-        margin-left: 8px;
+        margin-left: 14px;
       }
+    }
+
+    #{$comp}__svg {
+      --size: 25px;
+
+      width: var(--size);
+      height: var(--size);
     }
 
     #{$comp}__title {

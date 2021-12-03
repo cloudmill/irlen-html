@@ -1,4 +1,19 @@
-mixin accordion 
+mixin accordion
+  -
+    var ddata = [
+      {
+        label: 'Дата обновления заказа',
+        text: '01.06.2021'
+      },
+      {
+        label: 'Сумма заказа',
+        text: '7 900 ₽'
+      },
+      {
+        label: 'Статус',
+        text: 'Доставляется'
+      },
+    ]
   .accordion(data-accordion='')
     .accordion__head(data-accordion-button='')
       .accordion__row 
@@ -12,31 +27,39 @@ mixin accordion
           .accordion__text 
             |Доставляется
         .accordion__col
-          .accordion__text 
+          .accordion__text.desktop
             |7 900 ₽
           .accordion__icon 
             +arrow-svg.accordion__svg
     .accordion__body(data-accordion-dropdown='')
-      - for (x = 0; x < 3; x++)
-        .accordion__item 
-          .accordion__content-col
-            .accordion__image 
-              img(src="assets/images/product.jpg", alt="")
-            .accordion__content 
-              .accordion__title 
-                |Раскатник R-D TICN 376 ISO2X M14X2 2P
-              .accordion__label 
-                |Артикул: 9353014BTC
-              .accordion__label 
-                |Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)
-          .accordion__content-col
+      .accordion__grid  
+        each item in ddata
+          .accordion__grid-item 
+            .accordion__caption 
+              |#{item.label}
             .accordion__text 
-              |1 шт.
-            .tooltip
-              .accordion__price.tooltip__row 
-                |€ 93.42
-                span.tooltip__span
-                  .tooltip__icon 
-                    +tooltip-svg
-              .tooltip__container   
-                |Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?
+              |#{item.text}
+      .accordion__list
+        - for (x = 0; x < 3; x++)
+          .accordion__item 
+            .accordion__content-col
+              .accordion__image 
+                img(src="assets/images/product.jpg", alt="")
+              .accordion__content 
+                .accordion__title 
+                  |Раскатник R-D TICN 376 ISO2X M14X2 2P
+                .accordion__label 
+                  |Артикул: 9353014BTC
+                .accordion__label 
+                  |Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)
+            .accordion__content-col
+              .accordion__text.order2
+                |1 шт.
+              .tooltip
+                .accordion__price.tooltip__row 
+                  |€ 93.42
+                  span.tooltip__span
+                    .tooltip__icon 
+                      +tooltip-svg
+                .tooltip__container   
+                  |Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?

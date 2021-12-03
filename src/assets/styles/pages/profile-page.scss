@@ -2,6 +2,9 @@
 
   &__accordion {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
   }
   &__accordion-col {
     flex-shrink: 0;
@@ -26,6 +29,9 @@
 
   &__row {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
     justify-content: space-between;
   }
   
@@ -34,9 +40,16 @@
 
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
     }
     &:nth-child(2) {
       width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 32px;
+        width: 100%;
+      }
     }
   }
 
@@ -63,35 +76,64 @@
   &__info {}
   &__info-title {
     margin-bottom: 16px;
-    
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 12px;
+      @include fsl(14px, 120%);
+    }
     @include fsl(18px, 120%);
+    font-weight: 500;
+  }
+  &__info-text {
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 140%);
+    }
   }
   &__info-contacts {
     margin-top: 16px;
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      justify-content: space-between;
+    }
   }
   &__info-col {
     
     &:nth-child(1) {
       flex-shrink: 0;
       width: calc(#{$col-part-d} * 2);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
     }
   }
   &__info-link {
+    display: block;
+
     @include fsl(20px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px, 140%);
+    }
     font-weight: 500;
   }
   &__info-label {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 2px;
+      @include fsl(12px, 140%);
+    }
     color: $color-gray;
   }
   &__info-time {
-    font-weight: 500;
     @include fsl(14px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 140%);
+    }
     font-weight: 500;
   }
 
   &__form {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
     justify-content: space-between;
   }
   &__form-col {
@@ -99,16 +141,26 @@
 
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 100%;
+      }
     }
 
     &:nth-child(2) {
       width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
     }
   }
   &__form-grid {
     --gridCount: 2;
     --rowGap: 24px;
     --colGap: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --gridCount: 1;
+      --rowGap: 16px;
+    }
 
     display: grid;
     grid-template-columns: repeat(var(--gridCount), 1fr);
@@ -119,6 +171,9 @@
 
     &:last-child {
       grid-column: -1/2;
+      @media (max-width: ($breakpoint - 1px)) {
+        grid-column: auto;
+      }
     }
   }
   &__form-label {
@@ -126,17 +181,28 @@
   }
   &__form-buttons {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
   }
   &__form-btn {
 
     &:not(:first-child) {
       margin-left: 12px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 8px;
+        margin-left: 0;
+      }
     }
   }
 
   &__buttons {
     margin-top: 40px;
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 24px;
+      display: block;
+    }
   }
 
   &__button {
@@ -146,7 +212,10 @@
     align-items: center;
     justify-content: center;
     width: 160px;
-
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
+    
     background: $color-white;
     border-radius: 4px;
     cursor: pointer;

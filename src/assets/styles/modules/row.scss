@@ -1,6 +1,9 @@
 .row {
 
   display: flex;
+  @media (max-width: ($breakpoint - 1px)) {
+    display: block;
+  }
   justify-content: space-between;
 
   &__col {
@@ -9,11 +12,18 @@
     &:nth-child(1) {
       @media (min-width: $breakpoint) {
         width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+        @media (max-width: ($breakpoint - 1px)) {
+          width: 100%;
+        }
       }
     }
 
     &:nth-child(2) {
       width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 32px;
+        width: 100%;
+      }
     }
   }
 }

@@ -19,6 +19,9 @@ block content
         value: 'Интерактивное агенство КМ',
       },
       {
+        type: 'panel'
+      },
+      {
         type: 'password',
         label: 'Пароль',
         value: 'zxcqwerty123',
@@ -52,7 +55,7 @@ block content
       .container 
         .row 
           .row__col
-            +tabs.tabs--column(tabs = ['Заказы', 'Cкидка', 'Мои данные',])
+            +tabs.tabs--column.tabs--responsive(tabs = ['Заказы', 'Cкидка', 'Мои данные',])
           .row__col
             +model-tabs( items = ['Текущие заказы', 'Все заказы'])
             h2.margin-top.margin-top--xl 
@@ -63,7 +66,7 @@ block content
                   .main-page__media-container 
                     img.main-page__media-container(src="assets/images/hero-1.jpg", alt="")
                   .main-page__media-icon 
-                    +big-arrow-svg
+                    +big-arrow-svg.main-page__media-svg
                 .main-page__media-content 
                   .main-page__media-title 
                     |Каталог продукции
@@ -74,7 +77,7 @@ block content
                   .main-page__media-container 
                     img.main-page__media-container(src="assets/images/hero-2.jpg", alt="")
                   .main-page__media-icon 
-                    +big-arrow-svg
+                    +big-arrow-svg.main-page__media-svg
                 .main-page__media-content 
                   .main-page__media-title 
                     |Интернет-магазин
@@ -137,10 +140,19 @@ block content
                   form.form.form--disabled(action="/" data-form='') 
                     .profile-page__form-grid 
                       each item in ddata
-                        .profile-page__form-item
-                          .profile-page__form-label 
-                            |#{item.label}
-                          input.form__input(type=item.type value = item.value)
+                        - if (item.type === 'panel')
+                          .profile-page__form-item.mobile
+                            .loyalty-card.loyalty-card--small
+                              .loyalty-card__icon.loyalty-card__icon--start
+                                +warning-svg.loyalty-card__svg
+                              .loyalty-card__content 
+                                .loyalty-card__text 
+                                  |Для смены название компании или ИНН позвоните по телефону: #[a.loyalty-card__link(href="tel:8 800 444-60-98") 8 800 444-60-98]
+                        - else
+                          .profile-page__form-item
+                            .profile-page__form-label 
+                              |#{item.label}
+                            input.form__input(type=item.type value = item.value)
                     .profile-page__buttons
                       .profile-page__button(data-change-button='')
                         .profile-page__icon 
