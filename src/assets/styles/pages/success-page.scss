@@ -3,21 +3,54 @@
   &__section {
     margin-top: 220px;
     margin-bottom: 119px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 70px;
+      margin-bottom: 60px;
+    }
   }
 
   &__title {
     margin-bottom: 24px;
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 12px;
+      width: 100%;
+    }
   }
 
   &__text {
+    width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+      @include fsl(16px, 140%);
+    }
     @include fsl(18px, 140%);
+  }
+  
+  &__btn {
+    margin-top: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 24px;
+    }
+    display: flex;
   }
 
   &__icon {
-    margin-top: 50px;
-    
+    margin-top: -110px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 0;
+      margin-bottom: 24px;
+      justify-content: flex-start;
+    }
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__svg {
+    --size: 80px;
+
+    width: var(--size);
+    height: var(--size);
   }
 }

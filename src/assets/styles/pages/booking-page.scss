@@ -31,6 +31,13 @@
       display: block;
     }
     justify-content: space-between;
+
+    &.disabled {
+      #{$comp}__form {
+        opacity: .4;
+        pointer-events: none;
+      }
+    }
   }
   &__col {
     flex-shrink: 0;
@@ -70,20 +77,6 @@
     padding: 20px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 12px;
-    }
-  }
-
-  &__form {
-
-    &.disabled {
-      #{$comp}__block {
-        opacity: .4;
-        pointer-events: none;
-      }
-      #{$comp}__text {
-        opacity: 1;
-        pointer-events: all;
-      }
     }
   }
 

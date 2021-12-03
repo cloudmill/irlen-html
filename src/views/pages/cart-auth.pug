@@ -1,0 +1,134 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/button
+include ../components/counter
+
+block content 
+  .cart-page 
+    section.section.section--first 
+      .container 
+        +navigation(page='Корзина')
+    section.section.section--last
+      .container 
+        .cart-page__row 
+          .cart-page__col 
+            .cart-page__top
+              .cart-page__top-row 
+                .cart-page__top-col
+                  .cart-page__top-label 
+                    |товар
+                .cart-page__top-col
+                  .cart-page__top-label 
+                    |количество
+                .cart-page__top-col
+                  .cart-page__top-label 
+                    |цена
+                .cart-page__top-col
+                  .cart-page__top-label 
+                    |итого
+            ul.cart-page__list  
+              - for (i = 0; i < 6; i++)
+                li.cart-page__item 
+                  .cart-page__item-row 
+                    .cart-page__item-col
+                      .cart-page__item-image 
+                        img(src="assets/images/product.jpg", alt="")
+                      .cart-page__item-container 
+                        .cart-page__item-content
+                          .cart-page__item-text 
+                            |Раскатник R-D TICN 376 ISO2X M14X2 2P
+                          .cart-page__item-label 
+                            |Артикул: 9353014BTC
+                    .cart-page__item-col
+                      .cart-page__item-container 
+                        .cart-page__counter
+                          +counter.counter--md
+                    .cart-page__item-col
+                      .cart-page__item-container
+                        .cart-page__item-caption 
+                          |цена
+                        .tooltip
+                          .cart-page__item-price.tooltip__row
+                            |€ 93.42
+                            span.tooltip__span
+                              .tooltip__icon 
+                                +tooltip-svg
+                          .tooltip__container   
+                            |Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?
+                        .cart-page__item-old 
+                          |€ 103.55
+                    .cart-page__item-col
+                      .cart-page__item-container
+                        .cart-page__item-caption 
+                          |итого
+                        .cart-page__item-price 
+                          |€ 1279.2
+                    .cart-page__item-col
+                      .cart-page__item-icon 
+                        +trash-svg
+          .cart-page__col 
+            .cart-page__card 
+              .cart-page__card-top
+                .cart-page__card-title 
+                  |Ваш заказ
+                .cart-page__warning
+                  .cart-page__warning-row 
+                    .cart-page__warning-col
+                      .cart-page__warning-icon 
+                        +warning-svg.cart-page__warning-svg
+                    .cart-page__warning-col
+                      .cart-page__warning-title 
+                        |Внимание!
+                      .cart-page__warning-text 
+                        |При заказе прямым клиентом на сумму от 30 000 ₽ доставка по г. Санкт-Петербург бесплатна. Акция действует до конца 2021 года
+                .cart-page__card-label 
+                  |товары
+              .cart-page__card-body 
+                - for (i = 0; i < 2; i++)
+                  .cart-page__card-item 
+                    .cart-page__label 
+                      |Позиций: 22
+                    .cart-page__card-row 
+                      .cart-page__card-col
+                        p.cart-page__caption
+                          |Сумма, €
+                      .cart-page__card-col
+                        .tooltip
+                          .cart-page__card-text.tooltip__row
+                            |1222.45
+                            span.tooltip__span
+                              .tooltip__icon 
+                                +tooltip-svg
+                          .tooltip__container   
+                            |Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?
+              .cart-page__card-bot
+                ul.cart-page__card-list
+                  li.cart-page__card-thing 
+                    .cart-page__card-row 
+                      .cart-page__card-col
+                        p.cart-page__caption
+                          |Сумма без скидки, ₽
+                      .cart-page__card-col
+                        .cart-page__card-text 
+                          |- 109 906
+                  li.cart-page__card-thing 
+                    .cart-page__card-row 
+                      .cart-page__card-col
+                        p.cart-page__caption
+                          |Скидка, ₽
+                      .cart-page__card-col
+                        .cart-page__card-text 
+                          |- 20 906
+                .cart-page__card-row 
+                  .cart-page__card-col
+                    .cart-page__card-price 
+                      |Предварительная стоимость, ₽
+                  .cart-page__card-col
+                    .cart-page__card-num
+                      |89 0000
+                .cart-page__card-caption 
+                  |Цена с НДС по курсу ЦА на 25.06.2021
+                .cart-page__card-btn 
+                  +button.button--wide 
+                    |Продолжить оформление

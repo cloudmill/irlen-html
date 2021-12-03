@@ -1,13 +1,21 @@
 extends ../layouts/master.pug
 
+include ../components/button
 
 block content 
   .success-page 
     section.success-page__section 
       .container
+        .mobile
+          .success-page__icon 
+            +success-svg.success-page__svg
         h1.success-page__title 
-          |Заказ оформлен
-        p.succes-page__text 
-          |Мы свяжемся с вами в течении 10 минут для подтверждения заказа.
-        .success-page__icon 
-          +success-svg
+          |Заказ оформлен, его проверяют наши специалисты
+        p.success-page__text 
+          |Мы свяжемся с Вами для уточнения цены, деталей заказа, способа оплаты и доставки.
+        .success-page__btn
+          +button.button--white.button--outline
+            |Посмотреть заказ
+        .desktop
+          .success-page__icon 
+            +success-svg
