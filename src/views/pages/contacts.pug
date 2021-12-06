@@ -15,7 +15,7 @@ block content
         .contacts-page__row
           h1.nav-title
             |Контакты
-          .contacts-page__button
+          a.contacts-page__button(href="#") 
             .contacts-page__button-icon
               +printer-svg
             .contacts-page__button-text 
@@ -23,163 +23,162 @@ block content
     section.section 
       .container 
         .contacts-page__section 
-          h3
+          h3.contacts-page__title
             |Санкт-Петербург
-          .contacts-page__inner 
-            .contacts-page__section-row 
-              .contacts-page__section-col
-                .contacts-page__section-item
-                  .contacts-page__label 
-                    |Россия, звонок бесплатный
-                  a.contacts-page__link(href="tel:8 800 444-60-98") 
-                    |8 800 444-60-98
-                .contacts-page__section-item
-                  .contacts-page__label 
-                    |Многоканальный
-                  a.contacts-page__link(href="tel:8 812 600-60-98") 
-                    |8 812 600-60-98
-                .contacts-page__section-item
-                  .contacts-page__label 
-                    |Отдел продаж
-                  a.contacts-page__link(href="tel:8 812 600-60-98") 
-                    |8 812 600-60-98
-                  a.contacts-page__link(href="mailto:irlen@irlen.ru") 
-                    |irlen@irlen.ru
-              .contacts-page__section-col
-                .contacts-page__section-item
-                  .contacts-page__label 
-                    |Инструментальный отдел
-                  a.contacts-page__link(href="tel:8 911 769-41-26") 
-                    |8 911 769-41-26
-                  a.contacts-page__link(href="tel:8 812 923-36-93") 
-                    |8 812 923-36-93
-                  a.contacts-page__link(href="mailto:tool@irlen.ru") 
-                    |tool@irlen.ru
-                .contacts-page__section-item
-                  .contacts-page__label 
-                    |Служба сервиса
-                  a.contacts-page__link(href="tel:8 911 769-41-26") 
-                    |8 911 769-41-26
-                  a.contacts-page__link(href="tel:8 812 923-36-93") 
-                    |8 812 923-36-93
-                  a.contacts-page__link(href="mailto:tool@irlen.ru") 
-                    |tool@irlen.ru
-                .contacts-page__section-item
-                  .contacts-page__label 
-                    |Заказ ленточных полотен
-                  a.contacts-page__link(href="tel:8 911 947-89-93") 
-                    |8 911 947-89-93
-            .contacts-page__section-row.section__block
-              .contacts-page__section-col 
-                .contacts-page__section-item 
-                  .contacts-page__label 
-                    |Адрес
-                  addres.contacts-page__text
-                    |ул. Старожиловская, 9
-                .contacts-page__section-item 
-                  .contacts-page__label 
-                    |Время работы
-                  .contacts-page__text
-                    |09:00 — 17:00
+          .contacts-page__section-row 
+            .contacts-page__section-col
+              .contacts-page__section-item
+                .contacts-page__label 
+                  |Россия, звонок бесплатный
+                a.contacts-page__link(href="tel:8 800 444-60-98") 
+                  |8 800 444-60-98
+              .contacts-page__section-item
+                .contacts-page__label 
+                  |Многоканальный
+                a.contacts-page__link(href="tel:8 812 600-60-98") 
+                  |8 812 600-60-98
+              .contacts-page__section-item
+                .contacts-page__label 
+                  |Отдел продаж
+                a.contacts-page__link(href="tel:8 812 600-60-98") 
+                  |8 812 600-60-98
+                a.contacts-page__link(href="mailto:irlen@irlen.ru") 
+                  |irlen@irlen.ru
+            .contacts-page__section-col
+              .contacts-page__section-item
+                .contacts-page__label 
+                  |Инструментальный отдел
+                a.contacts-page__link(href="tel:8 911 769-41-26") 
+                  |8 911 769-41-26
+                a.contacts-page__link(href="tel:8 812 923-36-93") 
+                  |8 812 923-36-93
+                a.contacts-page__link(href="mailto:tool@irlen.ru") 
+                  |tool@irlen.ru
+              .contacts-page__section-item
+                .contacts-page__label 
+                  |Служба сервиса
+                a.contacts-page__link(href="tel:8 911 769-41-26") 
+                  |8 911 769-41-26
+                a.contacts-page__link(href="tel:8 812 923-36-93") 
+                  |8 812 923-36-93
+                a.contacts-page__link(href="mailto:tool@irlen.ru") 
+                  |tool@irlen.ru
+              .contacts-page__section-item
+                .contacts-page__label 
+                  |Заказ ленточных полотен
+                a.contacts-page__link(href="tel:8 911 947-89-93") 
+                  |8 911 947-89-93
+          .contacts-page__section-row.contacts-page__block
+            .contacts-page__section-col 
+              .contacts-page__section-item 
+                .contacts-page__label 
+                  |Адрес
+                addres.contacts-page__text
+                  |ул. Старожиловская, 9
+              .contacts-page__section-item 
+                .contacts-page__label 
+                  |Время работы
+                .contacts-page__text
+                  |09:00 — 17:00
           .contacts-page__inner 
             .contacts-page__img 
-              img(src="assets/images/contacts-1.jpg", alt="")
+              img.desktop(src="assets/images/contacts-1.jpg", alt="")
+              img.mobile(src="assets/images/contacts-1-mobile.jpg", alt="")
     section.section
       .container 
         .contacts-page__grid 
           .contacts-page__grid-item
-            h3 
+            h3.contacts-page__title
               |Москва
-            .contacts-page__inner 
-              .contacts-page__grid-row 
-                .contacts-page__grid-col
-                  .contacts-page__label 
-                    |Отдел продаж
-                  .contacts-page__grid-inner 
-                    .contacts-page__grid-left 
-                      a.contacts-page__link(href="tel:8 495 367-11-25") 
-                        |8 495 367-11-25
-                      a.contacts-page__link(href="tel:8 985 516-74-68") 
-                        |8 985 516-74-68
-                    .contacts-page__grid-right
-                      a.contacts-page__link(href="mailto:irlen@irlen-m.ru")
-                        |irlen@irlen-m.ru 
-                .contacts-page__grid-col
-                  .contacts-page__label 
-                    |Адрес
-                  addres.contacts-page__text
-                    |ул. Старожиловская, 9
+            .contacts-page__grid-row 
+              .contacts-page__grid-col
+                .contacts-page__label 
+                  |Отдел продаж
+                .contacts-page__grid-inner 
+                  .contacts-page__grid-left 
+                    a.contacts-page__link(href="tel:8 495 367-11-25") 
+                      |8 495 367-11-25
+                    a.contacts-page__link(href="tel:8 985 516-74-68") 
+                      |8 985 516-74-68
+                  .contacts-page__grid-right
+                    a.contacts-page__link(href="mailto:irlen@irlen-m.ru")
+                      |irlen@irlen-m.ru 
+              .contacts-page__grid-col
+                .contacts-page__label 
+                  |Адрес
+                addres.contacts-page__text
+                  |ул. Старожиловская, 9
             .contacts-page__inner 
               .contacts-page__img 
-                img(src="assets/images/contacts-2.jpg", alt="")
+                img.desktop(src="assets/images/contacts-2.jpg", alt="")
+                img.mobile(src="assets/images/contacts-1-mobile.jpg", alt="")
           .contacts-page__grid-item
-            h3 
+            h3.contacts-page__title
               |Москва
-            .contacts-page__inner 
-              .contacts-page__grid-row 
-                .contacts-page__grid-col
-                  .contacts-page__label 
-                    |Отдел продаж
-                  .contacts-page__grid-inner 
-                    .contacts-page__grid-left 
-                      a.contacts-page__link(href="tel:8 915 945-16-26") 
-                        |8 915 945-16-26
-                      a.contacts-page__link(href="tel:8 910 144-77-16") 
-                        |8 910 144-77-16
-                    .contacts-page__grid-right
-                      a.contacts-page__link(href="tel:8 831 249-99-88")
-                        |8 831 249-99-88
-                      a.contacts-page__link(href="mailto:nn@irlen.ru")
-                        |nn@irlen.ru
-                .contacts-page__grid-col
-                  .contacts-page__label 
-                    |Адрес
-                  addres.contacts-page__text
-                    |Московское ш., д.52
+            .contacts-page__grid-row 
+              .contacts-page__grid-col
+                .contacts-page__label 
+                  |Отдел продаж
+                .contacts-page__grid-inner 
+                  .contacts-page__grid-left 
+                    a.contacts-page__link(href="tel:8 915 945-16-26") 
+                      |8 915 945-16-26
+                    a.contacts-page__link(href="tel:8 910 144-77-16") 
+                      |8 910 144-77-16
+                  .contacts-page__grid-right
+                    a.contacts-page__link(href="tel:8 831 249-99-88")
+                      |8 831 249-99-88
+                    a.contacts-page__link(href="mailto:nn@irlen.ru")
+                      |nn@irlen.ru
+              .contacts-page__grid-col
+                .contacts-page__label 
+                  |Адрес
+                addres.contacts-page__text
+                  |Московское ш., д.52
             .contacts-page__inner 
               .contacts-page__img 
-                img(src="assets/images/contacts-2.jpg", alt="")
+                img.desktop(src="assets/images/contacts-2.jpg", alt="")
+                img.mobile(src="assets/images/contacts-1-mobile.jpg", alt="")
     section.section.section--last
       .container 
         .contacts-page__grid 
           .contacts-page__grid-item
-            h3 
+            h3.contacts-page__title
               |Екатеринбург
-            .contacts-page__inner 
-              .contacts-page__grid-row 
-                .contacts-page__grid-col
-                  .contacts-page__label 
-                    |Отдел продаж
-                  .contacts-page__grid-inner 
-                    .contacts-page__grid-left 
-                      a.contacts-page__link(href="tel:8 965 535-23-33") 
-                        |8 965 535-23-33
-                      a.contacts-page__link(href="tel:8 919 370-61-38") 
-                        |8 919 370-61-38
-                    .contacts-page__grid-right
-                      a.contacts-page__link(href="tel:8 343 383-44-80")
-                        |8 343 383-44-80
-                      a.contacts-page__link(href="mailto:ekb@irlen.ru")
-                        |ekb@irlen.ru
-                .contacts-page__grid-col
-                  .contacts-page__label 
-                    |Адрес
-                  addres.contacts-page__text
-                    |Московское ш., д.52
+            .contacts-page__grid-row 
+              .contacts-page__grid-col
+                .contacts-page__label 
+                  |Отдел продаж
+                .contacts-page__grid-inner 
+                  .contacts-page__grid-left 
+                    a.contacts-page__link(href="tel:8 965 535-23-33") 
+                      |8 965 535-23-33
+                    a.contacts-page__link(href="tel:8 919 370-61-38") 
+                      |8 919 370-61-38
+                  .contacts-page__grid-right
+                    a.contacts-page__link(href="tel:8 343 383-44-80")
+                      |8 343 383-44-80
+                    a.contacts-page__link(href="mailto:ekb@irlen.ru")
+                      |ekb@irlen.ru
+              .contacts-page__grid-col
+                .contacts-page__label 
+                  |Адрес
+                addres.contacts-page__text
+                  |Московское ш., д.52
             .contacts-page__inner 
               .contacts-page__img 
-                img(src="assets/images/contacts-2.jpg", alt="")
+                img.desktop(src="assets/images/contacts-2.jpg", alt="")
+                img.mobile(src="assets/images/contacts-1-mobile.jpg", alt="")
           .contacts-page__grid-item
-            h3 
+            h3.contacts-page__title
               |Пермь
-            .contacts-page__inner 
-              .contacts-page__grid-row 
-                .contacts-page__grid-col
-                  .contacts-page__label 
-                    |Отдел продаж
-                  .contacts-page__grid-inner 
-                    .contacts-page__grid-left 
-                      a.contacts-page__link(href="tel:8 908 271-68-76") 
-                        |8 908 271-68-76
-                      a.contacts-page__link(href="mailto:perm@irlen.ru") 
-                        |perm@irlen.ru
+            .contacts-page__grid-row 
+              .contacts-page__grid-col
+                .contacts-page__label 
+                  |Отдел продаж
+                .contacts-page__grid-inner 
+                  .contacts-page__grid-left 
+                    a.contacts-page__link(href="tel:8 908 271-68-76") 
+                      |8 908 271-68-76
+                    a.contacts-page__link(href="mailto:perm@irlen.ru") 
+                      |perm@irlen.ru
