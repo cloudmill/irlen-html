@@ -1,11 +1,13 @@
 mixin tabs 
   if (attributes.real)
     .tabs(class=attributes.class data-real-tabs='')
-      each item, i in attributes.tabs 
-        .tabs__item(class=(i === 0 ? 'active' : '') data-tabs-item='')
-          |#{item}
+      .tabs__container
+        each item, i in attributes.tabs 
+          .tabs__item(class=(i === 0 ? 'active' : '') data-tabs-item='')
+            |#{item}
   else 
     .tabs(class=attributes.class data-tabs='')
-      each item, i in attributes.tabs 
-        .tabs__item(class=(i === 0 ? 'active' : '') data-tabs-item='')
-          |#{item}
+      .tabs__container
+        each item, i in attributes.tabs 
+          .tabs__item(class=(i === 0 ? 'active' : '') data-tabs-item='')
+            |#{item}

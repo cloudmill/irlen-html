@@ -3,21 +3,29 @@
   
   display: flex;
 
-  background: $color-white;
-  border-radius: 4px;
-
   @media (max-width: ($breakpoint - 1px)) {
+    margin-left: -16px;
+    padding: 0 16px;
+
+    // fle
+    width: calc(100% + (16px * 2));
+
     overflow-x: scroll;
     @include scrollbar-hidden;
   }
 
   &--column {
-    flex-direction: column;
-    @media (max-width: ($breakpoint - 1px)) {
-      flex-direction: row;
-    }
+    
+    #{$comp}__container {
+      width: 100%;
+      
+      flex-direction: column;
+      @media (max-width: ($breakpoint - 1px)) {
+        flex-direction: row;
+      }
 
-    background: transparent;
+      background: transparent;
+    }
 
     #{$comp}__item {
       padding: 20px;
@@ -51,6 +59,13 @@
         text-align: center;
       }
     }
+  }
+
+  &__container {
+    display: flex;
+
+    background: $color-white;
+    border-radius: 4px;
   }
 
   &__item {

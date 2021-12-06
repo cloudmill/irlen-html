@@ -1,4 +1,5 @@
 import 'select2';
+import {mediaQuery} from './mediaQueries'
 
 // select
 {
@@ -76,4 +77,34 @@ import 'select2';
       });
     });
   });
+}
+
+// mobile picker text change
+{
+  $(() => {
+    const select = $('.select')
+    if (select.length && !mediaQuery.matches) {
+      
+      const selectMobile = select.find('.select__mobile')
+
+      if (selectMobile.is('[data-select-mobile]')) {
+
+        selectMobile.one('change', function() {
+          const parent = $(this).closest('[data-select-parent]')
+          const controlled = parent.find('[data-select-controlled]')
+
+          controlled.removeClass('disabled')
+        })
+      }
+
+      select.each(function() {
+        const selectMobile = $(this).find('.select__mobile')
+        const selectPlaceholder = $(this).find('.select2-selection__placeholder')
+
+        selectMobile.on('change', function() {
+          selectPlaceholder.text(this.value)
+        })
+      })
+    }
+  })
 }
