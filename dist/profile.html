@@ -67,19 +67,19 @@
 						</div>
 						<div class="header__bot">
 							<div class="header__col">
-								<div class="header__accordion">
+								<div class="header__accordion" data-accordion-header="1">
 									<div class="header__accordion-button">
 										<div class="header__accordion-text">Оборудование</div>
-										<div class="header__accordion-icon"><svg width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<div class="header__accordion-icon"><svg class="header__accordion-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
 											</svg></div>
 									</div>
 									<div class="header__accordion-dropdown"></div>
 								</div>
-								<div class="header__accordion">
+								<div class="header__accordion" data-accordion-header="2">
 									<div class="header__accordion-button">
 										<div class="header__accordion-text">Инструмент</div>
-										<div class="header__accordion-icon"><svg width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<div class="header__accordion-icon"><svg class="header__accordion-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
 											</svg></div>
 									</div>
@@ -89,9 +89,9 @@
 									<li class="header__nav-item"><a class="header__nav-link" href="#">О нас</a></li>
 									<li class="header__nav-item"><a class="header__nav-link" href="#">Клиентам</a></li>
 									<li class="header__nav-item">
-										<div class="header__nav-button" href="#">
+										<div class="header__nav-button" data-accordion-header="3">
 											<div class="header__nav-text">Услуги</div>
-											<div class="header__nav-icon"><svg width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<div class="header__nav-icon"><svg class="header__nav-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
 												</svg></div>
 										</div>
@@ -101,13 +101,10 @@
 								</ul>
 							</div>
 							<div class="header__col">
-								<div class="header__search">
-									<div class="header__search-icon"><svg width="31" height="33" viewbox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<circle cx="17.7144" cy="13.2857" r="12.2857" stroke="#121212" stroke-width="2"></circle>
-											<line y1="-1" x2="12.5259" y2="-1" transform="matrix(-0.70711 0.707104 -0.70711 -0.707104 8.85693 22.1428)" stroke="#121212" stroke-width="2"></line>
-										</svg></div>
-									<div class="header__search-text">Поиск по интернет-магазину</div>
-								</div>
+								<form class="header__form" action="/"><label class="header__search" for="search"><button class="header__search-icon"><svg class="header__search-svg" width="31" height="33" viewbox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="17.7144" cy="13.2857" r="12.2857" stroke="#121212" stroke-width="2"></circle>
+												<line y1="-1" x2="12.5259" y2="-1" transform="matrix(-0.70711 0.707104 -0.70711 -0.707104 8.85693 22.1428)" stroke="#121212" stroke-width="2"></line>
+											</svg></button><input class="header__search-input" id="search" name="search" placeholder="Поиск по интернет-магазину" /></label></form>
 							</div>
 							<div class="header__col">
 								<div class="header__links"><a class="header__cart" href="#">
@@ -163,6 +160,87 @@
 						</div>
 					</div>
 				</div>
+				<div class="header__modal">
+					<div class="header__modal-overlay"></div>
+					<div class="header__modal-product" data-header-modal="1">
+						<div class="header__modal-container">
+							<div class="header__modal-row">
+								<div class="header__modal-col">
+									<ul class="header__modal-list">
+										<li class="header__modal-item">Токарные станки с ЧПУ</li>
+										<li class="header__modal-item">Фрезерные станки с ЧПУ</li>
+										<li class="header__modal-item">Вертикальные токарные и карусельные станки с ЧПУ</li>
+										<li class="header__modal-item">Ленточнопильные станки</li>
+										<li class="header__modal-item">Шлифовальные станки</li>
+										<li class="header__modal-item">Прессовое оборудование</li>
+										<li class="header__modal-item">Электроэрозионные станки</li>
+										<li class="header__modal-item">Шлифовальные станки</li>
+										<li class="header__modal-item">Универсальные станки</li>
+										<li class="header__modal-item">Прессовое оборудование</li>
+										<li class="header__modal-item">Раскроечные станки</li>
+										<li class="header__modal-item">Электроэрозионные станки</li>
+										<li class="header__modal-item">Измерительное оборудование</li>
+									</ul>
+								</div>
+								<div class="header__modal-col">
+									<ul class="header__listing">
+										<li class="header__listing-item">С направляющими скольжения</li>
+										<li class="header__listing-item">С направляющими скольжения и осью Y</li>
+										<li class="header__listing-item">Трубообрабатывающие</li>
+										<li class="header__listing-item">Автоматы продольного точения</li>
+										<li class="header__listing-item">С направляющими качения</li>
+										<li class="header__listing-item">С направляющими качения и противошпинделем</li>
+										<li class="header__listing-item">С направляющими качения и осью Y</li>
+										<li class="header__listing-item">Роботизированные с направляющими качения</li>
+										<li class="header__listing-item">Токарно-фрезерные с направляющими качения</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__modal-product" data-header-modal="2">
+						<div class="header__modal-container">
+							<div class="header__modal-row">
+								<div class="header__modal-col">
+									<ul class="header__modal-list">
+										<li class="header__modal-item">Корпусной режущий инструмент</li>
+										<li class="header__modal-item">Осевой режущий инструмент</li>
+										<li class="header__modal-item">Вспомогательный инструмент для фрезерных станков с ЧПУ</li>
+										<li class="header__modal-item">Вспомогательный инструмент для токарных станков с ЧПУ</li>
+										<li class="header__modal-item">Приспособления</li>
+										<li class="header__modal-item">Аксессуары для инструмента</li>
+									</ul>
+								</div>
+								<div class="header__modal-col">
+									<ul class="header__listing">
+										<li class="header__listing-item">Пластины для точения</li>
+										<li class="header__listing-item">Токарные пластины MICRONEGA</li>
+										<li class="header__listing-item">Токарные пластины MICROBORING</li>
+										<li class="header__listing-item">Пластины для фрезерования</li>
+										<li class="header__listing-item">Пластины для корпусных сверл</li>
+										<li class="header__listing-item">Токарные державки</li>
+										<li class="header__listing-item">Державки MICRONEGA</li>
+										<li class="header__listing-item">Державки MICROBORING</li>
+										<li class="header__listing-item">Корпусные сверла</li>
+										<li class="header__listing-item">Корпусные фрезы</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__modal-product" data-header-modal="3">
+						<div class="header__modal-container">
+							<ul class="header__modal-list header__modal-list--transparent">
+								<li class="header__modal-item">Подбор инструмента</li>
+								<li class="header__modal-item">Ленточные пилы</li>
+								<li class="header__modal-item">Сервис</li>
+								<li class="header__modal-item">Инжиниринг</li>
+								<li class="header__modal-item">Обучение</li>
+								<li class="header__modal-item">Лизинг</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 			<main class="main">
 				<div class="profile-page main-page">
@@ -179,339 +257,343 @@
 					</section>
 					<section class="section section--last">
 						<div class="container">
-							<div class="row">
+							<div class="row" data-tabs-parent="">
 								<div class="row__col">
-									<div class="tabs tabs--column tabs--responsive" data-tabs="">
-										<div class="tabs__item active" data-tabs-item="">Заказы</div>
-										<div class="tabs__item" data-tabs-item="">Cкидка</div>
-										<div class="tabs__item" data-tabs-item="">Мои данные</div>
+									<div class="tabs tabs--column tabs--responsive" data-real-tabs="">
+										<div class="tabs__container">
+											<div class="tabs__item active" data-tabs-item="">Заказы</div>
+											<div class="tabs__item" data-tabs-item="">Cкидка</div>
+											<div class="tabs__item" data-tabs-item="">Мои данные</div>
+										</div>
 									</div>
 								</div>
 								<div class="row__col">
-									<div class="model-tabs" data-tabs="">
-										<div class="model-tabs__item active" data-tabs-item="">Текущие заказы</div>
-										<div class="model-tabs__item" data-tabs-item="">Все заказы</div>
-									</div>
-									<h2 class="margin-top margin-top--xl">Список заказов пуст</h2>
-									<div class="main-page__media main-page__media--small margin-top">
-										<div class="main-page__media-col"><a class="main-page__media-link" href="#">
-												<div class="main-page__media-container"><img class="main-page__media-container" src="assets/images/hero-1.jpg" alt=""></div>
-												<div class="main-page__media-icon"><svg class="main-page__media-svg" width="20" height="19" viewbox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M18.0435 1.248L17.8192 14.6896L14.7935 11.6639M18.0435 1.248L4.60185 1.47228L7.62757 4.49799M18.0435 1.248L1.34788 17.9436" stroke="white" stroke-width="2"></path>
-													</svg></div>
-											</a>
-											<div class="main-page__media-content">
-												<div class="main-page__media-title">Каталог продукции</div>
-												<div class="main-page__media-text">Станки с ЧПУ, ленточнопильные станки, шлифовальные станки, гидравлические прессы и прочее оборудование</div>
+									<div class="tabs-block active" data-tabs-block="">
+										<div class="model-tabs" data-tabs="">
+											<div class="model-tabs__item active" data-tabs-item="">Текущие заказы</div>
+											<div class="model-tabs__item" data-tabs-item="">Все заказы</div>
+										</div>
+										<h2 class="margin-top margin-top--xl">Список заказов пуст</h2>
+										<div class="main-page__media main-page__media--small margin-top">
+											<div class="main-page__media-col"><a class="main-page__media-link" href="#">
+													<div class="main-page__media-container"><img class="main-page__media-container" src="assets/images/hero-1.jpg" alt=""></div>
+													<div class="main-page__media-icon"><svg class="main-page__media-svg" width="20" height="19" viewbox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M18.0435 1.248L17.8192 14.6896L14.7935 11.6639M18.0435 1.248L4.60185 1.47228L7.62757 4.49799M18.0435 1.248L1.34788 17.9436" stroke="white" stroke-width="2"></path>
+														</svg></div>
+												</a>
+												<div class="main-page__media-content">
+													<div class="main-page__media-title">Каталог продукции</div>
+													<div class="main-page__media-text">Станки с ЧПУ, ленточнопильные станки, шлифовальные станки, гидравлические прессы и прочее оборудование</div>
+												</div>
+											</div>
+											<div class="main-page__media-col"><a class="main-page__media-link" href="#">
+													<div class="main-page__media-container"><img class="main-page__media-container" src="assets/images/hero-2.jpg" alt=""></div>
+													<div class="main-page__media-icon"><svg class="main-page__media-svg" width="20" height="19" viewbox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M18.0435 1.248L17.8192 14.6896L14.7935 11.6639M18.0435 1.248L4.60185 1.47228L7.62757 4.49799M18.0435 1.248L1.34788 17.9436" stroke="white" stroke-width="2"></path>
+														</svg></div>
+												</a>
+												<div class="main-page__media-content">
+													<div class="main-page__media-title">Интернет-магазин</div>
+													<div class="main-page__media-text">Режущий инструмент, вспомогательный инструмент, аксессуары для инструмента и приспособления</div>
+												</div>
 											</div>
 										</div>
-										<div class="main-page__media-col"><a class="main-page__media-link" href="#">
-												<div class="main-page__media-container"><img class="main-page__media-container" src="assets/images/hero-2.jpg" alt=""></div>
-												<div class="main-page__media-icon"><svg class="main-page__media-svg" width="20" height="19" viewbox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M18.0435 1.248L17.8192 14.6896L14.7935 11.6639M18.0435 1.248L4.60185 1.47228L7.62757 4.49799M18.0435 1.248L1.34788 17.9436" stroke="white" stroke-width="2"></path>
-													</svg></div>
-											</a>
-											<div class="main-page__media-content">
-												<div class="main-page__media-title">Интернет-магазин</div>
-												<div class="main-page__media-text">Режущий инструмент, вспомогательный инструмент, аксессуары для инструмента и приспособления</div>
+										<div class="section">
+											<div class="profile-page__accordion">
+												<div class="profile-page__accordion-col">
+													<div class="profile-page__accordion-label">Заказ</div>
+												</div>
+												<div class="profile-page__accordion-col">
+													<div class="profile-page__accordion-label">Дата обновления заказа</div>
+												</div>
+												<div class="profile-page__accordion-col">
+													<div class="profile-page__accordion-label">Статус</div>
+												</div>
+												<div class="profile-page__accordion-col">
+													<div class="profile-page__accordion-label">Сумма заказа</div>
+												</div>
 											</div>
+											<ul class="profile-page__accordion-list section__block">
+												<li class="profile-page__accordion-item">
+													<div class="accordion" data-accordion="">
+														<div class="accordion__head" data-accordion-button="">
+															<div class="accordion__row">
+																<div class="accordion__col">
+																	<div class="accordion__text">№0000024582</div>
+																</div>
+																<div class="accordion__col">
+																	<div class="accordion__text">01.06.2021</div>
+																</div>
+																<div class="accordion__col">
+																	<div class="accordion__text">Доставляется</div>
+																</div>
+																<div class="accordion__col">
+																	<div class="accordion__text desktop">7 900 ₽</div>
+																	<div class="accordion__icon"><svg class="accordion__svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+																		</svg></div>
+																</div>
+															</div>
+														</div>
+														<div class="accordion__body" data-accordion-dropdown="">
+															<div class="accordion__grid">
+																<div class="accordion__grid-item">
+																	<div class="accordion__caption">Дата обновления заказа</div>
+																	<div class="accordion__text">01.06.2021</div>
+																</div>
+																<div class="accordion__grid-item">
+																	<div class="accordion__caption">Сумма заказа</div>
+																	<div class="accordion__text">7 900 ₽</div>
+																</div>
+																<div class="accordion__grid-item">
+																	<div class="accordion__caption">Статус</div>
+																	<div class="accordion__text">Доставляется</div>
+																</div>
+															</div>
+															<div class="accordion__list">
+																<div class="accordion__item">
+																	<div class="accordion__content-col">
+																		<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
+																		<div class="accordion__content">
+																			<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
+																			<div class="accordion__label">Артикул: 9353014BTC</div>
+																			<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
+																		</div>
+																	</div>
+																	<div class="accordion__content-col">
+																		<div class="accordion__text order2">1 шт.</div>
+																		<div class="tooltip">
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="accordion__item">
+																	<div class="accordion__content-col">
+																		<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
+																		<div class="accordion__content">
+																			<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
+																			<div class="accordion__label">Артикул: 9353014BTC</div>
+																			<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
+																		</div>
+																	</div>
+																	<div class="accordion__content-col">
+																		<div class="accordion__text order2">1 шт.</div>
+																		<div class="tooltip">
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="accordion__item">
+																	<div class="accordion__content-col">
+																		<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
+																		<div class="accordion__content">
+																			<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
+																			<div class="accordion__label">Артикул: 9353014BTC</div>
+																			<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
+																		</div>
+																	</div>
+																	<div class="accordion__content-col">
+																		<div class="accordion__text order2">1 шт.</div>
+																		<div class="tooltip">
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="profile-page__accordion-item">
+													<div class="accordion" data-accordion="">
+														<div class="accordion__head" data-accordion-button="">
+															<div class="accordion__row">
+																<div class="accordion__col">
+																	<div class="accordion__text">№0000024582</div>
+																</div>
+																<div class="accordion__col">
+																	<div class="accordion__text">01.06.2021</div>
+																</div>
+																<div class="accordion__col">
+																	<div class="accordion__text">Доставляется</div>
+																</div>
+																<div class="accordion__col">
+																	<div class="accordion__text desktop">7 900 ₽</div>
+																	<div class="accordion__icon"><svg class="accordion__svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+																		</svg></div>
+																</div>
+															</div>
+														</div>
+														<div class="accordion__body" data-accordion-dropdown="">
+															<div class="accordion__grid">
+																<div class="accordion__grid-item">
+																	<div class="accordion__caption">Дата обновления заказа</div>
+																	<div class="accordion__text">01.06.2021</div>
+																</div>
+																<div class="accordion__grid-item">
+																	<div class="accordion__caption">Сумма заказа</div>
+																	<div class="accordion__text">7 900 ₽</div>
+																</div>
+																<div class="accordion__grid-item">
+																	<div class="accordion__caption">Статус</div>
+																	<div class="accordion__text">Доставляется</div>
+																</div>
+															</div>
+															<div class="accordion__list">
+																<div class="accordion__item">
+																	<div class="accordion__content-col">
+																		<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
+																		<div class="accordion__content">
+																			<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
+																			<div class="accordion__label">Артикул: 9353014BTC</div>
+																			<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
+																		</div>
+																	</div>
+																	<div class="accordion__content-col">
+																		<div class="accordion__text order2">1 шт.</div>
+																		<div class="tooltip">
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="accordion__item">
+																	<div class="accordion__content-col">
+																		<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
+																		<div class="accordion__content">
+																			<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
+																			<div class="accordion__label">Артикул: 9353014BTC</div>
+																			<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
+																		</div>
+																	</div>
+																	<div class="accordion__content-col">
+																		<div class="accordion__text order2">1 шт.</div>
+																		<div class="tooltip">
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="accordion__item">
+																	<div class="accordion__content-col">
+																		<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
+																		<div class="accordion__content">
+																			<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
+																			<div class="accordion__label">Артикул: 9353014BTC</div>
+																			<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
+																		</div>
+																	</div>
+																	<div class="accordion__content-col">
+																		<div class="accordion__text order2">1 шт.</div>
+																		<div class="tooltip">
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="profile-page__accordion-item">
+													<div class="accordion" data-accordion="">
+														<div class="accordion__head" data-accordion-button="">
+															<div class="accordion__row">
+																<div class="accordion__col">
+																	<div class="accordion__text">№0000024582</div>
+																</div>
+																<div class="accordion__col">
+																	<div class="accordion__text">01.06.2021</div>
+																</div>
+																<div class="accordion__col">
+																	<div class="accordion__text">Доставляется</div>
+																</div>
+																<div class="accordion__col">
+																	<div class="accordion__text desktop">7 900 ₽</div>
+																	<div class="accordion__icon"><svg class="accordion__svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+																		</svg></div>
+																</div>
+															</div>
+														</div>
+														<div class="accordion__body" data-accordion-dropdown="">
+															<div class="accordion__grid">
+																<div class="accordion__grid-item">
+																	<div class="accordion__caption">Дата обновления заказа</div>
+																	<div class="accordion__text">01.06.2021</div>
+																</div>
+																<div class="accordion__grid-item">
+																	<div class="accordion__caption">Сумма заказа</div>
+																	<div class="accordion__text">7 900 ₽</div>
+																</div>
+																<div class="accordion__grid-item">
+																	<div class="accordion__caption">Статус</div>
+																	<div class="accordion__text">Доставляется</div>
+																</div>
+															</div>
+															<div class="accordion__list">
+																<div class="accordion__item">
+																	<div class="accordion__content-col">
+																		<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
+																		<div class="accordion__content">
+																			<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
+																			<div class="accordion__label">Артикул: 9353014BTC</div>
+																			<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
+																		</div>
+																	</div>
+																	<div class="accordion__content-col">
+																		<div class="accordion__text order2">1 шт.</div>
+																		<div class="tooltip">
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="accordion__item">
+																	<div class="accordion__content-col">
+																		<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
+																		<div class="accordion__content">
+																			<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
+																			<div class="accordion__label">Артикул: 9353014BTC</div>
+																			<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
+																		</div>
+																	</div>
+																	<div class="accordion__content-col">
+																		<div class="accordion__text order2">1 шт.</div>
+																		<div class="tooltip">
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="accordion__item">
+																	<div class="accordion__content-col">
+																		<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
+																		<div class="accordion__content">
+																			<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
+																			<div class="accordion__label">Артикул: 9353014BTC</div>
+																			<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
+																		</div>
+																	</div>
+																	<div class="accordion__content-col">
+																		<div class="accordion__text order2">1 шт.</div>
+																		<div class="tooltip">
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
 										</div>
 									</div>
-									<div class="section">
-										<div class="profile-page__accordion">
-											<div class="profile-page__accordion-col">
-												<div class="profile-page__accordion-label">Заказ</div>
-											</div>
-											<div class="profile-page__accordion-col">
-												<div class="profile-page__accordion-label">Дата обновления заказа</div>
-											</div>
-											<div class="profile-page__accordion-col">
-												<div class="profile-page__accordion-label">Статус</div>
-											</div>
-											<div class="profile-page__accordion-col">
-												<div class="profile-page__accordion-label">Сумма заказа</div>
-											</div>
-										</div>
-										<ul class="profile-page__accordion-list section__block">
-											<li class="profile-page__accordion-item">
-												<div class="accordion" data-accordion="">
-													<div class="accordion__head" data-accordion-button="">
-														<div class="accordion__row">
-															<div class="accordion__col">
-																<div class="accordion__text">№0000024582</div>
-															</div>
-															<div class="accordion__col">
-																<div class="accordion__text">01.06.2021</div>
-															</div>
-															<div class="accordion__col">
-																<div class="accordion__text">Доставляется</div>
-															</div>
-															<div class="accordion__col">
-																<div class="accordion__text desktop">7 900 ₽</div>
-																<div class="accordion__icon"><svg class="accordion__svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-																	</svg></div>
-															</div>
-														</div>
-													</div>
-													<div class="accordion__body" data-accordion-dropdown="">
-														<div class="accordion__grid">
-															<div class="accordion__grid-item">
-																<div class="accordion__caption">Дата обновления заказа</div>
-																<div class="accordion__text">01.06.2021</div>
-															</div>
-															<div class="accordion__grid-item">
-																<div class="accordion__caption">Сумма заказа</div>
-																<div class="accordion__text">7 900 ₽</div>
-															</div>
-															<div class="accordion__grid-item">
-																<div class="accordion__caption">Статус</div>
-																<div class="accordion__text">Доставляется</div>
-															</div>
-														</div>
-														<div class="accordion__list">
-															<div class="accordion__item">
-																<div class="accordion__content-col">
-																	<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
-																	<div class="accordion__content">
-																		<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
-																		<div class="accordion__label">Артикул: 9353014BTC</div>
-																		<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
-																	</div>
-																</div>
-																<div class="accordion__content-col">
-																	<div class="accordion__text order2">1 шт.</div>
-																	<div class="tooltip">
-																		<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																		<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
-																	</div>
-																</div>
-															</div>
-															<div class="accordion__item">
-																<div class="accordion__content-col">
-																	<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
-																	<div class="accordion__content">
-																		<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
-																		<div class="accordion__label">Артикул: 9353014BTC</div>
-																		<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
-																	</div>
-																</div>
-																<div class="accordion__content-col">
-																	<div class="accordion__text order2">1 шт.</div>
-																	<div class="tooltip">
-																		<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																		<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
-																	</div>
-																</div>
-															</div>
-															<div class="accordion__item">
-																<div class="accordion__content-col">
-																	<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
-																	<div class="accordion__content">
-																		<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
-																		<div class="accordion__label">Артикул: 9353014BTC</div>
-																		<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
-																	</div>
-																</div>
-																<div class="accordion__content-col">
-																	<div class="accordion__text order2">1 шт.</div>
-																	<div class="tooltip">
-																		<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																		<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</li>
-											<li class="profile-page__accordion-item">
-												<div class="accordion" data-accordion="">
-													<div class="accordion__head" data-accordion-button="">
-														<div class="accordion__row">
-															<div class="accordion__col">
-																<div class="accordion__text">№0000024582</div>
-															</div>
-															<div class="accordion__col">
-																<div class="accordion__text">01.06.2021</div>
-															</div>
-															<div class="accordion__col">
-																<div class="accordion__text">Доставляется</div>
-															</div>
-															<div class="accordion__col">
-																<div class="accordion__text desktop">7 900 ₽</div>
-																<div class="accordion__icon"><svg class="accordion__svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-																	</svg></div>
-															</div>
-														</div>
-													</div>
-													<div class="accordion__body" data-accordion-dropdown="">
-														<div class="accordion__grid">
-															<div class="accordion__grid-item">
-																<div class="accordion__caption">Дата обновления заказа</div>
-																<div class="accordion__text">01.06.2021</div>
-															</div>
-															<div class="accordion__grid-item">
-																<div class="accordion__caption">Сумма заказа</div>
-																<div class="accordion__text">7 900 ₽</div>
-															</div>
-															<div class="accordion__grid-item">
-																<div class="accordion__caption">Статус</div>
-																<div class="accordion__text">Доставляется</div>
-															</div>
-														</div>
-														<div class="accordion__list">
-															<div class="accordion__item">
-																<div class="accordion__content-col">
-																	<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
-																	<div class="accordion__content">
-																		<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
-																		<div class="accordion__label">Артикул: 9353014BTC</div>
-																		<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
-																	</div>
-																</div>
-																<div class="accordion__content-col">
-																	<div class="accordion__text order2">1 шт.</div>
-																	<div class="tooltip">
-																		<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																		<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
-																	</div>
-																</div>
-															</div>
-															<div class="accordion__item">
-																<div class="accordion__content-col">
-																	<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
-																	<div class="accordion__content">
-																		<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
-																		<div class="accordion__label">Артикул: 9353014BTC</div>
-																		<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
-																	</div>
-																</div>
-																<div class="accordion__content-col">
-																	<div class="accordion__text order2">1 шт.</div>
-																	<div class="tooltip">
-																		<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																		<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
-																	</div>
-																</div>
-															</div>
-															<div class="accordion__item">
-																<div class="accordion__content-col">
-																	<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
-																	<div class="accordion__content">
-																		<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
-																		<div class="accordion__label">Артикул: 9353014BTC</div>
-																		<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
-																	</div>
-																</div>
-																<div class="accordion__content-col">
-																	<div class="accordion__text order2">1 шт.</div>
-																	<div class="tooltip">
-																		<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																		<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</li>
-											<li class="profile-page__accordion-item">
-												<div class="accordion" data-accordion="">
-													<div class="accordion__head" data-accordion-button="">
-														<div class="accordion__row">
-															<div class="accordion__col">
-																<div class="accordion__text">№0000024582</div>
-															</div>
-															<div class="accordion__col">
-																<div class="accordion__text">01.06.2021</div>
-															</div>
-															<div class="accordion__col">
-																<div class="accordion__text">Доставляется</div>
-															</div>
-															<div class="accordion__col">
-																<div class="accordion__text desktop">7 900 ₽</div>
-																<div class="accordion__icon"><svg class="accordion__svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-																	</svg></div>
-															</div>
-														</div>
-													</div>
-													<div class="accordion__body" data-accordion-dropdown="">
-														<div class="accordion__grid">
-															<div class="accordion__grid-item">
-																<div class="accordion__caption">Дата обновления заказа</div>
-																<div class="accordion__text">01.06.2021</div>
-															</div>
-															<div class="accordion__grid-item">
-																<div class="accordion__caption">Сумма заказа</div>
-																<div class="accordion__text">7 900 ₽</div>
-															</div>
-															<div class="accordion__grid-item">
-																<div class="accordion__caption">Статус</div>
-																<div class="accordion__text">Доставляется</div>
-															</div>
-														</div>
-														<div class="accordion__list">
-															<div class="accordion__item">
-																<div class="accordion__content-col">
-																	<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
-																	<div class="accordion__content">
-																		<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
-																		<div class="accordion__label">Артикул: 9353014BTC</div>
-																		<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
-																	</div>
-																</div>
-																<div class="accordion__content-col">
-																	<div class="accordion__text order2">1 шт.</div>
-																	<div class="tooltip">
-																		<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																		<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
-																	</div>
-																</div>
-															</div>
-															<div class="accordion__item">
-																<div class="accordion__content-col">
-																	<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
-																	<div class="accordion__content">
-																		<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
-																		<div class="accordion__label">Артикул: 9353014BTC</div>
-																		<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
-																	</div>
-																</div>
-																<div class="accordion__content-col">
-																	<div class="accordion__text order2">1 шт.</div>
-																	<div class="tooltip">
-																		<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																		<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
-																	</div>
-																</div>
-															</div>
-															<div class="accordion__item">
-																<div class="accordion__content-col">
-																	<div class="accordion__image"><img src="assets/images/product.jpg" alt="" /></div>
-																	<div class="accordion__content">
-																		<div class="accordion__title">Раскатник R-D TICN 376 ISO2X M14X2 2P</div>
-																		<div class="accordion__label">Артикул: 9353014BTC</div>
-																		<div class="accordion__label">Производитель: Yamawa Manufacturing Co.,Ltd. (Япония)</div>
-																	</div>
-																</div>
-																<div class="accordion__content-col">
-																	<div class="accordion__text order2">1 шт.</div>
-																	<div class="tooltip">
-																		<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																		<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="section">
+									<div class="tabs-block" data-tabs-block="">
 										<div class="profile-page__row">
 											<div class="profile-page__col">
 												<div class="profile-page__panel">
@@ -541,7 +623,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="section">
+									<div class="tabs-block" data-tabs-block="">
 										<div class="profile-page__form">
 											<div class="profile-page__form-col">
 												<form class="form form--disabled" action="/" data-form="">
@@ -704,7 +786,7 @@
 		</div>
 		<div class="login-modal" data-fancy-modal="1">
 			<div class="login-modal__container" data-tabs-parent="">
-				<h3 class="login-modal__inner">Войти</h3>
+				<h3 class="login-modal__wrapper">Войти</h3>
 				<div class="login-modal__inner">
 					<div class="model-tabs" data-real-tabs="">
 						<div class="model-tabs__item active" data-tabs-item="">Есть аккаунт</div>
@@ -720,11 +802,12 @@
 				</div>
 				<div class="tabs-block" data-tabs-block="">
 					<form class="form" action="/" data-form="1">
-						<div class="login-modal__inner">
+						<p class="login-modal__text login-modal__inner">Регистрация на нашем сайте позволяет видеть историю покупок, получать информацию о новых акциях и скидках, упрощает оформление заказа</p>
+						<div class="login-modal__wrapper">
 							<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" checked="checked" data-login-checkbox="" />
-									<div class="checkbox__box">
-										<div class="checkbox__icon"></div>
-									</div>
+									<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+										</svg></div>
 									<div class="tooltip">
 										<div class="checkbox__text tooltip__row">Юридическое лицо<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
 										<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
@@ -737,9 +820,8 @@
 							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль*" /></div>
 							<div class="form__item"><input class="form__input" placeholder="Название компании*" /></div>
 							<div class="form__item"><input class="form__input" placeholder="ИНН*" /></div>
-							<div class="form__item"><input class="form__input" placeholder="Телефон*" /></div>
-							<div class="form__item"><input class="form__input" placeholder="Имя*" /></div>
-							<div class="form__item"><textarea class="form__textarea" placeholder="Комментарий"></textarea></div>
+							<div class="form__item"><input class="form__input" placeholder="Телефон для связи*" /></div>
+							<div class="form__item"><input class="form__input" placeholder="Контактное лицо*" /></div>
 						</div>
 						<div class="login-modal__form" data-form-user="">
 							<div class="form__item"><input class="form__input" placeholder="Имя" /></div>
@@ -747,15 +829,15 @@
 							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" /></div>
 							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль" /></div>
 						</div>
-						<div class="form__item">
+						<div class="form__item form__item--big">
 							<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
-									<div class="checkbox__box">
-										<div class="checkbox__icon"></div>
-									</div>
+									<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+										</svg></div>
 									<div class="checkbox__text">Согласен на обработку персональных данных в соответствии с <a class="checkbox__link" href="#">политикой конфиденциальности</a></div>
 								</label></div>
 						</div>
-						<div class="form__item"><button class="button button--wide" data-form-button="1">Зарегистрироваться</button></div>
+						<div class="form__item form__item--big"><button class="button button--wide" data-form-button="1">Зарегистрироваться</button></div>
 					</form>
 				</div>
 			</div>

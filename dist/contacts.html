@@ -67,19 +67,19 @@
 						</div>
 						<div class="header__bot">
 							<div class="header__col">
-								<div class="header__accordion">
+								<div class="header__accordion" data-accordion-header="1">
 									<div class="header__accordion-button">
 										<div class="header__accordion-text">Оборудование</div>
-										<div class="header__accordion-icon"><svg width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<div class="header__accordion-icon"><svg class="header__accordion-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
 											</svg></div>
 									</div>
 									<div class="header__accordion-dropdown"></div>
 								</div>
-								<div class="header__accordion">
+								<div class="header__accordion" data-accordion-header="2">
 									<div class="header__accordion-button">
 										<div class="header__accordion-text">Инструмент</div>
-										<div class="header__accordion-icon"><svg width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<div class="header__accordion-icon"><svg class="header__accordion-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
 											</svg></div>
 									</div>
@@ -89,9 +89,9 @@
 									<li class="header__nav-item"><a class="header__nav-link" href="#">О нас</a></li>
 									<li class="header__nav-item"><a class="header__nav-link" href="#">Клиентам</a></li>
 									<li class="header__nav-item">
-										<div class="header__nav-button" href="#">
+										<div class="header__nav-button" data-accordion-header="3">
 											<div class="header__nav-text">Услуги</div>
-											<div class="header__nav-icon"><svg width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<div class="header__nav-icon"><svg class="header__nav-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
 												</svg></div>
 										</div>
@@ -101,13 +101,10 @@
 								</ul>
 							</div>
 							<div class="header__col">
-								<div class="header__search">
-									<div class="header__search-icon"><svg width="31" height="33" viewbox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<circle cx="17.7144" cy="13.2857" r="12.2857" stroke="#121212" stroke-width="2"></circle>
-											<line y1="-1" x2="12.5259" y2="-1" transform="matrix(-0.70711 0.707104 -0.70711 -0.707104 8.85693 22.1428)" stroke="#121212" stroke-width="2"></line>
-										</svg></div>
-									<div class="header__search-text">Поиск по интернет-магазину</div>
-								</div>
+								<form class="header__form" action="/"><label class="header__search" for="search"><button class="header__search-icon"><svg class="header__search-svg" width="31" height="33" viewbox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="17.7144" cy="13.2857" r="12.2857" stroke="#121212" stroke-width="2"></circle>
+												<line y1="-1" x2="12.5259" y2="-1" transform="matrix(-0.70711 0.707104 -0.70711 -0.707104 8.85693 22.1428)" stroke="#121212" stroke-width="2"></line>
+											</svg></button><input class="header__search-input" id="search" name="search" placeholder="Поиск по интернет-магазину" /></label></form>
 							</div>
 							<div class="header__col">
 								<div class="header__links"><a class="header__cart" href="#">
@@ -163,6 +160,87 @@
 						</div>
 					</div>
 				</div>
+				<div class="header__modal">
+					<div class="header__modal-overlay"></div>
+					<div class="header__modal-product" data-header-modal="1">
+						<div class="header__modal-container">
+							<div class="header__modal-row">
+								<div class="header__modal-col">
+									<ul class="header__modal-list">
+										<li class="header__modal-item">Токарные станки с ЧПУ</li>
+										<li class="header__modal-item">Фрезерные станки с ЧПУ</li>
+										<li class="header__modal-item">Вертикальные токарные и карусельные станки с ЧПУ</li>
+										<li class="header__modal-item">Ленточнопильные станки</li>
+										<li class="header__modal-item">Шлифовальные станки</li>
+										<li class="header__modal-item">Прессовое оборудование</li>
+										<li class="header__modal-item">Электроэрозионные станки</li>
+										<li class="header__modal-item">Шлифовальные станки</li>
+										<li class="header__modal-item">Универсальные станки</li>
+										<li class="header__modal-item">Прессовое оборудование</li>
+										<li class="header__modal-item">Раскроечные станки</li>
+										<li class="header__modal-item">Электроэрозионные станки</li>
+										<li class="header__modal-item">Измерительное оборудование</li>
+									</ul>
+								</div>
+								<div class="header__modal-col">
+									<ul class="header__listing">
+										<li class="header__listing-item">С направляющими скольжения</li>
+										<li class="header__listing-item">С направляющими скольжения и осью Y</li>
+										<li class="header__listing-item">Трубообрабатывающие</li>
+										<li class="header__listing-item">Автоматы продольного точения</li>
+										<li class="header__listing-item">С направляющими качения</li>
+										<li class="header__listing-item">С направляющими качения и противошпинделем</li>
+										<li class="header__listing-item">С направляющими качения и осью Y</li>
+										<li class="header__listing-item">Роботизированные с направляющими качения</li>
+										<li class="header__listing-item">Токарно-фрезерные с направляющими качения</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__modal-product" data-header-modal="2">
+						<div class="header__modal-container">
+							<div class="header__modal-row">
+								<div class="header__modal-col">
+									<ul class="header__modal-list">
+										<li class="header__modal-item">Корпусной режущий инструмент</li>
+										<li class="header__modal-item">Осевой режущий инструмент</li>
+										<li class="header__modal-item">Вспомогательный инструмент для фрезерных станков с ЧПУ</li>
+										<li class="header__modal-item">Вспомогательный инструмент для токарных станков с ЧПУ</li>
+										<li class="header__modal-item">Приспособления</li>
+										<li class="header__modal-item">Аксессуары для инструмента</li>
+									</ul>
+								</div>
+								<div class="header__modal-col">
+									<ul class="header__listing">
+										<li class="header__listing-item">Пластины для точения</li>
+										<li class="header__listing-item">Токарные пластины MICRONEGA</li>
+										<li class="header__listing-item">Токарные пластины MICROBORING</li>
+										<li class="header__listing-item">Пластины для фрезерования</li>
+										<li class="header__listing-item">Пластины для корпусных сверл</li>
+										<li class="header__listing-item">Токарные державки</li>
+										<li class="header__listing-item">Державки MICRONEGA</li>
+										<li class="header__listing-item">Державки MICROBORING</li>
+										<li class="header__listing-item">Корпусные сверла</li>
+										<li class="header__listing-item">Корпусные фрезы</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header__modal-product" data-header-modal="3">
+						<div class="header__modal-container">
+							<ul class="header__modal-list header__modal-list--transparent">
+								<li class="header__modal-item">Подбор инструмента</li>
+								<li class="header__modal-item">Ленточные пилы</li>
+								<li class="header__modal-item">Сервис</li>
+								<li class="header__modal-item">Инжиниринг</li>
+								<li class="header__modal-item">Обучение</li>
+								<li class="header__modal-item">Лизинг</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 			<main class="main">
 				<div class="contacts-page">
@@ -175,60 +253,57 @@
 								</li>
 							</ul>
 							<div class="contacts-page__row">
-								<h1 class="nav-title">Контакты</h1>
-								<div class="contacts-page__button">
+								<h1 class="nav-title">Контакты</h1><a class="contacts-page__button" href="#">
 									<div class="contacts-page__button-icon"><svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd" d="M3.33329 5.83329H4.99996V1.66663H15V5.83329H16.6666C17.5871 5.83329 18.3333 6.57948 18.3333 7.49996V14.1666C18.3333 15.0871 17.5871 15.8333 16.6666 15.8333H15V18.3333H4.99996V15.8333H3.33329C2.41282 15.8333 1.66663 15.0871 1.66663 14.1666V7.49996C1.66663 6.57948 2.41282 5.83329 3.33329 5.83329ZM13.3333 5.83329H6.66663V3.33329H13.3333V5.83329ZM16.6666 14.1666H15V12.5H4.99996V14.1666H3.33329V7.49996H16.6666V14.1666ZM13.3333 14.1666H6.66663V16.6666H13.3333V14.1666ZM15.8333 9.16663C15.8333 8.70639 15.4602 8.33329 15 8.33329C14.5397 8.33329 14.1666 8.70639 14.1666 9.16663C14.1666 9.62686 14.5397 9.99996 15 9.99996C15.4602 9.99996 15.8333 9.62686 15.8333 9.16663Z" fill="#121212"></path>
 										</svg></div>
 									<div class="contacts-page__button-text">Распечтать контакты</div>
-								</div>
+								</a>
 							</div>
 						</div>
 					</section>
 					<section class="section">
 						<div class="container">
 							<div class="contacts-page__section">
-								<h3>Санкт-Петербург</h3>
-								<div class="contacts-page__inner">
-									<div class="contacts-page__section-row">
-										<div class="contacts-page__section-col">
-											<div class="contacts-page__section-item">
-												<div class="contacts-page__label">Россия, звонок бесплатный</div><a class="contacts-page__link" href="tel:8 800 444-60-98">8 800 444-60-98</a>
-											</div>
-											<div class="contacts-page__section-item">
-												<div class="contacts-page__label">Многоканальный</div><a class="contacts-page__link" href="tel:8 812 600-60-98">8 812 600-60-98</a>
-											</div>
-											<div class="contacts-page__section-item">
-												<div class="contacts-page__label">Отдел продаж</div><a class="contacts-page__link" href="tel:8 812 600-60-98">8 812 600-60-98</a><a class="contacts-page__link" href="mailto:irlen@irlen.ru"> irlen@irlen.ru</a>
-											</div>
+								<h3 class="contacts-page__title">Санкт-Петербург</h3>
+								<div class="contacts-page__section-row">
+									<div class="contacts-page__section-col">
+										<div class="contacts-page__section-item">
+											<div class="contacts-page__label">Россия, звонок бесплатный</div><a class="contacts-page__link" href="tel:8 800 444-60-98">8 800 444-60-98</a>
 										</div>
-										<div class="contacts-page__section-col">
-											<div class="contacts-page__section-item">
-												<div class="contacts-page__label">Инструментальный отдел</div><a class="contacts-page__link" href="tel:8 911 769-41-26">8 911 769-41-26</a><a class="contacts-page__link" href="tel:8 812 923-36-93"> 8 812 923-36-93</a><a class="contacts-page__link" href="mailto:tool@irlen.ru"> tool@irlen.ru</a>
-											</div>
-											<div class="contacts-page__section-item">
-												<div class="contacts-page__label">Служба сервиса</div><a class="contacts-page__link" href="tel:8 911 769-41-26">8 911 769-41-26</a><a class="contacts-page__link" href="tel:8 812 923-36-93"> 8 812 923-36-93</a><a class="contacts-page__link" href="mailto:tool@irlen.ru"> tool@irlen.ru</a>
-											</div>
-											<div class="contacts-page__section-item">
-												<div class="contacts-page__label">Заказ ленточных полотен</div><a class="contacts-page__link" href="tel:8 911 947-89-93">8 911 947-89-93</a>
-											</div>
+										<div class="contacts-page__section-item">
+											<div class="contacts-page__label">Многоканальный</div><a class="contacts-page__link" href="tel:8 812 600-60-98">8 812 600-60-98</a>
+										</div>
+										<div class="contacts-page__section-item">
+											<div class="contacts-page__label">Отдел продаж</div><a class="contacts-page__link" href="tel:8 812 600-60-98">8 812 600-60-98</a><a class="contacts-page__link" href="mailto:irlen@irlen.ru"> irlen@irlen.ru</a>
 										</div>
 									</div>
-									<div class="contacts-page__section-row section__block">
-										<div class="contacts-page__section-col">
-											<div class="contacts-page__section-item">
-												<div class="contacts-page__label">Адрес</div>
-												<addres class="contacts-page__text">ул. Старожиловская, 9</addres>
-											</div>
-											<div class="contacts-page__section-item">
-												<div class="contacts-page__label">Время работы</div>
-												<div class="contacts-page__text">09:00 — 17:00</div>
-											</div>
+									<div class="contacts-page__section-col">
+										<div class="contacts-page__section-item">
+											<div class="contacts-page__label">Инструментальный отдел</div><a class="contacts-page__link" href="tel:8 911 769-41-26">8 911 769-41-26</a><a class="contacts-page__link" href="tel:8 812 923-36-93"> 8 812 923-36-93</a><a class="contacts-page__link" href="mailto:tool@irlen.ru"> tool@irlen.ru</a>
+										</div>
+										<div class="contacts-page__section-item">
+											<div class="contacts-page__label">Служба сервиса</div><a class="contacts-page__link" href="tel:8 911 769-41-26">8 911 769-41-26</a><a class="contacts-page__link" href="tel:8 812 923-36-93"> 8 812 923-36-93</a><a class="contacts-page__link" href="mailto:tool@irlen.ru"> tool@irlen.ru</a>
+										</div>
+										<div class="contacts-page__section-item">
+											<div class="contacts-page__label">Заказ ленточных полотен</div><a class="contacts-page__link" href="tel:8 911 947-89-93">8 911 947-89-93</a>
+										</div>
+									</div>
+								</div>
+								<div class="contacts-page__section-row contacts-page__block">
+									<div class="contacts-page__section-col">
+										<div class="contacts-page__section-item">
+											<div class="contacts-page__label">Адрес</div>
+											<addres class="contacts-page__text">ул. Старожиловская, 9</addres>
+										</div>
+										<div class="contacts-page__section-item">
+											<div class="contacts-page__label">Время работы</div>
+											<div class="contacts-page__text">09:00 — 17:00</div>
 										</div>
 									</div>
 								</div>
 								<div class="contacts-page__inner">
-									<div class="contacts-page__img"><img src="assets/images/contacts-1.jpg" alt=""></div>
+									<div class="contacts-page__img"><img class="desktop" src="assets/images/contacts-1.jpg" alt=""><img class="mobile" src="assets/images/contacts-1-mobile.jpg" alt=""></div>
 								</div>
 							</div>
 						</div>
@@ -237,45 +312,41 @@
 						<div class="container">
 							<div class="contacts-page__grid">
 								<div class="contacts-page__grid-item">
-									<h3>Москва</h3>
-									<div class="contacts-page__inner">
-										<div class="contacts-page__grid-row">
-											<div class="contacts-page__grid-col">
-												<div class="contacts-page__label">Отдел продаж</div>
-												<div class="contacts-page__grid-inner">
-													<div class="contacts-page__grid-left"><a class="contacts-page__link" href="tel:8 495 367-11-25">8 495 367-11-25</a><a class="contacts-page__link" href="tel:8 985 516-74-68"> 8 985 516-74-68</a></div>
-													<div class="contacts-page__grid-right"><a class="contacts-page__link" href="mailto:irlen@irlen-m.ru">irlen@irlen-m.ru</a></div>
-												</div>
+									<h3 class="contacts-page__title">Москва</h3>
+									<div class="contacts-page__grid-row">
+										<div class="contacts-page__grid-col">
+											<div class="contacts-page__label">Отдел продаж</div>
+											<div class="contacts-page__grid-inner">
+												<div class="contacts-page__grid-left"><a class="contacts-page__link" href="tel:8 495 367-11-25">8 495 367-11-25</a><a class="contacts-page__link" href="tel:8 985 516-74-68"> 8 985 516-74-68</a></div>
+												<div class="contacts-page__grid-right"><a class="contacts-page__link" href="mailto:irlen@irlen-m.ru">irlen@irlen-m.ru</a></div>
 											</div>
-											<div class="contacts-page__grid-col">
-												<div class="contacts-page__label">Адрес</div>
-												<addres class="contacts-page__text">ул. Старожиловская, 9</addres>
-											</div>
+										</div>
+										<div class="contacts-page__grid-col">
+											<div class="contacts-page__label">Адрес</div>
+											<addres class="contacts-page__text">ул. Старожиловская, 9</addres>
 										</div>
 									</div>
 									<div class="contacts-page__inner">
-										<div class="contacts-page__img"><img src="assets/images/contacts-2.jpg" alt=""></div>
+										<div class="contacts-page__img"><img class="desktop" src="assets/images/contacts-2.jpg" alt=""><img class="mobile" src="assets/images/contacts-1-mobile.jpg" alt=""></div>
 									</div>
 								</div>
 								<div class="contacts-page__grid-item">
-									<h3>Москва</h3>
-									<div class="contacts-page__inner">
-										<div class="contacts-page__grid-row">
-											<div class="contacts-page__grid-col">
-												<div class="contacts-page__label">Отдел продаж</div>
-												<div class="contacts-page__grid-inner">
-													<div class="contacts-page__grid-left"><a class="contacts-page__link" href="tel:8 915 945-16-26">8 915 945-16-26</a><a class="contacts-page__link" href="tel:8 910 144-77-16"> 8 910 144-77-16</a></div>
-													<div class="contacts-page__grid-right"><a class="contacts-page__link" href="tel:8 831 249-99-88">8 831 249-99-88</a><a class="contacts-page__link" href="mailto:nn@irlen.ru">nn@irlen.ru</a></div>
-												</div>
+									<h3 class="contacts-page__title">Москва</h3>
+									<div class="contacts-page__grid-row">
+										<div class="contacts-page__grid-col">
+											<div class="contacts-page__label">Отдел продаж</div>
+											<div class="contacts-page__grid-inner">
+												<div class="contacts-page__grid-left"><a class="contacts-page__link" href="tel:8 915 945-16-26">8 915 945-16-26</a><a class="contacts-page__link" href="tel:8 910 144-77-16"> 8 910 144-77-16</a></div>
+												<div class="contacts-page__grid-right"><a class="contacts-page__link" href="tel:8 831 249-99-88">8 831 249-99-88</a><a class="contacts-page__link" href="mailto:nn@irlen.ru">nn@irlen.ru</a></div>
 											</div>
-											<div class="contacts-page__grid-col">
-												<div class="contacts-page__label">Адрес</div>
-												<addres class="contacts-page__text">Московское ш., д.52</addres>
-											</div>
+										</div>
+										<div class="contacts-page__grid-col">
+											<div class="contacts-page__label">Адрес</div>
+											<addres class="contacts-page__text">Московское ш., д.52</addres>
 										</div>
 									</div>
 									<div class="contacts-page__inner">
-										<div class="contacts-page__img"><img src="assets/images/contacts-2.jpg" alt=""></div>
+										<div class="contacts-page__img"><img class="desktop" src="assets/images/contacts-2.jpg" alt=""><img class="mobile" src="assets/images/contacts-1-mobile.jpg" alt=""></div>
 									</div>
 								</div>
 							</div>
@@ -285,35 +356,31 @@
 						<div class="container">
 							<div class="contacts-page__grid">
 								<div class="contacts-page__grid-item">
-									<h3>Екатеринбург</h3>
-									<div class="contacts-page__inner">
-										<div class="contacts-page__grid-row">
-											<div class="contacts-page__grid-col">
-												<div class="contacts-page__label">Отдел продаж</div>
-												<div class="contacts-page__grid-inner">
-													<div class="contacts-page__grid-left"><a class="contacts-page__link" href="tel:8 965 535-23-33">8 965 535-23-33</a><a class="contacts-page__link" href="tel:8 919 370-61-38"> 8 919 370-61-38</a></div>
-													<div class="contacts-page__grid-right"><a class="contacts-page__link" href="tel:8 343 383-44-80">8 343 383-44-80</a><a class="contacts-page__link" href="mailto:ekb@irlen.ru">ekb@irlen.ru</a></div>
-												</div>
+									<h3 class="contacts-page__title">Екатеринбург</h3>
+									<div class="contacts-page__grid-row">
+										<div class="contacts-page__grid-col">
+											<div class="contacts-page__label">Отдел продаж</div>
+											<div class="contacts-page__grid-inner">
+												<div class="contacts-page__grid-left"><a class="contacts-page__link" href="tel:8 965 535-23-33">8 965 535-23-33</a><a class="contacts-page__link" href="tel:8 919 370-61-38"> 8 919 370-61-38</a></div>
+												<div class="contacts-page__grid-right"><a class="contacts-page__link" href="tel:8 343 383-44-80">8 343 383-44-80</a><a class="contacts-page__link" href="mailto:ekb@irlen.ru">ekb@irlen.ru</a></div>
 											</div>
-											<div class="contacts-page__grid-col">
-												<div class="contacts-page__label">Адрес</div>
-												<addres class="contacts-page__text">Московское ш., д.52</addres>
-											</div>
+										</div>
+										<div class="contacts-page__grid-col">
+											<div class="contacts-page__label">Адрес</div>
+											<addres class="contacts-page__text">Московское ш., д.52</addres>
 										</div>
 									</div>
 									<div class="contacts-page__inner">
-										<div class="contacts-page__img"><img src="assets/images/contacts-2.jpg" alt=""></div>
+										<div class="contacts-page__img"><img class="desktop" src="assets/images/contacts-2.jpg" alt=""><img class="mobile" src="assets/images/contacts-1-mobile.jpg" alt=""></div>
 									</div>
 								</div>
 								<div class="contacts-page__grid-item">
-									<h3>Пермь</h3>
-									<div class="contacts-page__inner">
-										<div class="contacts-page__grid-row">
-											<div class="contacts-page__grid-col">
-												<div class="contacts-page__label">Отдел продаж</div>
-												<div class="contacts-page__grid-inner">
-													<div class="contacts-page__grid-left"><a class="contacts-page__link" href="tel:8 908 271-68-76">8 908 271-68-76</a><a class="contacts-page__link" href="mailto:perm@irlen.ru"> perm@irlen.ru</a></div>
-												</div>
+									<h3 class="contacts-page__title">Пермь</h3>
+									<div class="contacts-page__grid-row">
+										<div class="contacts-page__grid-col">
+											<div class="contacts-page__label">Отдел продаж</div>
+											<div class="contacts-page__grid-inner">
+												<div class="contacts-page__grid-left"><a class="contacts-page__link" href="tel:8 908 271-68-76">8 908 271-68-76</a><a class="contacts-page__link" href="mailto:perm@irlen.ru"> perm@irlen.ru</a></div>
 											</div>
 										</div>
 									</div>
@@ -411,7 +478,7 @@
 		</div>
 		<div class="login-modal" data-fancy-modal="1">
 			<div class="login-modal__container" data-tabs-parent="">
-				<h3 class="login-modal__inner">Войти</h3>
+				<h3 class="login-modal__wrapper">Войти</h3>
 				<div class="login-modal__inner">
 					<div class="model-tabs" data-real-tabs="">
 						<div class="model-tabs__item active" data-tabs-item="">Есть аккаунт</div>
@@ -427,11 +494,12 @@
 				</div>
 				<div class="tabs-block" data-tabs-block="">
 					<form class="form" action="/" data-form="1">
-						<div class="login-modal__inner">
+						<p class="login-modal__text login-modal__inner">Регистрация на нашем сайте позволяет видеть историю покупок, получать информацию о новых акциях и скидках, упрощает оформление заказа</p>
+						<div class="login-modal__wrapper">
 							<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" checked="checked" data-login-checkbox="" />
-									<div class="checkbox__box">
-										<div class="checkbox__icon"></div>
-									</div>
+									<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+										</svg></div>
 									<div class="tooltip">
 										<div class="checkbox__text tooltip__row">Юридическое лицо<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
 										<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
@@ -444,9 +512,8 @@
 							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль*" /></div>
 							<div class="form__item"><input class="form__input" placeholder="Название компании*" /></div>
 							<div class="form__item"><input class="form__input" placeholder="ИНН*" /></div>
-							<div class="form__item"><input class="form__input" placeholder="Телефон*" /></div>
-							<div class="form__item"><input class="form__input" placeholder="Имя*" /></div>
-							<div class="form__item"><textarea class="form__textarea" placeholder="Комментарий"></textarea></div>
+							<div class="form__item"><input class="form__input" placeholder="Телефон для связи*" /></div>
+							<div class="form__item"><input class="form__input" placeholder="Контактное лицо*" /></div>
 						</div>
 						<div class="login-modal__form" data-form-user="">
 							<div class="form__item"><input class="form__input" placeholder="Имя" /></div>
@@ -454,15 +521,15 @@
 							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" /></div>
 							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль" /></div>
 						</div>
-						<div class="form__item">
+						<div class="form__item form__item--big">
 							<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
-									<div class="checkbox__box">
-										<div class="checkbox__icon"></div>
-									</div>
+									<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+										</svg></div>
 									<div class="checkbox__text">Согласен на обработку персональных данных в соответствии с <a class="checkbox__link" href="#">политикой конфиденциальности</a></div>
 								</label></div>
 						</div>
-						<div class="form__item"><button class="button button--wide" data-form-button="1">Зарегистрироваться</button></div>
+						<div class="form__item form__item--big"><button class="button button--wide" data-form-button="1">Зарегистрироваться</button></div>
 					</form>
 				</div>
 			</div>
