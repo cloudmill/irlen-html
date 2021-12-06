@@ -45,17 +45,17 @@ mixin login-modal
         },
         {
           type: 'text',
-          placeholder: 'Телефон*',
+          placeholder: 'Телефон для связи*',
         },
         {
           type: 'text',
-          placeholder: 'Имя*',
+          placeholder: 'Контактное лицо*',
         },
       ]
     }
   .login-modal(data-fancy-modal='1')
     .login-modal__container(data-tabs-parent='')
-      h3.login-modal__inner 
+      h3.login-modal__wrapper
         |Войти
       .login-modal__inner 
         +model-tabs(items = ['Есть аккаунт' , 'Регистрация'] real=true)
@@ -70,12 +70,14 @@ mixin login-modal
               |Отправить
       .tabs-block(data-tabs-block='')
         form.form(action="/" data-form='1')
-          .login-modal__inner
+          p.login-modal__text.login-modal__inner
+            |Регистрация на нашем сайте позволяет видеть историю покупок, получать информацию о новых акциях и скидках, упрощает оформление заказа
+          .login-modal__wrapper
             .checkbox 
               label.checkbox__label
                 input.checkbox__input(type="checkbox" checked data-login-checkbox='')
                 .checkbox__box 
-                  .checkbox__icon
+                  +check-svg.checkbox__svg
                 .tooltip
                   .checkbox__text.tooltip__row
                     |Юридическое лицо
@@ -88,21 +90,19 @@ mixin login-modal
             each item in ddata.corp 
               .form__item 
                 input.form__input(type=item.type placeholder=item.placeholder) 
-            .form__item 
-              textarea.form__textarea(placeholder="Комментарий")
           .login-modal__form(data-form-user='')
             each item in ddata.user
               .form__item 
                 input.form__input(type=item.type placeholder=item.placeholder) 
-          .form__item 
+          .form__item.form__item--big
             .checkbox.checkbox--start
               label.checkbox__label
                 input.checkbox__input(type="checkbox")
                 .checkbox__box 
-                  .checkbox__icon
+                  +check-svg.checkbox__svg
                 .checkbox__text
                   |Согласен на обработку персональных данных в соответствии с #[a.checkbox__link(href="#") политикой конфиденциальности]
-          .form__item 
+          .form__item.form__item--big 
             button.button.button--wide(data-form-button='1')
               |Зарегистрироваться
     .response(data-response="1")

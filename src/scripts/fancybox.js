@@ -35,6 +35,8 @@ import '@fancyapps/fancybox';
             '<div class="fancybox-stage"></div>' +
             '</div>'
           )
+          $.fancybox.defaults.animationEffect = 'zoom'
+          $.fancybox.defaults.animationDuration = 500
       }
 
       $.fancybox.open(modal);

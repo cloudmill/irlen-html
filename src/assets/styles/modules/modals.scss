@@ -1,22 +1,45 @@
 .login-modal {
-  margin-top: 80px;
 
   display: none;
 
+  &__wrapper {
+    margin-bottom: 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 16px;
+    }
+
+    display: flex;
+    justify-content: center;
+  }
+
   &__container {
     padding: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 24px 20px;
+    }
 
     width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: calc(#{$col-part-m} * 4 - #{$col-gap-m});
+    }
 
     background: $color-white;
     border-radius: 4px;
   }
 
   &__inner {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 16px;
+    }
 
     display: flex;
     justify-content: center;
+  }
+
+  &__text {
+    @include fsl(12px, 140%);
+    text-align: center;
   }
 
   &__form {
@@ -68,6 +91,13 @@
 
   background: $color-darken-white;
   border-radius: 4px;
+}
+
+.fancybox-slide.fancybox-slide--html  {
+  padding-top: 80px;
+  @media (max-width: ($breakpoint - 1px)) {
+    padding-top: 16px;
+  }
 }
 
 

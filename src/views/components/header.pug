@@ -17,14 +17,14 @@ mixin header
               |Заказать звонок
         .header__bot
           .header__col
-            .header__accordion
+            .header__accordion(data-accordion-header='1')
               .header__accordion-button 
                 .header__accordion-text
                   |Оборудование 
                 .header__accordion-icon
                   +arrow-svg
               .header__accordion-dropdown
-            .header__accordion
+            .header__accordion(data-accordion-header='2')
               .header__accordion-button 
                 .header__accordion-text
                   |Инструмент 
@@ -39,7 +39,7 @@ mixin header
                 a.header__nav-link(href="#") 
                   |Клиентам
               li.header__nav-item 
-                .header__nav-button(href="#") 
+                .header__nav-button(data-accordion-header='1')
                   .header__nav-text
                     |Услуги 
                   .header__nav-icon
@@ -49,11 +49,11 @@ mixin header
                 a.header__nav-link(href="#") 
                   |Контакты
           .header__col
-            .header__search 
-              .header__search-icon 
-                +search-svg
-              .header__search-text 
-                |Поиск по интернет-магазину
+            form.header__form(action="/") 
+              label.header__search(for='search')
+                button.header__search-icon 
+                  +search-svg.header__search-svg
+                input.header__search-input#search(type="text" name='search' placeholder="Поиск по интернет-магазину")
           .header__col
             .header__links 
               a.header__cart(href="#") 
@@ -90,3 +90,19 @@ mixin header
               span.header__burger-span
               span.header__burger-span
               span.header__burger-span
+    .header__modal 
+      .header__modal-overlay
+      .header__modal-product(data-header-modal='1')
+        .header__modal-container 
+          .header__modal-row 
+            .header__modal-col 
+              |qwe
+            .header__modal-col 
+              |zxc
+      .header__modal-product(data-header-modal='2')
+        .header__modal-container 
+          .header__modal-row 
+            .header__modal-col 
+              |123
+            .header__modal-col 
+              |rtyu

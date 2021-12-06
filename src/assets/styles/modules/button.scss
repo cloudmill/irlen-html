@@ -1,5 +1,9 @@
 .button {
   padding: 14px 22px;
+  @media (max-width: ($breakpoint - 1px)) {
+    padding: 10px 0;
+    width: 100%;
+  }
 
   display: flex;
   justify-content: center;
@@ -10,6 +14,9 @@
   cursor: pointer;
   border: none;
   @include f-main();
+  @media (max-width: ($breakpoint - 1px)) {
+    @include fsl(14px, 140%);
+  }
 
   &--md {
     padding: 8px 16px;

@@ -22,6 +22,17 @@
 
     &:not(:first-child) {
       margin-top: 20px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 8px;
+      }
+    }
+
+    &--big {
+      &:not(:first-child) {
+        @media (max-width: ($breakpoint - 1px)) {
+          margin-top: 16px;
+        }
+      }
     }
   }
 

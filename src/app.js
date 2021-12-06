@@ -7,6 +7,7 @@ import 'scripts/tooltip.js';
 import 'scripts/select.js';
 import 'scripts/aside.js';
 import 'scripts/login.js';
+import 'scripts/header.js';
 import 'scripts/range-slider.js';
 import 'scripts/form-response.js';
 import { FormChanger } from 'scripts/form-changer'
