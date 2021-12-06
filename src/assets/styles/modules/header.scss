@@ -122,6 +122,18 @@
 
   &__accordion {
     margin-right: 32px;
+
+    &.active {
+      #{$comp}__accordion-text {
+        color: $color-blue;
+      }
+      #{$comp}__accordion-svg {
+        transform: rotate(180deg);
+        path {
+          stroke: $color-blue;
+        }
+      }
+    }
   }
   &__accordion-button {
     display: flex;
@@ -131,6 +143,7 @@
   }
   &__accordion-text {
     @include fsl(18px, 140%);
+    transition: $transition;
   }
   &__accordion-icon {
     margin-left: 4px;
@@ -138,6 +151,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  &__accordion-svg {
+    transition: $transition;
+    path {
+      transition: $transition;
+    }
   }
 
   &__nav {
@@ -427,21 +446,6 @@
 
   &__modal {
 
-    &::before {
-      // content: "";
-      // position: absolute;
-      // left: 0;
-      // right: 0;
-      // bottom: 0;
-      // top: 100%;
-
-      // height: 300vh;
-
-      // background: rgba($color-black, 0.2);
-      // opacity: 0;
-      // transition: $transition;
-    }
-
     &--active {
 
       #{$comp}__modal-overlay {
@@ -467,5 +471,46 @@
   }
   &__modal-container {
     padding: 24px calc(#{$col-pad-d}) 38px calc(#{$col-part-d} + #{$col-pad-d});
+  }
+  &__modal-row {
+    display: flex;
+  }
+  &__modal-col {
+    &:nth-child(1) {
+      padding-right: 50px;
+
+      flex-shrink: 0;
+      width: calc(#{$col-part-d} * 3);
+    }
+  }
+  &__modal-list {
+    padding: 20px;
+
+    background: #F4F4F4;
+    border-radius: 4px;
+
+    &--transparent {
+      background: transparent;
+    }
+  }
+  &__modal-item {
+    font-weight: 500;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  &__listing {}
+  &__listing-item {
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
   }
 }
