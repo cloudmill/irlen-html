@@ -16,10 +16,10 @@ block content
               .error-page__text 
                 |Но, вы можете перейти в следующие разделы:
               .error-page__buttons 
-                each item in ['Главная', 'Оборудование', 'Инструмент']
+                each item in ['Главная', 'Оборудование', 'Инструмент', 'Материалы для скачивания']
                   .error-page__item 
-                    +button.button--small.button--white.button--outline
+                    +button.button--error.button--white.button--outline
                       |#{item}
             .error-page__col
               .error-page__icon 
-                +error-svg
+                +error-svg.error-page__svg

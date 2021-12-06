@@ -3,7 +3,11 @@
   &__grid {
     --colCount: 2;
     --gap: 20px;
-
+    @media (max-width: ($breakpoint - 1px)) {
+      --colCount: 1;
+      --gap: 8px;
+    }
+    
     display: grid;
     grid-template-columns: repeat(var(--colCount), 1fr);
     row-gap: var(--gap);
@@ -23,11 +27,27 @@
 
   &__card {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      flex-wrap: wrap;
+    }
   }
   &__card-col {
 
     &:not(:first-child) {
       margin-left: 28px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: ($breakpoint - 1px)) {
+      &:nth-child(2) {
+        margin-left: 39px;
+      }
+      &:nth-child(3) {
+        margin-top: 12px;
+        width: 100%;
+      }
     }
   }
   &__card-label {

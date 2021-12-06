@@ -12,7 +12,7 @@ block content
       .container 
         .row 
           .row__col
-            +tabs.tabs--column(tabs = ['Все', 'Новости', 'Мероприятия', 'Производители', 'Статьи'])
+            +tabs.tabs--column(tabs = ['Все', 'Новости', 'Мероприятия', 'Оборудование', 'Инструмент', 'Производители', 'Технологии', 'Акции'])
           .row__col
             .publications-page__grid 
               - for (i = 0; i < 3; i++)
@@ -25,8 +25,8 @@ block content
                       |Участие в выставке «Технофорум-2019»
                     p.main-page__discont-text 
                       |С 22 октября по 25 октября компания "ИРЛЕН-ИНЖИНИРИНГ" приняла участие в «Технофорум-2018»
-                  .main-page__icon 
-                    +big-arrow-svg.main-page__svg
+                  .arrow-icon 
+                    +big-arrow-svg.arrow-icon__svg
                 a.main-page__discont(href="#") 
                   .main-page__discont-container 
                     .main-page__discont-label
@@ -37,8 +37,8 @@ block content
                       |Cкидка 30% на весь ассортимент фрез OSAWA серии HF871
                     p.main-page__discont-text 
                       |Предлагаем попробовать высокопроизводительные фрезы HF по цене фрез G2. Срок акции с 10.09.2021 по 31.12.2021.
-                  .main-page__icon 
-                    +big-arrow-svg.main-page__svg
+                  .arrow-icon 
+                    +big-arrow-svg.arrow-icon__svg
                 a.main-page__discont(href="#") 
                   .main-page__discont-container 
                     .main-page__discont-label
@@ -68,5 +68,11 @@ block content
                             |#{item.label}
                           .main-page__discont-text
                             |#{item.text}
-                  .main-page__icon 
-                    +big-arrow-svg.main-page__svg
+                  .arrow-icon 
+                    +big-arrow-svg.arrow-icon__svg
+            .section__button 
+              .button-show 
+                .button-show__text 
+                  |Показать еще
+                .button-show__icon 
+                  +arrow-svg

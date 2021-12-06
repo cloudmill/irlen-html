@@ -53,55 +53,56 @@ block content
         +navigation(page='Профиль')
     section.section.section--last
       .container 
-        .row 
+        .row(data-tabs-parent='')
           .row__col
-            +tabs.tabs--column.tabs--responsive(tabs = ['Заказы', 'Cкидка', 'Мои данные',])
+            +tabs.tabs--column.tabs--responsive(tabs = ['Заказы', 'Cкидка', 'Мои данные',] real=true)
           .row__col
-            +model-tabs( items = ['Текущие заказы', 'Все заказы'])
-            h2.margin-top.margin-top--xl 
-              |Список заказов пуст
-            .main-page__media.main-page__media--small.margin-top
-              .main-page__media-col 
-                a.main-page__media-link(href="#") 
-                  .main-page__media-container 
-                    img.main-page__media-container(src="assets/images/hero-1.jpg", alt="")
-                  .main-page__media-icon 
-                    +big-arrow-svg.main-page__media-svg
-                .main-page__media-content 
-                  .main-page__media-title 
-                    |Каталог продукции
-                  .main-page__media-text 
-                    |Станки с ЧПУ, ленточнопильные станки, шлифовальные станки, гидравлические прессы и прочее оборудование
-              .main-page__media-col 
-                a.main-page__media-link(href="#") 
-                  .main-page__media-container 
-                    img.main-page__media-container(src="assets/images/hero-2.jpg", alt="")
-                  .main-page__media-icon 
-                    +big-arrow-svg.main-page__media-svg
-                .main-page__media-content 
-                  .main-page__media-title 
-                    |Интернет-магазин
-                  .main-page__media-text 
-                    |Режущий инструмент, вспомогательный инструмент, аксессуары для инструмента и приспособления
-            .section 
-              .profile-page__accordion 
-                .profile-page__accordion-col
-                  .profile-page__accordion-label 
-                    |Заказ
-                .profile-page__accordion-col
-                  .profile-page__accordion-label 
-                    |Дата обновления заказа
-                .profile-page__accordion-col
-                  .profile-page__accordion-label 
-                    |Статус
-                .profile-page__accordion-col
-                  .profile-page__accordion-label 
-                    |Сумма заказа
-              ul.profile-page__accordion-list.section__block
-                - for (i = 0; i < 3; i++)
-                  li.profile-page__accordion-item
-                    +accordion
-            .section
+            .tabs-block.active(data-tabs-block='')
+              +model-tabs( items = ['Текущие заказы', 'Все заказы'])
+              h2.margin-top.margin-top--xl 
+                |Список заказов пуст
+              .main-page__media.main-page__media--small.margin-top
+                .main-page__media-col 
+                  a.main-page__media-link(href="#") 
+                    .main-page__media-container 
+                      img.main-page__media-container(src="assets/images/hero-1.jpg", alt="")
+                    .main-page__media-icon 
+                      +big-arrow-svg.main-page__media-svg
+                  .main-page__media-content 
+                    .main-page__media-title 
+                      |Каталог продукции
+                    .main-page__media-text 
+                      |Станки с ЧПУ, ленточнопильные станки, шлифовальные станки, гидравлические прессы и прочее оборудование
+                .main-page__media-col 
+                  a.main-page__media-link(href="#") 
+                    .main-page__media-container 
+                      img.main-page__media-container(src="assets/images/hero-2.jpg", alt="")
+                    .main-page__media-icon 
+                      +big-arrow-svg.main-page__media-svg
+                  .main-page__media-content 
+                    .main-page__media-title 
+                      |Интернет-магазин
+                    .main-page__media-text 
+                      |Режущий инструмент, вспомогательный инструмент, аксессуары для инструмента и приспособления
+              .section 
+                .profile-page__accordion 
+                  .profile-page__accordion-col
+                    .profile-page__accordion-label 
+                      |Заказ
+                  .profile-page__accordion-col
+                    .profile-page__accordion-label 
+                      |Дата обновления заказа
+                  .profile-page__accordion-col
+                    .profile-page__accordion-label 
+                      |Статус
+                  .profile-page__accordion-col
+                    .profile-page__accordion-label 
+                      |Сумма заказа
+                ul.profile-page__accordion-list.section__block
+                  - for (i = 0; i < 3; i++)
+                    li.profile-page__accordion-item
+                      +accordion
+            .tabs-block(data-tabs-block='')
               .profile-page__row 
                 .profile-page__col
                   .profile-page__panel 
@@ -134,7 +135,7 @@ block content
                           |Время работы
                         .profile-page__info-time 
                           |09:00 — 17:00
-            .section 
+            .tabs-block(data-tabs-block='')
               .profile-page__form 
                 .profile-page__form-col
                   form.form.form--disabled(action="/" data-form='') 

@@ -2,16 +2,31 @@
 
   &__list {
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
   }
 
   &__item {
 
     &:not(:first-child) {
       margin-top: 48px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 24px;
+      }
     }
   }
   
   &__title {
     margin-bottom: 16px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__text {
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 140%);
+    }
   }
 }

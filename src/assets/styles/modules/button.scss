@@ -42,4 +42,8 @@
   &--outline {
     border: 1px solid $color-light-gray
   }
+
+  &--error {
+    min-width: 135px;
+  }
 }
