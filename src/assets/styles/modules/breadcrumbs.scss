@@ -4,13 +4,15 @@
   @media (max-width: ($breakpoint - 1px)) {
     margin-bottom: 12px;
     margin-top: 0;
+    padding: 0 16px;
+    margin-left: -16px;
   }
 
   display: flex;
   flex-wrap: wrap;
   @media (max-width: ($breakpoint - 1px)) {
     flex-wrap: nowrap;
-    width: calc(100% + 16px);
+    width: calc(100% + (16px * 2));
     overflow-x: scroll;
     @include scrollbar-hidden;
   }

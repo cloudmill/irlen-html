@@ -32,15 +32,17 @@ const BREAKPOINT = 1280;
           case 10:
             slider_options = {
               // ...slider_options,
-
+              pagination: {
+                el: '.swiper-pagination',
+              },
+              
               breakpoints: {
-                // [BREAKPOINT]: {
-                //   spaceBetween: 60,
-                // },
+                [BREAKPOINT]: {
+                  pagination: false,
+                },
               },
             }
             break;
-
         }
 
         const slider_swiper = new Swiper(slider_el[0], slider_options);
