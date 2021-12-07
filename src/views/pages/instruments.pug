@@ -11,7 +11,7 @@ block content
       .container 
         .instruments-page__tabs(data-tabs='')
           each item, i in ['Корпусной режущий инструмент', 'Осевой режущий инструмент', 'Вспомогательный инструмент для фрезерных станков с ЧПУ', 'Вспомогательный инструмент для токарных станков с ЧПУ', 'Приспособления', 'Аксессуары для инструмента']
-            .instruments-page__tabs-item(class=(i === 0 ? 'active' : '') data-tabs-item='' )
+            .instruments-page__tabs-item(data-tabs-item='' )
               .instruments-page__tabs-text(class=(i === 2 || i === 3 ? "instruments-page__tabs-text--wide" : '')) 
                 |#{item}
     each item, i in ['Корпусной режущий инструмент', 'Осевой режущий инструмент', 'Вспомогательный инструмент для фрезерных станков с ЧПУ', 'Вспомогательный инструмент для токарных станков с ЧПУ', 'Аксессуары для инструмента', ]
