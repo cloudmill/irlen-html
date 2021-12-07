@@ -53,4 +53,11 @@
   &--error {
     min-width: 135px;
   }
+
+  &--menu {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 11px 0;
+      @include fsl(10px, 140%);
+    }
+  }
 }

@@ -40,3 +40,21 @@
     display: none;
   }
 }
+
+.tippy {
+
+  &-box {
+    padding: 12px;
+
+    width: 161px;
+
+    border-radius: 4px;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.07);
+    background: $color-white;
+  }
+
+  &-content {
+    text-align: center;
+    @include fsl(12px, 140%);
+  }
+}
