@@ -8,8 +8,9 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="format-detection" content="telephone=no">
 		<meta name="format-detection" content="address=no">
+		<script defer="defer" src="assets/vendor.js"></script>
 		<script defer="defer" src="assets/app.js"></script>
-		<link href="452.css" rel="stylesheet">
+		<link href="145.css" rel="stylesheet">
 		<link href="app.css" rel="stylesheet">
 	</head>
 
@@ -108,7 +109,7 @@
 							</div>
 							<div class="header__col">
 								<div class="header__links"><a class="header__cart" href="#">
-										<div class="header__cart-icon"><svg width="38" height="34" viewbox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<div class="header__cart-icon"><svg class="header__cart-svg" width="38" height="34" viewbox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M5.86884 32.7905L1.24662 11.9905H36.7534L32.1312 32.7905H5.86884Z" stroke="#121212" stroke-width="2"></path>
 												<path d="M30.6856 2.94276L24.8 2.94276L30 11.7337" stroke="#121212" stroke-width="2"></path>
 												<path d="M8.05269 2.94276L13.9383 2.94276L8.7383 11.7337" stroke="#121212" stroke-width="2"></path>
@@ -116,7 +117,7 @@
 										<div class="header__cart-count">5</div>
 									</a>
 									<div class="header__user" data-fancy-button="1">
-										<div class="header__user-icon"><svg width="31" height="33" viewbox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<div class="header__user-icon"><svg class="header__user-svg" width="31" height="33" viewbox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<circle cx="15.5" cy="6.73376" r="5.5" stroke="#121212" stroke-width="2"></circle>
 												<path d="M25 31.2338H30V30.7338C30 22.7256 23.5081 16.2338 15.5 16.2338V16.2338C7.49187 16.2338 1 22.7256 1 30.7338V31.2338H6" stroke="#121212" stroke-width="2"></path>
 											</svg></div>
@@ -139,23 +140,279 @@
 						</div>
 					</div>
 					<div class="header__mobile">
-						<div class="header__mobile-col">
-							<div class="header__mobile-search"><svg class="header__search-svg" width="31" height="33" viewbox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<circle cx="17.7144" cy="13.2857" r="12.2857" stroke="#121212" stroke-width="2"></circle>
-									<line y1="-1" x2="12.5259" y2="-1" transform="matrix(-0.70711 0.707104 -0.70711 -0.707104 8.85693 22.1428)" stroke="#121212" stroke-width="2"></line>
-								</svg></div>
-						</div>
-						<div class="header__mobile-col"><a class="header__cart" href="#">
-								<div class="header__cart-icon"><svg class="header__cart-svg" width="38" height="34" viewbox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M5.86884 32.7905L1.24662 11.9905H36.7534L32.1312 32.7905H5.86884Z" stroke="#121212" stroke-width="2"></path>
-										<path d="M30.6856 2.94276L24.8 2.94276L30 11.7337" stroke="#121212" stroke-width="2"></path>
-										<path d="M8.05269 2.94276L13.9383 2.94276L8.7383 11.7337" stroke="#121212" stroke-width="2"></path>
+						<div class="header__mobile-row">
+							<div class="header__mobile-col">
+								<div class="header__mobile-search"><svg class="header__search-svg" width="31" height="33" viewbox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="17.7144" cy="13.2857" r="12.2857" stroke="#121212" stroke-width="2"></circle>
+										<line y1="-1" x2="12.5259" y2="-1" transform="matrix(-0.70711 0.707104 -0.70711 -0.707104 8.85693 22.1428)" stroke="#121212" stroke-width="2"></line>
 									</svg></div>
-								<div class="header__cart-count">5</div>
-							</a></div>
-						<div class="header__mobile-col">
-							<div class="header__menu">
-								<div class="header__burger"><span class="header__burger-span"></span><span class="header__burger-span"></span><span class="header__burger-span"></span></div>
+							</div>
+							<div class="header__mobile-col"><a class="header__cart" href="#">
+									<div class="header__cart-icon"><svg class="header__cart-svg" width="38" height="34" viewbox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.86884 32.7905L1.24662 11.9905H36.7534L32.1312 32.7905H5.86884Z" stroke="#121212" stroke-width="2"></path>
+											<path d="M30.6856 2.94276L24.8 2.94276L30 11.7337" stroke="#121212" stroke-width="2"></path>
+											<path d="M8.05269 2.94276L13.9383 2.94276L8.7383 11.7337" stroke="#121212" stroke-width="2"></path>
+										</svg></div>
+									<div class="header__cart-count">5</div>
+								</a></div>
+							<div class="header__mobile-col">
+								<div class="header__menu">
+									<div class="header__burger"><span class="header__burger-span"></span><span class="header__burger-span"></span><span class="header__burger-span"></span></div>
+								</div>
+							</div>
+						</div>
+						<div class="mobile-menu">
+							<div class="mobile-menu__overlay"></div>
+							<div class="mobile-menu__container">
+								<div class="mobile-menu__top">
+									<div class="mobile-menu__col"><a class="mobile-menu__button" href="#" data-fancy-button="1">
+											<div class="mobile-menu__icon"><svg class="mobile-menu__svg" width="31" height="33" viewbox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<circle cx="15.5" cy="6.73376" r="5.5" stroke="#121212" stroke-width="2"></circle>
+													<path d="M25 31.2338H30V30.7338C30 22.7256 23.5081 16.2338 15.5 16.2338V16.2338C7.49187 16.2338 1 22.7256 1 30.7338V31.2338H6" stroke="#121212" stroke-width="2"></path>
+												</svg></div>
+											<div class="mobile-menu__text">Личный кабинет</div>
+										</a></div>
+									<div class="mobile-menu__col"><a class="button button--menu" href="#">Заказать звонок</a></div>
+								</div>
+								<div class="mobile-menu__item mobile-menu__item--bb" data-modal-btn="5">
+									<div class="mobile-menu__item-text">Телефоны для связи</div>
+									<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+										</svg></div>
+								</div>
+								<ul class="mobile-menu__list">
+									<li class="mobile-menu__item" data-modal-btn="0">
+										<div class="mobile-menu__item-text">Оборудование</div>
+										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+											</svg></div>
+									</li>
+									<li class="mobile-menu__item" data-modal-btn="1">
+										<div class="mobile-menu__item-text">Инструмент</div>
+										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+											</svg></div>
+									</li>
+									<li class="mobile-menu__item" data-modal-btn="2">
+										<div class="mobile-menu__item-text">Услуги</div>
+										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+											</svg></div>
+									</li>
+								</ul>
+								<nav class="mobile-menu__nav"><a class="mobile-menu__nav-link" href="#">О нас</a><a class="mobile-menu__nav-link" href="#"> Клиентам</a><a class="mobile-menu__nav-link" href="#"> Контакты</a></nav>
+								<div class="mobile-menu__modals">
+									<div class="mobile-menu__modal" data-modal-menu="0">
+										<div class="mobile-menu__modal-top">
+											<div class="mobile-menu__modal-back" data-modal-close="0">
+												<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+												<div class="mobile-menu__modal-text">Оборудование</div>
+											</div>
+										</div>
+										<ul class="mobile-menu__list">
+											<li class="mobile-menu__item" data-modal-btn="q0">
+												<div class="mobile-menu__item-text">Токарные станки с ЧПУ</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+											<li class="mobile-menu__item" data-modal-btn="q0">
+												<div class="mobile-menu__item-text">Фрезерные станки с ЧПУ</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+											<li class="mobile-menu__item" data-modal-btn="q0">
+												<div class="mobile-menu__item-text">Вертикальные токарные и карусельные станки с ЧПУ</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+											<li class="mobile-menu__item" data-modal-btn="q0">
+												<div class="mobile-menu__item-text">Ленточнопильные станки</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+											<li class="mobile-menu__item" data-modal-btn="q0">
+												<div class="mobile-menu__item-text">Шлифовальные станки</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+											<li class="mobile-menu__item" data-modal-btn="q0">
+												<div class="mobile-menu__item-text">Прессовое оборудование</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+											<li class="mobile-menu__item" data-modal-btn="q0">
+												<div class="mobile-menu__item-text">Электроэрозионные станки</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+											<li class="mobile-menu__item" data-modal-btn="q0">
+												<div class="mobile-menu__item-text">Универсальные станки</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+											<li class="mobile-menu__item" data-modal-btn="q0">
+												<div class="mobile-menu__item-text">Раскроечные станки</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+											<li class="mobile-menu__item" data-modal-btn="q0">
+												<div class="mobile-menu__item-text">Измерительное оборудование</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+										</ul>
+										<div class="mobile-menu__modal" data-modal-menu="q0">
+											<div class="mobile-menu__modal-top">
+												<div class="mobile-menu__modal-back" data-modal-close="q0">
+													<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+														</svg></div>
+													<div class="mobile-menu__modal-text">Токарные станки с ЧПУ</div>
+												</div>
+											</div>
+											<ul class="mobile-menu__modal-list">
+												<li class="mobile-menu__modal-item"><a href="#">С направляющими качения</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">С направляющими качения и противошпинделем</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">С направляющими качения и осью Y</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">Роботизированные с направляющими качения токарно-фрезерные с направляющими качения</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">С направляющими скольжения</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">С направляющими скольжения и осью Y</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">Трубообрабатывающие</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">Автоматы продольного точения</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="mobile-menu__modal" data-modal-menu="1">
+										<div class="mobile-menu__modal-top">
+											<div class="mobile-menu__modal-back" data-modal-close="1">
+												<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+												<div class="mobile-menu__modal-text">Инструмент</div>
+											</div>
+										</div>
+										<ul class="mobile-menu__list">
+											<li class="mobile-menu__item" data-modal-btn="q1">
+												<div class="mobile-menu__item-text">Корпусной режущий инструмент</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+											<li class="mobile-menu__item" data-modal-btn="q1">
+												<div class="mobile-menu__item-text">Осевой режущий инструмент</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+											<li class="mobile-menu__item" data-modal-btn="q1">
+												<div class="mobile-menu__item-text">Вспомогательный инструмент для фрезерных станков с ЧПУ</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+											<li class="mobile-menu__item" data-modal-btn="q1">
+												<div class="mobile-menu__item-text">Вспомогательный инструмент для токарных станков с ЧПУ</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+											<li class="mobile-menu__item" data-modal-btn="q1">
+												<div class="mobile-menu__item-text">Приспособления</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+											<li class="mobile-menu__item" data-modal-btn="q1">
+												<div class="mobile-menu__item-text">Аксессуары для инструмента</div>
+												<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+											</li>
+										</ul>
+										<div class="mobile-menu__modal" data-modal-menu="q1">
+											<div class="mobile-menu__modal-top">
+												<div class="mobile-menu__modal-back" data-modal-close="q1">
+													<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+														</svg></div>
+													<div class="mobile-menu__modal-text">Корпусной режущий инструмент</div>
+												</div>
+											</div>
+											<ul class="mobile-menu__modal-list">
+												<li class="mobile-menu__modal-item"><a href="#">Пластины для точения</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">Пластины для фрезерования</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">Державки MICRONEGA</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">Корпусные сверла</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">Токарные пластины MICRONEGA</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">Пластины для корпусных сверл</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">Державки MICROBORING</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">Токарные пластины MICROBORING</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">Токарные державки</a></li>
+												<li class="mobile-menu__modal-item"><a href="#">Корпусные фрезы</a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="mobile-menu__modal" data-modal-menu="2">
+										<div class="mobile-menu__modal-top">
+											<div class="mobile-menu__modal-back" data-modal-close="2">
+												<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+												<div class="mobile-menu__modal-text">Услуги</div>
+											</div>
+										</div>
+										<ul class="mobile-menu__modal-list">
+											<li class="mobile-menu__modal-item"><a href="#">Подбор инструмента</a></li>
+											<li class="mobile-menu__modal-item"><a href="#">Ленточные пилы</a></li>
+											<li class="mobile-menu__modal-item"><a href="#">Сервис</a></li>
+											<li class="mobile-menu__modal-item"><a href="#">Инжиниринг</a></li>
+											<li class="mobile-menu__modal-item"><a href="#">Обучение</a></li>
+											<li class="mobile-menu__modal-item"><a href="#">Лизинг</a></li>
+										</ul>
+									</div>
+									<div class="mobile-menu__modal" data-modal-menu="5">
+										<div class="mobile-menu__modal-top">
+											<div class="mobile-menu__modal-back" data-modal-close="5">
+												<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+													</svg></div>
+												<div class="mobile-menu__modal-text mobile-menu__modal-text--default">Телефоны для связи</div>
+											</div>
+										</div>
+										<ul class="mobile-menu__modal-list">
+											<li class="mobile-menu__modal-item"><a class="header__link" href="tel:8 812 600-60-98">8 812 600-60-98</a>
+												<div class="header__label">Санкт-Петербург</div>
+											</li>
+											<li class="mobile-menu__modal-item"><a class="header__link" href="tel:8 495 367-11-25">8 495 367-11-25</a>
+												<div class="header__label">Москва</div>
+											</li>
+											<li class="mobile-menu__modal-item"><a class="header__link" href="tel:8 831 249-99-88">8 831 249-99-88</a>
+												<div class="header__label">Нижний Новгород</div>
+											</li>
+											<li class="mobile-menu__modal-item"><a class="header__link" href="tel:8 965 535-23-33">8 965 535-23-33</a>
+												<div class="header__label">Екатеринбург</div>
+											</li>
+											<li class="mobile-menu__modal-item"><a class="header__link" href="tel:8 908 271-68-76">8 908 271-68-76</a>
+												<div class="header__label">Пермь</div>
+											</li>
+											<li class="mobile-menu__modal-item"><a class="header__link" href="tel:8 800 444-60-98">8 800 444-60-98</a>
+												<div class="header__label">Россия, звонок бесплатный</div>
+											</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -363,8 +620,8 @@
 																	<div class="accordion__content-col">
 																		<div class="accordion__text order2">1 шт.</div>
 																		<div class="tooltip">
-																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg class="tooltip__svg" width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Цена с НДС по курсу ЦБ на 25.06.2021</div>
 																		</div>
 																	</div>
 																</div>
@@ -380,8 +637,8 @@
 																	<div class="accordion__content-col">
 																		<div class="accordion__text order2">1 шт.</div>
 																		<div class="tooltip">
-																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg class="tooltip__svg" width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Цена с НДС по курсу ЦБ на 25.06.2021</div>
 																		</div>
 																	</div>
 																</div>
@@ -397,8 +654,8 @@
 																	<div class="accordion__content-col">
 																		<div class="accordion__text order2">1 шт.</div>
 																		<div class="tooltip">
-																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg class="tooltip__svg" width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Цена с НДС по курсу ЦБ на 25.06.2021</div>
 																		</div>
 																	</div>
 																</div>
@@ -455,8 +712,8 @@
 																	<div class="accordion__content-col">
 																		<div class="accordion__text order2">1 шт.</div>
 																		<div class="tooltip">
-																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg class="tooltip__svg" width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Цена с НДС по курсу ЦБ на 25.06.2021</div>
 																		</div>
 																	</div>
 																</div>
@@ -472,8 +729,8 @@
 																	<div class="accordion__content-col">
 																		<div class="accordion__text order2">1 шт.</div>
 																		<div class="tooltip">
-																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg class="tooltip__svg" width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Цена с НДС по курсу ЦБ на 25.06.2021</div>
 																		</div>
 																	</div>
 																</div>
@@ -489,8 +746,8 @@
 																	<div class="accordion__content-col">
 																		<div class="accordion__text order2">1 шт.</div>
 																		<div class="tooltip">
-																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg class="tooltip__svg" width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Цена с НДС по курсу ЦБ на 25.06.2021</div>
 																		</div>
 																	</div>
 																</div>
@@ -547,8 +804,8 @@
 																	<div class="accordion__content-col">
 																		<div class="accordion__text order2">1 шт.</div>
 																		<div class="tooltip">
-																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg class="tooltip__svg" width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Цена с НДС по курсу ЦБ на 25.06.2021</div>
 																		</div>
 																	</div>
 																</div>
@@ -564,8 +821,8 @@
 																	<div class="accordion__content-col">
 																		<div class="accordion__text order2">1 шт.</div>
 																		<div class="tooltip">
-																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg class="tooltip__svg" width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Цена с НДС по курсу ЦБ на 25.06.2021</div>
 																		</div>
 																	</div>
 																</div>
@@ -581,8 +838,8 @@
 																	<div class="accordion__content-col">
 																		<div class="accordion__text order2">1 шт.</div>
 																		<div class="tooltip">
-																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-																			<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+																			<div class="accordion__price tooltip__row">€ 93.42<span class="tooltip__span"><div class="tooltip__icon"><svg class="tooltip__svg" width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+																			<div class="tooltip__container">Цена с НДС по курсу ЦБ на 25.06.2021</div>
 																		</div>
 																	</div>
 																</div>
@@ -804,13 +1061,13 @@
 					<form class="form" action="/" data-form="1">
 						<p class="login-modal__text login-modal__inner">Регистрация на нашем сайте позволяет видеть историю покупок, получать информацию о новых акциях и скидках, упрощает оформление заказа</p>
 						<div class="login-modal__wrapper">
-							<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" checked="checked" data-login-checkbox="" />
+							<div class="checkbox checkbox--lg"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" checked="checked" data-login-checkbox="" />
 									<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
 										</svg></div>
 									<div class="tooltip">
-										<div class="checkbox__text tooltip__row">Юридическое лицо<span class="tooltip__span"><div class="tooltip__icon"><svg width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-										<div class="tooltip__container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?</div>
+										<div class="checkbox__text tooltip__row">Юридическое лицо<span class="tooltip__span"><div class="tooltip__icon"><svg class="tooltip__svg" width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
+										<div class="tooltip__container">Цена с НДС по курсу ЦБ на 25.06.2021</div>
 									</div>
 								</label></div>
 						</div>
