@@ -35,11 +35,22 @@
     background: $color-black;
     border-radius: 4px;
     cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background: $color-blue;
+
+      #{$comp}__svg {
+        path {
+          stroke: $color-white;
+        }
+      }
+    }
   }
 
   &__svg {
-    
     path {
+      transition: $transition;
       stroke: $color-white;
     }
   }

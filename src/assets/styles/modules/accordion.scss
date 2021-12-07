@@ -11,17 +11,21 @@
   background: $color-white;
   transition: $transition;
 
+  &:hover {
+    border-color: $color-blue;
+  }
+
   &.active {
     border-color: $color-blue;
 
     #{$comp}__icon {
       transform: rotate(180deg);
     }
-    // #{$comp}__svg {
-    //   path {
-    //     stroke: $color-blue;
-    //   }
-    // }
+    #{$comp}__svg {
+      path {
+        stroke: $color-blue;
+      }
+    }
   }
 
   &__head {

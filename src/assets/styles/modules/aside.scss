@@ -1,4 +1,5 @@
 .aside {
+  $comp: &;
 
   &__card {
     border-radius: 4px;
@@ -20,9 +21,32 @@
   &__title {
     @include fsl(16px, 120%);
     font-weight: 500;
+    cursor: pointer;
+    transition: $transition;
+
+    &--hover {
+      &:hover {
+        color: $color-blue;
+  
+        #{$comp}__count {
+          color: $color-blue;
+        }
+      }
+    }
   }
 
   &__item {
+
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-blue;
+
+      #{$comp}__count {
+        color: $color-blue;
+      }
+    }
 
     &:not(:first-child) {
       margin-top: 8px;
@@ -37,6 +61,12 @@
     
     background: $color-darken-white;
     border-radius: 4px;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background-color: $color-light-gray;
+    }
   }
 
   &__text {
@@ -47,6 +77,7 @@
     padding-left: 8px;
     @include fsl(12px, 140%);
     color: $color-gray;
+    transition: $transition;
   }
 
   &__btn {
@@ -60,15 +91,37 @@
     background: $color-white;
     border-radius: 4px;
     cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background: $color-blue;
+
+      #{$comp}__btn-text {
+        color: $color-white;
+      }
+
+      #{$comp}__svg {
+        path {
+          stroke: $color-white;
+        }
+      }
+    }
   }
   &__btn-text {
     color: $color-gray;
     @include fsl(14px, 140%);
+    transition: $transition
   }
 
   &__icon {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__svg {
+    path {
+      transition: $transition;
+    }
   }
 }

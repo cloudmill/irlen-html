@@ -61,5 +61,7 @@
 }
 
 .order2 {
-  order: 2;
+  @media (max-width: ($breakpoint - 1px)) {
+    order: 2;
+  }
 }

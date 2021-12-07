@@ -27,10 +27,6 @@
     }
   }
 
-  &__loyalty {
-    
-  }
-
   &__counter {
     @media (max-width: ($breakpoint - 1px)) {
       width: 124px;
@@ -397,7 +393,21 @@
     display: flex;
     // align-items: center;
     justify-content: center;
+
     cursor: pointer;
+
+    &:hover {
+      #{$comp}__item-svg {
+        path {
+          stroke: $color-blue;
+        }
+      }
+    }
+  }
+  &__item-svg {
+    path {
+      transition: $transition;
+    }
   }
   &__item-caption {
     margin-bottom: 8px;

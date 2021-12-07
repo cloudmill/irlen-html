@@ -11,11 +11,16 @@
   background: $color-blue;
   border-radius: 4px;
   color: $color-white;
+  transition: $transition;
   cursor: pointer;
   border: none;
   @include f-main();
   @media (max-width: ($breakpoint - 1px)) {
     @include fsl(14px, 140%);
+  }
+
+  &:hover {
+    background: $color-darken-blue;
   }
 
   &--md {

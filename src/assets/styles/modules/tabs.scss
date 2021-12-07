@@ -7,7 +7,6 @@
     margin-left: -16px;
     padding: 0 16px;
 
-    // fle
     width: calc(100% + (16px * 2));
 
     overflow-x: scroll;
@@ -78,9 +77,14 @@
     border-radius: 4px;
     cursor: pointer;
     font-weight: 500;
+    transition: $transition;
     white-space: nowrap;
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px, 140%);
+    }
+
+    &:hover {
+      color: $color-blue;
     }
 
     &.active {

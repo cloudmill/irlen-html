@@ -23,6 +23,10 @@
       }
     }
 
+    &:hover {
+      color: $color-blue;
+    }
+
     &.active {
       color: $color-blue;
       border-color: $color-blue;

@@ -1,8 +1,22 @@
 .category-card {
+  $comp: &;
+
   display: block;
   width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
   @media (max-width: ($breakpoint - 1px)) {
     width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+  }
+
+  &:hover {
+    #{$comp}__title {
+      color: $color-blue;
+    }
+
+    .arrow-icon__svg {
+      path {
+        stroke: $color-blue;
+      }
+    }
   }
 
   &__container {
@@ -30,6 +44,7 @@
       @include fsl(12px, 120%);
     }
     font-weight: 500;
+    transition: $transition;
   }
 }
 

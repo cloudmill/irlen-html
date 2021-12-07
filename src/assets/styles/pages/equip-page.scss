@@ -28,6 +28,18 @@
     @media (max-width: ($breakpoint - 1px)) {
       background: transparent;
     }
+
+    &:hover {
+      #{$comp}__card-title {
+        color: $color-blue;
+      }
+
+      .arrow-icon__svg {
+        path {
+          stroke: $color-blue;
+        }
+      }
+    }
   }
   &__card-row {
     display: flex;
@@ -89,12 +101,15 @@
       @include fsl(16px, 120%);
     }
     font-weight: 500;
+    transition: $transition;
   }
   &__card-item {
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px, 120%);
     }
     color: $color-gray;
+    transition: $transition;
+
     &:not(:first-child) {
       margin-top: 12px;
       @media (max-width: ($breakpoint - 1px)) {

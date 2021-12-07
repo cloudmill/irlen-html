@@ -54,22 +54,31 @@
 
   &__grid {
     --itemsCount: 4;
-    // @media (max-width: ($breakpoint - 1px)) {
-    //   --itemsCount: 2;
-    // }
-
+    @media (max-width: ($breakpoint - 1px)) {
+      --itemsCount: 1;
+    }
     display: grid;
     grid-template-columns: repeat(var(--itemsCount), 1fr);
     column-gap: 20px;
     row-gap: 40px;
-    // @media (max-width: ($breakpoint - 1px)) {
-    //   column-gap: 8px;
-    //   row-gap: 8px;
-    // }
+    @media (max-width: ($breakpoint - 1px)) {
+      row-gap: 20px;
+    }
   }
 
   &__card {
 
+    &:hover {
+      #{$comp}__card-title {
+        color: $color-blue;
+      }
+
+      .arrow-icon__svg {
+        path {
+          stroke: $color-blue;
+        }
+      }
+    }
   }
   &__card-container {
     position: relative;
@@ -81,24 +90,23 @@
     border-radius: 4px;
     overflow: hidden;
   }
-  &__card-icon {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-  }
-  &__card-svg {
-    path {
-      stroke: $color-black;
-    }
-  }
   &__card-title {
     margin-top: 12px;
     @include fsl(18px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 8px;
+      @include fsl(14px, 120%);
+    }
     font-weight: 500;
+    transition: $transition;
   }
   &__card-text {
     margin-top: 8px;
     @include fsl(14px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 4px;
+      @include fsl(12px, 120%);
+    }
   }
 
   &__panel {

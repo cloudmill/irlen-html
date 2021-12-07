@@ -115,6 +115,11 @@
   &__link {
     @include fsl(14px, 140%);
     font-weight: 500;
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
   }
 
   &__label {
@@ -171,6 +176,18 @@
     align-items: center;
     cursor: pointer;
     font-weight: 500;
+
+    &:hover {
+      #{$comp}__accordion-text {
+        color: $color-blue;
+      }
+
+      #{$comp}__accordion-svg {
+        path {
+          stroke: $color-blue;
+        }
+      }
+    }
   }
   &__accordion-text {
     @include fsl(18px, 140%);
@@ -202,15 +219,32 @@
   }
   &__nav-link {
     @include fsl(14px, 140%);
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
   }
   &__nav-button {
     display: flex;
     align-items: center;
 
     cursor: pointer;
+
+    &:hover {
+      #{$comp}__nav-text {
+        color: $color-blue;
+      }
+      #{$comp}__nav-svg {
+        path {
+          stroke: $color-blue;
+        }
+      }
+    }
   }
   &__nav-text {
     @include fsl(14px, 140%);
+    transition: $transition;
   }
   &__nav-icon {
     margin-left: 4px;
@@ -218,6 +252,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  &__nav-svg {
+    path {
+      transition: $transition;
+    }
   }
 
   &__form {
@@ -298,6 +337,14 @@
     z-index: 0;
 
     display: block;
+
+    &:hover {
+      #{$comp}__cart-svg {
+        path {
+          stroke: $color-blue;
+        }
+      }
+    }
   }
   &__cart-icon {
     display: flex;
@@ -307,6 +354,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: 32px;
       height: 30px;
+    }
+
+    path {
+      transition: $transition;
     }
   }
   &__cart-count {
@@ -342,7 +393,27 @@
     z-index: 0;
     margin-left: 20px;
 
+    &:hover {
+      #{$comp}__user-svg {
+        circle {
+          stroke: $color-blue;
+        }
+        path {
+          stroke: $color-blue;
+        }
+      }
+    }
+
     &.loged:hover {
+      #{$comp}__user-svg {
+        circle {
+          stroke: $color-blue;
+        }
+        path {
+          stroke: $color-blue;
+        }
+      }
+
       #{$comp}__user-links {
         opacity: 1;
         pointer-events: all;
@@ -393,6 +464,14 @@
   &__user-link {
     @include fsl(14px, 140%);
     transition: $transition;
+  }
+  &__user-svg {
+    circle {
+      transition: $transition
+    }
+    path {
+      transition: $transition;
+    }
   }
 
   &__mobile {

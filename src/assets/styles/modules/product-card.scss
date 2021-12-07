@@ -140,7 +140,11 @@
 
     background: $color-blue;
     border-radius: 4px;
-    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background: $color-darken-blue;
+    }
   }
   &__button-text {
     @media (min-width: $breakpoint) {

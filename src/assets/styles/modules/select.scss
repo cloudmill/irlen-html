@@ -1,7 +1,7 @@
 .select {
   width: 100%;
   
-  @media (max-width: $breakpoint-m - 1px) {
+  @media (max-width: ($breakpoint-m - 1px)) {
     position: relative;
   }
   
@@ -58,12 +58,13 @@
       border-radius: 4px;
       transition: $transition;
 
-      // &:hover {
-      //   border-color: $color-blue;
-      // }
+      &:hover {
+        border-color: $color-blue;
+      }
 
       &__rendered {
         padding: 0;
+        margin-right: 10px;
 
         color: $color-black;
         @include fsl(16px, 130%);
@@ -142,7 +143,7 @@
 
     &--highlighted[aria-selected] {
       color: $color-black;
-      // background-color: $color-aqua;
+      background-color: transparent;
     }
 
     &[aria-selected=true] {
