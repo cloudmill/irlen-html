@@ -1,0 +1,193 @@
+.mobile-menu {
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  transition: $transition;
+  pointer-events: none;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    opacity: 0;
+    background: rgba($color-black, 0.2);
+    transition: $transition;
+  }
+
+  &__container {
+    padding-top: 54px;
+    margin-left: 16px;
+    position: relative;
+
+    height: 100%;
+
+    // overflow-y: scroll;
+    // @include scrollbar-hidden;
+    transform: translateX(100%);
+    pointer-events: all;
+    background: $color-white;
+    transition: $transition;
+  }
+
+  &__top {
+    margin-bottom: 16px;
+    padding: 0 16px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__col {
+    flex-shrink: 0;
+    width: calc(50% - 4px);
+  }
+
+  &__button {
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $color-light-gray;
+    border-radius: 4px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    --size: 15px;
+
+    width: var(--size);
+    height: var(--size);
+  }
+
+  &__text {
+    margin-left: 10px;
+    @include fsl(10px, 140%);
+  }
+
+  &__list {
+    margin-top: 16px;
+  }
+
+  &__item {
+    padding: 7px 16px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid $color-light-gray;
+    cursor: pointer;
+
+    &:last-child {
+      border-bottom: 1px solid $color-light-gray;
+    }
+
+    &--bb {
+      border-bottom: 1px solid $color-light-gray;
+    }
+  }
+  &__item-text {
+    margin-right: 12px;
+
+    @include fsl(14px, 140%);
+  }
+  &__item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item-svg {
+    transform: rotate(-90deg);
+  }
+  
+  &__nav {
+    padding: 16px 16px 0;
+  }
+  &__nav-link {
+    display: block;
+
+    @include fsl(14px, 140%);
+
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+
+  &__modal {
+    padding: 54px 0 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: $color-white;
+    transition: $transition;
+    transform: translateX(100%);
+    overflow-y: scroll;
+    @include scrollbar-hidden;
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
+  &__modal-top {
+    margin-left: 15px;
+    margin-right: 16px;
+    margin-bottom: 24px;
+  }
+  &__modal-back {
+    display: flex;
+    align-items: flex-start;
+
+    cursor: pointer;
+  }
+  &__modal-icon {
+    margin-top: 7px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__modal-svg {
+    transform: rotate(90deg);
+  }
+  &__modal-text {
+    margin-left: 13px;
+
+    font-weight: 500;
+    text-decoration: underline;
+
+    &--default {
+      text-decoration: none;
+    }
+  }
+  &__modal-list {
+    margin-left: 35px;
+    margin-right: 16px
+  }
+  &__modal-item {
+
+    @include fsl(12px, 140%);
+
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+  }
+}

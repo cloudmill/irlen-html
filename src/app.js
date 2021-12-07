@@ -13,9 +13,11 @@ import 'scripts/form-response.js';
 import { FormChanger } from 'scripts/form-changer'
 import { Tabs } from 'scripts/tabs'
 import { Counter } from 'scripts/counter'
+import { HeaderMenu } from 'scripts/header'
 
 $(() => {
   const formChanger = new FormChanger()
+  const headerMenu = new HeaderMenu()
   const tabsList = document.querySelectorAll('[data-tabs]')
 
   tabsList.forEach(item => {
