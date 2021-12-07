@@ -22,23 +22,23 @@ block content
               |Токарно-карусельный станок Leadwell VTL-1000 ATC
         .equip-detail__row.equip-detail__inner
           .equip-detail__col
-            .instruments-card__section-info
+            .equip-detail__section-info
               h1.instruments-card__section-title 
                 |Токарно-карусельный станок Leadwell VTL-1000 ATC
-              p.instruments-card__section-text 
+              p.equip-detail__section-text 
                 |Служит для обработки деталей типа диск и колесо среднего и крупного размера. Вертикальная компоновка станка облегчает загрузку/выгрузку заготовок. Большие модели оснащены в базовом исполнении редуктором.
             .equip-detail__image
               img.instruments-card__section-img(src="assets/images/equip-detail.jpg", alt="")
-            .instruments-card__section-inner.margin-top.margin-top--md 
-              .instruments-card__section-item 
+            .equip-detail__section-inner
+              .equip-detail__section-item 
                 .instruments-card__section-label 
                   |Производитель
                 .instruments-card__section-text 
                   |Leadwell
-              .instruments-card__section-item 
+              .equip-detail__section-item 
                 +button.button--small.button--outline.button--lg.button--white
                   |Возможные опции
-            .equip-detail__panel 
+            .equip-detail__panel.equip-detail__section-panel
               .equip-detail__panel-row 
                 .equip-detail__panel-col
                   p.equip-detail__panel-text
@@ -57,24 +57,9 @@ block content
                   - for (i = 0; i < 4; i++)
                     li.equip-detail__list-item 
                       .equip-detail__list-text.small 
-                        |Перемещение по оси X, мм
+                        |Перемещение по оси X 
                       .equip-detail__list-text 
-                        |300
-    //- section.instruments-card__block 
-      .container 
-        h2.instruments-card__inner
-          |Характеристики
-        - for (x = 0; x < 4; x++)
-          .equip-detail__block(class=(x === 0 ? "" : 'margin-top'))
-            h4.equip-detail__title 
-              |Рабочий диапазон
-            ul.equip-detail__list 
-              - for (i = 0; i < 4; i++)
-                li.equip-detail__list-item 
-                  .equip-detail__list-text.small 
-                    |Перемещение по оси X, мм
-                  .equip-detail__list-text 
-                    |300
+                        |300 мм
     section.section 
       .container 
         .instruments-card__row.instruments-card__inner

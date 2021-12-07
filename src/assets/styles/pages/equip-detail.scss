@@ -9,6 +9,9 @@
 
   &__row {
     display: flex;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
   }
   
   &__col {
@@ -17,6 +20,8 @@
       width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
       @media (max-width: ($breakpoint - 1px)) {
         width: 100%;
+        display: flex;
+        flex-direction: column;
       }
     }
     &:nth-child(2) {
@@ -25,13 +30,55 @@
         margin-left: 0;
         margin-top: 40px;
       }
+      width: 100%;
     }
   }
+
+  &__section-info {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 12px;
+    }
+  }
+  &__section-text {
+    width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+      @include fsl(14px, 140%);
+    }
+  }
+  &__section-inner {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 16px;
+      display: block;
+    }
+  }
+  &__section-item {
+    flex-shrink: 0;
+    width: calc(#{$col-part-d} * 2);
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+    }
+  }
+  &__section-panel {
+    margin-top: 30px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 24px;
+    }
+  }
+  
 
   &__image {
     margin-top: 20px;
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 0;
+      order: -1;
     }
   }
 
@@ -96,13 +143,22 @@
   }
   &__list-text {
     flex-shrink: 0;
-    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    width: calc(28% - 10px);
     @media (max-width: ($breakpoint - 1px)) {
       width: auto;
       @include fsl(14px, 140%);
     }
 
+    &:first-child {
+      margin-right: 10px;
+      width: 72%;
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+      }
+    }
+
     &.small {
+      @include fsl(14px, 140%);
       @media (max-width: ($breakpoint - 1px)) {
         @include fsl(12px, 140%);
       }
