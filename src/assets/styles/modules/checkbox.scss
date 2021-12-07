@@ -8,6 +8,14 @@
     }
   }
 
+  &--lg {
+    #{$comp}__text {
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(12px, 140%);
+      }
+    }
+  }
+
   &__label {
     position: relative;
 
@@ -59,6 +67,9 @@
   &__text {
     margin-left: 12px;
     @include fsl(14px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(10px, 140%);
+    }
   }
 
   &__link {

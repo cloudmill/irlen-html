@@ -35,10 +35,17 @@
 
     &:first-child {
       border-radius: 4px 0 0 4px;
+      border-right: none;
     }
 
     &:last-child {
       border-radius: 0 4px 4px 0;
+      border-left: none;
+    }
+
+    &:hover {
+      color: $color-blue;
+      background: $color-darken-white;
     }
   }
 
@@ -58,16 +65,16 @@
     width: var(--width);
     height: var(--size);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    text-align: center;
+    transition: $transition;
     border: 1px solid $color-light-gray;
-    border-left: none;
-    border-right: none;
     @include fsl(16px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px, 110%);
+    }
+
+    &:focus {
+      border-color: $color-blue;
     }
   }
 }

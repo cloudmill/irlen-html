@@ -73,7 +73,7 @@ mixin login-modal
           p.login-modal__text.login-modal__inner
             |Регистрация на нашем сайте позволяет видеть историю покупок, получать информацию о новых акциях и скидках, упрощает оформление заказа
           .login-modal__wrapper
-            .checkbox 
+            .checkbox.checkbox--lg
               label.checkbox__label
                 input.checkbox__input(type="checkbox" checked data-login-checkbox='')
                 .checkbox__box 
@@ -83,7 +83,7 @@ mixin login-modal
                     |Юридическое лицо
                     span.tooltip__span
                       .tooltip__icon 
-                        +tooltip-svg
+                        +tooltip-svg.tooltip__svg
                   .tooltip__container   
                     |Цена с НДС по курсу ЦБ на 25.06.2021
           .login-modal__form.active(data-form-corp='')

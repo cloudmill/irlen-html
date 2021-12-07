@@ -1,6 +1,5 @@
 .tooltip {
   $comp: &;
-  --size: 9px;
 
   &--start {
 
@@ -27,12 +26,25 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    &:hover {
+      #{$comp}__svg {
+        circle {
+          fill: $color-blue;
+        }
+        path {
+          fill: $color-white;
+        }
+      }
+    }
   }
 
   &__svg {
-    @media (max-width: ($breakpoint - 1px)) {
-      width: var(--size);
-      height: var(--size);
+    circle {
+      transition: $transition;
+    }
+    path {
+      transition: $transition;
     }
   }
   
