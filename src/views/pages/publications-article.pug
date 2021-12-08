@@ -1,7 +1,76 @@
 extends ../layouts/master.pug
 
+include ../components/slider-buttons
+
 block content 
   .publications-page 
-    section.section.section--first 
+    section.publications-page__section
       .container 
         .publications-page__container
+          ul.breadcrumbs 
+            li.breadcrumbs__item 
+              a.breadcrumbs__link(href="#") 
+                |Главная
+            li.breadcrumbs__item 
+              a.breadcrumbs__link(href="#") 
+                |Публикации
+            li.breadcrumbs__item 
+              a.breadcrumbs__link(href="#") 
+                |Технологии
+            li.breadcrumbs__item 
+              .breadcrumbs__text 
+                |Участие в выставке «Технофорум-2019»
+          h2.publications-page__title   
+            |Особенности пиления на лентопилочных станках с ручной подачей заготовок
+          .publications-page__section-cat
+            .publications-page__category  
+              |Новости
+          .margin-top 
+            h3.publications-page__section-title 
+              |Перед пилением
+            .publications-page__section-content 
+              p.publications-page__section-text 
+                |Для поддержки и удобства подачи длинномерных заготовок используйте роликовые столы (рольганги).
+              p.publications-page__section-text 
+                |Производительность при пилении во многом зависит от правильно выбранной ленточной пилы, а точнее формы, твёрдости и шага зуба пилы. Зуб «S» или «N» с передним углом 0° следует рассматривать при пилении заготовок малых диаметров и тонкостенных профилей из конструкционных, инструментальных сталей и чугунов.
+          .publications-page__section-img.publications-page__section-inner 
+            img(src="assets/images/table.jpg", alt="")
+          .publications-page__section-caption 
+            |Роликовый стол
+          .margin-top 
+            p.publications-page__section-text 
+              |При пиления профильных заготовок, а также пакетов заготовок из конструкционной стали используют пилы с формой зуба «P» или Protector c «усиленной спинкой».
+            p.publications-page__section-text 
+              |Для пиления труднообрабатываемых сталей и сплавов можно выбрать пилы с материалом зуба М51, М71 или Х3000. Но, для более эффективной и производительной резки здесь всё-таки следует использовать пилы с твердосплавными напайками.
+          .publications-page__section-container.publications-page__section-inner 
+            img(src="assets/images/publication-article.jpg", alt="")
+          .margin-top 
+            h3.publications-page__section-title 
+              |Перед пилением
+            .publications-page__section-content 
+              p.publications-page__section-text 
+                |При установке новой ленточной пилы на станок обязательно произведите её обкатку (приработку). Это процесс пиления заготовки с пониженной скоростью вращения пилы при медленном опускании пильной рамы на заготовку. Скорость пилы снижают на 30%, а подачу рамы вполовину от рабочих режимов. Время непрерывного резания при обкатке 15-20 минут.
+            ul.features-list.publications-page__section-inner
+              each item in ['Точение диаметральных размеров (внешних и внутренних);', 'Продольные проточки;', 'Точение фасонных и конических заготовок;', 'Отрезание заготовок по размерам;', 'Растачивание готовых отверстий;']
+                li.features-list__item 
+                  |#{item}
+          .publications-page__section-img.publications-page__section-inner
+            img(src="assets/images/publication-article-1.jpg", alt="")
+          .publications-page__section-img.publications-page__image 
+            img(src="assets/images/publication-article-2.jpg", alt="")
+          .margin-top 
+            h3.publications-page__section-title 
+              |Перед пилением
+            .publications-page__section-content 
+              p.publications-page__section-text 
+                |После окончания пиления заготовок обязательно очищайте рабочий стол, ведущий и ведомый шкивы станка от накопившейся стружки. Периодически проверяйте ведущий и ведомый шкивы станка на параллельность и отсутствие биений, а также износ твердосплавных пластин и подшипников направляющих. Своевременно меняйте щётку очистки пилы и СОЖ.
+          .margin-top 
+            .publications-page__section-slider 
+              .publications-page__slider
+                .swiper-container.swiper-container--visible--mobile.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='10' data-slider-prev='13' data-slider-next='14')
+                  .swiper-wrapper 
+                    - for (i = 0; i < 6; i++)
+                      .swiper-slide 
+                        img.publications-page__slider-img(src="assets/images/publication-2.jpg", alt="")
+              .publications-page__section-buttons
+                +slider-buttons.slider-buttons--small.slider-buttons--wide(prev = '13' next = '14')

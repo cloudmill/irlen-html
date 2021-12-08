@@ -73,6 +73,14 @@ $col-width-d: '((100vw - (#{$col-pad-d} * 2) - (#{$col-gap-d} * #{$col-count-d -
 $col-part-m: '(#{$col-width-m} + #{$col-gap-m})';
 $col-part-d: '(#{$col-width-d} + #{$col-gap-d})';
 
+// grid mobile alt
+$col-count-alt: 6;
+
+$col-width-alt: '((100vw - (#{$col-pad-m} * 2) - (#{$col-gap-m} * #{$col-count-alt - 1})) / #{$col-count-alt})';
+
+$col-part-alt: '(#{$col-width-alt} + #{$col-gap-m})';
+
+
 
 @mixin placeholder {
   &::-webkit-input-placeholder {

@@ -6,6 +6,9 @@
 
   &--small {
     --size: 44px;
+    @media (max-width: ($breakpoint - 1px)) {
+      --size: 32px;
+    }
 
     #{$comp}__button {
       background: $color-light-gray;
@@ -17,6 +20,11 @@
         stroke: $color-black;
       }
     }
+  }
+
+  &--wide {
+    width: 100%;
+    justify-content: space-between;
   }
 
   &__item {
