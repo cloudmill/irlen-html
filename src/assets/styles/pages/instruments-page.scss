@@ -1,8 +1,106 @@
 .instruments-page {
   $comp: &;
 
+  &__title {
+    margin-bottom: 48px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 0;
+      margin-right: 15px;
+
+      @include fsl(14px, 120%);
+    }
+    @include fsl(32px, 120%);
+    font-weight: 500;
+    transition: $transition;
+  }
+
+  &__section {
+    margin-top: 80px;
+    padding: 0 130px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0;
+      margin-top: -1px;
+
+      border-bottom: 1px solid $color-light-gray;
+      border-top: 1px solid $color-light-gray;
+    }
+    transition: $transition;
+
+    &:last-child {
+      margin-bottom: 100px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: 60px;
+      }
+    }
+
+    &.active {
+      position: relative;
+      border-color: $color-blue;
+
+      #{$comp}__button {
+        background: transparent;
+      }
+
+      #{$comp}__title {
+        color: $color-blue;
+      }
+
+      #{$comp}__icon {
+        transform: rotate(180deg);
+      }
+
+      #{$comp}__svg {
+        path {
+          stroke: $color-blue;
+        }
+      }
+    }
+  }
+  &__section-container {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 20px 16px;
+
+      display: none;
+    }
+  }
+
+  &__button {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 9px 17px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      
+      background: $color-white;
+      cursor: pointer;
+      transition: $transition;
+    }
+  }
+
+  &__icon {
+    display: none;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: $transition;
+    }
+  }
+  
+  &__svg {
+    path {
+      transition: $transition;
+    }
+  }
+
   &__tabs {
     padding: 20px 0 0;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
     
     background: $color-white;
     border-top: 1px solid $color-light-gray;

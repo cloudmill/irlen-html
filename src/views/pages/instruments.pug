@@ -71,10 +71,13 @@ block content
                 .instruments-page__tabs-text(class=(i === 2 || i === 3 ? "instruments-page__tabs-text--wide" : '')) 
                   |#{item.text}
     each item, i in ddata.sections
-      section.section(class=(i === 4 ? 'section--last' : '') id = item.id data-section='')
-        .container 
-          h2.section__title 
+      section.instruments-page__section(class=(i === 4 ? 'last' : '') id = item.id data-section='' data-accordion='')
+        .instruments-page__button(data-accordion-button='')
+          .instruments-page__title 
             |#{item.title}
+          .instruments-page__icon 
+            +arrow-svg.instruments-page__svg
+        .instruments-page__section-container(data-accordion-dropdown='')
           .instruments-page__grid 
             - for (j = 0; j < 10; j++)
               a.instruments-page__card(href="#") 
