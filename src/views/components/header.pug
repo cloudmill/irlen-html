@@ -235,3 +235,5 @@ mixin header
             each item in ['Подбор инструмента', 'Ленточные пилы', 'Сервис', 'Инжиниринг', 'Обучение', 'Лизинг']
               li.header__modal-item 
                 |#{item}
+    if (attributes.panel)
+      .header__panel

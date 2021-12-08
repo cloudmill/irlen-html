@@ -7,7 +7,7 @@
   left: 0;
   right: 0;
 
-  background: $color-white;
+  // background: $color-white;
   transition: $transition;
 
   &--up {
@@ -50,6 +50,15 @@
       }
     }
   }
+
+  &--show {
+    #{$comp}__panel {
+      @media (min-width: $breakpoint) {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
   
   &__inner {
     padding: 20px 20px 0;
@@ -63,6 +72,7 @@
       align-items: center;
     }
 
+    background: $color-white;
     border-bottom: 1px solid $color-light-gray;
   }
 
@@ -562,6 +572,7 @@
   }
 
   &__modal {
+    background: $color-white;
 
     &--active {
 
@@ -629,5 +640,16 @@
     &:not(:first-child) {
       margin-top: 20px;
     }
+  }
+
+  &__panel {
+    margin-top: -1px;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+
+    opacity: 0;
+    pointer-events: none;
   }
 }

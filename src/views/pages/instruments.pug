@@ -1,24 +1,80 @@
 extends ../layouts/master.pug
 
 include ../components/navigation
+include ../components/header
+
+block header 
+  +header(panel = true)
 
 block content 
+  -
+    var ddata = {
+      sections: [
+        {
+          id: 'q1',
+          title: 'Корпусной режущий инструмент',
+        },
+        {
+          id: 'q2',
+          title: 'Осевой режущий инструмент',
+        },
+        {
+          id: 'q3',
+          title: 'Вспомогательный инструмент для фрезерных станков с ЧПУ',
+        },
+        {
+          id: 'q4',
+          title: 'Вспомогательный инструмент для токарных станков с ЧПУ',
+        },
+        {
+          id: 'q5',
+          title: 'Аксессуары для инструмента',
+        },
+      ],
+      links: [
+        {
+          id: '#q1',
+          text: 'Корпусной режущий инструмент'
+        },
+        {
+          id: '#q2',
+          text: 'Осевой режущий инструмент'
+        },
+        {
+          id: '#q3',
+          text: 'Вспомогательный инструмент для фрезерных станков с ЧПУ'
+        },
+        {
+          id: '#q4',
+          text: 'Вспомогательный инструмент для токарных станков с ЧПУ'
+        },
+        {
+          id: '',
+          text: 'Приспособления'
+        },
+        {
+          id: '#q5',
+          text: 'Аксессуары для инструмента'
+        },
+      ]
+    }
   .instruments-page 
     section.section.section--first 
       .container 
         +navigation(page = 'Инструменты')
     section.section 
-      .container 
-        .instruments-page__tabs(data-tabs='')
-          each item, i in ['Корпусной режущий инструмент', 'Осевой режущий инструмент', 'Вспомогательный инструмент для фрезерных станков с ЧПУ', 'Вспомогательный инструмент для токарных станков с ЧПУ', 'Приспособления', 'Аксессуары для инструмента']
-            .instruments-page__tabs-item(data-tabs-item='' )
-              .instruments-page__tabs-text(class=(i === 2 || i === 3 ? "instruments-page__tabs-text--wide" : '')) 
-                |#{item}
-    each item, i in ['Корпусной режущий инструмент', 'Осевой режущий инструмент', 'Вспомогательный инструмент для фрезерных станков с ЧПУ', 'Вспомогательный инструмент для токарных станков с ЧПУ', 'Аксессуары для инструмента', ]
-      section.section(class=(i === 4 ? 'section--last' : ''))
+      .instruments-page__tabs(data-list='')
+        .container 
+          .instruments-page__tabs-container
+            each item, i in ddata.links
+              .instruments-page__tabs-item(data-scroll=item.id)
+                .instruments-page__tabs-text(class=(i === 2 || i === 3 ? "instruments-page__tabs-text--wide" : '')) 
+                  |#{item.text}
+    each item, i in ddata.sections
+      section.section(class=(i === 4 ? 'section--last' : '') id = item.id data-section='')
         .container 
           h2.section__title 
-            |#{item}
+            |#{item.title}
           .instruments-page__grid 
             - for (j = 0; j < 10; j++)
               a.instruments-page__card(href="#") 
