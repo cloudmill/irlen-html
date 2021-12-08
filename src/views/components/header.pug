@@ -15,7 +15,7 @@ mixin header
                 .header__label 
                   |#{item.city}
           .header__btn 
-            a.button.button--md(href="#") 
+            .button.button--md(data-fancy-button='phone')
               |Заказать звонок
         .header__bot
           .header__col
@@ -104,7 +104,7 @@ mixin header
                   .mobile-menu__text
                     |Личный кабинет
               .mobile-menu__col
-                +button.button--menu
+                .button.button--menu(data-fancy-button='phone')
                   |Заказать звонок
             .mobile-menu__item.mobile-menu__item--bb(data-modal-btn='5')
               .mobile-menu__item-text 

@@ -1,4 +1,5 @@
 .form {
+  $comp: &;
 
   &--disabled {
 
@@ -14,11 +15,9 @@
     }
   }
 
-  // &__title {
-  //   text-align: center;
-  // }
-
   &__item {
+    position: relative;
+    z-index: 0;
 
     &:not(:first-child) {
       margin-top: 20px;
@@ -44,12 +43,17 @@
     width: 100%;
 
     background: $color-white;
+    transition: $transition;
     border: 1px solid $color-light-gray;
     border-radius: 4px;
     @include fsl(14px, 140%);
     @include f-main();
     @include placeholder {
       color: $color-black;
+    }
+
+    &:focus {
+      border-color: $color-blue;
     }
   }
   
@@ -67,6 +71,75 @@
     @include f-main();
     @include placeholder {
       color: $color-black;
+    }
+  }
+
+  .parsley-error {
+    border-color: $color-red;
+
+    &~.form__placeholder {
+      border-color: $color-red;
+      color: $color-red;
+    }
+    &#{$comp}__textarea {
+      @include placeholder {
+        color: $color-red;
+      }
+    }
+  }
+
+  .parsley-errors-list {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    @media (max-width: ($breakpoint-s - 1px)) {
+      bottom: 5px;
+      right: 5px;
+    }
+
+    li {
+      @include fsl(11px, 120%);
+      color: $color-red;
+    }
+  }
+}
+
+[data-form-hidden] {
+  display: none;
+}
+
+.response {
+  padding: 50px;
+  @media (max-width: ($breakpoint - 1px)) {
+    padding: 24px 20px;
+  }
+
+  width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+  @media (max-width: ($breakpoint - 1px)) {
+    width: calc(#{$col-part-m} * 4 - #{$col-gap-m});
+  }
+  display: none;
+
+  background: $color-white;
+  border-radius: 4px;
+
+  &[data-response-active] {
+    display: block;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 12px;
+    }
+
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 140%);
     }
   }
 }

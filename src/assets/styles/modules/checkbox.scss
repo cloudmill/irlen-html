@@ -22,6 +22,21 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+
+    &.parsley-error {
+
+      #{$comp}__box {
+        border-color: $color-red;
+      }
+      
+      #{$comp}__text {
+        color: $color-red;
+      }
+
+      #{$comp}__link {
+        color: $color-red;
+      }
+    }
   }
 
   &__input {
@@ -70,10 +85,14 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(10px, 140%);
     }
+    transition: $transition;
   }
 
   &__link {
     color: $color-blue;
+  }
 
+  .parsley-errors-list  {
+    display: none;
   }
 }

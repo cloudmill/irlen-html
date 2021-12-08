@@ -84,6 +84,34 @@
   }
 }
 
+.phone-modal {
+
+  display: none;
+
+  &__container {
+    padding: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 24px 20px;
+    }
+  
+    width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: calc(#{$col-part-m} * 4 - #{$col-gap-m});
+    }
+  
+    background: $color-white;
+    border-radius: 4px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 20px;
+    }
+    text-align: center;
+  }
+}
+
 .fancybox-slide--html .fancybox-close-small {
   --size: 30px;
 

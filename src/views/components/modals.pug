@@ -54,7 +54,7 @@ mixin login-modal
       ]
     }
   .login-modal(data-fancy-modal='1')
-    .login-modal__container(data-tabs-parent='')
+    .login-modal__container(data-tabs-parent='' data-form-parent='')
       h3.login-modal__wrapper
         |Войти
       .login-modal__inner 
@@ -62,11 +62,11 @@ mixin login-modal
       .tabs-block.active(data-tabs-block='')
         form.form(action="/" data-form='123')
           .form__item 
-            input.form__input(type="email" placeholder='E-mail') 
+            input.form__input(type="email" placeholder='E-mail' required) 
           .form__item 
-            input.form__input(type="password" placeholder="Пароль") 
+            input.form__input(type="password" placeholder="Пароль" required) 
           .form__item 
-            button.button.button--wide(data-form-button='123')
+            button.button.button--wide(data-form-button='123' required)
               |Отправить
       .tabs-block(data-tabs-block='')
         form.form(action="/" data-form='1')
@@ -89,15 +89,15 @@ mixin login-modal
           .login-modal__form.active(data-form-corp='')
             each item in ddata.corp 
               .form__item 
-                input.form__input(type=item.type placeholder=item.placeholder) 
+                input.form__input(type=item.type placeholder=item.placeholder required) 
           .login-modal__form(data-form-user='')
             each item in ddata.user
               .form__item 
-                input.form__input(type=item.type placeholder=item.placeholder) 
+                input.form__input(type=item.type placeholder=item.placeholder required) 
           .form__item.form__item--big
             .checkbox.checkbox--start
               label.checkbox__label
-                input.checkbox__input(type="checkbox")
+                input.checkbox__input(type="checkbox" name='policy' required)
                 .checkbox__box 
                   +check-svg.checkbox__svg
                 .checkbox__text
@@ -106,6 +106,15 @@ mixin login-modal
             button.button.button--wide(data-form-button='1')
               |Зарегистрироваться
     .response(data-response="1")
+      h3.response__title
+        |Вы зарегистрировались
+      p.response__text 
+        |Благодарим за регистрацию на нашем сайте. Теперь вам доступен Личный кабинет, в котором можно просматривать историю покупок, видеть статус заказа и редактировать контактные данные.
+    .response(data-response='123')
+      h3.response__title
+        |Заявка отправлена
+      p.response__text 
+        |Мы свяжемся с вами по указанному номеру при регистрации для подтверждения статуса юридического лица.
 
 mixin docs-modal 
   .docs-modal(data-fancy-modal='10')
@@ -115,3 +124,32 @@ mixin docs-modal
       .grid-container.grid-container--2
         - for (x = 0; x < 6; x++)
           +docs-card
+
+mixin phone-modal 
+  .phone-modal(data-fancy-modal='phone')
+    .phone-modal__container(data-form-parent='')
+      h3.phone-modal__title
+        |Заказать звонок
+      form.form(action="/" data-form='w2') 
+        .form__item 
+          input.form__input(type="email" placeholder='E-mail*' required)
+        .form__item 
+          input.form__input(type="text" placeholder='Телефон' required)
+        .form__item 
+          input.form__input(type="text" placeholder='Имя' required)
+        .form__item.form__item--big
+          .checkbox.checkbox--start
+            label.checkbox__label
+              input.checkbox__input(type="checkbox" name='policy' required)
+              .checkbox__box 
+                +check-svg.checkbox__svg
+              .checkbox__text
+                |Согласен на обработку персональных данных в соответствии с #[a.checkbox__link(href="#") политикой конфиденциальности]
+        .form__item.form__item--big
+          button.button.button--wide(data-form-button='w2')
+            |Заказать звонок
+    .response(data-response='w2')
+      h3.response__title
+        |Спасибо
+      p.response__text 
+        |Мы свяжемся с вами в ближайшее время.

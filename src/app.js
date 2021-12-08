@@ -8,6 +8,7 @@ import 'scripts/select.js';
 import 'scripts/aside.js';
 import 'scripts/login.js';
 import 'scripts/header.js';
+import 'scripts/parsley.js';
 import 'scripts/anchor-links.js';
 import 'scripts/range-slider.js';
 import 'scripts/form-response.js';

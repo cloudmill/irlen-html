@@ -12,7 +12,7 @@ $(() => {
         e.preventDefault()
 
         // $(`[data-form='${formButtonId}']`).attr('data-form-hidden', '');
-        $(`[data-form='${formButtonId}']`).closest('[data-from-parent]').attr('data-form-hidden', '')
+        $(`[data-form='${formButtonId}']`).closest('[data-form-parent]').attr('data-form-hidden', '')
         $(`[data-response='${formButtonId}']`).attr('data-response-active', '');
       })
     })
