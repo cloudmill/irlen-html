@@ -10,7 +10,7 @@
 		<meta name="format-detection" content="address=no">
 		<script defer="defer" src="assets/vendor.js"></script>
 		<script defer="defer" src="assets/app.js"></script>
-		<link href="145.css" rel="stylesheet">
+		<link href="8.css" rel="stylesheet">
 		<link href="app.css" rel="stylesheet">
 	</head>
 
@@ -64,7 +64,9 @@
 									<div class="header__label">Россия, звонок бесплатный</div>
 								</li>
 							</ul>
-							<div class="header__btn"><a class="button button--md" href="#">Заказать звонок</a></div>
+							<div class="header__btn">
+								<div class="button button--md" data-fancy-button="phone">Заказать звонок</div>
+							</div>
 						</div>
 						<div class="header__bot">
 							<div class="header__col">
@@ -172,7 +174,9 @@
 												</svg></div>
 											<div class="mobile-menu__text">Личный кабинет</div>
 										</a></div>
-									<div class="mobile-menu__col"><a class="button button--menu" href="#">Заказать звонок</a></div>
+									<div class="mobile-menu__col">
+										<div class="button button--menu" data-fancy-button="phone">Заказать звонок</div>
+									</div>
 								</div>
 								<div class="mobile-menu__item mobile-menu__item--bb" data-modal-btn="5">
 									<div class="mobile-menu__item-text">Телефоны для связи</div>
@@ -501,47 +505,69 @@
 			</div>
 			<main class="main">
 				<div class="publications-page">
-					<section class="section section--first section--last">
+					<section class="publications-page__section">
 						<div class="container">
-							<ul class="breadcrumbs">
-								<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
-								<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Публикации</a></li>
-								<li class="breadcrumbs__item">
-									<div class="breadcrumbs__text">Участие в выставке «Технофорум-2019»</div>
-								</li>
-							</ul>
-							<h1 class="nav-title">Участие в выставке «Технофорум-2019»</h1>
-							<div class="publications-page__row">
-								<div class="publications-page__col">
-									<div class="publications-page__tag">Новости</div>
-									<div class="publications-page__content">
-										<p class="publications-page__content-text">В период с 21 по 24 октября компания "ИРЛЕН-ИНЖИНИРИНГ" приняла участие в ежегодной международной выставке "Технофорум-2020".</p>
-										<p class="publications-page__content-text">Традиционно на выставке были представлены как новинки, так и уже проверенный, хорошо зарекомендовавший себя инструмент ведущих производителей Yamawa, Osawa, NikkoTools. Посетителям был представлен вспомогательный инструмент фирм Kintek, UFS, StimZet, Evermore и др.</p>
+							<div class="publications-page__container">
+								<ul class="breadcrumbs">
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Публикации</a></li>
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Технологии</a></li>
+									<li class="breadcrumbs__item">
+										<div class="breadcrumbs__text">Выставка «Металлообработка-2020»</div>
+									</li>
+								</ul>
+								<h2 class="publications-page__title">Выставка «Металлообработка-2020»</h2>
+								<div class="publications-page__section-cat">
+									<div class="publications-page__category">Мероприятия</div>
+								</div>
+								<div class="publications-page__section-list">
+									<div class="publications-page__section-item">
+										<div class="publications-page__section-label">Начало</div>
+										<div class="publications-page__text">18.03.2021</div>
 									</div>
-									<div class="section">
+									<div class="publications-page__section-item">
+										<div class="publications-page__section-label">окончание</div>
+										<div class="publications-page__text">20.03.2021</div>
+									</div>
+									<div class="publications-page__section-item publications-page__section-item--wide">
+										<div class="publications-page__section-label">Адрес</div>
+										<div class="publications-page__text publications-page__text--limited">г. Санкт-Петербург, Петербургское шоссе, 64/1.</div>
+									</div>
+								</div>
+								<div class="margin-top">
+									<p class="publications-page__section-text">В период с 21 по 24 октября компания "ИРЛЕН-ИНЖИНИРИНГ" приняла участие в ежегодной международной выставке "Технофорум-2020".</p>
+									<p class="publications-page__section-text">Традиционно на выставке были представлены как новинки, так и уже проверенный, хорошо зарекомендовавший себя инструмент ведущих производителей Yamawa, Osawa, NikkoTools. Посетителям был представлен вспомогательный инструмент фирм Kintek, UFS, StimZet, Evermore и др.</p>
+								</div>
+								<div class="publications-page__section-img margin-top"><img src="assets/images/publication.jpg" alt=""></div>
+								<div class="margin-top">
+									<div class="publications-page__section-slider">
 										<div class="publications-page__slider">
-											<div class="publications-page__buttons">buttons</div>
 											<div class="swiper-container swiper-container--visible--mobile swiper-container--slide-width-auto swiper-container--slide-height-max" data-slider-id="10" data-slider-prev="13" data-slider-next="14">
 												<div class="swiper-wrapper">
-													<div class="swiper-slide"><img class="publications-page__slider-img" src="assets/images/publication.jpg" alt=""></div>
-													<div class="swiper-slide"><img class="publications-page__slider-img" src="assets/images/publication.jpg" alt=""></div>
-													<div class="swiper-slide"><img class="publications-page__slider-img" src="assets/images/publication.jpg" alt=""></div>
-													<div class="swiper-slide"><img class="publications-page__slider-img" src="assets/images/publication.jpg" alt=""></div>
-													<div class="swiper-slide"><img class="publications-page__slider-img" src="assets/images/publication.jpg" alt=""></div>
-													<div class="swiper-slide"><img class="publications-page__slider-img" src="assets/images/publication.jpg" alt=""></div>
+													<div class="swiper-slide"><img class="publications-page__slider-img" src="assets/images/publication-2.jpg" alt=""></div>
+													<div class="swiper-slide"><img class="publications-page__slider-img" src="assets/images/publication-2.jpg" alt=""></div>
+													<div class="swiper-slide"><img class="publications-page__slider-img" src="assets/images/publication-2.jpg" alt=""></div>
+													<div class="swiper-slide"><img class="publications-page__slider-img" src="assets/images/publication-2.jpg" alt=""></div>
+													<div class="swiper-slide"><img class="publications-page__slider-img" src="assets/images/publication-2.jpg" alt=""></div>
+													<div class="swiper-slide"><img class="publications-page__slider-img" src="assets/images/publication-2.jpg" alt=""></div>
+												</div>
+											</div>
+										</div>
+										<div class="publications-page__section-buttons">
+											<div class="slider-buttons slider-buttons--small slider-buttons--wide">
+												<div class="slider-buttons__item">
+													<div class="slider-buttons__button" data-slider-button="13"><svg class="slider-buttons__svg slider-buttons__left" width="20" height="19" viewbox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M18.0435 1.248L17.8192 14.6896L14.7935 11.6639M18.0435 1.248L4.60185 1.47228L7.62757 4.49799M18.0435 1.248L1.34788 17.9436" stroke="white" stroke-width="2"></path>
+														</svg></div>
+												</div>
+												<div class="slider-buttons__item">
+													<div class="slider-buttons__button" data-slider-button="14"><svg class="slider-buttons__svg slider-buttons__right" width="20" height="19" viewbox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M18.0435 1.248L17.8192 14.6896L14.7935 11.6639M18.0435 1.248L4.60185 1.47228L7.62757 4.49799M18.0435 1.248L1.34788 17.9436" stroke="white" stroke-width="2"></path>
+														</svg></div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="section__button"><a class="publications-page__button" href="#">
-											<div class="publications-page__button-icon"><svg class="publications-page__button-svg" width="20" height="19" viewbox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M18.0435 1.248L17.8192 14.6896L14.7935 11.6639M18.0435 1.248L4.60185 1.47228L7.62757 4.49799M18.0435 1.248L1.34788 17.9436" stroke="white" stroke-width="2"></path>
-												</svg></div>
-											<div class="publications-page__button-text">Вернуться</div>
-										</a></div>
-								</div>
-								<div class="publications-page__col">
-									<div class="publications-page__img"><img src="assets/images/publication-2.jpg" alt=""></div>
 								</div>
 							</div>
 						</div>
@@ -635,7 +661,7 @@
 			</div>
 		</div>
 		<div class="login-modal" data-fancy-modal="1">
-			<div class="login-modal__container" data-tabs-parent="">
+			<div class="login-modal__container" data-tabs-parent="" data-form-parent="">
 				<h3 class="login-modal__wrapper">Войти</h3>
 				<div class="login-modal__inner">
 					<div class="model-tabs" data-real-tabs="">
@@ -645,9 +671,9 @@
 				</div>
 				<div class="tabs-block active" data-tabs-block="">
 					<form class="form" action="/" data-form="123">
-						<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" /></div>
-						<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" /></div>
-						<div class="form__item"><button class="button button--wide" data-form-button="123">Отправить</button></div>
+						<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" required="required" /></div>
+						<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" required="required" /></div>
+						<div class="form__item"><button class="button button--wide" data-form-button="123" required="required">Отправить</button></div>
 					</form>
 				</div>
 				<div class="tabs-block" data-tabs-block="">
@@ -665,22 +691,22 @@
 								</label></div>
 						</div>
 						<div class="login-modal__form active" data-form-corp="">
-							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" /></div>
-							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль*" /></div>
-							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль*" /></div>
-							<div class="form__item"><input class="form__input" placeholder="Название компании*" /></div>
-							<div class="form__item"><input class="form__input" placeholder="ИНН*" /></div>
-							<div class="form__item"><input class="form__input" placeholder="Телефон для связи*" /></div>
-							<div class="form__item"><input class="form__input" placeholder="Контактное лицо*" /></div>
+							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" /></div>
+							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль*" required="required" /></div>
+							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль*" required="required" /></div>
+							<div class="form__item"><input class="form__input" placeholder="Название компании*" required="required" /></div>
+							<div class="form__item"><input class="form__input" placeholder="ИНН*" required="required" /></div>
+							<div class="form__item"><input class="form__input" placeholder="Телефон для связи*" required="required" /></div>
+							<div class="form__item"><input class="form__input" placeholder="Контактное лицо*" required="required" /></div>
 						</div>
 						<div class="login-modal__form" data-form-user="">
-							<div class="form__item"><input class="form__input" placeholder="Имя" /></div>
-							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" /></div>
-							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" /></div>
-							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль" /></div>
+							<div class="form__item"><input class="form__input" placeholder="Имя" required="required" /></div>
+							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" required="required" /></div>
+							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" required="required" /></div>
+							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль" required="required" /></div>
 						</div>
 						<div class="form__item form__item--big">
-							<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+							<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="policy" required="required" />
 									<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
 										</svg></div>
@@ -691,7 +717,37 @@
 					</form>
 				</div>
 			</div>
-			<div class="response" data-response="1"></div>
+			<div class="response" data-response="1">
+				<h3 class="response__title">Вы зарегистрировались</h3>
+				<p class="response__text">Благодарим за регистрацию на нашем сайте. Теперь вам доступен Личный кабинет, в котором можно просматривать историю покупок, видеть статус заказа и редактировать контактные данные.</p>
+			</div>
+			<div class="response" data-response="123">
+				<h3 class="response__title">Заявка отправлена</h3>
+				<p class="response__text">Мы свяжемся с вами по указанному номеру при регистрации для подтверждения статуса юридического лица.</p>
+			</div>
+		</div>
+		<div class="phone-modal" data-fancy-modal="phone">
+			<div class="phone-modal__container" data-form-parent="">
+				<h3 class="phone-modal__title">Заказать звонок</h3>
+				<form class="form" action="/" data-form="w2">
+					<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" /></div>
+					<div class="form__item"><input class="form__input" placeholder="Телефон" required="required" /></div>
+					<div class="form__item"><input class="form__input" placeholder="Имя" required="required" /></div>
+					<div class="form__item form__item--big">
+						<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="policy" required="required" />
+								<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+									</svg></div>
+								<div class="checkbox__text">Согласен на обработку персональных данных в соответствии с <a class="checkbox__link" href="#">политикой конфиденциальности</a></div>
+							</label></div>
+					</div>
+					<div class="form__item form__item--big"><button class="button button--wide" data-form-button="w2">Заказать звонок</button></div>
+				</form>
+			</div>
+			<div class="response" data-response="w2">
+				<h3 class="response__title">Спасибо</h3>
+				<p class="response__text">Мы свяжемся с вами в ближайшее время.</p>
+			</div>
 		</div>
 	</body>
 

@@ -10,7 +10,7 @@
 		<meta name="format-detection" content="address=no">
 		<script defer="defer" src="assets/vendor.js"></script>
 		<script defer="defer" src="assets/app.js"></script>
-		<link href="145.css" rel="stylesheet">
+		<link href="8.css" rel="stylesheet">
 		<link href="app.css" rel="stylesheet">
 	</head>
 
@@ -37,7 +37,7 @@
 			<main class="main"></main>
 		</div>
 		<div class="login-modal" data-fancy-modal="1">
-			<div class="login-modal__container" data-tabs-parent="">
+			<div class="login-modal__container" data-tabs-parent="" data-form-parent="">
 				<h3 class="login-modal__wrapper">Войти</h3>
 				<div class="login-modal__inner">
 					<div class="model-tabs" data-real-tabs="">
@@ -47,9 +47,9 @@
 				</div>
 				<div class="tabs-block active" data-tabs-block="">
 					<form class="form" action="/" data-form="123">
-						<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" /></div>
-						<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" /></div>
-						<div class="form__item"><button class="button button--wide" data-form-button="123">Отправить</button></div>
+						<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" required="required" /></div>
+						<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" required="required" /></div>
+						<div class="form__item"><button class="button button--wide" data-form-button="123" required="required">Отправить</button></div>
 					</form>
 				</div>
 				<div class="tabs-block" data-tabs-block="">
@@ -67,22 +67,22 @@
 								</label></div>
 						</div>
 						<div class="login-modal__form active" data-form-corp="">
-							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" /></div>
-							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль*" /></div>
-							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль*" /></div>
-							<div class="form__item"><input class="form__input" placeholder="Название компании*" /></div>
-							<div class="form__item"><input class="form__input" placeholder="ИНН*" /></div>
-							<div class="form__item"><input class="form__input" placeholder="Телефон для связи*" /></div>
-							<div class="form__item"><input class="form__input" placeholder="Контактное лицо*" /></div>
+							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" /></div>
+							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль*" required="required" /></div>
+							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль*" required="required" /></div>
+							<div class="form__item"><input class="form__input" placeholder="Название компании*" required="required" /></div>
+							<div class="form__item"><input class="form__input" placeholder="ИНН*" required="required" /></div>
+							<div class="form__item"><input class="form__input" placeholder="Телефон для связи*" required="required" /></div>
+							<div class="form__item"><input class="form__input" placeholder="Контактное лицо*" required="required" /></div>
 						</div>
 						<div class="login-modal__form" data-form-user="">
-							<div class="form__item"><input class="form__input" placeholder="Имя" /></div>
-							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" /></div>
-							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" /></div>
-							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль" /></div>
+							<div class="form__item"><input class="form__input" placeholder="Имя" required="required" /></div>
+							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" required="required" /></div>
+							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" required="required" /></div>
+							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль" required="required" /></div>
 						</div>
 						<div class="form__item form__item--big">
-							<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+							<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="policy" required="required" />
 									<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
 										</svg></div>
@@ -93,7 +93,37 @@
 					</form>
 				</div>
 			</div>
-			<div class="response" data-response="1"></div>
+			<div class="response" data-response="1">
+				<h3 class="response__title">Вы зарегистрировались</h3>
+				<p class="response__text">Благодарим за регистрацию на нашем сайте. Теперь вам доступен Личный кабинет, в котором можно просматривать историю покупок, видеть статус заказа и редактировать контактные данные.</p>
+			</div>
+			<div class="response" data-response="123">
+				<h3 class="response__title">Заявка отправлена</h3>
+				<p class="response__text">Мы свяжемся с вами по указанному номеру при регистрации для подтверждения статуса юридического лица.</p>
+			</div>
+		</div>
+		<div class="phone-modal" data-fancy-modal="phone">
+			<div class="phone-modal__container" data-form-parent="">
+				<h3 class="phone-modal__title">Заказать звонок</h3>
+				<form class="form" action="/" data-form="w2">
+					<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" /></div>
+					<div class="form__item"><input class="form__input" placeholder="Телефон" required="required" /></div>
+					<div class="form__item"><input class="form__input" placeholder="Имя" required="required" /></div>
+					<div class="form__item form__item--big">
+						<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="policy" required="required" />
+								<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+									</svg></div>
+								<div class="checkbox__text">Согласен на обработку персональных данных в соответствии с <a class="checkbox__link" href="#">политикой конфиденциальности</a></div>
+							</label></div>
+					</div>
+					<div class="form__item form__item--big"><button class="button button--wide" data-form-button="w2">Заказать звонок</button></div>
+				</form>
+			</div>
+			<div class="response" data-response="w2">
+				<h3 class="response__title">Спасибо</h3>
+				<p class="response__text">Мы свяжемся с вами в ближайшее время.</p>
+			</div>
 		</div>
 	</body>
 
