@@ -1,6 +1,12 @@
 .aside {
   $comp: &;
 
+  &__content {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+
   &__card {
     border-radius: 4px;
     background: $color-white;
@@ -123,5 +129,33 @@
     path {
       transition: $transition;
     }
+  }
+
+  &__mobile {
+    padding: 10px 16px;
+
+    @media (min-width: $breakpoint) {
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid $color-light-gray;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  &__mobile-text {
+    @include fsl(14px, 140%);
+  }
+  &__mobile-icon {
+    @include fsl(22px, 110%);
+  }
+
+  &__num {
+    margin-left: 4px;
+
+    color: $color-blue;
+    @include fsl(14px, 140%);
   }
 }

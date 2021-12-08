@@ -1,49 +1,57 @@
 mixin aside 
   .aside 
-    - for (j = 0; j < 3; j++)
-      .aside__card
-        .aside__container 
-          h5.aside__title 
-            |Материал детали
-          ul.aside__list.aside__inner
-            - for (i = 0; i < 3; i++)
-              li.aside__item 
-                .checkbox 
-                  label.checkbox__label
-                    input.checkbox__input(type="checkbox")
-                    .checkbox__box 
-                      +check-svg.checkbox__svg
-                    .checkbox__text 
-                      |Углеродистая сталь
-          .aside__button.aside__inner
-            .button-show 
-              .button-show__text 
-                |Показать еще
-              .button-show__icon 
-                +arrow-svg
-    if (attributes.range)
-      - for (x = 0; x < 2; x++)
-        .aside__card(data-range-block='')
+    if (attributes.mobile)
+      .aside__mobile(data-filters-button='')
+        .aside__mobile-text 
+          |Фильтры
+          span.aside__num
+        .aside__mobile-icon 
+          |+
+    .aside__content
+      - for (j = 0; j < 3; j++)
+        .aside__card
           .aside__container 
             h5.aside__title 
               |Материал детали
-            .range.aside__inner
-              .range__top 
-                .range__row 
-                  .range__item 
-                    label.range__label
-                      span.range__text 
-                        |от
-                      input.range__input(type="number" data-input-start='')
-                  .range__item 
-                    label.range__label
-                      span.range__text 
-                        |до
-                      input.range__input(type="number" data-input-end='')
-              .range__range
-    if (attributes.clear)
-      .aside__btn(data-clear-button='')
-        .aside__icon 
-          +trash-svg.aside__svg
-        .aside__btn-text 
-          |Очистить выбранное
+            ul.aside__list.aside__inner
+              - for (i = 0; i < 3; i++)
+                li.aside__item 
+                  .checkbox 
+                    label.checkbox__label
+                      input.checkbox__input(type="checkbox")
+                      .checkbox__box 
+                        +check-svg.checkbox__svg
+                      .checkbox__text 
+                        |Углеродистая сталь
+            .aside__button.aside__inner
+              .button-show 
+                .button-show__text 
+                  |Показать еще
+                .button-show__icon 
+                  +arrow-svg
+      if (attributes.range)
+        - for (x = 0; x < 2; x++)
+          .aside__card(data-range-block='')
+            .aside__container 
+              h5.aside__title 
+                |Материал детали
+              .range.aside__inner
+                .range__top 
+                  .range__row 
+                    .range__item 
+                      label.range__label
+                        span.range__text 
+                          |от
+                        input.range__input(type="number" data-input-start='')
+                    .range__item 
+                      label.range__label
+                        span.range__text 
+                          |до
+                        input.range__input(type="number" data-input-end='')
+                .range__range
+      if (attributes.clear)
+        .aside__btn(data-clear-button='')
+          .aside__icon 
+            +trash-svg.aside__svg
+          .aside__btn-text 
+            |Очистить выбранное

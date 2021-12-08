@@ -5,6 +5,7 @@ include ../components/button
 include ../components/aside
 include ../components/modals
 include ../components/product-card
+include ../components/filters-menu
 
 block content 
   .instruments-page 
@@ -26,7 +27,7 @@ block content
         .section__block 
           .section__row 
             .section__col
-              +aside(range=true clear=true)
+              +aside(range=true clear=true mobile=true)
             .section__col
               .instruments-page__container 
                 - for (i = 0; i < 12; i++)
@@ -38,3 +39,4 @@ block content
                   .button-show__icon 
                     +arrow-svg
   +docs-modal
+  +filters-menu

@@ -15,11 +15,13 @@ import 'scripts/form-response.js';
 import { FormChanger } from 'scripts/form-changer'
 import { Tabs } from 'scripts/tabs'
 import { Counter } from 'scripts/counter'
-import { HeaderMenu } from 'scripts/header'
+import { MobileMenu } from 'scripts/mobile-menu/mobile-menu'
+import { FiltersMenu } from 'scripts/mobile-menu/filters-menu'
 
 $(() => {
   const formChanger = new FormChanger()
-  const headerMenu = new HeaderMenu()
+  const headerMenu = new MobileMenu('.header', '.header__menu')
+  const filtersMenu = new FiltersMenu('[data-filters-menu]', '[data-filters-button]')
   const tabsList = document.querySelectorAll('[data-tabs]')
 
   tabsList.forEach(item => {

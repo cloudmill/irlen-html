@@ -71,7 +71,7 @@ block content
                 .instruments-page__tabs-text(class=(i === 2 || i === 3 ? "instruments-page__tabs-text--wide" : '')) 
                   |#{item.text}
     each item, i in ddata.sections
-      section.instruments-page__section(class=(i === 4 ? 'last' : '') id = item.id data-section='' data-accordion='')
+      section.instruments-page__section(id = item.id data-section='' data-accordion='')
         .instruments-page__button(data-accordion-button='')
           .instruments-page__title 
             |#{item.title}
