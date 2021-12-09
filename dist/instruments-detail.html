@@ -684,11 +684,13 @@
 														</div>
 													</div>
 												</div>
-												<div class="aside__btn" data-clear-button="">
-													<div class="aside__icon"><svg class="aside__svg" width="28" height="28" viewbox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M19.5885 8.58431H7.77783V9.17484H8.66363L9.19216 20.7582C9.20965 21.1378 9.37287 21.4961 9.64787 21.7585C9.92286 22.0208 10.2884 22.167 10.6685 22.1666H16.689C17.0691 22.167 17.4346 22.0208 17.7096 21.7585C17.9846 21.4961 18.1479 21.1378 18.1653 20.7582L18.7027 9.17484H19.5885V8.58431ZM17.5719 20.7316C17.5612 20.9593 17.4632 21.1741 17.2982 21.3314C17.1333 21.4887 16.914 21.5763 16.6861 21.5761H10.6774C10.4494 21.5763 10.2302 21.4887 10.0652 21.3314C9.90019 21.1741 9.80219 20.9593 9.79156 20.7316L9.26893 9.17484H18.1122L17.5719 20.7316ZM16.0453 6.8127H11.321V6.22217H16.0453V6.8127ZM12.7974 17.7376H12.2068V13.0133H12.7974V17.7376ZM15.1595 17.7376H14.569V13.0133H15.1595V17.7376Z" fill="#838383" stroke="#838383"></path>
-														</svg></div>
-													<div class="aside__btn-text">Очистить выбранное</div>
+												<div class="aside__btn">
+													<div class="clear-button" data-clear-button="">
+														<div class="clear-button__icon"><svg class="clear-button__svg" width="28" height="28" viewbox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M19.5885 8.58431H7.77783V9.17484H8.66363L9.19216 20.7582C9.20965 21.1378 9.37287 21.4961 9.64787 21.7585C9.92286 22.0208 10.2884 22.167 10.6685 22.1666H16.689C17.0691 22.167 17.4346 22.0208 17.7096 21.7585C17.9846 21.4961 18.1479 21.1378 18.1653 20.7582L18.7027 9.17484H19.5885V8.58431ZM17.5719 20.7316C17.5612 20.9593 17.4632 21.1741 17.2982 21.3314C17.1333 21.4887 16.914 21.5763 16.6861 21.5761H10.6774C10.4494 21.5763 10.2302 21.4887 10.0652 21.3314C9.90019 21.1741 9.80219 20.9593 9.79156 20.7316L9.26893 9.17484H18.1122L17.5719 20.7316ZM16.0453 6.8127H11.321V6.22217H16.0453V6.8127ZM12.7974 17.7376H12.2068V13.0133H12.7974V17.7376ZM15.1595 17.7376H14.569V13.0133H15.1595V17.7376Z" fill="#838383" stroke="#838383"></path>
+															</svg></div>
+														<div class="clear-button__text">Очистить выбранное</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -1440,250 +1442,383 @@
 					<div class="mobile-menu__overlay"></div>
 					<div class="mobile-menu__container">
 						<h3 class="mobile-menu__title">Фильтры</h3>
-						<ul class="mobile-menu__list">
-							<li class="mobile-menu__item" data-modal-btn="ww0">
-								<div class="mobile-menu__item-text">Материал детали</div>
-								<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-									</svg></div>
-							</li>
-							<li class="mobile-menu__item" data-modal-btn="ww1">
-								<div class="mobile-menu__item-text">Cерия фрезы</div>
-								<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-									</svg></div>
-							</li>
-							<li class="mobile-menu__item" data-modal-btn="ww2">
-								<div class="mobile-menu__item-text">Тип фрезы</div>
-								<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-									</svg></div>
-							</li>
-							<li class="mobile-menu__item" data-modal-btn="ww3">
-								<div class="mobile-menu__item-text">Диаметр фрезы, мм</div>
-								<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-									</svg></div>
-							</li>
-							<li class="mobile-menu__item" data-modal-btn="ww4">
-								<div class="mobile-menu__item-text">Длина фрезы, мм</div>
-								<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-									</svg></div>
-							</li>
-						</ul>
+						<div class="mobile-menu__column">
+							<ul class="mobile-menu__list">
+								<li class="mobile-menu__item" data-modal-btn="ww0">
+									<div class="mobile-menu__item-text">Материал детали<span class="mobile-menu__item-count" data-filters-count=""></span></div>
+									<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+										</svg></div>
+								</li>
+								<li class="mobile-menu__item" data-modal-btn="ww1">
+									<div class="mobile-menu__item-text">Cерия фрезы<span class="mobile-menu__item-count" data-filters-count=""></span></div>
+									<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+										</svg></div>
+								</li>
+								<li class="mobile-menu__item" data-modal-btn="ww2">
+									<div class="mobile-menu__item-text">Тип фрезы<span class="mobile-menu__item-count" data-filters-count=""></span></div>
+									<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+										</svg></div>
+								</li>
+								<li class="mobile-menu__item" data-modal-btn="ww3">
+									<div class="mobile-menu__item-text">Диаметр фрезы, мм<span class="mobile-menu__item-count" data-filters-count=""></span></div>
+									<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+										</svg></div>
+								</li>
+								<li class="mobile-menu__item" data-modal-btn="ww4">
+									<div class="mobile-menu__item-text">Длина фрезы, мм<span class="mobile-menu__item-count" data-filters-count=""></span></div>
+									<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+										</svg></div>
+								</li>
+							</ul>
+							<div class="mobile-menu__buttons">
+								<div class="mobile-menu__buttons-item">
+									<div class="clear-button" data-filters-clear="">
+										<div class="clear-button__icon"><svg class="clear-button__svg" width="28" height="28" viewbox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19.5885 8.58431H7.77783V9.17484H8.66363L9.19216 20.7582C9.20965 21.1378 9.37287 21.4961 9.64787 21.7585C9.92286 22.0208 10.2884 22.167 10.6685 22.1666H16.689C17.0691 22.167 17.4346 22.0208 17.7096 21.7585C17.9846 21.4961 18.1479 21.1378 18.1653 20.7582L18.7027 9.17484H19.5885V8.58431ZM17.5719 20.7316C17.5612 20.9593 17.4632 21.1741 17.2982 21.3314C17.1333 21.4887 16.914 21.5763 16.6861 21.5761H10.6774C10.4494 21.5763 10.2302 21.4887 10.0652 21.3314C9.90019 21.1741 9.80219 20.9593 9.79156 20.7316L9.26893 9.17484H18.1122L17.5719 20.7316ZM16.0453 6.8127H11.321V6.22217H16.0453V6.8127ZM12.7974 17.7376H12.2068V13.0133H12.7974V17.7376ZM15.1595 17.7376H14.569V13.0133H15.1595V17.7376Z" fill="#838383" stroke="#838383"></path>
+											</svg></div>
+										<div class="clear-button__text">Очистить выбранное</div>
+									</div>
+								</div>
+								<div class="mobile-menu__buttons-item">
+									<div class="button button--filters" data-filters-accept="general">Применить</div>
+								</div>
+							</div>
+						</div>
 						<div class="mobile-menu__modals">
 							<div class="mobile-menu__modal" data-modal-menu="ww0">
 								<div class="mobile-menu__modal-top">
-									<div class="mobile-menu__modal-back" data-modal-close="0">
+									<div class="mobile-menu__modal-back" data-modal-close="ww0">
 										<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
 											</svg></div>
-										<div class="mobile-menu__modal-text">Оборудование</div>
+										<div class="mobile-menu__modal-text mobile-menu__modal-text--default">Материал детали</div>
 									</div>
 								</div>
-								<ul class="mobile-menu__list">
-									<li class="mobile-menu__item" data-modal-btn="qq0">
-										<div class="mobile-menu__item-text">Токарные станки с ЧПУ</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-									<li class="mobile-menu__item" data-modal-btn="qq0">
-										<div class="mobile-menu__item-text">Фрезерные станки с ЧПУ</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-									<li class="mobile-menu__item" data-modal-btn="qq0">
-										<div class="mobile-menu__item-text">Вертикальные токарные и карусельные станки с ЧПУ</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-									<li class="mobile-menu__item" data-modal-btn="qq0">
-										<div class="mobile-menu__item-text">Ленточнопильные станки</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-									<li class="mobile-menu__item" data-modal-btn="qq0">
-										<div class="mobile-menu__item-text">Шлифовальные станки</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-									<li class="mobile-menu__item" data-modal-btn="qq0">
-										<div class="mobile-menu__item-text">Прессовое оборудование</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-									<li class="mobile-menu__item" data-modal-btn="qq0">
-										<div class="mobile-menu__item-text">Электроэрозионные станки</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-									<li class="mobile-menu__item" data-modal-btn="qq0">
-										<div class="mobile-menu__item-text">Универсальные станки</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-									<li class="mobile-menu__item" data-modal-btn="qq0">
-										<div class="mobile-menu__item-text">Раскроечные станки</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-									<li class="mobile-menu__item" data-modal-btn="qq0">
-										<div class="mobile-menu__item-text">Измерительное оборудование</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-								</ul>
-								<div class="mobile-menu__modal" data-modal-menu="qq0">
-									<div class="mobile-menu__modal-top">
-										<div class="mobile-menu__modal-back" data-modal-close="q0">
-											<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-												</svg></div>
-											<div class="mobile-menu__modal-text">Токарные станки с ЧПУ</div>
-										</div>
-									</div>
-									<ul class="mobile-menu__modal-list">
-										<li class="mobile-menu__modal-item"><a href="#">С направляющими качения</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">С направляющими качения и противошпинделем</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">С направляющими качения и осью Y</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">Роботизированные с направляющими качения токарно-фрезерные с направляющими качения</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">С направляющими скольжения</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">С направляющими скольжения и осью Y</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">Трубообрабатывающие</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">Автоматы продольного точения</a></li>
+								<div class="mobile-menu__column">
+									<ul class="mobile-menu__filters">
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Углеродистая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Нержавеющая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Чугун</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Углеродистая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Нержавеющая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Чугун</div>
+												</label></div>
+										</li>
 									</ul>
+									<div class="mobile-menu__buttons">
+										<div class="button button--filters" data-filters-accept="ww0">Применить</div>
+									</div>
 								</div>
 							</div>
-							<div class="mobile-menu__modal" data-modal-menu="1">
+							<div class="mobile-menu__modal" data-modal-menu="ww1">
 								<div class="mobile-menu__modal-top">
-									<div class="mobile-menu__modal-back" data-modal-close="1">
+									<div class="mobile-menu__modal-back" data-modal-close="ww1">
 										<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
 											</svg></div>
-										<div class="mobile-menu__modal-text">Инструмент</div>
+										<div class="mobile-menu__modal-text mobile-menu__modal-text--default">Cерия фрезы</div>
 									</div>
 								</div>
-								<ul class="mobile-menu__list">
-									<li class="mobile-menu__item" data-modal-btn="q1">
-										<div class="mobile-menu__item-text">Корпусной режущий инструмент</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-									<li class="mobile-menu__item" data-modal-btn="q1">
-										<div class="mobile-menu__item-text">Осевой режущий инструмент</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-									<li class="mobile-menu__item" data-modal-btn="q1">
-										<div class="mobile-menu__item-text">Вспомогательный инструмент для фрезерных станков с ЧПУ</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-									<li class="mobile-menu__item" data-modal-btn="q1">
-										<div class="mobile-menu__item-text">Вспомогательный инструмент для токарных станков с ЧПУ</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-									<li class="mobile-menu__item" data-modal-btn="q1">
-										<div class="mobile-menu__item-text">Приспособления</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-									<li class="mobile-menu__item" data-modal-btn="q1">
-										<div class="mobile-menu__item-text">Аксессуары для инструмента</div>
-										<div class="mobile-menu__item-icon"><svg class="mobile-menu__item-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-											</svg></div>
-									</li>
-								</ul>
-								<div class="mobile-menu__modal" data-modal-menu="q1">
-									<div class="mobile-menu__modal-top">
-										<div class="mobile-menu__modal-back" data-modal-close="q1">
-											<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
-												</svg></div>
-											<div class="mobile-menu__modal-text">Корпусной режущий инструмент</div>
-										</div>
-									</div>
-									<ul class="mobile-menu__modal-list">
-										<li class="mobile-menu__modal-item"><a href="#">Пластины для точения</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">Пластины для фрезерования</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">Державки MICRONEGA</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">Корпусные сверла</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">Токарные пластины MICRONEGA</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">Пластины для корпусных сверл</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">Державки MICROBORING</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">Токарные пластины MICROBORING</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">Токарные державки</a></li>
-										<li class="mobile-menu__modal-item"><a href="#">Корпусные фрезы</a></li>
+								<div class="mobile-menu__column">
+									<ul class="mobile-menu__filters">
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Углеродистая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Нержавеющая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Чугун</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Углеродистая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Нержавеющая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Чугун</div>
+												</label></div>
+										</li>
 									</ul>
+									<div class="mobile-menu__buttons">
+										<div class="button button--filters" data-filters-accept="ww1">Применить</div>
+									</div>
 								</div>
 							</div>
-							<div class="mobile-menu__modal" data-modal-menu="2">
+							<div class="mobile-menu__modal" data-modal-menu="ww2">
 								<div class="mobile-menu__modal-top">
-									<div class="mobile-menu__modal-back" data-modal-close="2">
+									<div class="mobile-menu__modal-back" data-modal-close="ww2">
 										<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
 											</svg></div>
-										<div class="mobile-menu__modal-text">Услуги</div>
+										<div class="mobile-menu__modal-text mobile-menu__modal-text--default">Тип фрезы</div>
 									</div>
 								</div>
-								<ul class="mobile-menu__modal-list">
-									<li class="mobile-menu__modal-item"><a href="#">Подбор инструмента</a></li>
-									<li class="mobile-menu__modal-item"><a href="#">Ленточные пилы</a></li>
-									<li class="mobile-menu__modal-item"><a href="#">Сервис</a></li>
-									<li class="mobile-menu__modal-item"><a href="#">Инжиниринг</a></li>
-									<li class="mobile-menu__modal-item"><a href="#">Обучение</a></li>
-									<li class="mobile-menu__modal-item"><a href="#">Лизинг</a></li>
-								</ul>
+								<div class="mobile-menu__column">
+									<ul class="mobile-menu__filters">
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Углеродистая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Нержавеющая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Чугун</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Углеродистая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Нержавеющая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Чугун</div>
+												</label></div>
+										</li>
+									</ul>
+									<div class="mobile-menu__buttons">
+										<div class="button button--filters" data-filters-accept="ww2">Применить</div>
+									</div>
+								</div>
 							</div>
-							<div class="mobile-menu__modal" data-modal-menu="5">
+							<div class="mobile-menu__modal" data-modal-menu="ww3">
 								<div class="mobile-menu__modal-top">
-									<div class="mobile-menu__modal-back" data-modal-close="5">
+									<div class="mobile-menu__modal-back" data-modal-close="ww3">
 										<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
 											</svg></div>
-										<div class="mobile-menu__modal-text mobile-menu__modal-text--default">Телефоны для связи</div>
+										<div class="mobile-menu__modal-text mobile-menu__modal-text--default">Диаметр фрезы, мм</div>
 									</div>
 								</div>
-								<ul class="mobile-menu__modal-list">
-									<li class="mobile-menu__modal-item"><a class="header__link" href="tel:8 812 600-60-98">8 812 600-60-98</a>
-										<div class="header__label">Санкт-Петербург</div>
-									</li>
-									<li class="mobile-menu__modal-item"><a class="header__link" href="tel:8 495 367-11-25">8 495 367-11-25</a>
-										<div class="header__label">Москва</div>
-									</li>
-									<li class="mobile-menu__modal-item"><a class="header__link" href="tel:8 831 249-99-88">8 831 249-99-88</a>
-										<div class="header__label">Нижний Новгород</div>
-									</li>
-									<li class="mobile-menu__modal-item"><a class="header__link" href="tel:8 965 535-23-33">8 965 535-23-33</a>
-										<div class="header__label">Екатеринбург</div>
-									</li>
-									<li class="mobile-menu__modal-item"><a class="header__link" href="tel:8 908 271-68-76">8 908 271-68-76</a>
-										<div class="header__label">Пермь</div>
-									</li>
-									<li class="mobile-menu__modal-item"><a class="header__link" href="tel:8 800 444-60-98">8 800 444-60-98</a>
-										<div class="header__label">Россия, звонок бесплатный</div>
-									</li>
-								</ul>
+								<div class="mobile-menu__column">
+									<ul class="mobile-menu__filters">
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Углеродистая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Нержавеющая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Чугун</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Углеродистая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Нержавеющая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Чугун</div>
+												</label></div>
+										</li>
+									</ul>
+									<div class="mobile-menu__buttons">
+										<div class="button button--filters" data-filters-accept="ww3">Применить</div>
+									</div>
+								</div>
+							</div>
+							<div class="mobile-menu__modal" data-modal-menu="ww4">
+								<div class="mobile-menu__modal-top">
+									<div class="mobile-menu__modal-back" data-modal-close="ww4">
+										<div class="mobile-menu__modal-icon"><svg class="mobile-menu__modal-svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+											</svg></div>
+										<div class="mobile-menu__modal-text mobile-menu__modal-text--default">Длина фрезы, мм</div>
+									</div>
+								</div>
+								<div class="mobile-menu__column">
+									<ul class="mobile-menu__filters">
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Углеродистая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Нержавеющая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Чугун</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Углеродистая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Нержавеющая сталь</div>
+												</label></div>
+										</li>
+										<li class="mobile-menu__filters-item">
+											<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" />
+													<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+														</svg></div>
+													<div class="checkbox__text checkbox__text--md">Чугун</div>
+												</label></div>
+										</li>
+									</ul>
+									<div class="mobile-menu__buttons">
+										<div class="button button--filters" data-filters-accept="ww4">Применить</div>
+									</div>
+								</div>
 							</div>
 						</div>
+						<div class="mobile-menu__btn" data-filters-button=""><svg width="10" height="10" viewbox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M5.9 4.99997L9.94999 9.04996L9.04999 9.94996L5 5.89997L0.950011 9.94996L0.0500136 9.04996L4.1 4.99997L0.0500136 0.949985L0.950011 0.0499875L5 4.09998L9.04999 0.0499875L9.94999 0.949985L5.9 4.99997Z" fill="#121212"></path>
+							</svg></div>
 					</div>
 				</div>
 			</main>
