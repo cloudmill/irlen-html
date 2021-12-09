@@ -8,4 +8,14 @@
     margin-right: 9px;
     @include fsl(14px, 140%);
   }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    transition: $transition;
+  }
 }

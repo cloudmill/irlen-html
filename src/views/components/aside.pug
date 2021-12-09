@@ -92,12 +92,12 @@ mixin aside
                           +check-svg.checkbox__svg
                         .checkbox__text 
                           |Углеродистая сталь
-              .aside__button.aside__inner
-                .button-show 
+              .aside__button.aside__inner(data-button-show='')
+                .button-show
                   .button-show__text 
                     |Показать еще
                   .button-show__icon 
-                    +arrow-svg
+                    +arrow-svg.button-show__svg
         if (attributes.range)
           - for (x = 0; x < 2; x++)
             .aside__card(data-range-block='')
