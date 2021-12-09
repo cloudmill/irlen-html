@@ -633,12 +633,29 @@
     &:not(:first-child) {
       margin-top: 20px;
     }
+
+    &.active {
+      color: $color-blue;
+    }
   }
 
-  &__listing {}
+  &__listing {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
   &__listing-item {
     &:not(:first-child) {
       margin-top: 20px;
+    }
+  }
+  &__listing-link {
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
     }
   }
 
@@ -653,5 +670,11 @@
 
     opacity: 0;
     pointer-events: none;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

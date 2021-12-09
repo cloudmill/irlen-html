@@ -98,6 +98,25 @@ import { mediaQuery } from './mediaQueries'
           stateManager.classRemove()
         }
       })
+
+      // header accordion category change
+      window.addEventListener('mousemove', event => {
+        const target = $(event.target)
+
+        if (target[0].hasAttribute('data-category-item')) {
+          const container = target.closest('[data-header-modal]')
+
+          const categoryItems = container.find('[data-category-item]')
+          const categoryLists = container.find('[data-category-list]')
+          
+          if (!target.hasClass('active')) {
+            categoryItems.removeClass('active')
+            categoryLists.removeClass('active')
+            categoryLists.eq(target.index()).addClass('active')
+            target.addClass('active')
+          }
+        }
+      })
     }
   })
 }

@@ -6,6 +6,7 @@ export class FiltersMenu extends MobileMenu {
 
     if (this.root) {
       this.checkboxes = this.root.querySelectorAll('.checkbox__input')
+      this.generalCount = document.querySelector('.aside__num')
 
       this.filtersManager()
     }
@@ -39,9 +40,7 @@ export class FiltersMenu extends MobileMenu {
         }
       })
 
-      const generalCount = document.querySelector('.aside__num')
-
-      generalCount.textContent = count ? `(${count})` : ''
+      this.generalCount.textContent = count ? `(${count})` : ''
       this.closeMenu()
 
     } else {
@@ -66,6 +65,8 @@ export class FiltersMenu extends MobileMenu {
     counters.forEach(item => {
       item.textContent = ''
     })
+
+    this.generalCount.textContent = ''
 
     this.checkboxes.forEach(item => {
       if (item.checked) {
