@@ -13,6 +13,10 @@
       "page": "Инструмент детальная"
     },
     {
+      "href": "instruments-detail-1",
+      "page": "Инструмент детальная 2"
+    },
+    {
       "href": "instruments-card",
       "page": "Инструмент карточка"
     },

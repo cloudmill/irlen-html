@@ -1,0 +1,42 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/button
+include ../components/aside
+include ../components/modals
+include ../components/product-card
+include ../components/filters-menu
+
+block content 
+  .instruments-page 
+    section.section.section--first 
+      .container 
+        +navigation(items = ['Инструменты'] page='Пластины для точения')
+    section.section.section--last
+      .container 
+        .panel
+          .panel__col
+            .panel__container
+              img(src="assets/images/instrument-1.jpg", alt="")
+          .panel__col
+            .panel__text 
+              |Твердосплавные пластины наиболее универсальны в использовании
+          .panel__col  
+            .button(data-fancy-button='10')
+              |Материалы для скачивания
+        .section__block 
+          .section__row 
+            .section__col
+              +aside(clear=true mobile=true alt=true)
+            .section__col
+              .instruments-page__container 
+                - for (i = 0; i < 12; i++)
+                  +product-card
+              .section__button 
+                .button-show 
+                  .button-show__text 
+                    |Показать еще
+                  .button-show__icon 
+                    +arrow-svg
+  +docs-modal
+  +filters-menu

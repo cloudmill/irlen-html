@@ -664,6 +664,8 @@
     position: absolute;
     top: 100%;
 
+    width: 100%;
+
     @media (max-width: ($breakpoint - 1px)) {
       display: none;
     }

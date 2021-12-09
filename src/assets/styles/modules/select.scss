@@ -16,15 +16,7 @@
     .select2-container {
 
       .select2-selection {
-        padding: 15px 20px;
-      }
-    }
-  }
-
-  &.select--md {
-    .select2-container {
-      .select2-selection {
-        padding: 14px 20px;
+        padding: 8px 20px;
       }
     }
   }
@@ -112,7 +104,6 @@
 }
 
 .select-wrapper {
-
 
   .select2-container {
     margin-top: -1px;

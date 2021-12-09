@@ -8,13 +8,53 @@ mixin aside
         .aside__mobile-icon 
           |+
     .aside__content
-      - for (j = 0; j < 3; j++)
+      if (attributes.alt)
+        .aside__card
+          .aside__container 
+            h5.aside__title 
+              |Размер резьбы
+            ul.aside__list.aside__inner
+              - for (i = 0; i < 2; i++)
+                li.aside__item 
+                  .select-wrapper 
+                    .select.select--small
+                      select.select__mobile(name='cat-mob' data-select-mobile='') 
+                        option(value="" selected disabled)
+                          |Выбрать
+                        each item in data.selectValues.cat
+                          option(value=item)
+                            |#{item} 
+                      select.select__select(data-select-placeholder='Выбрать' style='width: 100%')
+                        option(value='' disabled selected)
+                        each item in data.selectValues.cat
+                          option(value=item)
+                            |#{item} 
+        .aside__card
+          .aside__container 
+            h5.aside__title 
+              |Размер резьбы
+            ul.aside__list.aside__inner
+              - for (i = 0; i < 2; i++)
+                li.aside__item 
+                  .checkbox 
+                    label.checkbox__label
+                      input.checkbox__input(type="checkbox")
+                      .checkbox__box 
+                        +check-svg.checkbox__svg
+                      .tooltip
+                        .checkbox__text.tooltip__row
+                          |ISO2X
+                          span.tooltip__span
+                            .tooltip__icon 
+                              +tooltip-svg.tooltip__svg
+                        .tooltip__container   
+                          |Цена с НДС по курсу ЦБ на 25.06.2021
         .aside__card
           .aside__container 
             h5.aside__title 
               |Материал детали
             ul.aside__list.aside__inner
-              - for (i = 0; i < 3; i++)
+              each item in ['Углеродистая сталь', 'Нержавеющая сталь', 'Цветные металлы']
                 li.aside__item 
                   .checkbox 
                     label.checkbox__label
@@ -22,33 +62,62 @@ mixin aside
                       .checkbox__box 
                         +check-svg.checkbox__svg
                       .checkbox__text 
-                        |Углеродистая сталь
-            .aside__button.aside__inner
-              .button-show 
-                .button-show__text 
-                  |Показать еще
-                .button-show__icon 
-                  +arrow-svg
-      if (attributes.range)
-        - for (x = 0; x < 2; x++)
-          .aside__card(data-range-block='')
+                        |#{item}
+        .aside__card
+          .aside__container 
+            h5.aside__title 
+              |Особенности
+            ul.aside__list.aside__inner
+              li.aside__item 
+                .checkbox 
+                  label.checkbox__label
+                    input.checkbox__input(type="checkbox")
+                    .checkbox__box 
+                      +check-svg.checkbox__svg
+                    .checkbox__text 
+                      |Работают без СОЖ (только сквозные отверстия)
+      else
+        - for (j = 0; j < 3; j++)
+          .aside__card
             .aside__container 
               h5.aside__title 
                 |Материал детали
-              .range.aside__inner
-                .range__top 
-                  .range__row 
-                    .range__item 
-                      label.range__label
-                        span.range__text 
-                          |от
-                        input.range__input(type="number" data-input-start='')
-                    .range__item 
-                      label.range__label
-                        span.range__text 
-                          |до
-                        input.range__input(type="number" data-input-end='')
-                .range__range
+              ul.aside__list.aside__inner
+                - for (i = 0; i < 3; i++)
+                  li.aside__item 
+                    .checkbox 
+                      label.checkbox__label
+                        input.checkbox__input(type="checkbox")
+                        .checkbox__box 
+                          +check-svg.checkbox__svg
+                        .checkbox__text 
+                          |Углеродистая сталь
+              .aside__button.aside__inner
+                .button-show 
+                  .button-show__text 
+                    |Показать еще
+                  .button-show__icon 
+                    +arrow-svg
+        if (attributes.range)
+          - for (x = 0; x < 2; x++)
+            .aside__card(data-range-block='')
+              .aside__container 
+                h5.aside__title 
+                  |Материал детали
+                .range.aside__inner
+                  .range__top 
+                    .range__row 
+                      .range__item 
+                        label.range__label
+                          span.range__text 
+                            |от
+                          input.range__input(type="number" data-input-start='')
+                      .range__item 
+                        label.range__label
+                          span.range__text 
+                            |до
+                          input.range__input(type="number" data-input-end='')
+                  .range__range
       if (attributes.clear)
         .aside__btn
           .clear-button(data-clear-button='')

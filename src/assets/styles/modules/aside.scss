@@ -43,17 +43,6 @@
 
   &__item {
 
-    transition: $transition;
-    cursor: pointer;
-
-    &:hover {
-      color: $color-blue;
-
-      #{$comp}__count {
-        color: $color-blue;
-      }
-    }
-
     &:not(:first-child) {
       margin-top: 8px;
     }
@@ -77,6 +66,15 @@
 
   &__text {
     @include fsl(14px, 140%);
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+
+      #{$comp}__count {
+        color: $color-blue;
+      }
+    }
   }
 
   &__count {
