@@ -644,6 +644,8 @@
 
   &__panel {
     margin-top: -1px;
+    position: absolute;
+    top: 100%;
 
     @media (max-width: ($breakpoint - 1px)) {
       display: none;
