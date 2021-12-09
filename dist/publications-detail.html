@@ -149,6 +149,12 @@
 										<line y1="-1" x2="12.5259" y2="-1" transform="matrix(-0.70711 0.707104 -0.70711 -0.707104 8.85693 22.1428)" stroke="#121212" stroke-width="2"></line>
 									</svg></div>
 							</div>
+							<div class="header__mobile-col"><a class="header__icon" href="#"><svg width="28" height="28" viewbox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M4.15529 1.98517C4.15529 1.9645 4.15529 1.95072 4.15529 1.93005H1C1 15.6191 12.0986 26.7177 25.7876 26.7177V23.8862" stroke="#121212" stroke-width="1.5" stroke-miterlimit="10"></path>
+										<path d="M4.15576 1.93005H8.93692C8.94381 4.84422 9.68097 7.58615 10.9761 9.98362L7.42817 13.504C9.10915 16.2184 11.3757 18.5401 14.0419 20.2969L17.583 16.7489C20.0011 18.1268 22.7844 18.9397 25.7468 18.9879L25.7881 19.0292V23.8793" stroke="#121212" stroke-width="1.5" stroke-miterlimit="10"></path>
+										<path d="M16.4116 5.09216C17.9755 5.39529 19.4705 6.15311 20.6761 7.36563C21.799 8.48858 22.5362 9.85955 22.8738 11.2994" stroke="#121212" stroke-width="1.5" stroke-miterlimit="10"></path>
+										<path d="M17.0381 1C19.4424 1.43402 21.7435 2.57765 23.6036 4.43775C25.4086 6.24274 26.5453 8.46798 27 10.8034" stroke="#121212" stroke-width="1.5" stroke-miterlimit="10"></path>
+									</svg></a></div>
 							<div class="header__mobile-col"><a class="header__cart" href="#">
 									<div class="header__cart-icon"><svg class="header__cart-svg" width="38" height="34" viewbox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M5.86884 32.7905L1.24662 11.9905H36.7534L32.1312 32.7905H5.86884Z" stroke="#121212" stroke-width="2"></path>
@@ -428,32 +434,164 @@
 							<div class="header__modal-row">
 								<div class="header__modal-col">
 									<ul class="header__modal-list">
-										<li class="header__modal-item">Токарные станки с ЧПУ</li>
-										<li class="header__modal-item">Фрезерные станки с ЧПУ</li>
-										<li class="header__modal-item">Вертикальные токарные и карусельные станки с ЧПУ</li>
-										<li class="header__modal-item">Ленточнопильные станки</li>
-										<li class="header__modal-item">Шлифовальные станки</li>
-										<li class="header__modal-item">Прессовое оборудование</li>
-										<li class="header__modal-item">Электроэрозионные станки</li>
-										<li class="header__modal-item">Шлифовальные станки</li>
-										<li class="header__modal-item">Универсальные станки</li>
-										<li class="header__modal-item">Прессовое оборудование</li>
-										<li class="header__modal-item">Раскроечные станки</li>
-										<li class="header__modal-item">Электроэрозионные станки</li>
-										<li class="header__modal-item">Измерительное оборудование</li>
+										<li class="header__modal-item active" data-category-item="">Токарные станки с ЧПУ</li>
+										<li class="header__modal-item" data-category-item="">Фрезерные станки с ЧПУ</li>
+										<li class="header__modal-item" data-category-item="">Вертикальные токарные и карусельные станки с ЧПУ</li>
+										<li class="header__modal-item" data-category-item="">Ленточнопильные станки</li>
+										<li class="header__modal-item" data-category-item="">Шлифовальные станки</li>
+										<li class="header__modal-item" data-category-item="">Прессовое оборудование</li>
+										<li class="header__modal-item" data-category-item="">Электроэрозионные станки</li>
+										<li class="header__modal-item" data-category-item="">Шлифовальные станки</li>
+										<li class="header__modal-item" data-category-item="">Универсальные станки</li>
+										<li class="header__modal-item" data-category-item="">Прессовое оборудование</li>
+										<li class="header__modal-item" data-category-item="">Раскроечные станки</li>
+										<li class="header__modal-item" data-category-item="">Электроэрозионные станки</li>
+										<li class="header__modal-item" data-category-item="">Измерительное оборудование</li>
 									</ul>
 								</div>
 								<div class="header__modal-col">
-									<ul class="header__listing">
-										<li class="header__listing-item">С направляющими скольжения</li>
-										<li class="header__listing-item">С направляющими скольжения и осью Y</li>
-										<li class="header__listing-item">Трубообрабатывающие</li>
-										<li class="header__listing-item">Автоматы продольного точения</li>
-										<li class="header__listing-item">С направляющими качения</li>
-										<li class="header__listing-item">С направляющими качения и противошпинделем</li>
-										<li class="header__listing-item">С направляющими качения и осью Y</li>
-										<li class="header__listing-item">Роботизированные с направляющими качения</li>
-										<li class="header__listing-item">Токарно-фрезерные с направляющими качения</li>
+									<ul class="header__listing active" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения и осью Y 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Трубообрабатывающие 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Автоматы продольного точения 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и противошпинделем 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и осью Y 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Роботизированные с направляющими качения 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарно-фрезерные с направляющими качения 1</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения и осью Y 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Трубообрабатывающие 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Автоматы продольного точения 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и противошпинделем 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и осью Y 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Роботизированные с направляющими качения 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарно-фрезерные с направляющими качения 2</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения и осью Y 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Трубообрабатывающие 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Автоматы продольного точения 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и противошпинделем 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и осью Y 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Роботизированные с направляющими качения 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарно-фрезерные с направляющими качения 3</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения и осью Y 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Трубообрабатывающие 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Автоматы продольного точения 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и противошпинделем 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и осью Y 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Роботизированные с направляющими качения 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарно-фрезерные с направляющими качения 4</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения и осью Y 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Трубообрабатывающие 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Автоматы продольного точения 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и противошпинделем 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и осью Y 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Роботизированные с направляющими качения 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарно-фрезерные с направляющими качения 5</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения и осью Y 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Трубообрабатывающие 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Автоматы продольного точения 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и противошпинделем 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и осью Y 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Роботизированные с направляющими качения 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарно-фрезерные с направляющими качения 6</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения 7</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения и осью Y 7</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Трубообрабатывающие 7</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Автоматы продольного точения 7</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения 7</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и противошпинделем 7</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и осью Y 7</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Роботизированные с направляющими качения 7</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарно-фрезерные с направляющими качения 7</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения 8</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения и осью Y 8</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Трубообрабатывающие 8</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Автоматы продольного точения 8</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения 8</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и противошпинделем 8</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и осью Y 8</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Роботизированные с направляющими качения 8</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарно-фрезерные с направляющими качения 8</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения 9</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения и осью Y 9</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Трубообрабатывающие 9</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Автоматы продольного точения 9</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения 9</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и противошпинделем 9</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и осью Y 9</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Роботизированные с направляющими качения 9</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарно-фрезерные с направляющими качения 9</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения 10</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения и осью Y 10</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Трубообрабатывающие 10</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Автоматы продольного точения 10</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения 10</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и противошпинделем 10</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и осью Y 10</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Роботизированные с направляющими качения 10</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарно-фрезерные с направляющими качения 10</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения 11</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения и осью Y 11</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Трубообрабатывающие 11</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Автоматы продольного точения 11</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения 11</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и противошпинделем 11</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и осью Y 11</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Роботизированные с направляющими качения 11</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарно-фрезерные с направляющими качения 11</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения 12</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения и осью Y 12</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Трубообрабатывающие 12</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Автоматы продольного точения 12</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения 12</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и противошпинделем 12</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и осью Y 12</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Роботизированные с направляющими качения 12</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарно-фрезерные с направляющими качения 12</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения 13</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими скольжения и осью Y 13</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Трубообрабатывающие 13</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Автоматы продольного точения 13</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения 13</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и противошпинделем 13</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">С направляющими качения и осью Y 13</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Роботизированные с направляющими качения 13</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарно-фрезерные с направляющими качения 13</a></li>
 									</ul>
 								</div>
 							</div>
@@ -464,26 +602,86 @@
 							<div class="header__modal-row">
 								<div class="header__modal-col">
 									<ul class="header__modal-list">
-										<li class="header__modal-item">Корпусной режущий инструмент</li>
-										<li class="header__modal-item">Осевой режущий инструмент</li>
-										<li class="header__modal-item">Вспомогательный инструмент для фрезерных станков с ЧПУ</li>
-										<li class="header__modal-item">Вспомогательный инструмент для токарных станков с ЧПУ</li>
-										<li class="header__modal-item">Приспособления</li>
-										<li class="header__modal-item">Аксессуары для инструмента</li>
+										<li class="header__modal-item active" data-category-item="">Корпусной режущий инструмент</li>
+										<li class="header__modal-item" data-category-item="">Осевой режущий инструмент</li>
+										<li class="header__modal-item" data-category-item="">Вспомогательный инструмент для фрезерных станков с ЧПУ</li>
+										<li class="header__modal-item" data-category-item="">Вспомогательный инструмент для токарных станков с ЧПУ</li>
+										<li class="header__modal-item" data-category-item="">Приспособления</li>
+										<li class="header__modal-item" data-category-item="">Аксессуары для инструмента</li>
 									</ul>
 								</div>
 								<div class="header__modal-col">
-									<ul class="header__listing">
-										<li class="header__listing-item">Пластины для точения</li>
-										<li class="header__listing-item">Токарные пластины MICRONEGA</li>
-										<li class="header__listing-item">Токарные пластины MICROBORING</li>
-										<li class="header__listing-item">Пластины для фрезерования</li>
-										<li class="header__listing-item">Пластины для корпусных сверл</li>
-										<li class="header__listing-item">Токарные державки</li>
-										<li class="header__listing-item">Державки MICRONEGA</li>
-										<li class="header__listing-item">Державки MICROBORING</li>
-										<li class="header__listing-item">Корпусные сверла</li>
-										<li class="header__listing-item">Корпусные фрезы</li>
+									<ul class="header__listing active" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для точения 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные пластины MICRONEGA 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные пластины MICROBORING 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для фрезерования 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для корпусных сверл 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные державки 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Державки MICRONEGA 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Державки MICROBORING 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Корпусные сверла 1</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Корпусные фрезы 1</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для точения 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные пластины MICRONEGA 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные пластины MICROBORING 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для фрезерования 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для корпусных сверл 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные державки 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Державки MICRONEGA 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Державки MICROBORING 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Корпусные сверла 2</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Корпусные фрезы 2</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для точения 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные пластины MICRONEGA 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные пластины MICROBORING 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для фрезерования 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для корпусных сверл 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные державки 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Державки MICRONEGA 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Державки MICROBORING 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Корпусные сверла 3</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Корпусные фрезы 3</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для точения 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные пластины MICRONEGA 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные пластины MICROBORING 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для фрезерования 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для корпусных сверл 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные державки 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Державки MICRONEGA 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Державки MICROBORING 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Корпусные сверла 4</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Корпусные фрезы 4</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для точения 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные пластины MICRONEGA 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные пластины MICROBORING 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для фрезерования 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для корпусных сверл 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные державки 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Державки MICRONEGA 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Державки MICROBORING 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Корпусные сверла 5</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Корпусные фрезы 5</a></li>
+									</ul>
+									<ul class="header__listing" data-category-list="">
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для точения 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные пластины MICRONEGA 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные пластины MICROBORING 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для фрезерования 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Пластины для корпусных сверл 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Токарные державки 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Державки MICRONEGA 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Державки MICROBORING 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Корпусные сверла 6</a></li>
+										<li class="header__listing-item"><a class="header__listing-link" href="#">Корпусные фрезы 6</a></li>
 									</ul>
 								</div>
 							</div>
