@@ -86,6 +86,12 @@
       @include fsl(10px, 140%);
     }
     transition: $transition;
+
+    &--md {
+      @media (max-width: ($breakpoint -  1px)) {
+        @include fsl(12px, 140%);
+      }
+    }
   }
 
   &__link {

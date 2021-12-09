@@ -88,47 +88,6 @@
 
   &__btn {
     margin-top: 8px;
-    padding: 10px 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: $color-white;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: $transition;
-
-    &:hover {
-      background: $color-blue;
-
-      #{$comp}__btn-text {
-        color: $color-white;
-      }
-
-      #{$comp}__svg {
-        path {
-          stroke: $color-white;
-        }
-      }
-    }
-  }
-  &__btn-text {
-    color: $color-gray;
-    @include fsl(14px, 140%);
-    transition: $transition
-  }
-
-  &__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__svg {
-    path {
-      transition: $transition;
-    }
   }
 
   &__mobile {

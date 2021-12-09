@@ -12,10 +12,25 @@
   pointer-events: none;
 
   &--filters {
+    position: fixed;
     z-index: 1000;
 
     #{$comp}__container {
       padding-top: 19px;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    #{$comp}__title {
+
+    }
+
+    #{$comp}__modal {
+      padding: 60px 0 24px;
+
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -44,6 +59,7 @@
 
   &__container {
     padding-top: 54px;
+    padding-bottom: 16px;
     margin-left: 16px;
     position: relative;
 
@@ -133,6 +149,12 @@
   &__item-svg {
     transform: rotate(-90deg);
   }
+  &__item-count {
+    margin-left: 4px;
+
+    color: $color-blue;
+    @include fsl(14px, 140%);
+  }
   
   &__nav {
     padding: 16px 16px 0;
@@ -148,7 +170,7 @@
   }
 
   &__modal {
-    padding: 54px 0 24px;
+    padding: 54px 0 16px;
     position: absolute;
     top: 0;
     right: 0;
@@ -213,5 +235,53 @@
   &__title {
     margin-bottom: 24px;
     margin-left: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__filters {
+    margin-left: 16px;
+  }
+  &__filters-item {
+
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+
+  &__btn {
+    --size: 30px;
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 16px;
+
+    width: var(--size);
+    height: var(--size);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+    background: $color-darken-white;
+    cursor: pointer;
+  }
+
+  &__column {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__buttons {
+    margin: 0 16px;
+  }
+  &__buttons-item {
+
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
   }
 }

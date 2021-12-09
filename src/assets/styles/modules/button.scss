@@ -78,4 +78,10 @@
       @include fsl(10px, 140%);
     }
   }
+
+  &--filters {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 6px 0;
+    }
+  }
 }

@@ -1,0 +1,46 @@
+.clear-button {
+  $comp: &;
+
+  padding: 4px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: $color-white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background: $color-blue;
+
+    #{$comp}__text {
+      color: $color-white;
+    }
+
+    #{$comp}__svg {
+      path {
+        stroke: $color-white;
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    color: $color-gray;
+    @include fsl(14px, 140%);
+    transition: $transition
+  }
+
+  &__svg {
+    path {
+      transition: $transition;
+    }
+  }
+}

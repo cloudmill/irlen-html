@@ -30,17 +30,22 @@ export class MobileMenu {
       }
 
       if (target.closest('[data-modal-btn]')) {
-        const id = target.closest('[data-modal-btn]').getAttribute('data-modal-btn')
+        this.findId('data-modal-btn', target)
 
-        document.querySelector(`[data-modal-menu="${id}"]`).classList.add('active')
+        this.modal.classList.add('active')
       }
 
       if (target.closest('[data-modal-close]')) {
-        const id = target.closest('[data-modal-close]').getAttribute('data-modal-close')
+        this.findId('data-modal-close', target)
 
-        document.querySelector(`[data-modal-menu="${id}"]`).classList.remove('active')
+        this.modal.classList.remove('active')
       }
     })
+  }
+
+  findId(attribute, target) {
+    this.id = target.closest(`[${attribute}]`).getAttribute(attribute)
+    this.modal = document.querySelector(`[data-modal-menu="${this.id}"]`)
   }
 
   closeMenu() {

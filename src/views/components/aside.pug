@@ -50,8 +50,9 @@ mixin aside
                         input.range__input(type="number" data-input-end='')
                 .range__range
       if (attributes.clear)
-        .aside__btn(data-clear-button='')
-          .aside__icon 
-            +trash-svg.aside__svg
-          .aside__btn-text 
-            |Очистить выбранное
+        .aside__btn
+          .clear-button(data-clear-button='')
+            .clear-button__icon 
+              +trash-svg.clear-button__svg
+            .clear-button__text 
+              |Очистить выбранное
