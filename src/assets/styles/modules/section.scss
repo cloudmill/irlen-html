@@ -11,6 +11,13 @@
     }
   }
 
+  &--md {
+    margin-top: 100px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 40px;
+    }
+  }
+
   &--last {
     margin-bottom: 100px;
     @media (max-width: ($breakpoint - 1px)) {

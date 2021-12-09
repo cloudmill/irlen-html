@@ -4,6 +4,33 @@ include ../components/navigation
 include ../components/button
 
 block content 
+  -
+    var ddata = [
+      {
+        year: '1990',
+        text: 'Всё началось в 1990. Наша компания производила ремонт, сервис и обслуживание прецизионного и универсального оборудования. А так же осуществлял продажу восстановленного оборудования.'
+      },
+      {
+        year: '1994',
+        text: 'В 1994 мы первыми в России начали поставки импортных ленточнопильных станков. Был созданы сварочные участки и организован склад ленточных полотен.'
+      },
+      {
+        year: '1998',
+        text: 'Первые поставки новых станков с ЧПУ иностранного производства начались в 1998 году. С тех пор наша компания занимается оказанием полных инжиниринговых услуг, сервиса и обучения персонала заказчика.'
+      },
+      {
+        year: '2001',
+        text: 'В 2001 году была создана инструментальная служба с собственным складом режущего и вспомогательного инструмента.'
+      },
+      {
+        year: '2007',
+        text: 'С 2007 года мы начали расширение номенклатуры поставки инструмента и оборудования, в том числе шлифовальных, электроэрозионных станков и пр.'
+      },
+      {
+        year: '2010',
+        text: 'В нашем ассортименте появились гидравлические прессы и лазерные станки. Завершено создание склада запчастей на весь поставляемый модельный ряд.'
+      },
+    ]
   .about-page 
     section.section.section--first 
       .container 
@@ -14,66 +41,34 @@ block content
           .about-page__section-row 
             .about-page__section-col
               .about-page__section-title 
-                |АО «ИРЛЕН-ИНЖИНИРИНГ» г.Санкт-Петербург, с 1990 года, продолжая традиции ЗАО «Ирлен», успешно реализуют металлообрабатывающее оборудование во всех регионах РФ и странах СНГ
+                |История АО «ИРЛЕН-ИНЖИНИРИНГ» насчитывает уже несколько десятков лет. За это время компания выросла от небольшого ремонтного цеха до крупного предприятия, имеющего представительства в нескольких городах.
             .about-page__section-col
               .about-page__section-img 
                 img(src="assets/images/about-main.jpg", alt="")
-    section.section 
-      .container
-        h2
-          |Наше оборудование работает в различных отраслях
-        .about-page__industries.margin-top 
-          .about-page__industries-item 
-            .about-page__industries-container 
-              .about-page__industries-icon 
-                +industries-1-svg
-              .about-page__industries-text 
-                |Нефтегазовая
-          .about-page__industries-item 
-            .about-page__industries-container 
-              .about-page__industries-icon 
-                +industries-2-svg
-              .about-page__industries-text 
-                |Аэрокосмическая промышленность
-          .about-page__industries-item 
-            .about-page__industries-container 
-              .about-page__industries-icon 
-                +industries-3-svg
-              .about-page__industries-text 
-                |Приборостроение
-          .about-page__industries-item 
-            .about-page__industries-container 
-              .about-page__industries-icon 
-                +industries-4-svg
-              .about-page__industries-text 
-                |Военно-промышленный комплекс
-    section.section.section--last 
+    section.section.section--md
       .container 
-        .about-page__services 
-          .about-page__services-item
-            .about-page__services-img 
-              img(src="assets/images/about-service-1.jpg", alt="")
-            .about-page__services-container 
-              p.about-page__services-text
-                |Оказываем услуги поставки и внедрения  оборудования и технологий
-              .about-page__services-btn 
-                +button.button--small.button--white.button--outline
-                  |Подробнее
-          .about-page__services-item
-            .about-page__services-img 
-              img(src="assets/images/about-service-2.jpg", alt="")
-            .about-page__services-container 
-              p.about-page__services-text
-                |Проводим обучение технического персонала (операторов и технологов) работе со станками
-              .about-page__services-btn 
-                +button.button--small.button--white.button--outline
-                  |Подробнее
-          .about-page__services-item
-            .about-page__services-img 
-              img(src="assets/images/about-service-3.jpg", alt="")
-            .about-page__services-container 
-              p.about-page__services-text
-                |Оказываем гарантийное и послегарантийное обслуживание эксплуатируемого оборудования, сертификатов соответствия, гигиенических заключений, подготовка пакета отгрузочных и товаросопроводительных документов
-              .about-page__services-btn 
-                +button.button--small.button--white.button--outline
-                  |Подробнее
+        .about-page__history 
+          ul.about-page__history-list 
+            each item in ddata
+              li.about-page__history-item 
+                .about-page__history-row 
+                  .about-page__history-col
+                    .about-page__history-year 
+                      |#{item.year}
+                  .about-page__history-col
+                    p.about-page__history-text 
+                      |#{item.text}
+    section.section.about-page__stat  
+      .container 
+        .about-page__stat-container
+          .about-page__stat-year 
+            |2000+
+          .about-page__stat-row 
+            .about-page__stat-col
+              p.about-page__stat-text 
+                |На сегодняшний день наше оборудование работает более чем на 2000 предприятий России и ближнего зарубежья.
+            .about-page__stat-col
+              p.about-page__stat-text 
+                |Реализовано множество проектов переоснащения и модернизации производства.
+          .about-page__stat-img
+            +russia-svg
