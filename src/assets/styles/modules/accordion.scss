@@ -139,6 +139,9 @@
     }
     &:nth-child(2) {
       padding: 20px 36px 20px 0;
+      @media (max-width: ($breakpoint-ll - 1px)) {
+        padding: 20px 20px 20px 0;
+      }
       width: calc(#{$col-part-d} * 2 - 20px - #{$col-gap-d});
       @media (max-width: ($breakpoint - 1px)) {
         padding: 8px 0 0;

@@ -79,7 +79,7 @@ mixin aside
       else
         - for (j = 0; j < 3; j++)
           .aside__card
-            .aside__container 
+            .aside__container(data-accordion='') 
               h5.aside__title 
                 |Материал детали
               ul.aside__list.aside__inner
@@ -92,7 +92,17 @@ mixin aside
                           +check-svg.checkbox__svg
                         .checkbox__text 
                           |Углеродистая сталь
-              .aside__button.aside__inner(data-button-show='')
+              .aside__dropdown(data-accordion-dropdown='')
+                - for (i = 0; i < 2; i++)
+                  .aside__item 
+                    .checkbox 
+                      label.checkbox__label
+                        input.checkbox__input(type="checkbox")
+                        .checkbox__box 
+                          +check-svg.checkbox__svg
+                        .checkbox__text 
+                          |Нержавеющая сталь
+              .aside__button.aside__inner(data-button-show='' data-accordion-button='')
                 .button-show
                   .button-show__text 
                     |Показать еще

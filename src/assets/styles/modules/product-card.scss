@@ -127,6 +127,13 @@
     justify-content: space-between;
   }
 
+  &__btn {
+    width: calc(#{$col-width-d});
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
+  }
+
   &__button {
     padding: 12px 18px;
     @media (max-width: ($breakpoint - 1px)) {

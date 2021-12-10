@@ -40,6 +40,9 @@
 
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+      @media (max-width: ($breakpoint-xl - 1px)) {
+        width: calc(#{$col-part-d} * 2);
+      }
       @media (max-width: ($breakpoint - 1px)) {
         width: 100%;
       }
@@ -55,19 +58,38 @@
 
   &__panel {
     padding: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 12px;
+    }
 
     background: $color-white;
     border-radius: 4px;
   }
   &__panel-label {
     margin-bottom: 12px;
-    text-transform: uppercase;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 6px;
+      @include fsl(10px, 120%);
+    }
     @include fsl(12px, 120%);
+    text-transform: uppercase;
   }
   &__panel-title {
     margin-bottom: 40px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 16px;
+    }
     font-weight: 500;
     @include fsl(24px, 120%);
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      @include fsl(22px, 120%);
+    }
+    @media (max-width: ($breakpoint-l - 1px)) {
+      @include fsl(20px, 120%);
+    }
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px, 120%);
+    }
   }
   &__panel-discont {
     display: flex;

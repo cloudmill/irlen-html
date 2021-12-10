@@ -121,4 +121,9 @@
     color: $color-blue;
     @include fsl(14px, 140%);
   }
+
+  &__dropdown {
+    margin-top: 8px;
+    display: none;
+  }
 }

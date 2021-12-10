@@ -57,9 +57,9 @@
   }
   &__section-info {
     margin-bottom: 52px;
-
     width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
     @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 32px;
       width: 100%;
     }
   }
@@ -139,6 +139,9 @@
 
   &__bot {
     padding: 20px 130px 20px 40px;
+    @media (max-width: ($breakpoint-l - 1px)) {
+      padding: 20px 130px 20px 20px;
+    }
     width: calc(100% + 130px);
     @media (max-width: ($breakpoint - 1px)) {
       padding: 0;
@@ -189,7 +192,11 @@
     }
   }
   &__bot-num {
+    white-space: nowrap;
     @include fsl(24px, 110%);
+    @media (max-width: ($breakpoint-l - 1px)) {
+      @include fsl(18px, 110%);
+    }
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(16px, 110%);
     }

@@ -58,6 +58,15 @@
 
   &__number {
     --width: 110px;
+    @media (max-width: ($breakpoint-xl - 1px)) {
+      --width: 90px;
+    }
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      --width: 70px;
+    }
+    @media (max-width: ($breakpoint-l - 1px)) {
+      --width: 50px;
+    }
     @media (max-width: ($breakpoint - 1px)) {
       --width: 100%;
     }

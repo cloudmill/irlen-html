@@ -12,6 +12,7 @@
   border-radius: 4px;
   color: $color-white;
   transition: $transition;
+  white-space: nowrap;
   cursor: pointer;
   border: none;
   @include f-main();
@@ -30,6 +31,12 @@
 
   &--xl {
     padding: 14px 45px;
+    @media (max-width: ($breakpoint-l - 1px)) {
+      padding: 14px 30px;
+    }
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 10px 0;
+    }
   }
 
   &--wide {

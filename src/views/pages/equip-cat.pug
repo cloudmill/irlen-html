@@ -4,6 +4,7 @@ include ../components/navigation
 include ../components/button
 include ../components/tabs
 include ../components/model-tabs
+include ../components/modals
 
 
 block content 
@@ -44,7 +45,7 @@ block content
             .panel__text 
               |Токарные станки с ЧПУ на направляющих качения с максимальной частотой вращения шпинделя 6000 об/мин и возможностью установки фрезерного привода. Длинные заготовки возможно обрабатывать, используя заднюю бабку, поджимая автоматическим задним центром, также возможна обработка длинных валов, как в ручном, так и в автоматическом люнете.
           .panel__col  
-            +button 
+            .button(data-fancy-button='10')
               |Материалы для скачивания
         .margin-top
           +tabs(tabs = ['Leadwell серия T', 'Leadwell серия LTC', 'Leadwell серия T/LTC'])
@@ -110,3 +111,4 @@ block content
                       |#{item.label}
                     .equip-page__block-text 
                       |#{item.text}
+  +docs-modal

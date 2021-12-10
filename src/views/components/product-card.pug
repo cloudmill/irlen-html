@@ -16,17 +16,17 @@ mixin product-card
       .product-card__info 
         ul.product-card__list
           li.product-card__item 
-            .product-card__label
+            .product-card__label.mr10
               |Резьба
             .product-card__text
               |M10x1.5
           li.product-card__item 
-            .product-card__label
+            .product-card__label.mr10
               |Длина раскатника - L
             .product-card__text
               |9353014BTC
           li.product-card__item 
-            .product-card__label
+            .product-card__label.mr10
               |Размер стороны квадрата - K
             .product-card__text
               |M10x1.5
@@ -44,8 +44,9 @@ mixin product-card
       .product-card__bot 
         .product-card__count 
           +counter
-        a.product-card__button(href="#")
-          +cart-svg.product-card__svg
-          .product-card__button-text 
-            |В корзину
+        .product-card__btn
+          a.product-card__button(href="#")
+            +cart-svg.product-card__svg
+            .product-card__button-text 
+              |В корзину
 

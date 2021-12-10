@@ -182,12 +182,18 @@
   &__product-item {
     &:nth-child(1) {
       width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+      @media (max-width: ($breakpoint-xl - 1px)) {
+        width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+      }
     }
     &:nth-child(3) {
       margin-left: 31px;
     }
     &:nth-child(4) {
       margin-left: 83px;
+      @media (max-width: ($breakpoint-xl - 1px)) {
+        margin-left: 60px;
+      }
     }
   }
   &__product-row {
@@ -211,6 +217,9 @@
 
     &:nth-child(2) {
       width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+      @media (max-width: ($breakpoint-ll - 1px)) {
+        width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+      }
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 24px;
         width: 100%;

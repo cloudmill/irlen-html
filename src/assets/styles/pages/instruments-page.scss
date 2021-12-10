@@ -116,6 +116,12 @@
     display: grid;
     grid-template-columns: repeat(6, auto);
     column-gap: 66px;
+    @media (max-width: ($breakpoint-xl - 1px)) {
+      column-gap: 30px;
+    }
+    @media (max-width: ($breakpoint-l - 1px)) {
+      column-gap: 20px;
+    }
   }
   &__tabs-item {
     padding-bottom: 20px;
