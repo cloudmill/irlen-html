@@ -1,8 +1,15 @@
 .product-card {
+  $comp: &;
 
   border-radius: 4px;
   overflow: hidden;
   background: $color-white;
+
+  &:hover {
+    #{$comp}__title {
+      color: $color-blue;
+    }
+  }
 
   &--responsive {
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
@@ -62,6 +69,7 @@
       @include fsl(10px, 110%);
     }
     font-weight: 500;
+    transition: $transition;
   }
 
   &__info {

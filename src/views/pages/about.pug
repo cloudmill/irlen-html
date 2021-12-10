@@ -49,11 +49,11 @@ block content
       .container 
         .about-page__history 
           ul.about-page__history-list 
-            each item in ddata
-              li.about-page__history-item 
+            each item, i in ddata
+              li.about-page__history-item(class=(i === 5 ? 'about-page__history-item--last' : ''))
                 .about-page__history-row 
                   .about-page__history-col
-                    .about-page__history-year 
+                    .about-page__history-year
                       |#{item.year}
                   .about-page__history-col
                     p.about-page__history-text 

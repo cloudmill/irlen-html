@@ -55,24 +55,30 @@
   }
 
   &__buttons {
+    --itemsCount: 4;
+    --gap: 8px;
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      --itemsCount: 2;
+    }
+    @media (max-width: ($breakpoint - 1px)) {
+      --itemsCount: 1;
+    }
+
     margin-top: 40px;
-    display: flex;
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 24px;
-      display: block;
     }
+    display: grid;
+    grid-template-columns: repeat(var(--itemsCount), max-content);
+    @media (max-width: ($breakpoint - 1px)) {
+      grid-template-columns: repeat(var(--itemsCount), auto);
+    }
+    column-gap: var(--gap);
+    row-gap: var(--gap);
   }
 
   &__item {
     display: flex;
-
-    &:not(:first-child) {
-      margin-left: 8px;
-      @media (max-width: ($breakpoint - 1px)) {
-        margin-left: 0;
-        margin-top: 8px;
-      }
-    }
   }
 
   &__icon {

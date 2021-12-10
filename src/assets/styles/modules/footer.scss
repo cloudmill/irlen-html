@@ -102,6 +102,11 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px, 120%);
     }
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
   }
 
   &__body {
@@ -140,6 +145,11 @@
       @include fsl(14px, 140%);
     }
     font-weight: 500;
+    transition: $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
   }
   &__contacts-label {
     @include fsl(14px, 140%);
@@ -216,6 +226,7 @@
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px, 120%);
     }
+    transition: $transition;
 
     &:not(:first-child) {
       margin-left: 34px;
@@ -223,6 +234,10 @@
         margin-left: 0;
         margin-top: 8px;
       }
+    }
+
+    &:hover {
+      color: $color-blue;
     }
   }
 
