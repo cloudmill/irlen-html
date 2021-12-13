@@ -36,16 +36,6 @@ block content
         label: 'Пароль еще раз',
         value: 'zxcqwerty123',
       },
-      {
-        type: 'text',
-        label: 'Телефон',
-        value: '+7 (911) 286-25-63',
-      },
-      {
-        type: 'text',
-        label: 'Имя',
-        value: 'Кирилл',
-      },
     ]
   .profile-page.main-page
     section.section.section--first 
@@ -154,6 +144,14 @@ block content
                             .profile-page__form-label 
                               |#{item.label}
                             input.form__input(type=item.type value = item.value)
+                      .profile-page__form-item
+                        .profile-page__form-label 
+                          |Телефон
+                        input.form__input(type='text' value='+7 (911) 286-25-63' data-mask='phone')
+                      .profile-page__form-item
+                        .profile-page__form-label 
+                          |Имя
+                        input.form__input(type='text' value='Кирилл')
                     .profile-page__buttons
                       .profile-page__button(data-change-button='')
                         .profile-page__icon 

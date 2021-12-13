@@ -43,14 +43,6 @@ mixin login-modal
           type: 'text',
           placeholder: 'ИНН*',
         },
-        {
-          type: 'text',
-          placeholder: 'Телефон для связи*',
-        },
-        {
-          type: 'text',
-          placeholder: 'Контактное лицо*',
-        },
       ]
     }
   .login-modal(data-fancy-modal='1')
@@ -90,6 +82,10 @@ mixin login-modal
             each item in ddata.corp 
               .form__item 
                 input.form__input(type=item.type placeholder=item.placeholder required) 
+            .form__item 
+              input.form__input(type='text' placeholder='Телефон для связи*' data-mask='phone' required) 
+            .form__item 
+              input.form__input(type='text' placeholder='Контактное лицо*' required) 
           .login-modal__form(data-form-user='')
             each item in ddata.user
               .form__item 
@@ -134,7 +130,7 @@ mixin phone-modal
         .form__item 
           input.form__input(type="email" placeholder='E-mail*' required)
         .form__item 
-          input.form__input(type="text" placeholder='Телефон' required)
+          input.form__input(type="text" placeholder='Телефон' required data-mask='phone')
         .form__item 
           input.form__input(type="text" placeholder='Имя' required)
         .form__item.form__item--big

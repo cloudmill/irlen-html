@@ -18,6 +18,7 @@ import { Tabs } from 'scripts/tabs'
 import { Counter } from 'scripts/counter'
 import { MobileMenu } from 'scripts/mobile-menu/mobile-menu'
 import { FiltersMenu } from 'scripts/mobile-menu/filters-menu'
+import mask from "inputmask";
 
 $(() => {
   const formChanger = new FormChanger()
@@ -40,5 +41,6 @@ $(() => {
   counters.forEach(item => {
     const counter = new Counter(item)
   })
-  // console.log(inputs.value);
+  
+  Inputmask({ mask: "+7 (999) 999-9999", showMaskOnHover: false }).mask("[data-mask=phone]");
 })
