@@ -139,6 +139,11 @@
   }
 
   &__btn {
+    padding-left: 20px;
+    @media (max-width: ($breakpoint-xl - 1px)) {
+      padding-left: 0;
+    }
+    
     width: calc(#{$col-width-d});
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;

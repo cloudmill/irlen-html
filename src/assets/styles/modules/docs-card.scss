@@ -1,5 +1,8 @@
 .docs-card {
+  $comp: &;
+
   display: block;
+
   background: $color-white;
   border-radius: 4px;
   border: 1px solid $color-light-gray;
@@ -7,6 +10,12 @@
 
   &:hover {
     border-color: $color-blue;
+  }
+
+  &--modal {
+    #{$comp}__text {
+      text-transform: uppercase;
+    }
   }
 
   &__container {

@@ -19,6 +19,10 @@
     position: fixed;
     z-index: 1000;
 
+    #{$comp}__list {
+      margin-top: 0;
+    }
+
     #{$comp}__container {
       padding-top: 19px;
 

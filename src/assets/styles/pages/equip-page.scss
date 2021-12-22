@@ -2,9 +2,16 @@
   $comp: &;
 
   &__inner {
-    margin-top: 60px;
+    margin-top: 48px;
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 40px;
+    }
+
+    &--lg {
+      margin-top: 60px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 40px;
+      }
     }
   }
 
@@ -185,6 +192,11 @@
       @include fsl(12px, 120%);
     }
     font-weight: 500;
+  }
+  &__features-text {
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 140%);
+    }
   }
 
   &__text {

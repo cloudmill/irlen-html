@@ -51,7 +51,7 @@ block content
                     |наличие
                   .instruments-card__section-text 
                     |10 шт.
-              .instruments-card__price.margin-top.margin-top--md
+              .instruments-card__price.instruments-card__price-inner
                 .instruments-card__price-col
                   .tooltip.tooltip--start
                     .instruments-card__price-price.tooltip__row
@@ -67,7 +67,7 @@ block content
                   .discont.discont--small
                     .discont__text 
                       |Распродажа
-              .instruments-card__section-panel.margin-top.margin-top--md 
+              .instruments-card__section-panel.instruments-card__price-inner
                 .loyalty-card.loyalty-card--small
                   .loyalty-card__icon
                     +warning-svg.loyalty-card__svg
@@ -110,7 +110,7 @@ block content
           |Документация
         .grid-container
           - for (i = 0; i < 3; i++)
-            +docs-card
+            +docs-card.docs-card--modal
     section.section 
       .container 
         .instruments-card__row.instruments-card__inner

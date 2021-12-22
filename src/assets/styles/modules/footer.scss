@@ -49,6 +49,9 @@
 
     &:not(:first-child) {
       margin-top: 30px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 20px;
+      }
     }
   }
   &__top-text {
@@ -163,6 +166,7 @@
     margin-top: 40px;
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 20px;
+      width: calc(#{$col-part-m} * 2);
     }
 
     display: flex;
