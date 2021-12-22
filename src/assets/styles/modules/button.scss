@@ -9,14 +9,15 @@
   justify-content: center;
 
   background: $color-blue;
-  border-radius: 4px;
   color: $color-white;
   transition: $transition;
   white-space: nowrap;
   cursor: pointer;
   border: none;
   @include f-main();
+  border-radius: 4px;
   @media (max-width: ($breakpoint - 1px)) {
+    border-radius: 2px;
     @include fsl(14px, 140%);
   }
 
@@ -76,6 +77,11 @@
   }
 
   &--error {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 10px 17px;
+      width: auto;
+      min-width: 100px;
+    }
     min-width: 135px;
   }
 
@@ -87,6 +93,12 @@
   }
 
   &--filters {
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 6px 0;
+    }
+  }
+
+  &--search {
     @media (max-width: ($breakpoint - 1px)) {
       padding: 6px 0;
     }

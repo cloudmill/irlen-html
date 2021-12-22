@@ -270,6 +270,9 @@
 
     &--sm {
       margin: 0;
+      @media (min-width: $breakpoint) {
+        padding-bottom: 20px;
+      }
 
       #{$comp}__item-col {
         &:nth-child(1) {
@@ -421,6 +424,9 @@
   }
   &__item-old {
     margin-top: 4px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 0;
+    }
     color: $color-gray;
     @include fsl(12px, 110%);
     @media (max-width: ($breakpoint - 1px)) {

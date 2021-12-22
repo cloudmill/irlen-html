@@ -48,9 +48,12 @@
   }
 
   &--responsive {
-    @media (max-width: ($breakpoint - 1px)) {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+    #{$comp}__container {
+      @media (max-width: ($breakpoint - 1px)) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     #{$comp}__item {
@@ -65,6 +68,9 @@
 
     background: $color-white;
     border-radius: 4px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 2px;
+    }
   }
 
   &__item {
@@ -74,12 +80,13 @@
     }
 
     transition: $transition;
-    border-radius: 4px;
     cursor: pointer;
     font-weight: 500;
     transition: $transition;
     white-space: nowrap;
+    border-radius: 4px;
     @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 2px;
       @include fsl(12px, 140%);
     }
 

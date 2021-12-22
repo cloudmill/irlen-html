@@ -46,11 +46,17 @@
 
     #{$comp}__container {
       padding: 20px;
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: 16px 0 0;
+      }
     }
 
     #{$comp}__title {
       margin-bottom: 16px;
       @include fsl(16px, 110%);
+      @media (max-width: ($breakpoint - 1px)) {
+        @include fsl(14px, 110%);
+      }
     }
 
     #{$comp}__text {

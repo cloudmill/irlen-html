@@ -98,7 +98,11 @@
     },
     {
       "href": "publications-detail",
-      "page": "Публикации детальная"
+      "page": "Публикации статья"
+    },
+    {
+      "href": "publications-detail",
+      "page": "Публикации детальная статья"
     },
     {
       "href": "404",

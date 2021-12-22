@@ -115,13 +115,12 @@
   }
   &__price-old {
     margin-left: 12px;
-
-    color: $color-gray;
-    @include fsl(14px, 110%);
     @media (max-width: ($breakpoint - 1px)) {
       margin-left: 8px;
       @include fsl(10px, 110%);
     }
+    @include fsl(14px, 110%);
+    color: $color-gray;
     text-decoration: line-through;
   }
 
@@ -163,6 +162,9 @@
 
     background: $color-blue;
     border-radius: 4px;
+    @media (max-width: ($breakpoint - 1px)) {
+      border-radius: 2px;
+    }
     transition: $transition;
 
     &:hover {

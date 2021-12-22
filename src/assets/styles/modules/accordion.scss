@@ -89,7 +89,7 @@
   &__body {
     padding: 20px 0;
     @media (max-width: ($breakpoint - 1px)) {
-      padding: 12px 0;
+      padding: 0 0 12px;
     }
     display: none;
   }
@@ -156,10 +156,16 @@
   &__title {
     margin-bottom: 8px;
     line-height: 120%;
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 120%);
+    }
   }
 
   &__label {
     @include fsl(12px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(10px, 140%);
+    }
     color: $color-gray;
 
     &:not(:last-child) {
