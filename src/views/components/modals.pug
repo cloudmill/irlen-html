@@ -122,10 +122,10 @@ mixin docs-modal
           +docs-card.docs-card--modal
 
 mixin phone-modal 
-  .phone-modal(data-fancy-modal='phone')
+  .phone-modal(data-fancy-modal=attributes.id)
     .phone-modal__container(data-form-parent='')
       h3.phone-modal__title
-        |Заказать звонок
+        |#{attributes.title ? attributes.title : 'Заказать звонок'}
       form.form(action="/" data-form='w2') 
         .form__item 
           input.form__input(type="email" placeholder='E-mail*' required)
@@ -143,7 +143,7 @@ mixin phone-modal
                 |Согласен на обработку персональных данных в соответствии с #[a.checkbox__link(href="#") политикой конфиденциальности]
         .form__item.form__item--big
           button.button.button--wide(data-form-button='w2')
-            |Заказать звонок
+            |#{attributes.button ? attributes.button :'Заказать звонок'}
     .response(data-response='w2')
       h3.response__title
         |Спасибо

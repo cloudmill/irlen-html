@@ -49,7 +49,6 @@
   &__section-inner {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 16px;
       display: block;

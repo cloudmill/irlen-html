@@ -6,6 +6,7 @@ include ../components/counter
 include ../components/category-card
 include ../components/slider-buttons
 include ../components/product-card
+include ../components/modals
 
 
 block content 
@@ -18,9 +19,9 @@ block content
               li.breadcrumbs__item 
                 a.breadcrumbs__link(href="#") 
                   |#{item}
-          li.breadcrumbs__item 
-            .breadcrumbs__text 
-              |Токарно-карусельный станок Leadwell VTL-1000 ATC
+            li.breadcrumbs__item 
+              .breadcrumbs__text 
+                |Токарно-карусельный станок Leadwell VTL-1000 ATC
         .equip-detail__row.equip-detail__inner
           .equip-detail__col
             .equip-detail__section-info
@@ -45,7 +46,7 @@ block content
                   p.equip-detail__panel-text
                     |Задать вопрос или оставить заявку на подготовку коммерческого предложения
                 .equip-detail__panel-col
-                  +button
+                  .button(data-fancy-button='application')
                     |Оставить заявку
           .equip-detail__col
             h2.instruments-card__inner
@@ -82,3 +83,5 @@ block content
         .grid-container
           - for (i = 0; i < 2; i++)
             +docs-card
+  
+  +phone-modal(id = 'application' title = 'Оставить заявку' button = 'Отправить')

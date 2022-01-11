@@ -1,3 +1,4 @@
+import {mediaQuery} from './mediaQueries'
 
 export class Tabs {
   constructor(selector, manual) {
@@ -34,10 +35,27 @@ export class Tabs {
         }
       } else {
         item.classList.add('active');
+        this.scrollIntoView(i)
         if (manual) {
           this.tabsBlock[i].classList.add('active')
         }
       }
     })
+  }
+
+  scrollIntoView(index) {
+    if (!mediaQuery.matches) {
+      if (index) {
+        let distance = 0;
+
+        for (let x = 0; x < index; x++) {
+          distance += this.rootsTabs[x].offsetWidth + this.rootsTabs[x].offsetLeft
+        }
+
+        this.roots.scrollLeft = distance / 2
+      } else {
+        this.roots.scrollLeft = 0
+      }
+    }
   }
 }
