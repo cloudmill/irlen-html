@@ -76,7 +76,9 @@
       background: $color-white;
       cursor: pointer;
       transition: $transition;
+      pointer-events: all;
     }
+    pointer-events: none;
   }
 
   &__icon {

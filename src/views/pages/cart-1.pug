@@ -7,13 +7,14 @@ block content
   .cart-page 
     section.section.section--first 
       .container 
-        ul.breadcrumbs 
-          li.breadcrumbs__item 
-            a.breadcrumbs__link(href="#") 
-              |Главная
-          li.breadcrumbs__item 
-            .breadcrumbs__text 
-              |Корзина
+        .breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item 
+              a.breadcrumbs__link(href="#") 
+                |Главная
+            li.breadcrumbs__item 
+              .breadcrumbs__text 
+                |Корзина
         .cart-page__icon 
           +cart-empty-svg.cart-page__icon-svg.mobile
         h1.nav-title

@@ -1,5 +1,20 @@
 mixin aside 
   .aside 
+    -
+      var ddata = [
+        {
+          title: 'Материал детали',
+          items: ['Углеродистая сталь', 'Нержавеющая сталь', 'Чугун']
+        },
+        {
+          title: 'Cерия фрезы',
+          items: ['Оsawa alu по алюминию', 'Osawa G2 общего назначения с покрытием PV200', 'Osawa HF высокопроизводительные']
+        },
+        {
+          title: 'Тип фрезы',
+          items: ['Острая кромка', 'Фаска 45°', 'Фаска 45° + радиус']
+        },
+      ]
     if (attributes.mobile)
       .aside__mobile(data-filters-button='')
         .aside__mobile-text 
@@ -77,13 +92,13 @@ mixin aside
                     .checkbox__text 
                       |Работают без СОЖ (только сквозные отверстия)
       else
-        - for (j = 0; j < 3; j++)
+        each item in ddata
           .aside__card
             .aside__container(data-accordion='') 
               h5.aside__title 
-                |Материал детали
+                |#{item.title}
               ul.aside__list.aside__inner
-                - for (i = 0; i < 3; i++)
+                each el in item.items
                   li.aside__item 
                     .checkbox 
                       label.checkbox__label
@@ -91,7 +106,7 @@ mixin aside
                         .checkbox__box 
                           +check-svg.checkbox__svg
                         .checkbox__text 
-                          |Углеродистая сталь
+                          |#{el}
               .aside__dropdown(data-accordion-dropdown='')
                 - for (i = 0; i < 2; i++)
                   .aside__item 
@@ -113,7 +128,7 @@ mixin aside
             .aside__card(data-range-block='')
               .aside__container 
                 h5.aside__title 
-                  |Материал детали
+                  |Диаметр фрезы, мм
                 .range.aside__inner
                   .range__top 
                     .range__row 

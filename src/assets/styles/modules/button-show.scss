@@ -1,12 +1,43 @@
+.button-show-wrapper {
+  margin-top: 48px;
+  padding: 14px 0;
+  @media (max-width: ($breakpoint - 1px)) {
+    margin-top: 24px;
+    padding: 6px 0;
+  }
+
+  display: flex;
+  justify-content: center;
+
+  background: $color-white;
+  border-radius: 4px;
+  transition: $transition;
+  cursor: pointer;
+  border: 1px solid $color-light-gray;
+
+  &:hover {
+    background: $color-blue;
+    border-color: $color-blue;
+
+    .button-show__text {
+      color: $color-white;
+    }
+    .button-show__svg {
+      path {
+        stroke: $color-white;
+      }
+    }
+  }
+}
+
 .button-show {
   display: flex;
   align-items: center;
 
-  cursor: pointer;
-
   &__text {
     margin-right: 9px;
     @include fsl(14px, 140%);
+    transition: color $transition;
   }
 
   &__icon {
@@ -17,5 +48,9 @@
 
   &__svg {
     transition: $transition;
+
+    path {
+      transition: stroke $transition;
+    }
   }
 }

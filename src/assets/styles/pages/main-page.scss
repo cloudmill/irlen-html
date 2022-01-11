@@ -338,10 +338,9 @@
   &__link {
     margin-top: 60px;
     @media (max-width: ($breakpoint - 1px)) {
-      margin-top: 40px;
-      display: block;
+      margin-top: 0;
+      margin-bottom: 40px;
     }
-    display: flex;
 
     border-radius: 4px;
     overflow: hidden;
@@ -356,6 +355,19 @@
         path {
           stroke: $color-blue;
         }
+      }
+    }
+
+    &--desktop {
+      display: flex;
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
+    }
+    &--mobile {
+      display: none;
+      @media (max-width: ($breakpoint - 1px)) {
+        display: block;
       }
     }
   }

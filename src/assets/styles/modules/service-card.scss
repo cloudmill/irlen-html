@@ -11,6 +11,8 @@
   @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
     min-height: 110px;
+    display: flex;
+    flex-direction: column;
   }
 
   border: 1px solid $color-light-gray;
@@ -35,6 +37,8 @@
     padding: 20px;
     @media (max-width: ($breakpoint - 1px)) {
       padding: 8px 4px 8px 8px;
+
+      flex-grow: 1;
     }
 
     height: 100%;

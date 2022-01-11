@@ -12,11 +12,12 @@ block content
   .instruments-card.equip-detail
     section.instruments-card__section
       .container
-        ul.breadcrumbs 
-          each item in ['Главная', 'Оборудование', 'Токарные станки с ЧПУ']
-            li.breadcrumbs__item 
-              a.breadcrumbs__link(href="#") 
-                |#{item}
+        .breadcrumbs
+          ul.breadcrumbs__list
+            each item in ['Главная', 'Оборудование', 'Токарные станки с ЧПУ']
+              li.breadcrumbs__item 
+                a.breadcrumbs__link(href="#") 
+                  |#{item}
           li.breadcrumbs__item 
             .breadcrumbs__text 
               |Токарно-карусельный станок Leadwell VTL-1000 ATC

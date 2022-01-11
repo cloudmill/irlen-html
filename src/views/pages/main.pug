@@ -38,6 +38,18 @@ block content
                     img(src="assets/images/" + item.url, alt="")
                 .service-card__icon 
                   +big-arrow-svg.service-card__svg
+        a.main-page__link.main-page__link--mobile(href="#") 
+          .main-page__link-col
+            .main-page__link-container 
+              .main-page__link-title 
+                |Материалы для скачивания
+              p.main-page__link-text 
+                |Каталоги, буклеты, методички
+            .arrow-icon 
+              +big-arrow-svg.arrow-icon__svg
+          .main-page__link-col
+            .main-page__link-img
+              img(src="assets/images/main-link.jpg", alt="")
         .main-page__features
           .main-page__features-col 
             .main-page__features-row 
@@ -84,7 +96,7 @@ block content
                     |Предлагаем попробовать высокопроизводительные фрезы HF по цене фрез G2. Срок акции с 10.09.2021 по 31.12.2021.
                 .arrow-icon 
                   +big-arrow-svg.arrow-icon__svg
-        a.main-page__link(href="#") 
+        a.main-page__link.main-page__link--desktop(href="#") 
           .main-page__link-col
             .main-page__link-container 
               .main-page__link-title 
