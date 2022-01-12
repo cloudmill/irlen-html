@@ -9,7 +9,131 @@ include ../components/product-card
 include ../components/modals
 
 
-block content 
+block content
+  -
+    var ddata = [
+      {
+        title: 'Рабочий диапазон',
+        items: [
+          {
+            left: 'Перемещение по оси X',
+            right: '300 мм'
+          },
+          {
+            left: 'Перемещение по оси Y',
+            right: '400 мм'
+          },
+          {
+            left: 'Перемещение по оси Z',
+            right: '510 мм'
+          },
+          {
+            left: 'Расстояние от поверхности стола до торца шпинделя',
+            right: '100-610 мм'
+          },
+          {
+            left: 'Расстояние от оси шпинделя до колонны',
+            right: '450 мм'
+          },
+        ]
+      },
+      {
+        title: 'Стол',
+        items: [
+          {
+            left: 'Размеры рабочей поверхнсоти стола (ДхШ)',
+            right: '550x400 мм'
+          },
+          {
+            left: 'Допустимая нагрузка',
+            right: '500 кг'
+          },
+          {
+            left: 'Т-пазы',
+            right: '18Tx125x3'
+          },
+        ]
+      },
+      {
+        title: 'Шпиндель',
+        items: [
+          {
+            left: 'Скорость вращения шпинделя',
+            right: 'ВТТ 40 (SK)* об/мин'
+          },
+          {
+            left: 'Конус шпинделя',
+            right: '500'
+          },
+          {
+            left: 'Внутренний подшипник шпинделя',
+          },
+        ]
+      },
+      {
+        title: 'Подачи',
+        items: [
+          {
+            left: 'Скорость быстрых перемещений по осям X/Y/Z',
+            right: '48/48/36 м/мин'
+          },
+          {
+            left: 'Максимальная скорость рабочей подачи',
+            right: '10 м/мин'
+          },
+        ]
+      },
+      {
+        title: 'УАСИ «Рука-манипулятор»',
+        items: [
+          {
+            left: 'Количество инструментальных мест в магазине',
+            right: '24 (30, 40, 60) шт.'
+          },
+          {
+            left: 'Максимальный диаметр инструмент (при установленных соседних)',
+            right: '80 мм'
+          },
+          {
+            left: 'Максимальная длина инструмента',
+            right: '225 мм'
+          },
+        ]
+      },
+      {
+        title: 'Двигатели FANUC а',
+        items: [
+          {
+            left: 'Мощность двигателя привода шпинделя FANUC (30 мин)',
+          },
+          {
+            left: 'Мощность двигателей приводов по ося X/Y/Z FANUC',
+            right: '1,6/3/4 кВт'
+          },
+        ]
+      },
+      {
+        title: 'Габаритные размеры',
+        items: [
+          {
+            left: 'Размеры (ДxШ)',
+            right: '1500x2600 мм'
+          },
+          {
+            left: 'Высота',
+            right: '2680 мм'
+          },
+          {
+            left: 'Вес',
+            right: '4500 кг'
+          },
+          {
+            left: 'Суммарная потребляемая мощность',
+            right: '25 кВА'
+          },
+        ]
+      },
+    ]
   .instruments-card.equip-detail
     section.instruments-card__section
       .container
@@ -51,17 +175,17 @@ block content
           .equip-detail__col
             h2.instruments-card__inner
               |Характеристики
-            - for (x = 0; x < 4; x++)
+            each item in ddata
               .equip-detail__block(class=(x === 0 ? "" : 'margin-top'))
                 h4.equip-detail__title 
-                  |Рабочий диапазон
+                  |#{item.title}
                 ul.equip-detail__list 
-                  - for (i = 0; i < 4; i++)
+                  each el in item.items
                     li.equip-detail__list-item 
                       .equip-detail__list-text.small 
-                        |Перемещение по оси X 
+                        |#{el.left}
                       .equip-detail__list-text 
-                        |300 мм
+                        |#{el.right}
     section.section 
       .container 
         .instruments-card__row.instruments-card__inner

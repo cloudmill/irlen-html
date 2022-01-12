@@ -63,7 +63,7 @@ block content
                               .tooltip__icon 
                                 +tooltip-svg.tooltip__svg
                           .tooltip__container   
-                            |Цена с НДС по курсу ЦБ на 25.06.2021
+                            |#{data.tooltipText}
                         .cart-page__item-old 
                           |€ 103.55
                     .cart-page__item-col
@@ -78,7 +78,7 @@ block content
           .cart-page__col 
             .cart-page__card 
               .cart-page__card-top
-                .cart-page__card-title 
+                h4.cart-page__card-title 
                   |Ваш заказ
                 .cart-page__warning
                   .cart-page__warning-row 
@@ -111,7 +111,6 @@ block content
                           .tooltip__container   
                             |Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima consectetur deserunt cumque?
               .cart-page__card-bot
-                
                 .cart-page__card-row 
                   .cart-page__card-col
                     .cart-page__card-price 
@@ -120,7 +119,7 @@ block content
                     .cart-page__card-num
                       |89 0000
                 .cart-page__card-caption 
-                  |Цена с НДС по курсу ЦА на 25.06.2021
+                  |#{data.tooltipText}
                 .cart-page__card-btn 
                   +button.button--wide 
                     |Перейти к оформлению

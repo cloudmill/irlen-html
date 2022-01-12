@@ -82,10 +82,6 @@
   }
   &__card-title {
     margin-bottom: 16px;
-    @include fsl(18px, 120%);
-    @media (max-width: ($breakpoint - 1px)) {
-      @include fsl(14px, 120%);
-    }
   }
   &__card-label {
     margin-top: 24px;
