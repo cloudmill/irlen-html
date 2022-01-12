@@ -3,7 +3,64 @@ extends ../layouts/master.pug
 include ../components/navigation
 include ../components/equip-card
 
-block content 
+block content
+  -
+    var ddata = {
+      bigCards: [
+        {
+          img: 'assets/images/equip-1.jpg',
+          title: 'Токарные станки с ЧПУ',
+          items: ['С направляющими качения', 'С направляющими качения и противошпинделем', 'С направляющими качения и осью Y', 'Роботизированные с направляющими качения токарно-фрезерные с направляющими качения', 'С направляющими скольжения', 'С направляющими скольжения и осью Y', 'Трубообрабатывающие', 'Автоматы продольного точения']
+        },
+        {
+          img: 'assets/images/equip/equip-2.jpg',
+          title: 'Фрезерные станки с ЧПУ',
+          items: ['Вертикально фрезерные с направляющими качения', 'Вертикально фрезерные с направляющими скольжения', 'Вертикально фрезерные с наклонно-поворотным столом (4-х осевые)', 'Вертикально фрезерные пятиосевые', 'Вертикально фрезерные двухпаллетные', 'Горизонтально фрезерные', 'Двухпаллетные горизонтально фрезерные', 'Пасточные', 'Портальные']
+        },
+        {
+          img: 'assets/images/equip/equip-3.jpg',
+          title: 'Вертикальные токарные и карусельные станки с ЧПУ',
+          items: ['Вертикальные токарные станки с направляющими качения', 'Вертикальные токарные станки с направляющими скольжения', 'Карусельные станки с направляющими качения', 'Карусельные станки с направляющими скольжения',]
+        },
+        {
+          img: 'assets/images/equip/equip-4.jpg',
+          title: 'Ленточнопильные станки',
+          items: ['Полуавтоматические для перпендикулярной отрезки', 'Автоматические для перпендикулярной отрезки', 'Ручные для угловой отрезки', 'Полуавтоматические для угловой отрезки', 'Автоматические для угловой отрезки', 'Вертикальные', ]
+        },
+      ],
+      cards: [
+        {
+          img: 'assets/images/equip-card-1.jpg',
+          title: 'Шлифовальные станки',
+          items: ['Плоскошлифовальные', 'Круглошлифовальные',]
+        },
+        {
+          img: 'assets/images/equip/equip-card-2.jpg',
+          title: 'Прессовое оборудование',
+          items: ['Гидравлические прессы', 'Гидравлические листогибы', 'Гильотины',]
+        },
+        {
+          img: 'assets/images/equip/equip-card-3.jpg',
+          title: 'Электроэрозионные станки',
+          items: ['Универсальные', 'с ЧПУ',]
+        },
+        {
+          img: 'assets/images/equip/equip-card-4.jpg',
+          title: 'Универсальные станки',
+          items: ['Токарные',]
+        },
+        {
+          img: 'assets/images/equip/equip-card-4.jpg',
+          title: 'Раскроечные станки',
+          items: ['Лазерные', 'Плазменные', 'Координатно пробивные',]
+        },
+        {
+          img: 'assets/images/equip/equip-card-5.jpg',
+          title: 'Измерительное оборудование',
+          items: ['Оптические системы', 'Проекторы',]
+        },
+      ]
+    }
   .equip-page 
     section.section.section--first 
       .container 
@@ -11,28 +68,26 @@ block content
     section.section.section--last 
       .container 
         ul.equip-page__list
-          - for (j = 0; j < 4; j++)
+          each item in ddata.bigCards
             li.equip-page__list-item 
               a.equip-page__card(href="#") 
                 .equip-page__card-row 
                   .equip-page__card-col
                     .equip-page__card-image 
-                      img(src="assets/images/equip-1.jpg", alt="")
+                      img(src=item.img, alt="")
                     .arrow-icon
                       +big-arrow-svg.arrow-icon__svg
                   .equip-page__card-col
                     .equip-page__card-container
                       .equip-page__card-title 
-                        |Токарные станки с ЧПУ
+                        |#{item.title}
                       ul.equip-page__card-list 
-                        - for (i = 0; i < 4; i++)
+                        each el in item.items
                           li.equip-page__card-item 
-                            |С направляющими качения 
-                          li.equip-page__card-item 
-                            |Роботизированные с направляющими качения токарно-фрезерные с направляющими качения 
+                            |#{el}
                     .arrow-icon
                       +big-arrow-svg.arrow-icon__svg
         .section__block
           .equip-page__grid 
-            - for (i = 0; i < 6; i++)
-              +equip-card
+            each item in ddata.cards
+              +equip-card(items = item.items img = item.img title = item.title)

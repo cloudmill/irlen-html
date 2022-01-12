@@ -10,13 +10,22 @@ block content
   .search-page 
     section.section.section--first 
       .container 
-        +navigation(page='Результаты поиска')
+        .breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item 
+              a.breadcrumbs__link(href="#") 
+                |Главная
+            li.breadcrumbs__item 
+              .breadcrumbs__text 
+                |Результаты поиска
+        h1.nav-title
+          |Результаты поиска по запросу «B1-3»
     section.section.section--last 
       .container 
         form.search-page__search(action="/") 
           .search-page__row
             .search-page__col 
-              input.search-page__input(type="text")
+              input.search-page__input(type="text" value = 'B1-3')
             .search-page__col 
               +button.button--wide.button--search
                 |Поиск
@@ -48,5 +57,3 @@ block content
                   |Показать еще
                 .button-show__icon 
                   +arrow-svg.button-show__svg
-        .search-page__result.margin-top.margin-top--md
-          |Поиск не дал результатов
