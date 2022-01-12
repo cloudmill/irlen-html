@@ -76,7 +76,7 @@ mixin header
       .header__mobile 
         .header__mobile-row
           .header__mobile-col
-            .header__mobile-search
+            .header__mobile-search(data-search-button='')
               +search-svg.header__search-svg
           .header__mobile-col
             a.header__icon(href="#")
@@ -201,6 +201,13 @@ mixin header
                         |#{item.phone}
                       .header__label 
                         |#{item.city}
+        .search-modal(data-search-modal='')
+          form.search-modal__form(action="/")
+            .search-modal__inner
+              label.search-modal__label
+                input.search-modal__input(type="text" placeholder='Поиск по интернет-магазину' required)
+              .search-modal__button(data-search-button='')
+                +close-svg
     .header__modal 
       .header__modal-overlay
       .header__modal-product(data-header-modal='1')

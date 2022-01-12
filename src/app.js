@@ -11,6 +11,7 @@ import 'scripts/header.js';
 import 'scripts/show-more.js';
 import 'scripts/parsley.js';
 import 'scripts/anchor-links.js';
+import 'scripts/search.js';
 import 'scripts/range-slider.js';
 import 'scripts/form-response.js';
 import { FormChanger } from 'scripts/form-changer'
@@ -21,6 +22,8 @@ import { FiltersMenu } from 'scripts/mobile-menu/filters-menu'
 import mask from "inputmask";
 
 $(() => {
+  require("scripts/backend");
+
   const formChanger = new FormChanger()
   const headerMenu = new MobileMenu('.header', '.header__menu')
   const filtersMenu = new FiltersMenu('[data-filters-menu]', '[data-filters-button]')
