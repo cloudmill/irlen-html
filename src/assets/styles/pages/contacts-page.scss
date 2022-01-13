@@ -16,6 +16,17 @@
     }
     display: flex;
     align-items: center;
+
+    &:hover {
+      #{$comp}__button-svg {
+        path {
+          fill: $color-blue;
+        }
+      }
+      #{$comp}__button-text {
+        color: $color-blue;
+      }
+    }
   }
   &__button-icon {
     margin-right: 4px;
@@ -24,8 +35,14 @@
     align-items: center;
     justify-content: center;
   }
+  &__button-svg {
+    path {
+      transition: fill $transition;
+    }
+  }
   &__button-text {
     @include fsl(14px, 140%);
+    transition: color $transition;
   }
 
   &__inner {

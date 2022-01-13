@@ -109,12 +109,12 @@
       "page": "Публикации"
     },
     {
-      "href": "publications-detail",
+      "href": "publications-article",
       "page": "Публикации статья"
     },
     {
       "href": "publications-detail",
-      "page": "Публикации детальная статья"
+      "page": "Публикации мероприятия"
     },
     {
       "href": "404",
