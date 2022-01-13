@@ -708,29 +708,36 @@
 				</div>
 			</div>
 			<main class="main">
-				<div class="search-page">
+				<div class="profile-page main-page">
 					<section class="section section--first">
 						<div class="container">
 							<div class="breadcrumbs">
 								<ul class="breadcrumbs__list">
 									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
 									<li class="breadcrumbs__item">
-										<div class="breadcrumbs__text">Результаты поиска</div>
+										<div class="breadcrumbs__text">Профиль</div>
 									</li>
 								</ul>
 							</div>
-							<h1 class="nav-title">Результаты поиска по запросу «фрезыв»</h1>
+							<h1 class="nav-title">Профиль</h1>
 						</div>
 					</section>
 					<section class="section section--last">
 						<div class="container">
-							<form class="search-page__search" action="/">
-								<div class="search-page__row">
-									<div class="search-page__col"><input class="search-page__input" value="B1-3"></div>
-									<div class="search-page__col"><a class="button button--wide button--search" href="#">Поиск</a></div>
+							<div class="row profile-page__inner">
+								<div class="row__col">
+									<div class="tabs tabs--column tabs--responsive" data-tabs="">
+										<div class="tabs__container">
+											<div class="tabs__item active" data-tabs-item="">Заказы</div>
+											<div class="tabs__item" data-tabs-item="">Cкидка</div>
+											<div class="tabs__item" data-tabs-item="">Мои данные</div>
+										</div>
+									</div>
 								</div>
-							</form>
-							<div class="search-page__result margin-top margin-top--md">Поиск не дал результатов</div>
+								<div class="row__col">
+									<div class="profile-page__auth">Для доступа к данным необходимо <a class="profile-page__auth-link" href="#">авторизоваться</a></div>
+								</div>
+							</div>
 						</div>
 					</section>
 				</div>
