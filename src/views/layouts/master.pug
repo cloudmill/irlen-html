@@ -18,11 +18,12 @@ html(lang='en')
     meta(name="format-detection", content="telephone=no")
     meta(name="format-detection", content="address=no")
 
+  block vars
 
   body.body
     +grid-test
 
-    .wrapper
+    .wrapper(class=[isVisible ? "wrapper--visible" : ""])
       block header
         +header
 
@@ -34,5 +35,6 @@ html(lang='en')
     
     +login-modal
     +phone-modal(id = 'phone')
+    +profile-modal
 
     block scripts

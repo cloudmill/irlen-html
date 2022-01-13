@@ -12,7 +12,9 @@
   transition: $transition;
 
   &:hover {
-    border-color: $color-blue;
+    @media (min-width: $breakpoint) {
+      border-color: $color-blue;
+    }
   }
 
   &.active {

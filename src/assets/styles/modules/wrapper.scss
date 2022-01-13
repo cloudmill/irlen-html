@@ -5,4 +5,10 @@
   min-height: 100vh;
   min-width: 320px;
   overflow-x: hidden;
+
+  &--visible {
+    @media (min-width: $breakpoint) {
+      overflow: visible;
+    }
+  }
 }

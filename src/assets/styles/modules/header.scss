@@ -565,7 +565,11 @@
 
   &__user-link {
     @include fsl(14px, 140%);
-    transition: $transition;
+    transition: color $transition;
+
+    &:hover {
+      color: $color-blue;
+    }
   }
 
   &__user-svg {

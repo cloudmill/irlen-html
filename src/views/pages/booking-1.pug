@@ -4,23 +4,26 @@ include ../components/navigation
 include ../components/button
 include ../components/model-tabs
 
+block vars 
+  - var isVisible = true
+
 block content 
   -
     var ddata = [
       {
-        items: ['Название компании', 'Юридический адрес']
+        items: ['Название компании*', 'Юридический адрес*']
       },
       {
-        items: ['ИНН', 'Почтовый адрес']
+        items: ['ИНН*', 'Почтовый адрес*']
       },
       {
-        items: ['КПП', 'Руководитель']
+        items: ['КПП*', 'Руководитель*']
       },
       {
-        items: ['БИК', 'Рук. действует на основании']
+        items: ['БИК*', 'Рук. действует на основании*']
       },
       {
-        items: ['Корреспонденский счет', 'Должность руководителя']
+        items: ['Корреспонденский счет*', 'Должность руководителя*']
       },
     ]
   .booking-page.cart-page 
@@ -51,18 +54,22 @@ block content
                 .booking-page__block-item.active(data-tabs-block='')
                   .booking-page__block-row 
                     .booking-page__block-col
-                      input.form__input(type="text" placeholder="Имя*")
+                      .form__item
+                        input.form__input(type="text" placeholder="Имя*" required)
                     .booking-page__block-col
-                      input.form__input(type="text" placeholder="Телефон*" data-mask='phone')
+                      .form__item
+                        input.form__input(type="text" placeholder="Телефон*" data-mask='phone'  required)
                   .booking-page__block-row
                     .booking-page__block-col
-                      input.form__input(type="email" placeholder="E-mail*")
+                      .form__item
+                        input.form__input(type="email" placeholder="E-mail*" required)
                 .booking-page__block-item(data-tabs-block='')
                   each item, i in ddata
                     .booking-page__block-row
                       each text in item.items
                         .booking-page__block-col
-                          input.form__input(type="text" placeholder=text)
+                          .form__item
+                            input.form__input(type="text" placeholder=text required)
               .booking-page__title.margin-top.margin-top--xl
                 |Способ доставки
               .booking-page__parent(data-tabs-parent='')
@@ -75,10 +82,13 @@ block content
                     .booking-page__form.margin-top.margin-top--md 
                       .booking-page__block-row 
                         .booking-page__block-col
-                          input.form__input(type="text" placeholder="Город доставки*")
+                          .form__item
+                            input.form__input(type="text" placeholder="Город доставки*" required)
                         .booking-page__block-col
-                          input.form__input(type="text" placeholder="Адрес доставки*")
-                      textarea.form__textarea(placeholder="Комментарий")
+                          .form__item
+                            input.form__input(type="text" placeholder="Адрес доставки*" required)
+                      .form__item.form__item--default
+                        textarea.form__textarea(placeholder="Комментарий" required)
                   .booking-page__block-item.booking-page__form(data-tabs-block='')
                     .booking-page__block-row 
                       .booking-page__block-col

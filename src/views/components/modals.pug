@@ -149,3 +149,16 @@ mixin phone-modal
         |Спасибо
       p.response__text 
         |Мы свяжемся с вами в ближайшее время.
+
+mixin profile-modal
+  .profile-modal(data-fancy-modal='p1')
+    .profile-modal__container 
+      .profile-modal__top
+        h5
+          |Кирилл
+      .profile-modal__body  
+        ul.profile-modal__list 
+          each item in ['Заказы', 'Cкидка', 'Мои данные', 'Выйти']
+            li.profile-modal__item 
+              a.profile-modal__link(href="#") 
+                |#{item}

@@ -69,6 +69,10 @@
   }
 
   &__card {
+    @media (min-width: $breakpoint) {
+      position: sticky;
+      top: 180px;
+    }
     background: $color-white;
     border-radius: 4px;
   }

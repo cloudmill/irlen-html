@@ -254,4 +254,21 @@
     margin-left: 10px;
     @include fsl(14px, 140%);
   }
+
+  &__auth {
+    @include fsl(18px, 140%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(16px, 140%);
+    }
+  }
+  &__auth-link {
+    color: $color-blue;
+  }
+
+  &__inner {
+    margin-bottom: 300px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 257px;
+    }
+  }
 }

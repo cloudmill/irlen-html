@@ -2,7 +2,40 @@ extends ../layouts/master.pug
 
 include ../components/navigation
 
-block content 
+block content
+  -
+    var ddata = [
+      {
+        title: 'Подбор инструмента',
+        text: 'Высококвалифицированные консультации по подбору инструмента',
+        img: 'assets/images/service-page-1.jpg'
+      },
+      {
+        title: 'Ленточные пилы',
+        text: 'Поставка и сварка любого вида полотна для ленточнопильного оборудования',
+        img: 'assets/images/services/services-2.jpg'
+      },
+      {
+        title: 'Сервис',
+        text: 'Сервисная служба АО «ИРЛЕН-ИНЖИНИРИНГ» решает широкий спектр задач, связанных с запуском оборудования в эксплуатацию и его обслуживанием',
+        img: 'assets/images/services/services-3.jpg'
+      },
+      {
+        title: 'Инжиниринг',
+        text: 'АО «ИРЛЕН –ИНЖИНИРИНГ» предлагает своим клиентам индивидуальный подход в решении технико-экономических задач для конкретного производства',
+        img: 'assets/images/services/services-4.jpg'
+      },
+      {
+        title: 'Обучение',
+        text: 'Комплексная подготовка специалистов для работы на оборудовании с ЧПУ является одним из направлений деятельности нашей компании',
+        img: 'assets/images/services/services-5.jpg'
+      },
+      {
+        title: 'Лизинг',
+        text: 'Услуги лизинга металлообрабатывающего оборудования',
+        img: 'assets/images/services/services-6.jpg'
+      },
+    ]
   .services-page
     section.section.section--first 
       .container 
@@ -10,17 +43,17 @@ block content
     section.section.section--last
       .container
         .grid-container.grid-container--2
-          - for (i = 0; i < 6; i++)
+          each item in ddata
             a.services-page__card(href="#") 
               .services-page__card-row 
                 .services-page__card-col
                   .services-page__card-image
-                    img(src="assets/images/service-page-1.jpg", alt="")
+                    img(src=item.img , alt="")
                 .services-page__card-col
                   .services-page__card-container 
                     .services-page__card-title 
-                      |Подбор инструмента
+                      |#{item.title}
                     .services-page__card-text 
-                      |Высококвалифицированные консультации по подбору инструмента
+                      |#{item.text}
                   .services-page__card-icon 
                     +big-arrow-svg.services-page__card-svg
