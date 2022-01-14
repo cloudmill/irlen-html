@@ -61,7 +61,7 @@ mixin login-modal
             button.button.button--wide(data-form-button='123' required)
               |Войти
       .tabs-block(data-tabs-block='')
-        form.form(action="/" data-form='1')
+        .form
           p.login-modal__text.login-modal__inner
             |Регистрация на нашем сайте позволяет видеть историю покупок, получать информацию о новых акциях и скидках, упрощает оформление заказа
           .login-modal__wrapper
@@ -78,7 +78,7 @@ mixin login-modal
                         +tooltip-svg.tooltip__svg
                   .tooltip__container   
                     |Для юридических лиц предусмотренна программа лояльности.
-          .login-modal__form.active(data-form-corp='')
+          form.login-modal__form.active(data-form-corp='' action="/" data-form='123')
             each item in ddata.corp 
               .form__item 
                 input.form__input(type=item.type placeholder=item.placeholder required) 
@@ -86,21 +86,43 @@ mixin login-modal
               input.form__input(type='text' placeholder='Телефон для связи*' data-mask='phone' required) 
             .form__item 
               input.form__input(type='text' placeholder='Контактное лицо*' required) 
-          .login-modal__form(data-form-user='')
+            .form__item.form__item--big
+              .checkbox.checkbox--start
+                label.checkbox__label
+                  input.checkbox__input(type="checkbox" name='policy' required)
+                  .checkbox__box 
+                    +check-svg.checkbox__svg
+                  .checkbox__text
+                    |Согласен на обработку персональных данных в соответствии с #[a.checkbox__link(href="#") политикой конфиденциальности]
+            .form__item.form__item--big 
+              button.button.button--wide(data-form-button='123')
+                |Зарегистрироваться
+          form.login-modal__form(data-form-user='' action="/" data-form='1')
             each item in ddata.user
               .form__item 
                 input.form__input(type=item.type placeholder=item.placeholder required) 
-          .form__item.form__item--big
-            .checkbox.checkbox--start
-              label.checkbox__label
-                input.checkbox__input(type="checkbox" name='policy' required)
-                .checkbox__box 
-                  +check-svg.checkbox__svg
-                .checkbox__text
-                  |Согласен на обработку персональных данных в соответствии с #[a.checkbox__link(href="#") политикой конфиденциальности]
-          .form__item.form__item--big 
-            button.button.button--wide(data-form-button='1')
-              |Зарегистрироваться
+            .form__item.form__item--big
+              .checkbox.checkbox--start
+                label.checkbox__label
+                  input.checkbox__input(type="checkbox" name='policy' required)
+                  .checkbox__box 
+                    +check-svg.checkbox__svg
+                  .checkbox__text
+                    |Согласен на обработку персональных данных в соответствии с #[a.checkbox__link(href="#") политикой конфиденциальности]
+            .form__item.form__item--big 
+              button.button.button--wide(data-form-button='1')
+                |Зарегистрироваться
+          //- .form__item.form__item--big
+          //-   .checkbox.checkbox--start
+          //-     label.checkbox__label
+          //-       input.checkbox__input(type="checkbox" name='policy' required)
+          //-       .checkbox__box 
+          //-         +check-svg.checkbox__svg
+          //-       .checkbox__text
+          //-         |Согласен на обработку персональных данных в соответствии с #[a.checkbox__link(href="#") политикой конфиденциальности]
+          //- .form__item.form__item--big 
+          //-   button.button.button--wide(data-form-button='1')
+          //-     |Зарегистрироваться
     .response(data-response="1")
       h3.response__title
         |Вы зарегистрировались

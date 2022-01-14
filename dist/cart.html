@@ -1215,7 +1215,7 @@
 					</form>
 				</div>
 				<div class="tabs-block" data-tabs-block="">
-					<form class="form" action="/" data-form="1">
+					<div class="form">
 						<p class="login-modal__text login-modal__inner">Регистрация на нашем сайте позволяет видеть историю покупок, получать информацию о новых акциях и скидках, упрощает оформление заказа</p>
 						<div class="login-modal__wrapper">
 							<div class="checkbox checkbox--lg"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" checked="checked" data-login-checkbox="" />
@@ -1228,7 +1228,7 @@
 									</div>
 								</label></div>
 						</div>
-						<div class="login-modal__form active" data-form-corp="">
+						<form class="login-modal__form active" data-form-corp="" action="/" data-form="123">
 							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" /></div>
 							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль*" required="required" /></div>
 							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль*" required="required" /></div>
@@ -1236,23 +1236,32 @@
 							<div class="form__item"><input class="form__input" placeholder="ИНН*" required="required" /></div>
 							<div class="form__item"><input class="form__input" placeholder="Телефон для связи*" data-mask="phone" required="required" /></div>
 							<div class="form__item"><input class="form__input" placeholder="Контактное лицо*" required="required" /></div>
-						</div>
-						<div class="login-modal__form" data-form-user="">
+							<div class="form__item form__item--big">
+								<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="policy" required="required" />
+										<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+											</svg></div>
+										<div class="checkbox__text">Согласен на обработку персональных данных в соответствии с <a class="checkbox__link" href="#">политикой конфиденциальности</a></div>
+									</label></div>
+							</div>
+							<div class="form__item form__item--big"><button class="button button--wide" data-form-button="123">Зарегистрироваться</button></div>
+						</form>
+						<form class="login-modal__form" data-form-user="" action="/" data-form="1">
 							<div class="form__item"><input class="form__input" placeholder="Имя" required="required" /></div>
 							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" required="required" /></div>
 							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" required="required" /></div>
 							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль" required="required" /></div>
-						</div>
-						<div class="form__item form__item--big">
-							<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="policy" required="required" />
-									<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
-										</svg></div>
-									<div class="checkbox__text">Согласен на обработку персональных данных в соответствии с <a class="checkbox__link" href="#">политикой конфиденциальности</a></div>
-								</label></div>
-						</div>
-						<div class="form__item form__item--big"><button class="button button--wide" data-form-button="1">Зарегистрироваться</button></div>
-					</form>
+							<div class="form__item form__item--big">
+								<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="policy" required="required" />
+										<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+											</svg></div>
+										<div class="checkbox__text">Согласен на обработку персональных данных в соответствии с <a class="checkbox__link" href="#">политикой конфиденциальности</a></div>
+									</label></div>
+							</div>
+							<div class="form__item form__item--big"><button class="button button--wide" data-form-button="1">Зарегистрироваться</button></div>
+						</form>
+					</div>
 				</div>
 			</div>
 			<div class="response" data-response="1">
