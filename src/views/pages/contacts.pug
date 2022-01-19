@@ -1,6 +1,5 @@
 extends ../layouts/master.pug
 
-
 block content 
   .contacts-page 
     section.section.section--first 
@@ -16,7 +15,7 @@ block content
         .contacts-page__row
           h1.nav-title
             |Контакты
-          a.contacts-page__button(href="#") 
+          .contacts-page__button(onclick="window.print();return false;") 
             .contacts-page__button-icon
               +printer-svg.contacts-page__button-svg
             .contacts-page__button-text 

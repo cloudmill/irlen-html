@@ -3,9 +3,11 @@
 
   &__row {
     display: flex;
+
     @media (max-width: ($breakpoint - 1px)) {
       display: block;
     }
+
     align-items: center;
     justify-content: space-between;
   }
@@ -14,8 +16,15 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 32px;
     }
+
     display: flex;
     align-items: center;
+
+    @media print {
+      display: none;
+    }
+
+    cursor: pointer;
 
     &:hover {
       #{$comp}__button-svg {
@@ -23,11 +32,13 @@
           fill: $color-blue;
         }
       }
+
       #{$comp}__button-text {
         color: $color-blue;
       }
     }
   }
+
   &__button-icon {
     margin-right: 4px;
 
@@ -35,11 +46,13 @@
     align-items: center;
     justify-content: center;
   }
+
   &__button-svg {
     path {
       transition: fill $transition;
     }
   }
+
   &__button-text {
     @include fsl(14px, 140%);
     transition: color $transition;
@@ -47,6 +60,7 @@
 
   &__inner {
     margin-top: 40px;
+
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 16px;
     }
@@ -55,6 +69,7 @@
   &__label {
     color: $color-gray;
     @include fsl(14px, 140%);
+
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(12px, 140%);
     }
@@ -64,9 +79,11 @@
     margin-top: 2px;
     display: block;
     font-weight: 500;
+
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px, 140%);
     }
+
     transition: $transition;
 
     &:hover {
@@ -81,6 +98,7 @@
 
   &__title {
     margin-bottom: 40px;
+
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
     }
@@ -88,23 +106,29 @@
 
   &__block {
     margin-top: 20px;
+
     @media (min-width: ($breakpoint - 1px)) {
       margin-top: 12px;
     }
   }
 
   &__section {}
+
   &__section-row {
     display: flex;
+
     @media (max-width: ($breakpoint - 1px)) {
       display: block;
     }
+
     justify-content: space-between;
   }
+
   &__section-col {
     flex-shrink: 0;
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     display: flex;
+
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       display: block;
@@ -113,12 +137,14 @@
     &:nth-child(1) {
       #{$comp}__section-item {
         width: calc(#{$col-part-d} * 2);
+
         @media (max-width: ($breakpoint - 1px)) {
           width: 100%;
         }
 
         &:first-child {
           width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+
           @media (max-width: ($breakpoint - 1px)) {
             width: 100%;
           }
@@ -133,12 +159,14 @@
 
       #{$comp}__section-item {
         width: calc(#{$col-part-d} * 2);
+
         @media (max-width: ($breakpoint - 1px)) {
           width: 100%;
         }
 
         &:last-child {
           width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+
           @media (max-width: ($breakpoint - 1px)) {
             width: 100%;
           }
@@ -146,6 +174,7 @@
       }
     }
   }
+
   &__section-item {
     &:not(:first-child) {
       @media (max-width: ($breakpoint - 1px)) {
@@ -160,6 +189,7 @@
 
     overflow: hidden;
     border-radius: 4px;
+
     @media (max-width: ($breakpoint - 1px)) {
       border-radius: 2px;
     }
@@ -168,6 +198,7 @@
   &__grid {
     --itemCount: 2;
     --gap: 20px;
+
     @media (max-width: ($breakpoint - 1px)) {
       --itemCount: 1;
       --gap: 40px;
@@ -178,16 +209,21 @@
     grid-template-columns: repeat(var(--itemCount), 1fr);
     column-gap: var(--gap);
   }
+
   &__grid-row {
     display: flex;
+
     @media (max-width: ($breakpoint - 1px)) {
       display: block;
     }
+
     justify-content: space-between;
   }
+
   &__grid-col {
     flex-shrink: 0;
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
@@ -198,14 +234,18 @@
       }
     }
   }
+
   &__grid-inner {
     display: flex;
+
     @media (max-width: ($breakpoint - 1px)) {
       display: block;
     }
   }
+
   &__grid-right {
     margin-left: 32px;
+
     @media (max-width: ($breakpoint - 1px)) {
       margin-left: 0;
     }
