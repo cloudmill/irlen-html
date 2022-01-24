@@ -1,4 +1,6 @@
 .footer {
+  $comp: &;
+
   border-top: 1px solid $color-light-gray;
   background: $color-white;
 
@@ -42,6 +44,22 @@
       @media (max-width: ($breakpoint - 1px)) {
         margin-bottom: 0;
         width: calc(50% - 4px);
+      }
+    }
+
+    &:first-child {
+      @media print {
+        display: flex;
+      }
+
+      #{$comp}__top-item {
+        @media print {
+          width: 50%;
+        }
+
+        @media print {
+          margin-top: 0;
+        }
       }
     }
   }
@@ -121,6 +139,12 @@
     @media (max-width: ($breakpoint - 1px)) {
       display: block;
     }
+
+    @media print {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 20px;
+    }
   }
   &__contacts-item {
     flex-shrink: 0;
@@ -139,6 +163,9 @@
     &:not(:first-child) {
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 12px;
+        @media print {
+          margin-top: 0;
+        }
       }
     }
   }
@@ -170,6 +197,10 @@
     }
 
     display: flex;
+
+    @media print {
+      display: none;
+    }
   }
 
   &__bot {

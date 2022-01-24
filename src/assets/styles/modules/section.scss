@@ -9,6 +9,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 63px;
     }
+
+    @media print {
+      margin-top: 40px;
+    }
   }
 
   &--md {

@@ -16,6 +16,10 @@
     @include scrollbar-hidden;
   }
 
+  @media print {
+    display: none;
+  }
+
   &__list {
     display: flex;
     flex-shrink: 0;
