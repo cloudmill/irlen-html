@@ -45,10 +45,13 @@ block content
       .container 
         .row(data-tabs-parent='')
           .row__col
-            +tabs.tabs--column.tabs--responsive(tabs = ['Заказы', 'Cкидка', 'Мои данные',] real=true)
-            .profile-page__wrapper
-              +button 
-                |Выйти
+            .tabs.tabs--column(data-real-tabs='')
+              .tabs__container
+                each item, i in ['Заказы', 'Cкидка', 'Мои данные', ]
+                  .tabs__item(class=(i === 0 ? 'active' : '') data-tabs-item='')
+                    |#{item}
+                .tabs__item 
+                  |Выйти
           .row__col
             .tabs-block.active(data-tabs-block='')
               +model-tabs( items = ['Текущие заказы', 'Все заказы'])
