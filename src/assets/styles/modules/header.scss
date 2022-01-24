@@ -10,9 +10,7 @@
   // background: $color-white;
   transition: $transition;
 
-  @media print {
-    background: red;
-  }
+
 
   &--up {
     @media (min-width: $breakpoint) {
@@ -80,6 +78,9 @@
 
     background: $color-white;
     border-bottom: 1px solid $color-light-gray;
+    @media print {
+      background: red;
+    }
   }
 
   &__logo {
