@@ -8,6 +8,15 @@
     }
   }
 
+  &__description {
+    margin-top: 12px;
+    @media (min-width: $breakpoint) {
+      margin-top: 20px;
+      @include fsl(18px);
+    }
+    @include fsl(16px, 140%);
+  }
+
   &__button {
     display: flex;
     align-items: center;

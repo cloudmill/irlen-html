@@ -1,0 +1,82 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/button
+include ../components/counter
+include ../components/model-tabs
+
+block vars 
+  - var isVisible = true
+
+block content 
+  .booking-page.cart-page 
+    section.section.section--first.section--last 
+      .container 
+        h1
+          |Заказ оформлен, его проверяют наши специалисты
+        p.booking-page__description
+          |Мы свяжемся с Вами для уточнения цены, деталей заказа, способа оплаты и доставки.
+        .booking-page__product-row 
+          .booking-page__product-col
+            .booking-page__product
+              .booking-page__product-inner
+                each item in ['товар', 'кол-во', 'цена', 'итого'] 
+                  .booking-page__product-item
+                    .cart-page__top-label
+                      |#{item}
+              ul.booking-page__product-list  
+                - for (i = 0; i < 6; i++)
+                  li.cart-page__item.cart-page__item--sm
+                    .cart-page__item-row 
+                      .cart-page__item-col
+                        .cart-page__item-image 
+                          img(src="assets/images/product.jpg", alt="")
+                        .cart-page__item-container 
+                          .cart-page__item-content
+                            .cart-page__item-text 
+                              |Раскатник R-D TICN 376 ISO2X M14X2 2P
+                            .cart-page__item-label 
+                              |Артикул: 9353014BTC
+                      .cart-page__item-col 
+                        .cart-page__item-container 
+                          .cart-page__item-caption 
+                            |кол-во
+                          .booking-page__product-text 
+                            |12 шт.
+                      .cart-page__item-col
+                        .cart-page__item-container 
+                          .cart-page__item-caption 
+                            |цена
+                          .tooltip
+                            .cart-page__item-price.tooltip__row
+                              |₽ 93.42
+                              span.tooltip__span
+                                .tooltip__icon 
+                                  +tooltip-svg.tooltip__svg
+                            .tooltip__container   
+                              |#{data.tooltipText}
+                      .cart-page__item-col
+                        .cart-page__item-container
+                          .cart-page__item-caption 
+                            |итого
+                          .cart-page__item-price 
+                            |₽ 1279.2
+          .booking-page__product-col
+            .cart-page__card 
+              .booking-page__container 
+                .cart-page__card-row 
+                  .booking-page__card-col
+                    .cart-page__card-price 
+                      |Предварительная стоимость, ₽
+                  .booking-page__card-col
+                    .cart-page__card-num 
+                      |89 0000
+                .cart-page__card-caption 
+                  |#{data.tooltipText}
+                .booking-page__card-row.booking-page__card-inner
+                  .cart-page__card-col
+                    .booking-page__card-text 
+                      |Доставка
+                  .cart-page__card-col
+                    .booking-page__card-text
+                      |Транспортная компания
