@@ -46,6 +46,9 @@ block content
         .row(data-tabs-parent='')
           .row__col
             +tabs.tabs--column.tabs--responsive(tabs = ['Заказы', 'Cкидка', 'Мои данные',] real=true)
+            .profile-page__wrapper
+              +button 
+                |Выйти
           .row__col
             .tabs-block.active(data-tabs-block='')
               +model-tabs( items = ['Текущие заказы', 'Все заказы'])
