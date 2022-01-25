@@ -9,6 +9,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding: 20px 0;
     }
+
+    @media print {
+      padding: 20px 0;
+    }
   }
 
   &__top {
@@ -17,6 +21,11 @@
   &__top-row {
     display: flex;
     @media (max-width: ($breakpoint - 1px)) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media print {
       flex-wrap: wrap;
       justify-content: space-between;
     }
@@ -32,8 +41,18 @@
       width: 100%;
     }
 
+    @media print {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
     &:nth-child(3) {
       @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: 0;
+        width: calc(50% - 4px);
+      }
+
+      @media print {
         margin-bottom: 0;
         width: calc(50% - 4px);
       }
@@ -42,6 +61,11 @@
     &:last-child {
       width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
       @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: 0;
+        width: calc(50% - 4px);
+      }
+
+      @media print {
         margin-bottom: 0;
         width: calc(50% - 4px);
       }

@@ -64,6 +64,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 16px;
     }
+
+    @media print {
+      margin-top: 16px;
+    }
   }
 
   &__label {
@@ -71,6 +75,10 @@
     @include fsl(14px, 140%);
 
     @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 140%);
+    }
+
+    @media print {
       @include fsl(12px, 140%);
     }
   }
@@ -81,6 +89,10 @@
     font-weight: 500;
 
     @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(14px, 140%);
+    }
+
+    @media print {
       @include fsl(14px, 140%);
     }
 
@@ -102,6 +114,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
     }
+
+    @media print {
+      margin-bottom: 20px;
+    }
   }
 
   &__block {
@@ -120,6 +136,7 @@
     @media (max-width: ($breakpoint - 1px)) {
       display: block;
     }
+    
 
     justify-content: space-between;
 
@@ -140,6 +157,7 @@
 
     @media print {
       width: 50%;
+      display: block;
     }
 
     &:nth-child(1) {
@@ -165,6 +183,10 @@
         margin-top: 12px;
       }
 
+      @media print {
+        margin-top: 12px;
+      }
+
       #{$comp}__section-item {
         width: calc(#{$col-part-d} * 2);
 
@@ -186,6 +208,10 @@
   &__section-item {
     &:not(:first-child) {
       @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 12px;
+      }
+
+      @media print {
         margin-top: 12px;
       }
     }
@@ -215,6 +241,11 @@
       --itemCount: 1;
       --gap: 40px;
       row-gap: var(--gap);
+    }
+
+    @media print {
+      --itemCount: 1;
+      --gap: 20px;
     }
 
     display: grid;
@@ -259,12 +290,20 @@
     @media (max-width: ($breakpoint - 1px)) {
       display: block;
     }
+
+    @media print {
+      display: block;
+    }
   }
 
   &__grid-right {
     margin-left: 32px;
 
     @media (max-width: ($breakpoint - 1px)) {
+      margin-left: 0;
+    }
+
+    @media print {
       margin-left: 0;
     }
   }

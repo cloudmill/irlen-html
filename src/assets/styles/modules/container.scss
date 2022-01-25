@@ -3,4 +3,8 @@
   @media (max-width: ($breakpoint - 1px)) {
     padding: 0 #{$col-pad-m};
   }
+
+  @media print {
+    padding: 0 #{$col-pad-m};
+  }
 }
