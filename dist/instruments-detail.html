@@ -113,12 +113,14 @@
 							</div>
 							<div class="header__col">
 								<div class="header__links"><a class="header__cart" href="#">
-										<div class="header__cart-icon"><svg class="header__cart-svg" width="38" height="34" viewbox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M5.86884 32.7905L1.24662 11.9905H36.7534L32.1312 32.7905H5.86884Z" stroke="#121212" stroke-width="2"></path>
-												<path d="M30.6856 2.94276L24.8 2.94276L30 11.7337" stroke="#121212" stroke-width="2"></path>
-												<path d="M8.05269 2.94276L13.9383 2.94276L8.7383 11.7337" stroke="#121212" stroke-width="2"></path>
-											</svg></div>
-										<div class="header__cart-count">5</div>
+										<div class="header__cart-container">
+											<div class="header__cart-icon"><svg class="header__cart-svg" width="38" height="34" viewbox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M5.86884 32.7905L1.24662 11.9905H36.7534L32.1312 32.7905H5.86884Z" stroke="#121212" stroke-width="2"></path>
+													<path d="M30.6856 2.94276L24.8 2.94276L30 11.7337" stroke="#121212" stroke-width="2"></path>
+													<path d="M8.05269 2.94276L13.9383 2.94276L8.7383 11.7337" stroke="#121212" stroke-width="2"></path>
+												</svg></div>
+											<div class="header__cart-count">5</div>
+										</div>
 									</a>
 									<div class="header__user loged" data-fancy-button="1">
 										<div class="header__user-icon"><svg class="header__user-svg" width="31" height="33" viewbox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -158,12 +160,14 @@
 										<path d="M17.0381 1C19.4424 1.43402 21.7435 2.57765 23.6036 4.43775C25.4086 6.24274 26.5453 8.46798 27 10.8034" stroke="#121212" stroke-width="1.5" stroke-miterlimit="10"></path>
 									</svg></a></div>
 							<div class="header__mobile-col"><a class="header__cart" href="#">
-									<div class="header__cart-icon"><svg class="header__cart-svg" width="38" height="34" viewbox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M5.86884 32.7905L1.24662 11.9905H36.7534L32.1312 32.7905H5.86884Z" stroke="#121212" stroke-width="2"></path>
-											<path d="M30.6856 2.94276L24.8 2.94276L30 11.7337" stroke="#121212" stroke-width="2"></path>
-											<path d="M8.05269 2.94276L13.9383 2.94276L8.7383 11.7337" stroke="#121212" stroke-width="2"></path>
-										</svg></div>
-									<div class="header__cart-count">5</div>
+									<div class="header__cart-container">
+										<div class="header__cart-icon"><svg class="header__cart-svg" width="38" height="34" viewbox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M5.86884 32.7905L1.24662 11.9905H36.7534L32.1312 32.7905H5.86884Z" stroke="#121212" stroke-width="2"></path>
+												<path d="M30.6856 2.94276L24.8 2.94276L30 11.7337" stroke="#121212" stroke-width="2"></path>
+												<path d="M8.05269 2.94276L13.9383 2.94276L8.7383 11.7337" stroke="#121212" stroke-width="2"></path>
+											</svg></div>
+										<div class="header__cart-count">5</div>
+									</div>
 								</a></div>
 							<div class="header__mobile-col">
 								<div class="header__menu">
@@ -744,7 +748,7 @@
 							<div class="section__block">
 								<div class="section__row">
 									<div class="section__col">
-										<div class="aside">
+										<form class="aside form" action="/">
 											<div class="aside__mobile" data-filters-button="">
 												<div class="aside__mobile-text">Фильтры<span class="aside__num"></span></div>
 												<div class="aside__mobile-icon">+</div>
@@ -921,6 +925,63 @@
 														</div>
 													</div>
 												</div>
+												<div class="aside__card">
+													<div class="aside__container" data-accordion="">
+														<h5 class="aside__title">Тип фрезы, радиокнопки</h5>
+														<ul class="aside__list aside__inner">
+															<li class="aside__item">
+																<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="group1" checked="checked" />
+																		<div class="radio__circle"><svg class="radio__svg" width="8" height="8" viewbox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<rect width="8" height="8" rx="4" fill="#2447ED"></rect>
+																			</svg></div>
+																		<div class="radio__text">Острая кромка</div>
+																	</label></div>
+															</li>
+															<li class="aside__item">
+																<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="group1" />
+																		<div class="radio__circle"><svg class="radio__svg" width="8" height="8" viewbox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<rect width="8" height="8" rx="4" fill="#2447ED"></rect>
+																			</svg></div>
+																		<div class="radio__text">Фаска 45°</div>
+																	</label></div>
+															</li>
+															<li class="aside__item">
+																<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="group1" />
+																		<div class="radio__circle"><svg class="radio__svg" width="8" height="8" viewbox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<rect width="8" height="8" rx="4" fill="#2447ED"></rect>
+																			</svg></div>
+																		<div class="radio__text">Фаска 45° + радиус</div>
+																	</label></div>
+															</li>
+														</ul>
+														<div class="aside__dropdown" data-accordion-dropdown="">
+															<div class="aside__item">
+																<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="group1" />
+																		<div class="radio__circle"><svg class="radio__svg" width="8" height="8" viewbox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<rect width="8" height="8" rx="4" fill="#2447ED"></rect>
+																			</svg></div>
+																		<div class="radio__text">Острая кромка</div>
+																	</label></div>
+															</div>
+															<div class="aside__item">
+																<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="group1" />
+																		<div class="radio__circle"><svg class="radio__svg" width="8" height="8" viewbox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<rect width="8" height="8" rx="4" fill="#2447ED"></rect>
+																			</svg></div>
+																		<div class="radio__text">Острая кромка</div>
+																	</label></div>
+															</div>
+														</div>
+														<div class="aside__button aside__inner" data-button-show="" data-accordion-button="">
+															<div class="button-show">
+																<div class="button-show__text">Показать еще</div>
+																<div class="button-show__icon"><svg class="button-show__svg" width="14" height="8" viewbox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M9.02806 1.27777H12.5556L7.27778 6.73466L2 1.27777H5.52749" stroke="#121212"></path>
+																	</svg></div>
+															</div>
+														</div>
+													</div>
+												</div>
 												<div class="aside__card" data-range-block="">
 													<div class="aside__container">
 														<h5 class="aside__title">Диаметр фрезы, мм</h5>
@@ -947,6 +1008,12 @@
 															</div>
 															<div class="range__range"></div>
 														</div>
+													</div>
+												</div>
+												<div class="aside__card">
+													<div class="aside__container">
+														<h5 class="aside__title">Численное значение, мм</h5>
+														<div class="aside__inner"><input class="form__input form__input--sm" value="2000" /></div>
 													</div>
 												</div>
 												<div class="aside__btn">
@@ -958,7 +1025,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</form>
 									</div>
 									<div class="section__col">
 										<div class="instruments-page__container">
