@@ -253,6 +253,21 @@
     column-gap: var(--gap);
   }
 
+  &__grid-item {
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @media (max-width: ($breakpoint - 1px)) {
+      display: block;
+    }
+
+    &--block {
+      display: block;
+    }
+  }
+
   &__grid-row {
     display: flex;
 
@@ -287,9 +302,13 @@
   &__grid-inner {
     display: flex;
 
-    @media (max-width: ($breakpoint - 1px)) {
+    @media (max-width: ($breakpoint-ll - 1px)) {
       display: block;
     }
+
+    // @media (max-width: ($breakpoint - 1px)) {
+    //   display: block;
+    // }
 
     @media print {
       display: block;
@@ -299,9 +318,13 @@
   &__grid-right {
     margin-left: 32px;
 
-    @media (max-width: ($breakpoint - 1px)) {
+    @media (max-width: ($breakpoint-ll - 1px)) {
       margin-left: 0;
     }
+
+    // @media (max-width: ($breakpoint - 1px)) {
+    //   margin-left: 0;
+    // }
 
     @media print {
       margin-left: 0;

@@ -99,10 +99,11 @@ mixin header
               +call-svg
           .header__mobile-col
             a.header__cart(href="#") 
-              .header__cart-icon 
-                +cart-svg.header__cart-svg
-              .header__cart-count 
-                |5
+              .header__cart-container
+                .header__cart-icon 
+                  +cart-svg.header__cart-svg
+                .header__cart-count 
+                  |5
           .header__mobile-col
             .header__menu
               .header__burger
