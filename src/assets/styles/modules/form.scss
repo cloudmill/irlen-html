@@ -59,6 +59,10 @@
     &:focus {
       border-color: $color-blue;
     }
+
+    &--sm {
+      padding: 9px 16px;
+    }
   }
   
   &__textarea {

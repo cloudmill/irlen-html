@@ -55,24 +55,40 @@ mixin header
                 input.header__search-input#search(type="text" name='search' placeholder="Поиск по интернет-магазину")
           .header__col
             .header__links 
-              a.header__cart(href="#") 
-                .header__cart-icon 
-                  +cart-svg.header__cart-svg
-                .header__cart-count 
-                  |5
-              .header__user.loged(data-fancy-button='1')
-                .header__user-icon
-                  +user-svg.header__user-svg
-                .header__user-links 
-                  .header__user-container
-                    .header__user-top
-                      .header__user-name 
-                        |Кирилл
-                    ul.header__user-list 
-                      each item in ['Заказы', 'Cкидка', 'Мои данные', 'Выйти']
-                        li.header__user-item
-                          a.header__user-link(href="#") 
-                            |#{item}
+              a.header__cart(href="#")  
+                .header__cart-container
+                  .header__cart-icon 
+                    +cart-svg.header__cart-svg
+                  .header__cart-count 
+                    |5
+              if (!attributes.login)
+                .header__user.loged(data-fancy-button='1')
+                  .header__user-icon
+                    +user-svg.header__user-svg
+                  .header__user-links 
+                    .header__user-container
+                      .header__user-top
+                        .header__user-name 
+                          |Кирилл
+                      ul.header__user-list 
+                        each item in ['Заказы', 'Cкидка', 'Мои данные', 'Выйти']
+                          li.header__user-item
+                            a.header__user-link(href="#") 
+                              |#{item}
+              else 
+                .header__user.loged
+                  .header__user-label 
+                    |К.
+                  .header__user-links 
+                    .header__user-container
+                      .header__user-top
+                        .header__user-name 
+                          |Кирилл
+                      ul.header__user-list 
+                        each item in ['Заказы', 'Cкидка', 'Мои данные', 'Выйти']
+                          li.header__user-item
+                            a.header__user-link(href="#") 
+                              |#{item}
       .header__mobile 
         .header__mobile-row
           .header__mobile-col

@@ -8,7 +8,7 @@ include ../components/button
 
 block content 
   .search-page 
-    section.section.section--first 
+    section.section.section--first.section--last
       .container 
         .breadcrumbs
           ul.breadcrumbs__list
@@ -20,8 +20,8 @@ block content
                 |Результаты поиска
         h1.nav-title
           |Результаты поиска по запросу «B1-3»
-    section.section.section--last 
-      .container 
+        .search-page__text.search-page__inner
+          |Найдено результатов: 25
         form.search-page__search(action="/") 
           .search-page__row
             .search-page__col 

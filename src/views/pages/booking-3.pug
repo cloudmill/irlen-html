@@ -8,14 +8,31 @@ include ../components/model-tabs
 block vars 
   - var isVisible = true
 
-block content 
+block content
+  -
+    var ddata = [
+      {
+        caption: 'Дата заказа',
+        text: '01.06.2021',
+      },
+      {
+        caption: 'Номер заказа',
+        text: '№0000024582',
+      },
+      {
+        caption: 'Доставка',
+        text: 'Транспортная компания',
+      },
+    ]
   .booking-page.cart-page 
-    section.section.section--first.section--last 
+    section.section.section--first
       .container 
         h1
           |Заказ оформлен, его проверяют наши специалисты
         p.booking-page__description
           |Мы свяжемся с Вами для уточнения цены, деталей заказа, способа оплаты и доставки.
+    section.section.section--sm.section--last
+      .container
         .booking-page__product-row 
           .booking-page__product-col
             .booking-page__product
@@ -70,13 +87,16 @@ block content
                       |Предварительная стоимость, ₽
                   .booking-page__card-col
                     .cart-page__card-num 
-                      |89 0000
+                      |890 000
                 .cart-page__card-caption 
                   |#{data.tooltipText}
-                .booking-page__card-row.booking-page__card-inner
-                  .cart-page__card-col
-                    .booking-page__card-text 
-                      |Доставка
-                  .cart-page__card-col
-                    .booking-page__card-text
-                      |Транспортная компания
+                ul.booking-page__list.booking-page__card-inner
+                  each item in ddata
+                    li.booking-page__list-item
+                      .booking-page__card-row
+                        .cart-page__card-col
+                          .booking-page__list-text 
+                            |#{item.caption}
+                        .cart-page__card-col
+                          .booking-page__card-text
+                            |#{item.text}

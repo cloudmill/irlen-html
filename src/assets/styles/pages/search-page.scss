@@ -71,4 +71,19 @@
     }
     font-weight: 500;
   }
+
+  &__inner {
+    margin: 20px 0 40px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin: 8px 0 10px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    @include fsl(16px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
+      @include fsl(12px, 120%);
+    }
+  }
 }

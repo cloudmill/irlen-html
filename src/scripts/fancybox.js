@@ -3,6 +3,7 @@ import '@fancyapps/fancybox';
 // fancybox
 {
   $(() => {
+    
 
     $.fancybox.defaults.closeExisting = true;
     $.fancybox.defaults.touch = false;
@@ -12,7 +13,7 @@ import '@fancyapps/fancybox';
       '<div class="fancybox-bg"></div>' +
       '<div class="fancybox-stage"></div>' +
       '</div>'
-    )
+    );
 
     $('[data-fancy-button]').on('click', function (event) {
       event.preventDefault();

@@ -31,6 +31,33 @@ block content
         text: '300'
       },
     ]
+  -
+    var table = [
+      {
+        text: 'Модель',
+        label: '',
+      },
+      {
+        text: 'Макс. диаметр точения',
+        label: 'мм',
+      },
+      {
+        text: 'Макс. длина точения',
+        label: 'мм',
+      },
+      {
+        text: 'Диаметр патрона',
+        label: 'мм',
+      },
+      {
+        text: 'Макс. диаметр прутковой заготовки',
+        label: 'мм',
+      },
+      {
+        text: 'Харакатеристика шпинделя',
+        label: 'кВт/об/мин',
+      },
+    ]
   .equip-page 
     section.section.section--first 
       .container 
@@ -56,9 +83,11 @@ block content
         table.equip-page__table
           thead.equip-page__table-head 
             tr 
-              each item in ['Модель', 'Макс. диаметр точения, мм', 'Макс. длина точения, мм', 'Диаметр патрона, мм', 'Макс. диаметр прутковой заготовки, мм', 'Харакатеристика шпинделя, кВт/об/мин']
+              each item in table
                 td.equip-page__table-cell.equip-page__table-title
-                  |#{item}
+                  |#{item.text}
+                  div
+                    |#{item.label}
           tbody.equip-page__table-body  
             - for (i = 0; i < 13; i++)
               tr
@@ -87,9 +116,11 @@ block content
         table.equip-page__table
           thead.equip-page__table-head 
             tr 
-              each item in ['Модель', 'Макс. диаметр точения, мм', 'Макс. длина точения, мм', 'Диаметр патрона, мм', 'Макс. диаметр прутковой заготовки, мм', 'Харакатеристика шпинделя, кВт/об/мин']
+              each item in table
                 td.equip-page__table-cell.equip-page__table-title
-                  |#{item}
+                  |#{item.text}
+                  div 
+                    |#{item.label}
           tbody.equip-page__table-body  
             - for (i = 0; i < 13; i++)
               tr
