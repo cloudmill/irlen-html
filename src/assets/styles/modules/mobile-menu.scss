@@ -121,6 +121,9 @@
   &__text {
     margin-left: 10px;
     @include fsl(10px, 140%);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   &__list {
