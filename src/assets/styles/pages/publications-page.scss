@@ -112,9 +112,25 @@
   &__slider {
     position: relative;
     z-index: 0;
+    @media (min-width: $breakpoint) {
+      padding: 0 64px;
+    }
+    max-height: 310px;
+    overflow: hidden;
+  }
+  &__slider-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   &__slider-img {
-    display: block;
+    @media (min-width: $breakpoint) {
+      height: 310px;
+    }
+    height: 196px;
+    
+    border-radius: 4px;
+    overflow: hidden;
   }
 
   &__button {
@@ -329,12 +345,5 @@
         max-width: 256px;
       }
     }
-  }
-
-  &__slider {
-    max-width: 303px;
-
-    border-radius: 4px;
-    overflow: hidden;
   }
 }
