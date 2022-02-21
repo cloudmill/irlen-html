@@ -1,4 +1,5 @@
 .services-page {
+  $comp: &;
 
   &__card {
     @media (max-width: ($breakpoint - 1px)) {
@@ -9,6 +10,14 @@
     border-radius: 4px;
     overflow: hidden;
     background: $color-white;
+
+    &:hover {
+      #{$comp}__card-svg {
+        path {
+          stroke: $color-blue;
+        }
+      }
+    }
   }
   &__card-row {
     display: flex;
@@ -85,6 +94,7 @@
 
     path {
       stroke: $color-black;
+      transition: $transition;
     }
   }
   
