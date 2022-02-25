@@ -221,37 +221,67 @@
     padding: 0 130px;
     display: block;
     border-bottom: 1px solid $color-light-gray;
-
-    tr {
-      padding: 16px 0;
-      display: flex;
-      align-items: center;
-    }
+  }
+  &__table-wrapper {
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
   }
   &__table-body {
-    padding: 0 130px;
+    display: block;
+  }
+  &__table-inner {
+    margin-top: -1px;
 
     display: block;
+    
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    transition: $transition;
 
-    tr {
-      padding: 24px 0;
-      display: flex;
-      
-      border-bottom: 1px solid $color-light-gray;
+    &:hover {
+      border-color: $color-light-gray;
+      background: $color-darken-white;
+
+      #{$comp}__table-cell {
+        color: $color-blue;
+      }
     }
+  }
+  &__table-line {
+    margin: 0 130px -1px;
+    padding: 24px 0;
+
+    display: flex;
+
+    border-bottom: 1px solid $color-light-gray;
   }
   &__table-cell {
     padding-right: 36px;
     width: calc(#{$col-part-d} * 2);
 
+    transition: $transition;
 
     &:last-child {
+      padding-right: 0;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
     }
   }
   &__table-title {
     color: $color-gray;
     @include fsl(12px, 140%);
+  }
+  &__table-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: ($breakpoint - 1px)) {
+      justify-content: flex-end;
+    }
   }
 
   &__block {
@@ -268,6 +298,9 @@
     padding-top: 16px;
 
     border-top: 1px solid $color-blue;
+  }
+  &__block-link {
+    display: block;
   }
   &__block-top {
     padding-bottom: 12px;

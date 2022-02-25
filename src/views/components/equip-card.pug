@@ -1,17 +1,33 @@
 mixin equip-card 
-  a.equip-card(class=attributes.class href="#")
-    .equip-card__image 
-        img(src=attributes.img, alt="")
-    .equip-card__container 
-      .equip-card__title 
-        |#{attributes.title}
-      if(attributes.text)
-        p.equip-card__text
-          |#{attributes.text}
-      else 
-        ul.equip-card__list 
-          each el in attributes.items
-            li.equip-card__item 
-              |#{el}
-      .arrow-icon 
-        +big-arrow-svg.arrow-icon__svg
+  if (attributes.static)
+    .equip-card(class=attributes.class)
+      .equip-card__image 
+          img(src=attributes.img, alt="")
+      .equip-card__container 
+        .equip-card__title 
+          |#{attributes.title}
+        if(attributes.text)
+          p.equip-card__text
+            |#{attributes.text}
+        else 
+          ul.equip-card__list 
+            each el in attributes.items
+              li.equip-card__item 
+                |#{el}
+  else
+    a.equip-card(class=attributes.class href="#")
+      .equip-card__image 
+          img(src=attributes.img, alt="")
+      .equip-card__container 
+        .equip-card__title 
+          |#{attributes.title}
+        if(attributes.text)
+          p.equip-card__text
+            |#{attributes.text}
+        else 
+          ul.equip-card__list 
+            each el in attributes.items
+              li.equip-card__item 
+                |#{el}
+        .arrow-icon 
+          +big-arrow-svg.arrow-icon__svg

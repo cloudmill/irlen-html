@@ -62,6 +62,12 @@
     #{$comp}__text {
       color: $color-gray;
     }
+
+    &:hover {
+      #{$comp}__title {
+        color: $color-black;
+      }
+    }
   }
 
   &__image {
