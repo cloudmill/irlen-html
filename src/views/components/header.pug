@@ -45,6 +45,12 @@ mixin header
                   .header__nav-icon
                     +arrow-svg.header__nav-svg
               li.header__nav-item 
+                .header__nav-button(data-accordion-header='3')
+                  .header__nav-text
+                    |Публикации 
+                  .header__nav-icon
+                    +arrow-svg.header__nav-svg
+              li.header__nav-item 
                 a.header__nav-link(href="#") 
                   |Контакты
           .header__col
@@ -129,7 +135,7 @@ mixin header
               .mobile-menu__item-icon 
                 +arrow-svg.mobile-menu__item-svg
             ul.mobile-menu__list 
-              each item, i in ['Оборудование', 'Инструмент', 'Услуги']
+              each item, i in ['Оборудование', 'Инструмент', 'Услуги', 'Публикации']
                 li.mobile-menu__item(data-modal-btn=i)
                   .mobile-menu__item-text 
                     |#{item}
@@ -195,6 +201,18 @@ mixin header
               .mobile-menu__modal(data-modal-menu='2') 
                 .mobile-menu__modal-top 
                   .mobile-menu__modal-back(data-modal-close='2') 
+                    .mobile-menu__modal-icon 
+                      +arrow-svg.mobile-menu__modal-svg
+                    .mobile-menu__modal-text 
+                      |Услуги
+                ul.mobile-menu__modal-list 
+                  each item in ['Подбор инструмента', 'Ленточные пилы', 'Сервис', 'Инжиниринг', 'Обучение', 'Лизинг']
+                    li.mobile-menu__modal-item
+                      a(href="#") 
+                        |#{item}
+              .mobile-menu__modal(data-modal-menu='3') 
+                .mobile-menu__modal-top 
+                  .mobile-menu__modal-back(data-modal-close='3') 
                     .mobile-menu__modal-icon 
                       +arrow-svg.mobile-menu__modal-svg
                     .mobile-menu__modal-text 
