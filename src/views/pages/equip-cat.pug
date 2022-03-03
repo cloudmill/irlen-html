@@ -75,8 +75,12 @@ block content
             .button(data-fancy-button='10')
               |Материалы для скачивания
         .margin-top
-          +tabs(tabs = ['Leadwell серия T', 'Leadwell серия LTC', 'Leadwell серия T/LTC'])
-        .margin-top.margin-top--md 
+          .tabs(data-tabs='')
+            .tabs__container
+              each item, i in ['Leadwell серия T', 'Leadwell серия LTC', 'Leadwell серия T/LTC']
+                .tabs__item(class=(i === 0 ? 'active' : '') data-tabs-item='' data-scroll=`#q${i}`)
+                  |#{item}
+        .margin-top.margin-top--md#q0
           +model-tabs(items = ['Модели', 'Возможные опции'])
     section.section.section--white.section--table
       .equip-page__block.margin-top.margin-top--md 
@@ -116,7 +120,7 @@ block content
                         |#{item.text}
                   .equip-page__table-icon 
                     +blue-arrow-svg.equip-page__table-svg
-      .container 
+      .container#q1
         .equip-page__inner.equip-page__inner--lg
           +model-tabs(items = ['Модели', 'Возможные опции'])
       .equip-page__block.margin-top.margin-top--md 
