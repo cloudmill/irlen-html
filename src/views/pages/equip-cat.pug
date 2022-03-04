@@ -80,10 +80,11 @@ block content
               each item, i in ['Leadwell серия T', 'Leadwell серия LTC', 'Leadwell серия T/LTC']
                 .tabs__item(class=(i === 0 ? 'active' : '') data-tabs-item='' data-scroll=`#q${i}`)
                   |#{item}
-        .margin-top.margin-top--md#q0
-          +model-tabs(items = ['Модели', 'Возможные опции'])
     section.section.section--white.section--table
-      .equip-page__block.margin-top.margin-top--md 
+      .equip-page__first.margin-top.margin-top--md#q0
+        .container
+          +model-tabs(items = ['Модели', 'Возможные опции'])
+      .equip-page__block
         .equip-page__table
           .equip-page__table-head 
             .equip-page__table-wrapper 

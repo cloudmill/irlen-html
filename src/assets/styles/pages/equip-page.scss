@@ -211,6 +211,14 @@
     }
   }
 
+  &__first {
+    padding-bottom: 32px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding-bottom: 20px;
+    }
+    background: $color-darken-white;
+  }
+
   &__table {
     @media (max-width: ($breakpoint - 1px)) {
       display: none;
