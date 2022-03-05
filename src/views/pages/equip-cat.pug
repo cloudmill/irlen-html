@@ -81,9 +81,11 @@ block content
                 .tabs__item(class=(i === 0 ? 'active' : '') data-tabs-item='' data-scroll=`#q${i}`)
                   |#{item}
     section.section.section--white.section--table
-      .equip-page__first.margin-top.margin-top--md#q0
-        .container
-          +model-tabs(items = ['Модели', 'Возможные опции'])
+      .equip-page__first
+        .container#q0
+          h2
+            |LTC
+          +model-tabs.margin-top.margin-top--md(items = ['Модели', 'Возможные опции'])
       .equip-page__block
         .equip-page__table
           .equip-page__table-head 
@@ -122,9 +124,10 @@ block content
                   .equip-page__table-icon 
                     +blue-arrow-svg.equip-page__table-svg
       .container#q1
-        .equip-page__inner.equip-page__inner--lg
-          +model-tabs(items = ['Модели', 'Возможные опции'])
-      .equip-page__block.margin-top.margin-top--md 
+        h2.equip-page__inner.equip-page__inner--lg
+          |LTC
+        +model-tabs.margin-top.margin-top--md(items = ['Модели', 'Возможные опции'])
+      .equip-page__block.margin-top.margin-top--md
         .equip-page__table
           .equip-page__table-head 
             .equip-page__table-wrapper
@@ -162,8 +165,9 @@ block content
                   .equip-page__table-icon 
                     +blue-arrow-svg.equip-page__table-svg
       .container#q2
-        .equip-page__inner.equip-page__inner--lg
-          +model-tabs(items = ['Модели', 'Возможные опции'])
+        h2.equip-page__inner.equip-page__inner--lg
+          |LTC
+        +model-tabs.margin-top.margin-top--md(items = ['Модели', 'Возможные опции'])
       .equip-page__block.margin-top.margin-top--md 
         .equip-page__table
           .equip-page__table-head 

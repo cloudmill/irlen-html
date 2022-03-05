@@ -212,11 +212,11 @@
   }
 
   &__first {
-    padding-bottom: 32px;
+    padding: 32px 0;
     @media (max-width: ($breakpoint - 1px)) {
-      padding-bottom: 20px;
+      padding: 20px 0;
+      background: $color-darken-white;
     }
-    background: $color-darken-white;
   }
 
   &__table {
