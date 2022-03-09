@@ -7,8 +7,7 @@ $(() => {
   
       const originalText = text.text()
   
-      let lineCountD = 5
-      let lineCountM = 4
+      let lineCount = 5
   
       const lineHeightM = 14
       const lineHeightD = 20
@@ -17,13 +16,8 @@ $(() => {
         return mediaQuery.matches ? lineHeightD : lineHeightM
       }
 
-      function getLineCount() {
-        return mediaQuery.matches ? lineCountD : lineCountM
-      }
-
       function updateTitle() {
         const lineHeight = getLineHeight()
-        const lineCount = getLineCount();
   
         text.text(originalText)
   
