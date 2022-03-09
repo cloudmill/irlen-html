@@ -6,6 +6,7 @@ import 'scripts/fancybox.js';
 import 'scripts/tooltip.js';
 import 'scripts/select.js';
 import 'scripts/aside.js';
+import 'scripts/crop-text.js';
 import 'scripts/login.js';
 import 'scripts/header.js';
 import 'scripts/show-more.js';

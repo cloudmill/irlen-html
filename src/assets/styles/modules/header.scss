@@ -816,7 +816,9 @@
     transition: $transition;
 
     &:hover {
-      color: $color-blue;
+      #{$comp}__modal-link {
+        color: $color-blue;
+      }
     }
 
     &:not(:first-child) {
@@ -826,6 +828,10 @@
     &.active {
       color: $color-blue;
     }
+  }
+
+  &__modal-link {
+    transition: $transition;
   }
 
   &__listing {

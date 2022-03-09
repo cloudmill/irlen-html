@@ -7,7 +7,7 @@ block content
     var ddata = [
       {
         title: 'Подбор инструмента',
-        text: 'Высококвалифицированные консультации по подбору инструмента',
+        text: 'Высококвалифицированные консультации по подбору инструментаысококвалифицированные консультации по подбору инструментаысококвалифицированные консультации по подбору инструментаысококвалифицированные консультации по подбору инструментаысококвалифицированные консультации по подбору инструмента',
         img: 'assets/images/service-page-1.jpg'
       },
       {
@@ -53,7 +53,7 @@ block content
                   .services-page__card-container 
                     .services-page__card-title 
                       |#{item.title}
-                    .services-page__card-text 
+                    .services-page__card-text(data-crop-text='')
                       |#{item.text}
                   .services-page__card-icon 
                     +big-arrow-svg.services-page__card-svg

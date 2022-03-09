@@ -252,7 +252,8 @@ mixin header
               ul.header__modal-list
                 each item, i in ['Токарные станки с ЧПУ', 'Фрезерные станки с ЧПУ', 'Вертикальные токарные и карусельные станки с ЧПУ', 'Ленточнопильные станки', 'Шлифовальные станки', 'Прессовое оборудование', 'Электроэрозионные станки', 'Шлифовальные станки', 'Универсальные станки', 'Прессовое оборудование', 'Раскроечные станки', 'Электроэрозионные станки', 'Измерительное оборудование', ]
                   li.header__modal-item(class=(i === 0 ? 'active' : '') data-category-item='')
-                    |#{item}
+                    a.header__modal-link(href="#") 
+                      |#{item}
             .header__modal-col 
               - for (x = 0; x < 13; x++)
                 ul.header__listing(class=(x === 0 ? 'active' : '') data-category-list='')
@@ -267,7 +268,8 @@ mixin header
               ul.header__modal-list
                 each item, i in ['Корпусной режущий инструмент', 'Осевой режущий инструмент', 'Вспомогательный инструмент для фрезерных станков с ЧПУ', 'Вспомогательный инструмент для токарных станков с ЧПУ', 'Приспособления', 'Аксессуары для инструмента']
                   li.header__modal-item(class=(i === 0 ? 'active' : '') data-category-item='')
-                    |#{item}
+                    a.header__modal-link(href="#") 
+                      |#{item}
             .header__modal-col  
               - for (x = 0; x < 6; x++)
                 ul.header__listing(class=(x === 0 ? 'active' : '') data-category-list='')
@@ -280,6 +282,7 @@ mixin header
           ul.header__modal-list.header__modal-list--transparent
             each item in ['Подбор инструмента', 'Ленточные пилы', 'Сервис', 'Инжиниринг', 'Обучение', 'Лизинг']
               li.header__modal-item 
-                |#{item}
+                a.header__modal-link(href="#") 
+                  |#{item}
     if (attributes.panel)
       .header__panel
