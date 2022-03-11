@@ -4,12 +4,8 @@ $(function () {
     filter();
     showMore();
     snippetSlider();
-    callBackAjaxError();
+    forms();
 });
-
-function callBackAjaxError(xhr, error) {
-    console.debug(xhr); console.debug(error);
-}
 
 function snippetSlider() {
     $(document).ready(function () {
@@ -40,7 +36,9 @@ function filter() {
                 $(document).find('[data-type=items-container-full]').empty();
                 $(document).find('[data-type=items-container-full]').append($(r));
             },
-            error: callBackAjaxError(xhr, error)
+            error: function (r) {
+                console.debug(r);
+            }
         });
     });
 }
@@ -78,8 +76,47 @@ function showMore() {
                         container.after(responsePageNav);
                     }
                 },
-                error: callBackAjaxError(xhr, error)
+                error: function (r) {
+                    console.debug(r);
+                }
             });
         }
+    });
+}
+
+function forms() {
+    $(document).on("submit", "[data-type=js-form]", function (e) {
+        console.log("form submit");
+        e.preventDefault();
+
+        let form = $(this),
+            formParent = form.parent("[data-form-parent]"),
+            formResponse = formParent.siblings("[data-type=form-response]"),
+            url = form.attr("data-url"),
+            data = {};
+
+
+        form.find("[data-type=get-field]").each(function () {
+            let field = $(this).attr("data-uf"),
+                val = $(this).val();
+
+            data[field] = val;
+        });
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            dataType: "json",
+            data: data,
+            success: function (r) {
+                if (r.success === true) {
+                    form.attr('data-form-hidden', '')
+                    formResponse.attr('data-response-active', '');
+                }
+            },
+            error: function (r) {
+                console.debug(r);
+            }
+        });
     });
 }
