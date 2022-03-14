@@ -93,8 +93,16 @@
       "page": "ЛК не авторизовались"
     },
     {
-      "href": "profile",
-      "page": "ЛК"
+      "href": "profile-orders",
+      "page": "[ЛК] заказы"
+    },
+    {
+      "href": "profile-discount",
+      "page": "[ЛК] скидка"
+    },
+    {
+      "href": "profile-data",
+      "page": "[ЛК] данные"
     },
     {
       "href": "services",

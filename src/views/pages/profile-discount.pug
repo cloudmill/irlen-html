@@ -1,0 +1,58 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/tabs
+include ../components/accordion
+include ../components/model-tabs
+
+block header 
+  +header(login = true)
+
+block content 
+  .profile-page.main-page
+    section.section.section--first 
+      .container 
+        +navigation(page='Профиль')
+    section.section.section--last
+      .container 
+        .row
+          .row__col
+            .tabs.tabs--column
+              .tabs__container
+                .tabs__item.active
+                  |Cкидка
+                .tabs__item 
+                  |Выйти
+          .row__col
+            .profile-page__row 
+              .profile-page__col
+                .profile-page__panel 
+                  .profile-page__panel-label 
+                    |Ваш статус
+                  .profile-page__panel-title 
+                    |Уровен цен 2
+                  .profile-page__panel-label 
+                    |Текущий размер скидки
+                  .profile-page__panel-discont  
+                    .discont.discont--md
+                      .discont__text 
+                        |10%
+              .profile-page__col
+                .profile-page__info 
+                  .profile-page__info-title 
+                    |Что такое уровни цен
+                  p.profile-page__info-text
+                    |Для каждого клиента у нас разработа система лояльности. #[br] Она зависит от оборота. Чем больше вы заказываете у нас, тем выше ваша скидка.
+                  p.profile-page__info-text.margin-top.margin-top--md
+                    |Чтобы узнать подробные условия работы, свяжитесь с нами.
+                  .profile-page__info-contacts 
+                    .profile-page__info-col
+                      a.profile-page__info-link(href="tel:88126006098")  
+                        |8 812 600-60-98
+                      a.profile-page__info-link(href="mailto:irlen@irlen.ru")  
+                        |irlen@irlen.ru
+                    .profile-page__info-col
+                      .profile-page__info-label 
+                        |Время работы
+                      .profile-page__info-time 
+                        |09:00 — 17:00

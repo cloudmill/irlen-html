@@ -133,12 +133,12 @@
     transition: $transition;
 
     &--highlighted[aria-selected] {
-      color: $color-black;
-      background-color: transparent;
+      color: $color-blue;
+      background-color: $color-darken-white;
     }
 
     &[aria-selected=true] {
-      // background-color: $color-aqua;
+      background-color: $color-white;
     }
   }
 }

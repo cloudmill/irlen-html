@@ -150,11 +150,11 @@ mixin phone-modal
         |#{attributes.title ? attributes.title : 'Заказать звонок'}
       form.form(action="/" data-form='w2') 
         .form__item 
-          input.form__input(type="email" placeholder='E-mail*' required)
+          input.form__input(type="email" placeholder='Имя*' required)
         .form__item 
-          input.form__input(type="text" placeholder='Телефон' required data-mask='phone')
+          input.form__input(type="text" placeholder='Телефон*' required data-mask='phone')
         .form__item 
-          input.form__input(type="text" placeholder='Имя' required)
+          input.form__input(type="text" placeholder='E-mail*' required)
         .form__item.form__item--big
           .checkbox.checkbox--start
             label.checkbox__label
