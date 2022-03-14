@@ -90,8 +90,11 @@ function forms() {
         e.preventDefault();
 
         let form = $(this),
-            formParent = form.parent("[data-form-parent]"),
+            formParent = form.parents("[data-form-parent]"),
+            proverkaSib = formParent.siblings(),
             formResponse = formParent.siblings("[data-type=form-response]"),
+            formResponseTtl = formResponse.find("[data-response=title]"),
+            formResponseMsg = formResponse.find("[data-response=mess]"),
             url = form.attr("data-url"),
             data = {};
 
@@ -109,9 +112,16 @@ function forms() {
             dataType: "json",
             data: data,
             success: function (r) {
-                if (r.success === true) {
-                    form.attr('data-form-hidden', '')
+                if (r.type === 'login') {
+                    formParent.attr('data-form-hidden', '');
                     formResponse.attr('data-response-active', '');
+                    formResponseTtl.html(r.title);
+                    formResponseMsg.html(r.mess);
+                } else {
+                    if (r.success === true) {
+                        form.attr('data-form-hidden', '');
+                        formResponse.attr('data-response-active', '');
+                    }
                 }
             },
             error: function (r) {
