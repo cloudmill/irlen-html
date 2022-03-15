@@ -141,14 +141,22 @@ function forms() {
             dataType: "json",
             data: data,
             success: function (r) {
-                if (r.type === 'login') {
-                    console.log('log in / reg');
-                    formParent.attr('data-form-hidden', '');
-                    formResponse.attr('data-response-active', '');
-                    modalResponseTtl.html(r.title);
-                    modalResponseMsg.html(r.mess);
+                if (r.type) {
+                    if (r.type === 'login') {
+                        console.log('log in / reg');
+                        formParent.attr('data-form-hidden', '');
+                        formResponse.attr('data-response-active', '');
+                        modalResponseTtl.html(r.title);
+                        modalResponseMsg.html(r.mess);
+                        console.log('reload');
 
-                    setTimeout(location.reload(), 4000);
+                        setTimeout(function () {
+                            location.reload();
+                        }, 3000);
+                    }
+                    if (r.type === 'change') {
+                        alert(r.mess);
+                    }
                 } else {
                     if (r.success === true) {
                         form.attr('data-form-hidden', '');
