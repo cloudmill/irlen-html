@@ -5,7 +5,36 @@ $(function () {
     showMore();
     snippetSlider();
     forms();
+    logout();
 });
+
+function logout() {
+    $(document).on("click", "[data-type=logout]", function (e) {
+        e.preventDefault();
+
+        let thisObj = $(this),
+            url = thisObj.attr("data-url");
+
+        console.log("logout");
+
+        $.ajax({
+            method: "POST",
+            url: url,
+            dataType: "json",
+            data: {
+                logout: true,
+            },
+            success: function (r) {
+                if (r.success == true) {
+                    location.reload();
+                }
+            },
+            error: function (r) {
+                console.debug(r);
+            }
+        });
+    });
+}
 
 function snippetSlider() {
     $(document).ready(function () {
@@ -91,10 +120,10 @@ function forms() {
 
         let form = $(this),
             formParent = form.parents("[data-form-parent]"),
-            proverkaSib = formParent.siblings(),
+            modalLogin = form.parents("[data-fancy-modal=1]"),
             formResponse = formParent.siblings("[data-type=form-response]"),
-            formResponseTtl = formResponse.find("[data-response=title]"),
-            formResponseMsg = formResponse.find("[data-response=mess]"),
+            modalResponseTtl = modalLogin.find("[data-response=title]"),
+            modalResponseMsg = modalLogin.find("[data-response=mess]"),
             url = form.attr("data-url"),
             data = {};
 
@@ -113,10 +142,11 @@ function forms() {
             data: data,
             success: function (r) {
                 if (r.type === 'login') {
+                    console.log('log in / reg');
                     formParent.attr('data-form-hidden', '');
                     formResponse.attr('data-response-active', '');
-                    formResponseTtl.html(r.title);
-                    formResponseMsg.html(r.mess);
+                    modalResponseTtl.html(r.title);
+                    modalResponseMsg.html(r.mess);
                 } else {
                     if (r.success === true) {
                         form.attr('data-form-hidden', '');
