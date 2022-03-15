@@ -58,8 +58,8 @@ block content
       .container 
         h2
           |Токарные станки с ЧПУ
-    each item in ddata
-      section.section   
+    each item, index in ddata
+      section.section(class=(index === 3 ? "section--last" : ""))
         .container
           .docs-page__row 
             .docs-page__col
@@ -76,11 +76,3 @@ block content
             .grid-container.margin-top.margin-top--md 
               - for (i = 0; i < 6; i++)
                 +docs-card
-    section.section.section--last.margin-top
-      .container 
-        .button-show-wrapper 
-          .button-show 
-            .button-show__text 
-              |Показать еще
-            .button-show__icon 
-              +arrow-svg.button-show__svg
