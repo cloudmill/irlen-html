@@ -147,6 +147,8 @@ function forms() {
                     formResponse.attr('data-response-active', '');
                     modalResponseTtl.html(r.title);
                     modalResponseMsg.html(r.mess);
+
+                    setTimeout(location.reload(), 4000);
                 } else {
                     if (r.success === true) {
                         form.attr('data-form-hidden', '');
