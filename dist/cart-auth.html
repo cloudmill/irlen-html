@@ -1274,15 +1274,17 @@
 					<div class="form">
 						<p class="login-modal__text login-modal__inner">Регистрация на нашем сайте позволяет видеть историю покупок, получать информацию о новых акциях и скидках, упрощает оформление заказа</p>
 						<div class="login-modal__wrapper">
-							<div class="checkbox checkbox--lg"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" checked="checked" data-login-checkbox="" />
-									<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
-										</svg></div>
-									<div class="tooltip">
-										<div class="checkbox__text tooltip__row">Юридическое лицо<span class="tooltip__span"><div class="tooltip__icon"><svg class="tooltip__svg" width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span></div>
-										<div class="tooltip__container">Для юридических лиц предусмотренна программа лояльности.</div>
-									</div>
-								</label></div>
+							<div class="tooltip">
+								<div class="tooltip__row">
+									<div class="checkbox checkbox--lg"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" checked="checked" data-login-checkbox="" />
+											<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="1.5"></path>
+												</svg></div>
+											<div class="checkbox__text">Юридическое лицо</div>
+										</label></div><span class="tooltip__span"><div class="tooltip__icon"><svg class="tooltip__svg" width="15" height="16" viewbox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="7.5" cy="8" r="7.5" fill="#E0E0E0"></circle><path d="M7.288 3.776C5.524 3.776 4.528 4.856 4.492 6.392H5.872C5.908 5.384 6.436 4.976 7.312 4.976C8.188 4.976 8.656 5.552 8.656 6.188C8.656 6.908 8.272 7.244 7.696 7.652C6.796 8.36 6.436 8.756 6.436 9.752V10.076H7.816V9.752C7.816 9.104 8.02 8.912 8.584 8.504C9.4 7.892 10.048 7.4 10.048 6.188C10.048 4.784 9.064 3.776 7.288 3.776ZM7.888 12.5V10.892H6.34V12.5H7.888Z" fill="#121212"></path></svg></div></span>
+								</div>
+								<div class="tooltip__container">Для юридических лиц предусмотренна программа лояльности.</div>
+							</div>
 						</div>
 						<form class="login-modal__form active" data-form-corp="" action="/" data-form="123">
 							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" /></div>
@@ -1303,10 +1305,10 @@
 							<div class="form__item form__item--big"><button class="button button--wide" data-form-button="123">Зарегистрироваться</button></div>
 						</form>
 						<form class="login-modal__form" data-form-user="" action="/" data-form="1">
-							<div class="form__item"><input class="form__input" placeholder="Имя" required="required" /></div>
-							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" required="required" /></div>
-							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" required="required" /></div>
-							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль" required="required" /></div>
+							<div class="form__item"><input class="form__input" placeholder="Имя*" required="required" /></div>
+							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" /></div>
+							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль*" required="required" /></div>
+							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль*" required="required" /></div>
 							<div class="form__item form__item--big">
 								<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="policy" required="required" />
 										<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1333,9 +1335,9 @@
 			<div class="phone-modal__container" data-form-parent="">
 				<h3 class="phone-modal__title">Заказать звонок</h3>
 				<form class="form" action="/" data-form="w2">
-					<div class="form__item"><input class="form__input" type="email" placeholder="Имя*" required="required" /></div>
+					<div class="form__item"><input class="form__input" placeholder="Имя*" required="required" /></div>
 					<div class="form__item"><input class="form__input" placeholder="Телефон*" required="required" data-mask="phone" /></div>
-					<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" /></div>
+					<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" /></div>
 					<div class="form__item form__item--big">
 						<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="policy" required="required" />
 								<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
