@@ -124,6 +124,9 @@ function forms() {
             formResponse = formParent.siblings("[data-type=form-response]"),
             modalResponseTtl = modalLogin.find("[data-response=title]"),
             modalResponseMsg = modalLogin.find("[data-response=mess]"),
+            formInputErrorIn = form.find("[data-resp=error-in]"),
+            formInputErrorUl = form.find("[error-ul]"),
+            formInputErrorMess = form.find("[data-resp=error-mess]"),
             url = form.attr("data-url"),
             data = {};
 
@@ -150,9 +153,7 @@ function forms() {
                         modalResponseMsg.html(r.mess);
                         console.log('reload');
 
-                        setTimeout(function () {
-                            location.reload();
-                        }, 3000);
+                        location.reload();
                     }
                     if (r.type === 'change') {
                         alert(r.mess);
