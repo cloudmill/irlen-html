@@ -917,6 +917,9 @@
 						<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" required="required" /></div>
 						<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" required="required" /></div>
 						<div class="form__item"><button class="button button--wide" data-form-button="123" required="required">Войти</button></div>
+						<div class="login-modal__item">
+							<div class="login-modal__link" data-fancy-button="pass">Забыли пароль?</div>
+						</div>
 					</form>
 				</div>
 				<div class="tabs-block" data-tabs-block="">
@@ -984,7 +987,7 @@
 				<form class="form" action="/" data-form="w2">
 					<div class="form__item"><input class="form__input" type="email" placeholder="Имя*" required="required" /></div>
 					<div class="form__item"><input class="form__input" placeholder="Телефон*" required="required" data-mask="phone" /></div>
-					<div class="form__item"><input class="form__input" placeholder="E-mail*" required="required" /></div>
+					<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" /></div>
 					<div class="form__item form__item--big">
 						<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="policy" required="required" />
 								<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1014,6 +1017,19 @@
 						<li class="profile-modal__item"><a class="profile-modal__link" href="#">Выйти</a></li>
 					</ul>
 				</div>
+			</div>
+		</div>
+		<div class="login-modal" data-fancy-modal="pass">
+			<div class="login-modal__container" data-form-parent="">
+				<h3 class="login-modal__title">Войти</h3>
+				<div class="login-modal__caption">Укажите почту на которую был зарегестрирован аккаунт</div>
+				<form class="form" action="/" data-form="p2">
+					<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" required="required" /></div>
+					<div class="form__item"><button class="button button--wide" data-form-button="p2" required="required">Отправить</button></div>
+				</form>
+			</div>
+			<div class="response response--pass" data-response="p2">
+				<h3 class="response__title">Новый пароль отправлен на указанную почту</h3>
 			</div>
 		</div>
 	</body>
