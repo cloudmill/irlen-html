@@ -84,8 +84,9 @@ block content
                       ul.equip-page__card-list 
                         each el in item.items
                           li.equip-page__card-item 
-                            div.equip-page__card-link
-                              |#{el}
+                            object
+                              a.equip-page__card-link(href="#123")
+                                |#{el}
                     .arrow-icon
                       +big-arrow-svg.arrow-icon__svg
         .section__block
