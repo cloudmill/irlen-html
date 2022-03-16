@@ -24,19 +24,19 @@ mixin login-modal
       user: [
         {
           type: 'text',
-          placeholder: 'Имя',
+          placeholder: 'Имя*',
         },
         {
           type: 'email',
-          placeholder: 'E-mail',
+          placeholder: 'E-mail*',
         },
         {
           type: 'password',
-          placeholder: 'Пароль',
+          placeholder: 'Пароль*',
         },
         {
           type: 'password',
-          placeholder: 'Повторите пароль',
+          placeholder: 'Повторите пароль*',
         },
       ],
       corp: [
@@ -85,19 +85,20 @@ mixin login-modal
           p.login-modal__text.login-modal__inner
             |Регистрация на нашем сайте позволяет видеть историю покупок, получать информацию о новых акциях и скидках, упрощает оформление заказа
           .login-modal__wrapper
-            .checkbox.checkbox--lg
-              label.checkbox__label
-                input.checkbox__input(type="checkbox" checked data-login-checkbox='')
-                .checkbox__box 
-                  +check-svg.checkbox__svg
-                .tooltip
-                  .checkbox__text.tooltip__row
-                    |Юридическое лицо
-                    span.tooltip__span
-                      .tooltip__icon 
-                        +tooltip-svg.tooltip__svg
-                  .tooltip__container   
-                    |Для юридических лиц предусмотренна программа лояльности.
+            .tooltip
+              .tooltip__row
+                .checkbox.checkbox--lg
+                  label.checkbox__label
+                    input.checkbox__input(type="checkbox" checked data-login-checkbox='')
+                    .checkbox__box 
+                      +check-svg.checkbox__svg
+                    .checkbox__text
+                      |Юридическое лицо
+                span.tooltip__span
+                  .tooltip__icon 
+                    +tooltip-svg.tooltip__svg
+              .tooltip__container   
+                |Для юридических лиц предусмотренна программа лояльности.
           form.login-modal__form.active(data-form-corp='' action="/" data-form='123')
             each item in ddata.corp 
               .form__item 
@@ -159,11 +160,11 @@ mixin phone-modal
         |#{attributes.title ? attributes.title : 'Заказать звонок'}
       form.form(action="/" data-form='w2') 
         .form__item 
-          input.form__input(type="email" placeholder='Имя*' required)
+          input.form__input(type="text" placeholder='Имя*' required)
         .form__item 
           input.form__input(type="text" placeholder='Телефон*' required data-mask='phone')
         .form__item 
-          input.form__input(type="email" placeholder='E-mail*' required)
+          input.form__input(type="email" placeholder='E-mail')
         .form__item.form__item--big
           .checkbox.checkbox--start
             label.checkbox__label

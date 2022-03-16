@@ -9,7 +9,7 @@ block header
   +header(login = true)
 
 block content 
-  - 
+  -
     var ddata = [
       {
         type: 'email',
@@ -23,21 +23,6 @@ block content
       },
       {
         type: 'panel'
-      },
-      {
-        type: 'password',
-        label: 'Пароль',
-        value: 'zxcqwerty123',
-      },
-      {
-        type: 'text',
-        label: 'ИНН',
-        value: '789746513',
-      },
-      {
-        type: 'password',
-        label: 'Пароль еще раз',
-        value: 'zxcqwerty123',
       },
     ]
   .profile-page.main-page
@@ -72,7 +57,19 @@ block content
                         .profile-page__form-item
                           .profile-page__form-label 
                             |#{item.label}
-                          input.form__input(type=item.type value = item.value class=(item.label === "ИНН" || item.label === "Название компании" ? "disabled" : "" ))
+                          input.form__input(type=item.type required value = item.value class=(item.label === "ИНН" || item.label === "Название компании" ? "disabled" : "" ))
+                    .profile-page__form-item
+                      .profile-page__form-label 
+                        |Пароль
+                      input.form__input#password(type="password" required value = "zxcqwerty123")
+                    .profile-page__form-item
+                      .profile-page__form-label 
+                        |ИНН
+                      input.form__input.disabled(type="text" required value = "789746513")
+                    .profile-page__form-item
+                      .profile-page__form-label 
+                        |Пароль еще раз
+                      input.form__input(type="password" data-parsley-equalto="#password" required value = "zxcqwerty123")
                     .profile-page__form-item
                       .profile-page__form-label 
                         |Телефон
@@ -91,8 +88,8 @@ block content
                       .profile-page__form-btn
                         .button.button--small.button--white(data-cancel-button='') 
                           |Отменить
-                      .profile-page__form-btn(data-save-button='')
-                        .button.button--small
+                      .profile-page__form-btn
+                        button.button.button--small(data-save-button='')
                           |Сохранить
               .profile-page__form-col
                 .loyalty-card.loyalty-card--small

@@ -16,12 +16,16 @@ export class FormChanger {
       const target = e.target
 
       if (target.closest('[data-change-button]')) {
-        this.cashValues()
+        this.cacheValues()
         this.form.classList.toggle('form--disabled')
       }
 
       if (target.closest('[data-save-button]')) {
-        this.form.classList.toggle('form--disabled')
+        const instance = $(this.form).parsley()
+
+        if (instance.isValid()) {
+          this.form.classList.toggle('form--disabled')
+        }
       }
 
       if (target.closest('[data-cancel-button]')) {
@@ -30,7 +34,7 @@ export class FormChanger {
     })
   }
 
-  cashValues() {
+  cacheValues() {
     this.inputs = this.form.querySelectorAll('.form__input')
     this.values = []
 

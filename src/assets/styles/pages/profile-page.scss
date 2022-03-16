@@ -191,6 +191,8 @@
     column-gap: var(--colGap);
   }
   &__form-item {
+    position: relative;
+    z-index: 0;
 
     &:last-child {
       grid-column: -1/2;
