@@ -1,6 +1,23 @@
 include ./model-tabs
 include ./docs-card
 
+mixin pass-modal
+  .login-modal(data-fancy-modal='pass')
+    .login-modal__container(data-form-parent='')
+      h3.login-modal__title
+        |Войти
+      .login-modal__caption 
+        |Укажите почту на которую был зарегестрирован аккаунт
+      form.form(action="/" data-form='p2')
+        .form__item 
+          input.form__input(type="email" placeholder='E-mail' required) 
+        .form__item 
+          button.button.button--wide(data-form-button='p2' required)
+            |Отправить
+    .response.response--pass(data-response="p2")
+      h3.response__title
+        |Новый пароль отправлен на указанную почту
+
 mixin login-modal 
   -
     var ddata = {
@@ -60,6 +77,9 @@ mixin login-modal
           .form__item 
             button.button.button--wide(data-form-button='123' required)
               |Войти
+          .login-modal__item
+            .login-modal__link(data-fancy-button='pass')
+              |Забыли пароль?
       .tabs-block(data-tabs-block='')
         .form
           p.login-modal__text.login-modal__inner
@@ -112,17 +132,6 @@ mixin login-modal
             .form__item.form__item--big 
               button.button.button--wide(data-form-button='1')
                 |Зарегистрироваться
-          //- .form__item.form__item--big
-          //-   .checkbox.checkbox--start
-          //-     label.checkbox__label
-          //-       input.checkbox__input(type="checkbox" name='policy' required)
-          //-       .checkbox__box 
-          //-         +check-svg.checkbox__svg
-          //-       .checkbox__text
-          //-         |Согласен на обработку персональных данных в соответствии с #[a.checkbox__link(href="#") политикой конфиденциальности]
-          //- .form__item.form__item--big 
-          //-   button.button.button--wide(data-form-button='1')
-          //-     |Зарегистрироваться
     .response(data-response="1")
       h3.response__title
         |Вы зарегистрировались
@@ -154,7 +163,7 @@ mixin phone-modal
         .form__item 
           input.form__input(type="text" placeholder='Телефон*' required data-mask='phone')
         .form__item 
-          input.form__input(type="text" placeholder='E-mail*' required)
+          input.form__input(type="email" placeholder='E-mail*' required)
         .form__item.form__item--big
           .checkbox.checkbox--start
             label.checkbox__label

@@ -59,6 +59,30 @@
       display: block;
     }
   }
+
+  &__title {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &__caption {
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  &__item {
+    margin-top: 12px;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    color: $color-blue;
+    @include fsl(14px, 140%);
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 .docs-modal {

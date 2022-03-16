@@ -128,6 +128,8 @@
 }
 
 .response {
+  $comp: &;
+
   padding: 50px;
   @media (max-width: ($breakpoint - 1px)) {
     padding: 24px 20px;
@@ -144,6 +146,16 @@
 
   &[data-response-active] {
     display: block;
+  }
+
+  &--pass {
+    @media (min-width: $breakpoint) {
+      padding: 90px 60px;
+    }
+
+    #{$comp}__title {
+      margin-bottom: 0;
+    }
   }
 
   &__title {

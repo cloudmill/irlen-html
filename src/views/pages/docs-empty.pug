@@ -9,24 +9,39 @@ block content
   -
     var ddata = [
       {
-        title: 'С направляющими качения',
+        title: 'Токарные станки с ЧПУ',
         text: 'Общие документы',
-        count: 6,
+        count: 4,
       },
       {
-        title: 'С направляющими качения и противошпинделем',
+        title: 'Leadwell CNC machines mfg., corp.',
         text: 'Каталоги производителя',
+        img: 'assets/images/docs/docs-2.jpg',
         count: 2,
       },
       {
-        title: 'С направляющими качения и осью Y',
+        title: 'Force One machinery',
         text: 'Каталоги производителя',
+        img: 'assets/images/docs/docs-3.jpg',
         count: 1,
       },
       {
-        title: 'Роботизированные с направляющими качения токарно-фрезерные с направляющими качения',
+        title: 'SFM',
         text: 'Каталоги производителя',
         count: 3,
+        img: 'assets/images/docs-1.jpg'
+      },
+      {
+        title: 'GSM',
+        text: 'Каталоги производителя',
+        count: 1,
+        img: 'assets/images/docs/docs-4.jpg'
+      },
+      {
+        title: 'POLY GIM',
+        text: 'Каталоги производителя',
+        count: 4,
+        img: 'assets/images/docs/docs-5.jpg'
       },
     ]
   .docs-page 
@@ -56,23 +71,5 @@ block content
                           |#{item} 
     section.section 
       .container 
-        h2
-          |Токарные станки с ЧПУ
-    each item, index in ddata
-      section.section(class=(index === 3 ? "section--last" : ""))
-        .container
-          .docs-page__row 
-            .docs-page__col
-              h3.docs-page__title 
-                |#{item.title}
-              .docs-page__text 
-                |#{item.text}
-          .grid-container.margin-top.margin-top--md 
-            - for (i = 0; i < item.count; i++)
-              +docs-card
-          .section 
-            .docs-page__text 
-              |Документация
-            .grid-container.margin-top.margin-top--md 
-              - for (i = 0; i < 6; i++)
-                +docs-card
+        h3.docs-page__empty 
+          |Выберите категорию из выпадающего списка

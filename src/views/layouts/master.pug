@@ -28,7 +28,7 @@ html(lang='en')
 
   block vars
 
-  body.body
+  body.body.no-transition
     +grid-test
 
     .wrapper(class=[isVisible ? "wrapper--visible" : ""])
@@ -44,5 +44,6 @@ html(lang='en')
     +login-modal
     +phone-modal(id = 'phone')
     +profile-modal
+    +pass-modal
 
     block scripts
