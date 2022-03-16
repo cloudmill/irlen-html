@@ -7,7 +7,7 @@ $(() => {
   Parsley.addMessages('ru', {
     defaultMessage: "Некорректное значение.",
     type: {
-      email: "Формат email-адреса некорректный.",
+      email: "Формат email-адреса некорректный",
       url: "Введите URL адрес.",
       number: "Введите число.",
       integer: "Введите целое число.",
