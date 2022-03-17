@@ -120,12 +120,7 @@ function forms() {
 
         let form = $(this),
             formParent = form.parents("[data-form-parent]"),
-            modalLogin = form.parents("[data-fancy-modal=1]"),
             formResponse = formParent.siblings("[data-type=form-response]"),
-            modalResponseTtl = modalLogin.find("[data-response=title]"),
-            modalResponseMsg = modalLogin.find("[data-response=mess]"),
-            formInputErrorIn = form.find("[data-resp=error-in]"),
-            formInputErrorUl = form.find("[error-ul]"),
             formInputErrorMess = form.find("[data-resp=error-mess]"),
             url = form.attr("data-url"),
             data = {};
@@ -145,14 +140,12 @@ function forms() {
             data: data,
             success: function (r) {
                 if (r.type) {
-                    if (r.type === 'login') {
-                        console.log('log in / reg');
-                        formParent.attr('data-form-hidden', '');
-                        formResponse.attr('data-response-active', '');
-                        modalResponseTtl.html(r.title);
-                        modalResponseMsg.html(r.mess);
-                        console.log('reload');
+                    if (r.type === 'login_error') {
+                        console.log('log in / error');
 
+                        formInputErrorMess.parsley().addError('customValidationId', { message: r.mess });
+                    }
+                    if (r.type === 'login') {
                         location.reload();
                     }
                     if (r.type === 'change') {
