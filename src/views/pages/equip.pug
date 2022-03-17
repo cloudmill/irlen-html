@@ -70,7 +70,7 @@ block content
         ul.equip-page__list
           each item in ddata.bigCards
             li.equip-page__list-item 
-              a.equip-page__card(href="#") 
+              .equip-page__card
                 .equip-page__card-row 
                   .equip-page__card-col
                     .equip-page__card-image 
@@ -79,16 +79,16 @@ block content
                       +big-arrow-svg.arrow-icon__svg
                   .equip-page__card-col
                     .equip-page__card-container
-                      .equip-page__card-title 
+                      a.equip-page__card-title(href="#") 
                         |#{item.title}
+                        .arrow-icon
+                          +big-arrow-svg.arrow-icon__svg
                       ul.equip-page__card-list 
                         each el in item.items
                           li.equip-page__card-item 
-                            object
-                              a.equip-page__card-link(href="#123")
-                                |#{el}
-                    .arrow-icon
-                      +big-arrow-svg.arrow-icon__svg
+                            a.equip-page__card-link(href="#123")
+                              |#{el}
+                    
         .section__block
           .equip-page__grid 
             each item in ddata.cards

@@ -51,6 +51,12 @@ mixin header
                   .header__nav-icon
                     +arrow-svg.header__nav-svg
               li.header__nav-item 
+                .header__nav-button(data-accordion-header='4')
+                  .header__nav-text
+                    |Документация 
+                  .header__nav-icon
+                    +arrow-svg.header__nav-svg
+              li.header__nav-item 
                 a.header__nav-link(href="#") 
                   |Контакты
           .header__col
@@ -281,6 +287,13 @@ mixin header
         .header__modal-container 
           ul.header__modal-list.header__modal-list--transparent
             each item in ['Подбор инструмента', 'Ленточные пилы', 'Сервис', 'Инжиниринг', 'Обучение', 'Лизинг']
+              li.header__modal-item 
+                a.header__modal-link(href="#") 
+                  |#{item}
+      .header__modal-product(data-header-modal='4')
+        .header__modal-container 
+          ul.header__modal-list.header__modal-list--transparent
+            each item in ['Оборудование', 'Инструменты']
               li.header__modal-item 
                 a.header__modal-link(href="#") 
                   |#{item}

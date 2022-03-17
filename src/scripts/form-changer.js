@@ -48,6 +48,7 @@ export class FormChanger {
 
     for (let i = 0; i < this.values.length; i++) {
       this.inputs[i].value = this.values[i]
+      $(this.inputs[i]).parsley().reset()
     }
   }
 }
