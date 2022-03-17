@@ -61,7 +61,7 @@ block content
                     .profile-page__form-item
                       .profile-page__form-label 
                         |Пароль
-                      input.form__input#password(type="password" required value = "zxcqwerty123")
+                      input.form__input#password(type="password" data-parsley-equalto="#passwordAgain" required value = "zxcqwerty123")
                     .profile-page__form-item
                       .profile-page__form-label 
                         |ИНН
@@ -69,7 +69,7 @@ block content
                     .profile-page__form-item
                       .profile-page__form-label 
                         |Пароль еще раз
-                      input.form__input(type="password" data-parsley-equalto="#password" required value = "zxcqwerty123")
+                      input.form__input#passwordAgain(type="password" data-parsley-equalto="#password" required value = "zxcqwerty123")
                     .profile-page__form-item
                       .profile-page__form-label 
                         |Телефон

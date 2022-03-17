@@ -35,18 +35,6 @@
     @media (max-width: ($breakpoint - 1px)) {
       background: transparent;
     }
-
-    &:hover {
-      #{$comp}__card-title {
-        color: $color-blue;
-      }
-
-      .arrow-icon__svg {
-        path {
-          stroke: $color-blue;
-        }
-      }
-    }
   }
   &__card-row {
     display: flex;
@@ -102,13 +90,30 @@
   }
   &__card-title {
     margin-bottom: 24px;
-    @include fsl(24px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 12px;
+    }
+
+    display: block;
+
+    @include fsl(24px, 120%);
+    @media (max-width: ($breakpoint - 1px)) {
       @include fsl(16px, 120%);
     }
     font-weight: 500;
     transition: $transition;
+
+    &:hover {
+      @media (min-width: $breakpoint) {
+        color: $color-blue;
+  
+        .arrow-icon__svg {
+          path {
+            stroke: $color-blue;
+          }
+        }
+      }
+    }
   }
   &__card-item {
     @media (max-width: ($breakpoint - 1px)) {

@@ -90,6 +90,10 @@
       margin-right: 30px;
     }
 
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      width: 150px;
+    }
+
     @media (max-width: ($breakpoint - 1px)) {
       margin-right: 0;
     }
@@ -173,7 +177,7 @@
 
     &:nth-child(3) {
       padding-left: 60px;
-      @media (max-width: ($breakpoint-xl - 1px)) {
+      @media (max-width: ($breakpoint-xxl - 1px)) {
         padding-left: 30px;
       }
       @media (max-width: ($breakpoint-ll - 1px)) {
@@ -233,6 +237,9 @@
     @media (max-width: ($breakpoint-xl - 1px)) {
       @include fsl(16px);
     }
+    @media (max-width: ($breakpoint-ll - 1px)) {
+      @include fsl(14px);
+    }
     transition: $transition;
   }
 
@@ -264,11 +271,11 @@
     &:not(:first-child) {
       margin-left: 32px;
 
-      @media (max-width: ($breakpoint-ll - 1px)) {
-        margin-left: 20px;
+      @media (max-width: ($breakpoint-xl - 1px)) {
+        margin-left: 25px;
       }
 
-      @media (max-width: ($breakpoint-l - 1px)) {
+      @media (max-width: ($breakpoint-ll - 1px)) {
         margin-left: 15px;
       }
     }
@@ -352,9 +359,8 @@
 
   &__search {
     padding-left: 32px;
-
-    @media (max-width: ($breakpoint-xl - 1px)) {
-      padding-left: 25px;
+    @media (max-width: ($breakpoint-xxl - 1px)) {
+      padding-left: 20px;
     }
     @media (max-width: ($breakpoint-ll - 1px)) {
       padding-left: 15px;
