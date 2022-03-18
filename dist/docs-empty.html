@@ -999,8 +999,8 @@
 						<form class="login-modal__form active" data-form-user="" action="/" data-form="1">
 							<div class="form__item"><input class="form__input" placeholder="Имя*" required="required" /></div>
 							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" /></div>
-							<div class="form__item"><input class="form__input" type="password" placeholder="Пароль*" required="required" /></div>
-							<div class="form__item"><input class="form__input" type="password" placeholder="Повторите пароль*" required="required" /></div>
+							<div class="form__item"><input class="form__input" id="password" type="password" placeholder="Пароль*" required="required" data-parsley-equalto="#passwordAgain" /></div>
+							<div class="form__item"><input class="form__input" id="passwordAgain" type="password" placeholder="Повторите пароль*" required="required" data-parsley-equalto="#password" /></div>
 							<div class="form__item form__item--big">
 								<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="policy" required="required" />
 										<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">

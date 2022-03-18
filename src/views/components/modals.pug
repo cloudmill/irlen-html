@@ -30,14 +30,6 @@ mixin login-modal
           type: 'email',
           placeholder: 'E-mail*',
         },
-        {
-          type: 'password',
-          placeholder: 'Пароль*',
-        },
-        {
-          type: 'password',
-          placeholder: 'Повторите пароль*',
-        },
       ],
       corp: [
         {
@@ -122,6 +114,10 @@ mixin login-modal
             each item in ddata.user
               .form__item 
                 input.form__input(type=item.type placeholder=item.placeholder required) 
+            .form__item 
+              input.form__input#password(type="password" placeholder="Пароль*" required data-parsley-equalto="#passwordAgain") 
+            .form__item 
+              input.form__input#passwordAgain(type="password" placeholder="Повторите пароль*" required data-parsley-equalto="#password") 
             .form__item.form__item--big
               .checkbox.checkbox--start
                 label.checkbox__label
