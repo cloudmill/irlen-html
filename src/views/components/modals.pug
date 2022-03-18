@@ -89,7 +89,7 @@ mixin login-modal
               .tooltip__row
                 .checkbox.checkbox--lg
                   label.checkbox__label
-                    input.checkbox__input(type="checkbox" checked data-login-checkbox='')
+                    input.checkbox__input(type="checkbox" data-login-checkbox='')
                     .checkbox__box 
                       +check-svg.checkbox__svg
                     .checkbox__text
@@ -99,7 +99,7 @@ mixin login-modal
                     +tooltip-svg.tooltip__svg
               .tooltip__container   
                 |Для юридических лиц предусмотренна программа лояльности.
-          form.login-modal__form.active(data-form-corp='' action="/" data-form='123')
+          form.login-modal__form(data-form-corp='' action="/" data-form='123')
             each item in ddata.corp 
               .form__item 
                 input.form__input(type=item.type placeholder=item.placeholder required) 
@@ -118,7 +118,7 @@ mixin login-modal
             .form__item.form__item--big 
               button.button.button--wide(data-form-button='123')
                 |Зарегистрироваться
-          form.login-modal__form(data-form-user='' action="/" data-form='1')
+          form.login-modal__form.active(data-form-user='' action="/" data-form='1')
             each item in ddata.user
               .form__item 
                 input.form__input(type=item.type placeholder=item.placeholder required) 
