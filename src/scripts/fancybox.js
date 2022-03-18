@@ -1,4 +1,5 @@
 import '@fancyapps/fancybox';
+import {formReset} from './form-reset'
 
 // fancybox
 {
@@ -14,6 +15,7 @@ import '@fancyapps/fancybox';
       '<div class="fancybox-stage"></div>' +
       '</div>'
     );
+    $.fancybox.defaults.afterClose = formReset;
 
     $('[data-fancy-button]').on('click', function (event) {
       event.preventDefault();
