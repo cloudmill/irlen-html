@@ -65,7 +65,7 @@ mixin login-modal
           .form__item 
             input.form__input(type="email" placeholder='E-mail' required) 
           .form__item 
-            input.form__input(type="password" placeholder="Пароль" required) 
+            input.form__input(type="password" placeholder="Пароль" required data-parsley-minlength="7") 
           .form__item 
             button.button.button--wide(data-form-button='123' required)
               |Войти
@@ -115,9 +115,9 @@ mixin login-modal
               .form__item 
                 input.form__input(type=item.type placeholder=item.placeholder required) 
             .form__item 
-              input.form__input#password(type="password" placeholder="Пароль*" required data-parsley-equalto="#passwordAgain") 
+              input.form__input#password(type="password" placeholder="Пароль*" required data-parsley-equalto="#passwordAgain" data-parsley-minlength="7") 
             .form__item 
-              input.form__input#passwordAgain(type="password" placeholder="Повторите пароль*" required data-parsley-equalto="#password") 
+              input.form__input#passwordAgain(type="password" placeholder="Повторите пароль*" required data-parsley-equalto="#password" data-parsley-minlength="7") 
             .form__item.form__item--big
               .checkbox.checkbox--start
                 label.checkbox__label

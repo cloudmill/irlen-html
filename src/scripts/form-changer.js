@@ -16,8 +16,13 @@ export class FormChanger {
       const target = e.target
 
       if (target.closest('[data-change-button]')) {
+        const passwordInputs = this.form.querySelectorAll('input[type=password]')
+        
         this.cacheValues()
         this.form.classList.toggle('form--disabled')
+        passwordInputs.forEach(item => {
+          item.value = ''
+        })
       }
 
       if (target.closest('[data-save-button]')) {
