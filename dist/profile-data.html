@@ -834,13 +834,13 @@
 														</div>
 													</div>
 													<div class="profile-page__form-item">
-														<div class="profile-page__form-label">Пароль</div><input class="form__input" id="password" type="password" data-parsley-equalto="#passwordAgain" required value="zxcqwerty123">
+														<div class="profile-page__form-label">Пароль</div><input class="form__input" id="password" type="password" data-parsley-equalto="#passwordAgain" required value="zxcqwerty123" data-parsley-minlength="7">
 													</div>
 													<div class="profile-page__form-item">
 														<div class="profile-page__form-label">ИНН</div><input class="form__input disabled" required value="789746513">
 													</div>
 													<div class="profile-page__form-item">
-														<div class="profile-page__form-label">Пароль еще раз</div><input class="form__input" id="passwordAgain" type="password" data-parsley-equalto="#password" required value="zxcqwerty123">
+														<div class="profile-page__form-label">Пароль еще раз</div><input class="form__input" id="passwordAgain" type="password" data-parsley-equalto="#password" required value="zxcqwerty123" data-parsley-minlength="7">
 													</div>
 													<div class="profile-page__form-item">
 														<div class="profile-page__form-label">Телефон</div><input class="form__input" value="+7 (911) 286-25-63" data-mask="phone">
@@ -981,7 +981,7 @@
 				<div class="tabs-block active" data-tabs-block="">
 					<form class="form" action="/" data-form="123">
 						<div class="form__item"><input class="form__input" type="email" placeholder="E-mail" required="required" /></div>
-						<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" required="required" /></div>
+						<div class="form__item"><input class="form__input" type="password" placeholder="Пароль" required="required" data-parsley-minlength="7" /></div>
 						<div class="form__item"><button class="button button--wide" data-form-button="123" required="required">Войти</button></div>
 						<div class="login-modal__item">
 							<div class="login-modal__link" data-fancy-button="pass">Забыли пароль?</div>
@@ -1025,8 +1025,8 @@
 						<form class="login-modal__form active" data-form-user="" action="/" data-form="1">
 							<div class="form__item"><input class="form__input" placeholder="Имя*" required="required" /></div>
 							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" /></div>
-							<div class="form__item"><input class="form__input" id="password" type="password" placeholder="Пароль*" required="required" data-parsley-equalto="#passwordAgain" /></div>
-							<div class="form__item"><input class="form__input" id="passwordAgain" type="password" placeholder="Повторите пароль*" required="required" data-parsley-equalto="#password" /></div>
+							<div class="form__item"><input class="form__input" id="password" type="password" placeholder="Пароль*" required="required" data-parsley-equalto="#passwordAgain" data-parsley-minlength="7" /></div>
+							<div class="form__item"><input class="form__input" id="passwordAgain" type="password" placeholder="Повторите пароль*" required="required" data-parsley-equalto="#password" data-parsley-minlength="7" /></div>
 							<div class="form__item form__item--big">
 								<div class="checkbox checkbox--start"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" name="policy" required="required" />
 										<div class="checkbox__box"><svg class="checkbox__svg" width="12" height="10" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
