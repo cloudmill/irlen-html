@@ -4,6 +4,10 @@
   border-top: 1px solid $color-light-gray;
   background: $color-white;
 
+  @media print {
+    display: none;
+  }
+
   &__inner {
     padding: 60px 0;
     @media (max-width: ($breakpoint - 1px)) {
