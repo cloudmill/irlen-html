@@ -33,25 +33,10 @@ mixin login-modal
       ],
       corp: [
         {
-          type: 'email',
-          placeholder: 'E-mail*',
+          type: '',
+          placeholder: '',
         },
-        {
-          type: 'password',
-          placeholder: 'Пароль*',
-        },
-        {
-          type: 'password',
-          placeholder: 'Повторите пароль*',
-        },
-        {
-          type: 'text',
-          placeholder: 'Название компании*',
-        },
-        {
-          type: 'text',
-          placeholder: 'ИНН*',
-        },
+        
       ]
     }
   .login-modal(data-fancy-modal='1')
@@ -92,13 +77,20 @@ mixin login-modal
               .tooltip__container   
                 |Для юридических лиц предусмотренна программа лояльности.
           form.login-modal__form(data-form-corp='' action="/" data-form='123')
-            each item in ddata.corp 
-              .form__item 
-                input.form__input(type=item.type placeholder=item.placeholder required) 
+            .form__item 
+              input.form__input(type="email" placeholder="E-mail*" required) 
+            .form__item 
+              input.form__input#password1(type="password" placeholder="Пароль*" required data-parsley-equalto="#passwordAgain1" data-parsley-minlength="7") 
+            .form__item 
+              input.form__input#passwordAgain1(type="password" placeholder="Повторите пароль*" required data-parsley-equalto="#password1" data-parsley-minlength="7") 
+            .form__item 
+              input.form__input(type="text" placeholder="Название компании*" required) 
+            .form__item 
+              input.form__input(type="text" placeholder="ИНН*" required data-parsley-length="[10, 12]") 
             .form__item 
               input.form__input(type='text' placeholder='Телефон для связи*' data-mask='phone' required) 
             .form__item 
-              input.form__input(type='text' placeholder='Контактное лицо*' required) 
+              input.form__input(type='text' placeholder='Контактное лицо*' required data-parsley-pattern="[a-zA-Zа-яёА-ЯЁ\\s]+") 
             .form__item.form__item--big
               .checkbox.checkbox--start
                 label.checkbox__label

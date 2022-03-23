@@ -5,7 +5,9 @@ export function formReset(instance, slide) {
   if (response.length) {
     const form = slide.$content.find("[data-form]")
 
-    form[0].reset();
+    form.each(function() {
+      this.reset()
+    })
     response.removeAttr("data-response-active")
     $('[data-form-parent]').removeAttr("data-form-hidden")
   }
