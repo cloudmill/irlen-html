@@ -19,26 +19,6 @@ mixin pass-modal
         |Новый пароль отправлен на указанную почту
 
 mixin login-modal 
-  -
-    var ddata = {
-      user: [
-        {
-          type: 'text',
-          placeholder: 'Имя*',
-        },
-        {
-          type: 'email',
-          placeholder: 'E-mail*',
-        },
-      ],
-      corp: [
-        {
-          type: '',
-          placeholder: '',
-        },
-        
-      ]
-    }
   .login-modal(data-fancy-modal='1')
     .login-modal__container(data-tabs-parent='' data-form-parent='')
       h3.login-modal__wrapper
@@ -103,11 +83,12 @@ mixin login-modal
               button.button.button--wide(data-form-button='123')
                 |Зарегистрироваться
           form.login-modal__form.active(data-form-user='' action="/" data-form='1')
-            each item in ddata.user
-              .form__item 
-                input.form__input(type=item.type placeholder=item.placeholder required) 
             .form__item 
-              input.form__input#password(type="password" placeholder="Пароль*" required data-parsley-equalto="#passwordAgain" data-parsley-minlength="7") 
+              input.form__input(type="text" placeholder="Имя*" required data-parsley-pattern="[a-zA-Zа-яёА-ЯЁ\\s]+") 
+            .form__item 
+              input.form__input(type="text" placeholder="E-mail*" required) 
+            .form__item 
+              input.form__input#password(type="password" placeholder="Пароль*" required data-parsley-minlength="7" data-parsley-equalto="#passwordAgain" data-password='' data-parsley-priority-enabled='false') 
             .form__item 
               input.form__input#passwordAgain(type="password" placeholder="Повторите пароль*" required data-parsley-equalto="#password") 
             .form__item.form__item--big
