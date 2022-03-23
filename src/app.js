@@ -13,6 +13,7 @@ import 'scripts/show-more.js';
 import 'scripts/parsley.js';
 import 'scripts/anchor-links.js';
 import 'scripts/search.js';
+import 'scripts/map.js';
 import 'scripts/no-transition.js';
 import 'scripts/range-slider.js';
 import 'scripts/form-response.js';
