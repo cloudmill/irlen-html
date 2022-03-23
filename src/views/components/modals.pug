@@ -82,11 +82,11 @@ mixin login-modal
             .form__item 
               input.form__input#password1(type="password" placeholder="Пароль*" required data-parsley-equalto="#passwordAgain1" data-parsley-minlength="7") 
             .form__item 
-              input.form__input#passwordAgain1(type="password" placeholder="Повторите пароль*" required data-parsley-equalto="#password1" data-parsley-minlength="7") 
+              input.form__input#passwordAgain1(type="password" placeholder="Повторите пароль*" required data-parsley-equalto="#password1") 
             .form__item 
               input.form__input(type="text" placeholder="Название компании*" required) 
             .form__item 
-              input.form__input(type="text" placeholder="ИНН*" required data-parsley-length="[10, 12]") 
+              input.form__input(type="number" placeholder="ИНН*" required data-parsley-length="[10, 12]") 
             .form__item 
               input.form__input(type='text' placeholder='Телефон для связи*' data-mask='phone' required) 
             .form__item 
@@ -109,7 +109,7 @@ mixin login-modal
             .form__item 
               input.form__input#password(type="password" placeholder="Пароль*" required data-parsley-equalto="#passwordAgain" data-parsley-minlength="7") 
             .form__item 
-              input.form__input#passwordAgain(type="password" placeholder="Повторите пароль*" required data-parsley-equalto="#password" data-parsley-minlength="7") 
+              input.form__input#passwordAgain(type="password" placeholder="Повторите пароль*" required data-parsley-equalto="#password") 
             .form__item.form__item--big
               .checkbox.checkbox--start
                 label.checkbox__label
