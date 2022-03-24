@@ -812,58 +812,56 @@
 									</div>
 								</div>
 								<div class="row__col">
-									<div class="profile-page__form">
+									<form class="profile-page__form form form--disabled" action="/" data-form="">
 										<div class="profile-page__form-col">
-											<form class="form form--disabled" action="/" data-form="">
-												<div class="profile-page__form-grid">
-													<div class="profile-page__form-item">
-														<div class="profile-page__form-label">Email</div><input class="form__input" type="email" required value="ksh@cloudmill.ru">
-													</div>
-													<div class="profile-page__form-item">
-														<div class="profile-page__form-label">Название компании</div><input class="form__input disabled" required value="Интерактивное агенство КМ">
-													</div>
-													<div class="profile-page__form-item mobile">
-														<div class="loyalty-card loyalty-card--small">
-															<div class="loyalty-card__icon loyalty-card__icon--start"><svg class="loyalty-card__svg" width="45" height="45" viewbox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-																	<rect width="45" height="45" rx="4" fill="#CAFDFA"></rect>
-																	<path d="M21.1628 15V21.1345L21.6512 25.7563H23.3488L23.8372 21.1345V15H21.1628ZM24 30V27.1849H21V30H24Z" fill="#121212"></path>
-																</svg></div>
-															<div class="loyalty-card__content">
-																<div class="loyalty-card__text">Для смены название компании или ИНН позвоните по телефону: <a class="loyalty-card__link" href="tel:8 800 444-60-98">8 800 444-60-98</a></div>
-															</div>
-														</div>
-													</div>
-													<div class="profile-page__form-item">
-														<div class="profile-page__form-label">Пароль</div><input class="form__input" id="password" type="password" data-parsley-equalto="#passwordAgain" required value="zxcqwerty123" data-parsley-minlength="7">
-													</div>
-													<div class="profile-page__form-item">
-														<div class="profile-page__form-label">ИНН</div><input class="form__input disabled" required value="789746513">
-													</div>
-													<div class="profile-page__form-item">
-														<div class="profile-page__form-label">Пароль еще раз</div><input class="form__input" id="passwordAgain" type="password" data-parsley-equalto="#password" required value="zxcqwerty123" data-parsley-minlength="7">
-													</div>
-													<div class="profile-page__form-item">
-														<div class="profile-page__form-label">Телефон</div><input class="form__input" value="+7 (911) 286-25-63" data-mask="phone">
-													</div>
-													<div class="profile-page__form-item">
-														<div class="profile-page__form-label">Имя</div><input class="form__input" value="Кирилл">
-													</div>
+											<div class="profile-page__form-grid">
+												<div class="profile-page__form-item">
+													<div class="profile-page__form-label">Email</div><input class="form__input" type="email" required value="ksh@cloudmill.ru">
 												</div>
-												<div class="profile-page__buttons">
-													<div class="profile-page__button" data-change-button="">
-														<div class="profile-page__icon"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path fill-rule="evenodd" clip-rule="evenodd" d="M12.6978 0.666626C13.2434 0.666626 13.7664 0.884476 14.1484 1.26948L16.7325 3.85356C17.1172 4.23829 17.3334 4.7601 17.3334 5.30419C17.3334 5.84829 17.1172 6.37009 16.7325 6.75482L7.29791 16.1864C6.71584 16.8579 5.89074 17.2704 4.94549 17.3352H0.666656V16.5019L0.669363 12.9894C0.740355 12.1107 1.14888 11.2936 1.77207 10.7445L11.2461 1.27048C11.6303 0.883984 12.1528 0.666626 12.6978 0.666626ZM4.88664 15.6707C5.33183 15.6391 5.74623 15.4319 6.07899 15.0513L12.3806 8.74972L9.25193 5.62095L2.91341 11.958C2.57578 12.2566 2.36691 12.6743 2.33332 13.0565V15.6691L4.88664 15.6707ZM10.4306 4.44258L13.5591 7.57121L15.554 5.57631C15.6262 5.50414 15.6667 5.40626 15.6667 5.30419C15.6667 5.20213 15.6262 5.10424 15.554 5.03207L12.9676 2.44567C12.8962 2.37375 12.7991 2.33329 12.6978 2.33329C12.5965 2.33329 12.4993 2.37375 12.428 2.44567L10.4306 4.44258Z" fill="#121212"></path>
+												<div class="profile-page__form-item">
+													<div class="profile-page__form-label">Название компании</div><input class="form__input disabled" required value="Интерактивное агенство КМ">
+												</div>
+												<div class="profile-page__form-item mobile">
+													<div class="loyalty-card loyalty-card--small">
+														<div class="loyalty-card__icon loyalty-card__icon--start"><svg class="loyalty-card__svg" width="45" height="45" viewbox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect width="45" height="45" rx="4" fill="#CAFDFA"></rect>
+																<path d="M21.1628 15V21.1345L21.6512 25.7563H23.3488L23.8372 21.1345V15H21.1628ZM24 30V27.1849H21V30H24Z" fill="#121212"></path>
 															</svg></div>
-														<div class="profile-page__text">Изменить</div>
-													</div>
-													<div class="profile-page__form-buttons">
-														<div class="profile-page__form-btn">
-															<div class="button button--small button--white" data-cancel-button="">Отменить</div>
+														<div class="loyalty-card__content">
+															<div class="loyalty-card__text">Для смены название компании или ИНН позвоните по телефону: <a class="loyalty-card__link" href="tel:8 800 444-60-98">8 800 444-60-98</a></div>
 														</div>
-														<div class="profile-page__form-btn"><button class="button button--small" data-save-button="">Сохранить</button></div>
 													</div>
 												</div>
-											</form>
+												<div class="profile-page__form-item">
+													<div class="profile-page__form-label">Пароль</div><input class="form__input" id="password2" type="password" data-parsley-equalto="#passwordAgain2" required value="zxcqwerty123" data-parsley-minlength="7" data-password="" data-parsley-priority-enabled="false">
+												</div>
+												<div class="profile-page__form-item">
+													<div class="profile-page__form-label">ИНН</div><input class="form__input disabled" required value="789746513">
+												</div>
+												<div class="profile-page__form-item">
+													<div class="profile-page__form-label">Пароль еще раз</div><input class="form__input" id="passwordAgain2" type="password" data-parsley-equalto="#password2" required value="zxcqwerty123">
+												</div>
+												<div class="profile-page__form-item">
+													<div class="profile-page__form-label">Телефон</div><input class="form__input" value="+7 (911) 286-25-63" data-mask="phone">
+												</div>
+												<div class="profile-page__form-item">
+													<div class="profile-page__form-label">Имя</div><input class="form__input" value="Кирилл" data-parsley-pattern="[a-zA-Zа-яёА-ЯЁ\s]+">
+												</div>
+											</div>
+											<div class="profile-page__buttons">
+												<div class="profile-page__button" data-change-button="">
+													<div class="profile-page__icon"><svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M12.6978 0.666626C13.2434 0.666626 13.7664 0.884476 14.1484 1.26948L16.7325 3.85356C17.1172 4.23829 17.3334 4.7601 17.3334 5.30419C17.3334 5.84829 17.1172 6.37009 16.7325 6.75482L7.29791 16.1864C6.71584 16.8579 5.89074 17.2704 4.94549 17.3352H0.666656V16.5019L0.669363 12.9894C0.740355 12.1107 1.14888 11.2936 1.77207 10.7445L11.2461 1.27048C11.6303 0.883984 12.1528 0.666626 12.6978 0.666626ZM4.88664 15.6707C5.33183 15.6391 5.74623 15.4319 6.07899 15.0513L12.3806 8.74972L9.25193 5.62095L2.91341 11.958C2.57578 12.2566 2.36691 12.6743 2.33332 13.0565V15.6691L4.88664 15.6707ZM10.4306 4.44258L13.5591 7.57121L15.554 5.57631C15.6262 5.50414 15.6667 5.40626 15.6667 5.30419C15.6667 5.20213 15.6262 5.10424 15.554 5.03207L12.9676 2.44567C12.8962 2.37375 12.7991 2.33329 12.6978 2.33329C12.5965 2.33329 12.4993 2.37375 12.428 2.44567L10.4306 4.44258Z" fill="#121212"></path>
+														</svg></div>
+													<div class="profile-page__text">Изменить</div>
+												</div>
+												<div class="profile-page__form-buttons">
+													<div class="profile-page__form-btn">
+														<div class="button button--small button--white" data-cancel-button="">Отменить</div>
+													</div>
+													<div class="profile-page__form-btn"><button class="button button--small" data-save-button="">Сохранить</button></div>
+												</div>
+											</div>
 										</div>
 										<div class="profile-page__form-col">
 											<div class="loyalty-card loyalty-card--small">
@@ -876,7 +874,7 @@
 												</div>
 											</div>
 										</div>
-									</div>
+									</form>
 								</div>
 							</div>
 						</div>
@@ -1006,7 +1004,7 @@
 						</div>
 						<form class="login-modal__form" data-form-corp="" action="/" data-form="123">
 							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" /></div>
-							<div class="form__item"><input class="form__input" id="password1" type="password" placeholder="Пароль*" required="required" data-parsley-equalto="#passwordAgain1" data-parsley-minlength="7" /></div>
+							<div class="form__item"><input class="form__input" id="password1" type="password" placeholder="Пароль*" required="required" data-parsley-equalto="#passwordAgain1" data-parsley-minlength="7" data-password="" data-parsley-priority-enabled="false" /></div>
 							<div class="form__item"><input class="form__input" id="passwordAgain1" type="password" placeholder="Повторите пароль*" required="required" data-parsley-equalto="#password1" /></div>
 							<div class="form__item"><input class="form__input" placeholder="Название компании*" required="required" /></div>
 							<div class="form__item"><input class="form__input" type="number" placeholder="ИНН*" required="required" data-parsley-length="[10, 12]" /></div>
