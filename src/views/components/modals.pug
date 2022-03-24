@@ -28,7 +28,7 @@ mixin login-modal
       .tabs-block.active(data-tabs-block='')
         form.form(action="/" data-form='123')
           .form__item 
-            input.form__input(type="email" placeholder='E-mail' required) 
+            input.form__input(type="email" placeholder='E-mail' required data-parsley-trigger-after-failure="focusout") 
           .form__item 
             input.form__input(type="password" placeholder="Пароль" required data-parsley-minlength="7") 
           .form__item 
@@ -58,7 +58,7 @@ mixin login-modal
                 |Для юридических лиц предусмотренна программа лояльности.
           form.login-modal__form(data-form-corp='' action="/" data-form='123')
             .form__item 
-              input.form__input(type="email" placeholder="E-mail*" required) 
+              input.form__input(type="email" placeholder="E-mail*" required data-parsley-trigger-after-failure="focusout") 
             .form__item 
               input.form__input#password1(type="password" placeholder="Пароль*" required data-parsley-equalto="#passwordAgain1" data-parsley-minlength="7" data-password='' data-parsley-priority-enabled='false') 
             .form__item 

@@ -12,11 +12,6 @@ block content
   -
     var ddata = [
       {
-        type: 'email',
-        label: 'Email',
-        value: 'ksh@cloudmill.ru',
-      },
-      {
         type: 'text',
         label: 'Название компании',
         value: 'Интерактивное агенство КМ',
@@ -43,6 +38,10 @@ block content
             form.profile-page__form.form.form--disabled(action="/" data-form='') 
               .profile-page__form-col
                 .profile-page__form-grid 
+                  .profile-page__form-item
+                    .profile-page__form-label 
+                      |Email
+                    input.form__input(type="email" placeholder='E-mail' value="ksh@cloudmill.ru" required data-parsley-trigger-after-failure="focusout") 
                   each item in ddata
                     if (item.type === 'panel')
                       .profile-page__form-item.mobile
@@ -56,7 +55,7 @@ block content
                       .profile-page__form-item
                         .profile-page__form-label 
                           |#{item.label}
-                        input.form__input(type=item.type required value = item.value class=(item.label === "ИНН" || item.label === "Название компании" ? "disabled" : "" ))
+                        input.form__input(type=item.type required value = item.value class=(item.label === "Название компании" ? "disabled" : "" ))
                   .profile-page__form-item
                     .profile-page__form-label 
                       |Пароль
