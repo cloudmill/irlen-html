@@ -6,10 +6,11 @@ if ($('.contacts-page').length) {
   try {
     ymaps.ready(() => {
       const maps = $('[data-map-parent]')
+      console.log("YANDEX map ready");
       maps.each(function() {
         const id = $(this).attr('id')
         const center = $(this).data('map-parent').split(' ')
-
+        console.log("LOOP");
         // vars
         const markWidth = 33;
         const markHeight = 45;  
@@ -71,6 +72,8 @@ if ($('.contacts-page').length) {
               map.setZoom(12);
             }
           });
+
+          console.log("END");
       });
     })
   } catch (err) {

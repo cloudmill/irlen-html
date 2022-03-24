@@ -749,7 +749,8 @@
     &--active {
 
       #{$comp}__modal-overlay {
-        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
       }
     }
   }
@@ -764,7 +765,8 @@
     height: 300vh;
 
     background: rgba($color-black, 0.2);
-    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
     transition: $transition;
   }
 
