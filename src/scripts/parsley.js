@@ -46,5 +46,21 @@ $(() => {
         equalToError.css('display', '')
       }
     })
+
+    input.on('input', function() {
+      if ($(this).val() === equalTo.val()) {
+        equalTo.removeClass('parsley-error')
+        equalTo.addClass('parsley-succes')
+        equalTo.parent().find('li').remove()
+      }
+    })
+
+    equalTo.on('input', function() {
+      if ($(this).val() === input.val() && input.val().length > 7) {
+        input.removeClass('parsley-error')
+        input.addClass('parsley-succes')
+        input.parent().find('li').remove()
+      }
+    })
   })
 });

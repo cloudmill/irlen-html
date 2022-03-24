@@ -3,6 +3,11 @@
 
   &--disabled {
 
+    .loyalty-card {
+      opacity: 0;
+      pointer-events: none;
+    }
+
     #{$comp}__input {
       opacity: 0.4;
       pointer-events: none;

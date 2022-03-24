@@ -40,57 +40,56 @@ block content
                 .tabs__item 
                   |Выйти
           .row__col
-            .profile-page__form 
+            form.profile-page__form.form.form--disabled(action="/" data-form='') 
               .profile-page__form-col
-                form.form.form--disabled(action="/" data-form='') 
-                  .profile-page__form-grid 
-                    each item in ddata
-                      if (item.type === 'panel')
-                        .profile-page__form-item.mobile
-                          .loyalty-card.loyalty-card--small
-                            .loyalty-card__icon.loyalty-card__icon--start
-                              +warning-svg.loyalty-card__svg
-                            .loyalty-card__content 
-                              .loyalty-card__text 
-                                |Для смены название компании или ИНН позвоните по телефону: #[a.loyalty-card__link(href="tel:8 800 444-60-98") 8 800 444-60-98]
-                      else
-                        .profile-page__form-item
-                          .profile-page__form-label 
-                            |#{item.label}
-                          input.form__input(type=item.type required value = item.value class=(item.label === "ИНН" || item.label === "Название компании" ? "disabled" : "" ))
-                    .profile-page__form-item
-                      .profile-page__form-label 
-                        |Пароль
-                      input.form__input#password(type="password" data-parsley-equalto="#passwordAgain" required value = "zxcqwerty123" data-parsley-minlength="7")
-                    .profile-page__form-item
-                      .profile-page__form-label 
-                        |ИНН
-                      input.form__input.disabled(type="text" required value = "789746513")
-                    .profile-page__form-item
-                      .profile-page__form-label 
-                        |Пароль еще раз
-                      input.form__input#passwordAgain(type="password" data-parsley-equalto="#password" required value = "zxcqwerty123" data-parsley-minlength="7")
-                    .profile-page__form-item
-                      .profile-page__form-label 
-                        |Телефон
-                      input.form__input(type='text' value='+7 (911) 286-25-63' data-mask='phone')
-                    .profile-page__form-item
-                      .profile-page__form-label 
-                        |Имя
-                      input.form__input(type='text' value='Кирилл')
-                  .profile-page__buttons
-                    .profile-page__button(data-change-button='')
-                      .profile-page__icon 
-                        +change-svg
-                      .profile-page__text 
-                        |Изменить
-                    .profile-page__form-buttons
-                      .profile-page__form-btn
-                        .button.button--small.button--white(data-cancel-button='') 
-                          |Отменить
-                      .profile-page__form-btn
-                        button.button.button--small(data-save-button='')
-                          |Сохранить
+                .profile-page__form-grid 
+                  each item in ddata
+                    if (item.type === 'panel')
+                      .profile-page__form-item.mobile
+                        .loyalty-card.loyalty-card--small
+                          .loyalty-card__icon.loyalty-card__icon--start
+                            +warning-svg.loyalty-card__svg
+                          .loyalty-card__content 
+                            .loyalty-card__text 
+                              |Для смены название компании или ИНН позвоните по телефону: #[a.loyalty-card__link(href="tel:8 800 444-60-98") 8 800 444-60-98]
+                    else
+                      .profile-page__form-item
+                        .profile-page__form-label 
+                          |#{item.label}
+                        input.form__input(type=item.type required value = item.value class=(item.label === "ИНН" || item.label === "Название компании" ? "disabled" : "" ))
+                  .profile-page__form-item
+                    .profile-page__form-label 
+                      |Пароль
+                    input.form__input#password2(type="password" data-parsley-equalto="#passwordAgain2" required value = "zxcqwerty123" data-parsley-minlength="7" data-password='' data-parsley-priority-enabled='false')
+                  .profile-page__form-item
+                    .profile-page__form-label 
+                      |ИНН
+                    input.form__input.disabled(type="text" required value = "789746513")
+                  .profile-page__form-item
+                    .profile-page__form-label 
+                      |Пароль еще раз
+                    input.form__input#passwordAgain2(type="password" data-parsley-equalto="#password2" required value = "zxcqwerty123")
+                  .profile-page__form-item
+                    .profile-page__form-label 
+                      |Телефон
+                    input.form__input(type='text' value='+7 (911) 286-25-63' data-mask='phone')
+                  .profile-page__form-item
+                    .profile-page__form-label 
+                      |Имя
+                    input.form__input(type='text' value='Кирилл' data-parsley-pattern="[a-zA-Zа-яёА-ЯЁ\\s]+")
+                .profile-page__buttons
+                  .profile-page__button(data-change-button='')
+                    .profile-page__icon 
+                      +change-svg
+                    .profile-page__text 
+                      |Изменить
+                  .profile-page__form-buttons
+                    .profile-page__form-btn
+                      .button.button--small.button--white(data-cancel-button='') 
+                        |Отменить
+                    .profile-page__form-btn
+                      button.button.button--small(data-save-button='')
+                        |Сохранить
               .profile-page__form-col
                 .loyalty-card.loyalty-card--small
                   .loyalty-card__icon.loyalty-card__icon--start
