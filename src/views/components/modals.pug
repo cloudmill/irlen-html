@@ -86,7 +86,7 @@ mixin login-modal
             .form__item 
               input.form__input(type="text" placeholder="Имя*" required data-parsley-pattern="[a-zA-Zа-яёА-ЯЁ\\s]+") 
             .form__item 
-              input.form__input(type="email" placeholder="E-mail*" required) 
+              input.form__input(type="email" placeholder="E-mail*" required data-parsley-trigger-after-failure="focusout") 
             .form__item 
               input.form__input#password(type="password" placeholder="Пароль*" required data-parsley-minlength="7" data-parsley-equalto="#passwordAgain" data-password='' data-parsley-priority-enabled='false') 
             .form__item 

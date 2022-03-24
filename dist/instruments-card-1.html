@@ -1947,7 +1947,7 @@
 						</form>
 						<form class="login-modal__form active" data-form-user="" action="/" data-form="1">
 							<div class="form__item"><input class="form__input" placeholder="Имя*" required="required" data-parsley-pattern="[a-zA-Zа-яёА-ЯЁ\s]+" /></div>
-							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" /></div>
+							<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required="required" data-parsley-trigger-after-failure="focusout" /></div>
 							<div class="form__item"><input class="form__input" id="password" type="password" placeholder="Пароль*" required="required" data-parsley-minlength="7" data-parsley-equalto="#passwordAgain" data-password="" data-parsley-priority-enabled="false" /></div>
 							<div class="form__item"><input class="form__input" id="passwordAgain" type="password" placeholder="Повторите пароль*" required="required" data-parsley-equalto="#password" /></div>
 							<div class="form__item form__item--big">
