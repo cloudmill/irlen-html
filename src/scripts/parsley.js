@@ -40,7 +40,7 @@ $(() => {
     input.parsley().on('field:error', function() {
       const equalToError = input.parent().find('.parsley-equalto')
 
-      if (input.val().length > 1 && input.val().length < 7) {
+      if (input.val().length > 0 && input.val().length < 7) {
         equalToError.css("display", "none")
       } else {
         equalToError.css('display', '')
@@ -56,7 +56,7 @@ $(() => {
     })
 
     equalTo.on('input', function() {
-      if ($(this).val() === input.val() && input.val().length > 7) {
+      if ($(this).val() === input.val() && input.val().length >= 7) {
         input.removeClass('parsley-error')
         input.addClass('parsley-succes')
         input.parent().find('li').remove()
