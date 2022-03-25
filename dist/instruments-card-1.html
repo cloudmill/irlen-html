@@ -866,12 +866,12 @@
 													</svg></div>
 												<div class="loyalty-card__content">
 													<div class="loyalty-card__title">Для юридических лиц действует программа лояльности.</div>
-													<div class="loyalty-card__text"><a class="loyalty-card__link" href="#">Авторизуйтесь</a>, чтобы узнать свой уровень цен.</div>
+													<div class="loyalty-card__text"><a class="loyalty-card__link" data-fancy-button="1" href="#">Авторизуйтесь</a>, чтобы узнать свой уровень цен.</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="instruments-card__bot">
+									<div class="instruments-card__bot" data-count-parent="">
 										<div class="instruments-card__bot-row">
 											<div class="instruments-card__bot-col">
 												<div class="instruments-card__bot-label">итого</div>
@@ -887,7 +887,9 @@
 													</div>
 												</div>
 											</div>
-											<div class="instruments-card__bot-col"><a class="button button--xl" href="#">Добавить в корзину</a></div>
+											<div class="instruments-card__bot-col">
+												<div class="button button--xl" data-fancy-button="product1">Добавить в корзину</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -1816,6 +1818,31 @@
 							</div>
 						</div>
 					</section>
+				</div>
+				<div class="product-modal" data-fancy-modal="product1">
+					<div class="product-modal__container">
+						<h3 class="product-modal__title">Товар добавлен в корзину</h3>
+						<div class="product-modal__body">
+							<div class="product-modal__top">
+								<div class="product-modal__label">товар</div>
+								<div class="product-modal__label">кол-во</div>
+							</div>
+							<div class="product-modal__row">
+								<div class="product-modal__col">
+									<h5>Раскатник R-D TICN 376 ISO2X M14X2 2P</h5>
+								</div>
+								<div class="product-modal__col">
+									<div class="product-modal__count" data-product-count="">35</div>
+								</div>
+							</div>
+							<div class="product-modal__buttons">
+								<div class="product-modal__item">
+									<div class="button button--wide button--white button--outline" data-fancybox-close="">Закрыть</div>
+								</div>
+								<div class="product-modal__item"><a class="button button--wide" href="#">Перейти в корзину</a></div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</main>
 			<div class="footer">
