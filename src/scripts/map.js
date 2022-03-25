@@ -47,7 +47,7 @@ if ($('.contacts-page').length) {
             },
             {
               iconLayout: "default#image",
-              iconImageHref: "/local/templates/main/assets/images/svg/placemark.svg",
+              iconImageHref: "/local/templates/main/assets/images/svg/map/placemark.svg",
               iconImageSize: [markWidth, markHeight],
               iconImageOffset: [-markWidth / 2, -80],
 
