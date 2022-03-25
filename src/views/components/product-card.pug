@@ -2,7 +2,7 @@ include ./counter
 
 mixin product-card 
   .product-card(class=attributes.class)
-    .product-card__container 
+    a.product-card__container(href="#")
       img(src="assets/images/product.jpg", alt="")
       .product-card__top 
         img.product-card__logo(src="assets/images/product-logo.png", alt="")
@@ -41,11 +41,11 @@ mixin product-card
             |#{data.tooltipText}
         .product-card__price-old
           |₽ 103.55
-      .product-card__bot 
+      .product-card__bot(data-count-parent='')
         .product-card__count 
           +counter
         .product-card__btn
-          a.product-card__button(href="#")
+          .product-card__button(data-fancy-button='product1')
             +cart-svg.product-card__svg
             .product-card__button-text 
               |В корзину

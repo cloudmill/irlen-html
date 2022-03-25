@@ -254,6 +254,74 @@
   }
 }
 
+.product-modal {
+
+  display: none;
+  width: 600px;
+
+  background: $color-white;
+  border-radius: 4px;
+
+  &__container {
+    padding: 60px 40px 40px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    text-align: center;
+  }
+
+  &__top {
+    margin-bottom: 12px;
+    padding-right: 20px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    color: $color-gray;
+    @include fsl(12px, 120%);
+  }
+
+  &__row {
+    padding: 16px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border: 1px solid $color-light-gray;
+    border-radius: 4px;
+  }
+
+  &__col {
+
+    &:nth-child(1) {
+      max-width: 272px;
+    }
+
+    &:nth-child(2) {
+      width: 55px;
+    }
+  }
+
+  &__buttons {
+    margin-top: 40px;
+
+    display: flex;
+  }
+
+  &__item {
+    width: 50%;
+    
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+}
+
 .fancybox-slide--html .fancybox-close-small {
   --size: 30px;
 

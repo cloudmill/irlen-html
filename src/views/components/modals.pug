@@ -163,3 +163,28 @@ mixin profile-modal
             li.profile-modal__item 
               a.profile-modal__link(href="#") 
                 |#{item}
+
+mixin product-modal 
+  .product-modal(data-fancy-modal='product1') 
+    .product-modal__container 
+      h3.product-modal__title 
+        |Товар добавлен в корзину
+      .product-modal__body 
+        .product-modal__top 
+          each item in ['товар', 'кол-во']
+            .product-modal__label 
+              |#{item}
+        .product-modal__row 
+          .product-modal__col
+            h5 
+              |Раскатник R-D TICN 376 ISO2X M14X2 2P
+          .product-modal__col
+            .product-modal__count(data-product-count='')
+              |35
+        .product-modal__buttons 
+          .product-modal__item
+            .button.button--wide.button--white.button--outline(data-fancybox-close='')
+              |Закрыть
+          .product-modal__item
+            a.button.button--wide(href="#")
+              |Перейти в корзину

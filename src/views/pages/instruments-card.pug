@@ -6,6 +6,7 @@ include ../components/counter
 include ../components/category-card
 include ../components/slider-buttons
 include ../components/product-card
+include ../components/modals
 
 
 block content 
@@ -103,8 +104,8 @@ block content
                     .loyalty-card__title 
                       |Для юридических лиц действует программа лояльности.
                     .loyalty-card__text 
-                      |#[a.loyalty-card__link(href="#") Авторизуйтесь], чтобы узнать свой уровень цен.
-            .instruments-card__bot
+                      |#[a.loyalty-card__link(href="#" data-fancy-button='1') Авторизуйтесь], чтобы узнать свой уровень цен.
+            .instruments-card__bot(data-count-parent='')
               .instruments-card__bot-row 
                 .instruments-card__bot-col
                   .instruments-card__bot-label 
@@ -114,7 +115,7 @@ block content
                 .instruments-card__bot-col
                   +counter.counter--md
                 .instruments-card__bot-col
-                  +button.button--xl
+                  .button.button--xl(data-fancy-button='product1')
                     |Добавить в корзину
     section.instruments-card__block 
       .container 
@@ -167,3 +168,5 @@ block content
                 +category-card(title = 'Резьбонарезные головки VDI' url = 'category-2.jpg')
               .swiper-slide
                 +category-card(title = 'Токарные цанговые патроны' url = 'category-3.jpg')
+
+  +product-modal

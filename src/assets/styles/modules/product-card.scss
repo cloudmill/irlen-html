@@ -1,6 +1,8 @@
 .product-card {
   $comp: &;
 
+  // display: block;
+
   border-radius: 4px;
   overflow: hidden;
   background: $color-white;
@@ -31,6 +33,8 @@
   &__container {
     position: relative;
     z-index: 0;
+
+    display: block;
   }
 
   &__top {
@@ -166,6 +170,7 @@
       border-radius: 2px;
     }
     transition: $transition;
+    cursor: pointer;
 
     &:hover {
       background: $color-darken-blue;

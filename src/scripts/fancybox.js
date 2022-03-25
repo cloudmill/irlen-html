@@ -20,6 +20,7 @@ import {formReset} from './form-reset'
     $('[data-fancy-button]').on('click', function (event) {
       event.preventDefault();
 
+      const button = $(this)
       const id = $(this).data('fancy-button');
       const modal = $(`[data-fancy-modal="${id}"]`);
 
@@ -31,6 +32,14 @@ import {formReset} from './form-reset'
         case 'p1':
           $.fancybox.defaults.animationEffect = 'slide-in-out'
           $.fancybox.defaults.animationDuration = 500
+          break
+        case 'product1':
+          $.fancybox.defaults.beforeShow = function(instance, slide) {
+            const productCount = button.closest('[data-count-parent]').find('[data-count-number]')
+            const modalCount = $(slide.src).find('[data-product-count]')
+
+            modalCount.text(productCount.val())
+          }
           break
         default:
           $.fancybox.defaults.closeExisting = true;
