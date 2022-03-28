@@ -150,8 +150,6 @@ function forms() {
             formParent = form.parents("[data-form-parent]"),
             formResponse = formParent.siblings("[data-type=form-response]"),
             formInputErrorMess = form.find("[data-resp=error-mess]"),
-            formInputErrorMessLogin = form.find("[data-resp=error-mess-login]"),
-            formInputErrorMessPass = form.find("[data-resp=error-mess-pass]"),
             url = form.attr("data-url"),
             data = {};
 
