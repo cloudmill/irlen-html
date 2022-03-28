@@ -174,6 +174,8 @@ function forms() {
                     if (r.type === 'login_error') {
                         console.log('log in / error');
 
+                        formParent.removeAttr('data-form-hidden');
+
                         formInputErrorMess.each(function () {
                             let elem = $(this).parsley();
 
