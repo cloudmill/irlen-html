@@ -174,8 +174,12 @@ function forms() {
                     if (r.type === 'login_error') {
                         console.log('log in / error');
 
-                        formInputErrorMess.parsley().removeError('customValidationId');
-                        formInputErrorMess.parsley().addError('customValidationId', { message: r.mess });
+                        formInputErrorMess.each(function () {
+                            let elem = $(this).parsley();
+
+                            elem.removeError('customValidationId');
+                            elem.addError('customValidationId', { message: r.mess });
+                        });
                     }
                     if (r.type === 'login_error_pass_change') {
                         console.log('log in / error pass change');
@@ -183,8 +187,12 @@ function forms() {
                         formParent.removeAttr('data-form-hidden');
                         formResponse.removeAttr('data-response-active');
 
-                        formInputErrorMess.parsley().removeError('customValidationId');
-                        formInputErrorMess.parsley().addError('customValidationId', { message: r.mess });
+                        formInputErrorMess.each(function () {
+                            let elem = $(this).parsley();
+
+                            elem.removeError('customValidationId');
+                            elem.addError('customValidationId', { message: r.mess });
+                        });
                     }
                     if (r.type === 'login') {
                         location.reload();
