@@ -7,7 +7,42 @@ $(function () {
     forms();
     logout();
     filterChange();
+    add2basket();
 });
+
+function add2basket() {
+    $(document).on("click", "[data-type=js-add2basket]", function (e) {
+        e.preventDefault();
+
+        let thisObj = $(this),
+            productId = thisObj.attr("data-productId"),
+            quantity = thisObj.attr("data-quantity");
+
+        console.log("add2basket");
+
+        $.ajax({
+            method: "POST",
+            url: "/local/templates/main/include/ajax/basket.php",
+            dataType: "json",
+            data: {
+                productId: productId,
+                quantity: quantity,
+            },
+            success: function (r) {
+                if (r.success == true) {
+                    if (r.count == 0) {
+                        $(document).find('[data-type=basket-count-lk-block]').css('display', 'none');
+                    } else {
+                        $(document).find('[data-type=basket-count-lk]').html(r.count);
+                    }
+                }
+            },
+            error: function (r) {
+                console.debug(r);
+            }
+        });
+    });
+}
 
 function logout() {
     $(document).on("click", "[data-type=logout]", function (e) {
