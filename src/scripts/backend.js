@@ -8,7 +8,57 @@ $(function () {
     logout();
     filterChange();
     add2basket();
+    basketAction();
 });
+
+function basketAction() {
+    $(document).on("click", "[data-type=basket-action]", function (e) {
+        e.preventDefault();
+
+        let thisObj = $(this),
+            productId = thisObj.attr("data-productId"),
+            ulList = $(this).parents("[data-type=basket-list]"),
+            action = thisObj.attr("data-action");
+
+        console.log(action);
+
+        console.log('basketAction');
+
+        $.ajax({
+            method: "POST",
+            url: "/local/templates/main/include/ajax/basket.php",
+            dataType: "json",
+            data: {
+                productId: productId,
+                action: action,
+            },
+            success: function (r) {
+                if (r.ajax == true) {
+
+                    $(document).find('[data-type=basket-count-lk]').html(r.count);
+
+                    $.ajax({
+                        method: "GET",
+                        url: window.location.href,
+                        data: {
+                            ajax: 1,
+                        },
+                        success: function (r) {
+                            ulList.empty();
+                            ulList.append($(r));
+                        },
+                        error: function (r) {
+                            console.debug(r);
+                        }
+                    });
+                }
+            },
+            error: function (r) {
+                console.debug(r);
+            }
+        });
+    });
+}
 
 function add2basket() {
     $(document).on("click", "[data-type=js-add2basket]", function (e) {
@@ -16,7 +66,8 @@ function add2basket() {
 
         let thisObj = $(this),
             productId = thisObj.attr("data-productId"),
-            quantity = thisObj.attr("data-quantity");
+            quantity = thisObj.attr("data-quantity"),
+            action = 'add';;
 
         console.log("add2basket");
 
@@ -27,14 +78,11 @@ function add2basket() {
             data: {
                 productId: productId,
                 quantity: quantity,
+                action: action,
             },
             success: function (r) {
                 if (r.success == true) {
-                    if (r.count == 0) {
-                        $(document).find('[data-type=basket-count-lk-block]').css('display', 'none');
-                    } else {
-                        $(document).find('[data-type=basket-count-lk]').html(r.count);
-                    }
+                    $(document).find('[data-type=basket-count-lk]').html(r.count);
                 }
             },
             error: function (r) {
