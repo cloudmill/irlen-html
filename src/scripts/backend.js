@@ -37,20 +37,24 @@ function basketAction() {
 
                     $(document).find('[data-type=basket-count-lk]').html(r.count);
 
-                    $.ajax({
-                        method: "GET",
-                        url: window.location.href,
-                        data: {
-                            ajax: 1,
-                        },
-                        success: function (r) {
-                            ulList.empty();
-                            ulList.append($(r));
-                        },
-                        error: function (r) {
-                            console.debug(r);
-                        }
-                    });
+                    if (r.count == 0) {
+                        location.reload();
+                    } else {
+                        $.ajax({
+                            method: "GET",
+                            url: window.location.href,
+                            data: {
+                                ajax: 1,
+                            },
+                            success: function (r) {
+                                ulList.empty();
+                                ulList.append($(r));
+                            },
+                            error: function (r) {
+                                console.debug(r);
+                            }
+                        });
+                    }
                 }
             },
             error: function (r) {
@@ -66,8 +70,9 @@ function add2basket() {
 
         let thisObj = $(this),
             productId = thisObj.attr("data-productId"),
-            quantity = thisObj.attr("data-quantity"),
-            action = 'add';;
+            productName = thisObj.attr("data-productName"),
+            quantity = thisObj.parents("[data-type=add-basket-block]").find("[data-type=count]").val(),
+            action = 'add';
 
         console.log("add2basket");
 
@@ -83,6 +88,9 @@ function add2basket() {
             success: function (r) {
                 if (r.success == true) {
                     $(document).find('[data-type=basket-count-lk]').html(r.count);
+
+                    $(document).find('[data-type=modal-item-name]').html(productName);
+                    $(document).find('[data-product-count]').html(quantity);
                 }
             },
             error: function (r) {
