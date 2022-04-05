@@ -9,7 +9,31 @@ $(function () {
     filterChange();
     add2basket();
     basketAction();
+    changeDeliveryType();
 });
+
+function changeDeliveryType() {
+    $(document).on("click", "[data-type=change-del]", function (e) {
+        e.preventDefault();
+
+        let thisObj = $(this),
+            type = thisObj.attr('data-del'),
+            parent = $(this).parents("[data-type=parents-del]");
+
+        if (type == 'self') {
+            parent.find("[data-type=get-field]").each(function () {
+                $(this).removeAttr('required');
+            });
+        }
+
+        if (type == 'company') {
+            parent.find("[data-type=get-field]").each(function () {
+                $(this).attr('required', '');
+            });
+        }
+
+    });
+}
 
 function basketAction() {
     $(document).on("click", "[data-type=basket-action]", function (e) {
