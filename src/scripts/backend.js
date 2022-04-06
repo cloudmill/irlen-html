@@ -312,6 +312,24 @@ function forms() {
                     if (r.type === 'login') {
                         location.reload();
                     }
+                    if (r.type === 'order') {
+                        $(document).find('[data-type=basket-count-lk]').html(r.count);
+                        $.ajax({
+                            method: "GET",
+                            url: "/local/templates/main/include/ajax/basket.php",
+                            data: {
+                                type: 'basket_clean',
+                                site: r.site,
+                                order: r.order
+                            },
+                            success: function (r) {
+                            },
+                            error: function (r) {
+                                console.debug(r);
+                            }
+                        });
+                        //location.href = '/';
+                    }
                 } else {
                     if (r.success === true) {
                         form.attr('data-form-hidden', '');
