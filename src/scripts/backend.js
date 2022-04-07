@@ -316,19 +316,17 @@ function forms() {
                         $(document).find('[data-type=basket-count-lk]').html(r.count);
                         $.ajax({
                             method: "GET",
-                            url: "/local/templates/main/include/ajax/basket.php",
+                            url: "/local/templates/main/include/ajax/order.php",
                             data: {
                                 type: 'basket_clean',
-                                site: r.site,
-                                order: r.order
                             },
                             success: function (r) {
+                                location.href = '/profile/orders/';
                             },
                             error: function (r) {
                                 console.debug(r);
                             }
                         });
-                        //location.href = '/';
                     }
                 } else {
                     if (r.success === true) {
