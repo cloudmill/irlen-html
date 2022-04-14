@@ -264,6 +264,7 @@ function forms() {
         let form = $(this),
             formParent = form.parents("[data-form-parent]"),
             formResponse = formParent.siblings("[data-type=form-response]"),
+            respMess = formResponse.find("[data-type=resp-mess]"),
             formInputErrorMess = form.find("[data-resp=error-mess]"),
             url = form.attr("data-url"),
             data = {};
@@ -299,9 +300,6 @@ function forms() {
                     if (r.type === 'login_error_pass_change') {
                         console.log('log in / error pass change');
 
-                        formParent.removeAttr('data-form-hidden');
-                        formResponse.removeAttr('data-response-active');
-
                         formInputErrorMess.each(function () {
                             let elem = $(this).parsley();
 
@@ -309,8 +307,14 @@ function forms() {
                             elem.addError('customValidationId', { message: r.mess });
                         });
                     }
-                    if (r.type === 'login') {
+                    if (r.type === 'login_auth') {
+                        form.removeAttr('data-form-hidden');
+                        formResponse.removeAttr('data-response-active');
+
                         location.reload();
+                    }
+                    if (r.type === 'login') {
+                        respMess.html(r.mess);
                     }
                     if (r.type === 'order') {
                         $(document).find('[data-type=basket-count-lk]').html(r.count);
