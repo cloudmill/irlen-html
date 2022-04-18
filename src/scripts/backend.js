@@ -300,6 +300,9 @@ function forms() {
                     if (r.type === 'login_error_pass_change') {
                         console.log('log in / error pass change');
 
+                        formParent.removeAttr('data-form-hidden');
+                        formResponse.removeAttr('data-response-active');
+
                         formInputErrorMess.each(function () {
                             let elem = $(this).parsley();
 
@@ -308,10 +311,10 @@ function forms() {
                         });
                     }
                     if (r.type === 'login_auth') {
-                        form.removeAttr('data-form-hidden');
-                        formResponse.removeAttr('data-response-active');
+                        formParent.attr('data-form-hidden', '');
+                        formResponse.attr('data-response-active', '');
 
-                        location.reload();
+                        respMess.html(r.mess);
                     }
                     if (r.type === 'login') {
                         respMess.html(r.mess);
