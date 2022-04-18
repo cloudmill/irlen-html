@@ -321,19 +321,7 @@ function forms() {
                     }
                     if (r.type === 'order') {
                         $(document).find('[data-type=basket-count-lk]').html(r.count);
-                        $.ajax({
-                            method: "GET",
-                            url: "/local/templates/main/include/ajax/order.php",
-                            data: {
-                                type: 'basket_clean',
-                            },
-                            success: function (r) {
-                                location.href = '/profile/orders/';
-                            },
-                            error: function (r) {
-                                console.debug(r);
-                            }
-                        });
+                        location.href = '/order/?ordersuc=yes&id=' + r.id + '';
                     }
                 } else {
                     if (r.success === true) {
