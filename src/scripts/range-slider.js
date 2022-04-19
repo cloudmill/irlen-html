@@ -7,18 +7,19 @@ $(() => {
   if (rangeParent.length) {
 
     rangeParent.each(function() {
+      const event = new CustomEvent('range_slider_change', {detail: {container: $(this)}});
       const rangeSlider = $(this).find('.range__range');
       const inputStart = $(this).find('[data-input-start]');
       const inputEnd = $(this).find('[data-input-end]');
 
       const inputStartValue = inputStart.attr('data-input-start');
       const inputEndValue = inputEnd.attr('data-input-end');
-      
+
       const rangeMin = Number(rangeSlider.attr('data-range-min'));
       const rangeMax = Number(rangeSlider.attr('data-range-max'));
 
       console.log(rangeMin, rangeMax);
-  
+
       noUiSlider.create(rangeSlider[0], {
         start: [inputStartValue, inputEndValue],
         step: 1,
@@ -31,18 +32,20 @@ $(() => {
           decimals: 1
         }),
       });
-  
+
       rangeSlider[0].noUiSlider.on('update', function (values, handle) {
-  
+
         const value = values[handle];
-  
+
         if (handle) {
           inputEnd.val(value)
         } else {
           inputStart.val(value)
         }
+
+        window.dispatchEvent(event);
       });
-  
+
       inputStart.on('change', function() {
         rangeSlider[0].noUiSlider.set([+this.value, null])
       })

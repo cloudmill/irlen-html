@@ -12,6 +12,10 @@ $(function () {
     changeDeliveryType();
 });
 
+window.addEventListener('range_slider_change', function(e) {
+    console.log(e.detail.container);
+});
+
 function changeDeliveryType() {
     $(document).on("click", "[data-type=change-del]", function (e) {
         e.preventDefault();
