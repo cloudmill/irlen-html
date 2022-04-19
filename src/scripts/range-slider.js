@@ -7,20 +7,28 @@ $(() => {
   if (rangeParent.length) {
 
     rangeParent.each(function() {
-      const rangeSlider = $(this).find('.range__range')
-      const inputStart = $(this).find('[data-input-start]')
-      const inputEnd = $(this).find('[data-input-end]')
+      const rangeSlider = $(this).find('.range__range');
+      const inputStart = $(this).find('[data-input-start]');
+      const inputEnd = $(this).find('[data-input-end]');
+
+      const inputStartValue = inputStart.attr('data-input-start');
+      const inputEndValue = inputEnd.attr('data-input-end');
+      
+      const rangeMin = Number(rangeSlider.attr('data-range-min'));
+      const rangeMax = Number(rangeSlider.attr('data-range-max'));
+
+      console.log(rangeMin, rangeMax);
   
       noUiSlider.create(rangeSlider[0], {
-        start: [30, 70],
+        start: [inputStartValue, inputEndValue],
         step: 1,
         range: {
-          min: 10,
-          max: 100
+          min: rangeMin,
+          max: rangeMax
         },
         connect: true,
         format: wNumb({
-          decimals: 0
+          decimals: 1
         }),
       });
   

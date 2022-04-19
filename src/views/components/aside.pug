@@ -166,13 +166,13 @@ mixin aside
                         label.range__label
                           span.range__text 
                             |от
-                          input.range__input(type="number" data-input-start='')
+                          input.range__input(type="number" data-input-start='10')
                       .range__item 
                         label.range__label
                           span.range__text 
                             |до
-                          input.range__input(type="number" data-input-end='')
-                  .range__range
+                          input.range__input(type="number" data-input-end='40')
+                  .range__range(data-range-min='1' data-range-max='50')
           .aside__card
             .aside__container 
               h5.aside__title 

@@ -64,6 +64,10 @@ block content
                       .form__item
                         input.form__input(type="email" placeholder="E-mail*" required)
                 .booking-page__block-item(data-tabs-block='')
+
+                  .booking-page__title
+                    |Реквизиты для выставления счета
+
                   each item, i in ddata
                     .booking-page__block-row
                       each text in item.items
