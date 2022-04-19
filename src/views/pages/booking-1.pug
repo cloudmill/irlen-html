@@ -51,7 +51,8 @@ block content
                   .loyalty-card__text 
                     |#[a.loyalty-card__link(href="#") Авторизуйтесь], чтобы узнать свой уровень цен.
               .booking-page__form.margin-top.margin-top--xl
-                .booking-page__block-item.active(data-tabs-block='')
+
+                .booking-page__block-item.form-disabled.active(data-tabs-block='')
                   .booking-page__block-row 
                     .booking-page__block-col
                       .form__item
@@ -63,17 +64,19 @@ block content
                     .booking-page__block-col
                       .form__item
                         input.form__input(type="email" placeholder="E-mail*" required)
+
                 .booking-page__block-item(data-tabs-block='')
 
                   .booking-page__title
                     |Реквизиты для выставления счета
 
-                  each item, i in ddata
-                    .booking-page__block-row
-                      each text in item.items
-                        .booking-page__block-col
-                          .form__item
-                            input.form__input(type="text" placeholder=text required)
+                  .form-disabled
+                    each item, i in ddata
+                      .booking-page__block-row
+                        each text in item.items
+                          .booking-page__block-col
+                            .form__item
+                              input.form__input(type="text" placeholder=text required)
               .booking-page__title.margin-top.margin-top--xl
                 |Способ доставки
               .booking-page__parent(data-tabs-parent='')

@@ -42,7 +42,7 @@
     justify-content: space-between;
 
     &.disabled {
-      #{$comp}__form {
+      .form-disabled {
         opacity: .4;
         pointer-events: none;
       }
@@ -130,6 +130,14 @@
     display: none;
     &.active {
       display: block;
+    }
+
+    .booking-page__title {
+      margin-bottom: 32px;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: 20px;
+      }
     }
   }
 
