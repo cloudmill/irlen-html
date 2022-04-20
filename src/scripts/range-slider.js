@@ -30,7 +30,7 @@ $(() => {
 
       noUiSlider.create(rangeSlider[0], {
         start: [inputStartValue, inputEndValue],
-        step: 1,
+        step: .5,
         range: {
           min: rangeMin,
           max: rangeMax

@@ -1,7 +1,11 @@
 .range {
 
-  &__top {
-    margin-bottom: 20px;
+  // &__top {
+  //   margin-bottom: 20px;
+  // }
+
+  &__range {
+    display: none;
   }
 
   &__row {
