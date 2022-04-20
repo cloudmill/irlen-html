@@ -32,11 +32,18 @@ window.addEventListener('range_slider_change', function(e) {
     console.log(data);
 });
 
+$(document).on('change', '[data-type=filter]', function() {
+    const container = $(this).parents('[data-container=filters]'),
+        data = getDataForm(container);
+
+    console.log(data);
+});
+
 function getDataForm(form) {
     const data = {};
 
-    form.find('[data-type=get-field], input:checked, .noUi-handle-lower').each(function() {
-        data[$(this).data('field')] = $(this).val();
+    form.find('[data-type=get-field], input:checked').each(function() {
+        data[$(this).parents('[data-container=filter-item]').data('filter-field')] = $(this).val();
     });
 
     return data;
