@@ -15,7 +15,7 @@ import 'scripts/anchor-links.js';
 import 'scripts/search.js';
 import 'scripts/map.js';
 import 'scripts/no-transition.js';
-import 'scripts/range-slider.js';
+// import 'scripts/range-slider.js';
 import 'scripts/form-response.js';
 import { FormChanger } from 'scripts/form-changer'
 import { Tabs } from 'scripts/tabs'
