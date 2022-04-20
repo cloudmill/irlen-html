@@ -13,8 +13,34 @@ $(function () {
 });
 
 window.addEventListener('range_slider_change', function(e) {
-    console.log(e.detail.container);
+    const container = $(e.detail.container).parents('[data-container=filters]'),
+        filterField = $(e.detail.container).find('.aside__title').text(),
+        filterVal = {
+            '>': e.detail.data[0],
+            '<': e.detail.data[1],
+        },
+        data = getDataForm(container);
+
+    data[filterField] = filterVal;
+
+    $(e.detail.container).attr({
+        'data-type': 'get-field',
+        'data-field': filterField,
+        'value': JSON.stringify(filterVal),
+    });
+
+    console.log(data);
 });
+
+function getDataForm(form) {
+    const data = {};
+
+    form.find('[data-type=get-field], input:checked, .noUi-handle-lower').each(function() {
+        data[$(this).data('field')] = $(this).val();
+    });
+
+    return data;
+}
 
 function changeDeliveryType() {
     $(document).on("click", "[data-type=change-del]", function (e) {

@@ -7,18 +7,26 @@ $(() => {
   if (rangeParent.length) {
 
     rangeParent.each(function() {
-      const event = new CustomEvent('range_slider_change', {detail: {container: $(this)}});
       const rangeSlider = $(this).find('.range__range');
       const inputStart = $(this).find('[data-input-start]');
       const inputEnd = $(this).find('[data-input-end]');
+      const event = new CustomEvent(
+          'range_slider_change', {
+            detail: {
+              container: $(this),
+              data: {
+                0: inputStart.val(),
+                1: inputEnd.val(),
+              },
+            },
+          }
+      );
 
       const inputStartValue = inputStart.attr('data-input-start');
       const inputEndValue = inputEnd.attr('data-input-end');
 
       const rangeMin = Number(rangeSlider.attr('data-range-min'));
       const rangeMax = Number(rangeSlider.attr('data-range-max'));
-
-      console.log(rangeMin, rangeMax);
 
       noUiSlider.create(rangeSlider[0], {
         start: [inputStartValue, inputEndValue],
@@ -42,15 +50,32 @@ $(() => {
         } else {
           inputStart.val(value)
         }
+      });
 
-        window.dispatchEvent(event);
+      rangeSlider[0].noUiSlider.on('end', function (values) {
+        window.dispatchEvent(new CustomEvent(
+            'range_slider_change', {
+              detail: {
+                  data: values,
+              }
+            }
+        ));
       });
 
       inputStart.on('change', function() {
         rangeSlider[0].noUiSlider.set([+this.value, null])
+        window.dispatchEvent(new CustomEvent(
+            'range_slider_change_keyboard_min', {
+              detail: {
+                input: $(this),
+                data: this.value,
+              },
+            }
+        ));
       })
       inputEnd.on('change', function() {
         rangeSlider[0].noUiSlider.set([null, +this.value])
+        window.dispatchEvent(event);
       })
     })
   }
