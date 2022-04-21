@@ -38,6 +38,7 @@ window.addEventListener('range_slider_change', function(e) {
 
 $(document).on('change', '[data-type=filter]', function() {
     const container = $(this).parents('[data-container=filters]'),
+        itemsContainer = $(container.data('link-container')),
         data = getDataForm(container);
 
     data['ajax'] = 'filter';
@@ -48,7 +49,44 @@ $(document).on('change', '[data-type=filter]', function() {
         dataType: 'html',
         data: data,
         success: function(r) {
+            itemsContainer.empty();
+            itemsContainer.append($(r).find('[data-container=items]').children());
 
+            const enableStyle = {
+                    'opacity': 1,
+                    'pointer-events': 'auto',
+                },
+                disableStyle = {
+                    'opacity': 0.5,
+                    'pointer-events': 'none',
+                };
+
+            let index = 0;
+            container.children().each(function() {
+                const filterBody = $(this).find('[data-type=filter-body]'),
+                    filterItemResponse = $(r).find('[data-link-container]').children().eq(index);
+
+                if ($(this).find('[data-type=filter-name]').text() !== filterItemResponse.find('[data-type=filter-name]').text()) {
+                    filterBody.css(disableStyle);
+                    filterBody.find('[data-active]').css(disableStyle);
+                } else {
+                    const arr = filterItemResponse.find('[data-type=filter]').map((arrI, item) => item.value);
+
+                    filterBody.css(enableStyle);
+                    filterBody.find('[data-type=filter]').each(function() {
+                        if (Object.values(arr).includes($(this).val())) {
+                            const parent = $(this).parents('[data-type=filter-item]');
+
+                            parent.css(enableStyle);
+                            parent.attr('data-active', true);
+                        } else {
+                            $(this).parents('[data-type=filter-item]').css(disableStyle);
+                        }
+                    });
+
+                    index++;
+                }
+            });
         },
         error: ajaxCallbackErrors,
     });
@@ -62,10 +100,9 @@ function getDataForm(form) {
     form.find('[data-type=get-field], input:checked').each(function(i) {
         const field = $(this).parents('[data-container=filter-item]').data('filter-field');
 
-        data['filter'][i] = {
-            0: field,
-            1: '=',
-            2: $(this).val(),
+        data['filter'][field] = {
+            equality: '=',
+            value: $(this).val(),
         }
     });
 
