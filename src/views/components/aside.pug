@@ -161,18 +161,17 @@ mixin aside
                   |Диаметр фрезы, мм
                 .range.aside__inner
                   .range__top 
-                    .range__row 
+                    .range__row(data-range)
                       .range__item 
                         label.range__label
                           span.range__text 
                             |от
-                          input.range__input(type="number" min='5' max='10' value='5')
+                          input.range__input(type="number" min='5' max='10' value='5' data-range-1)
                       .range__item 
                         label.range__label
                           span.range__text 
                             |до
-                          input.range__input(type="number" min='5' max='10' value='10')
-                  //- .range__range(data-range-min='1' data-range-max='50')
+                          input.range__input(type="number" min='5' max='10' value='10' data-range-2)
           .aside__card
             .aside__container 
               h5.aside__title 
