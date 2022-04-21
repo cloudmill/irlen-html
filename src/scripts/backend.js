@@ -12,6 +12,10 @@ $(function () {
     changeDeliveryType();
 });
 
+function ajaxCallbackErrors(xhr) {
+    alert(`error: ${xhr.status}: ${xhr.statusText}`);
+}
+
 window.addEventListener('range_slider_change', function(e) {
     const container = $(e.detail.container).parents('[data-container=filters]'),
         filterField = $(e.detail.container).find('.aside__title').text(),
@@ -36,14 +40,33 @@ $(document).on('change', '[data-type=filter]', function() {
     const container = $(this).parents('[data-container=filters]'),
         data = getDataForm(container);
 
-    console.log(data);
+    data['ajax'] = 'filter';
+
+    $.ajax({
+        type: 'GET',
+        url: window.location.href,
+        dataType: 'html',
+        data: data,
+        success: function(r) {
+
+        },
+        error: ajaxCallbackErrors,
+    });
 });
 
 function getDataForm(form) {
-    const data = {};
+    const data = {
+        'filter': {},
+    };
 
-    form.find('[data-type=get-field], input:checked').each(function() {
-        data[$(this).parents('[data-container=filter-item]').data('filter-field')] = $(this).val();
+    form.find('[data-type=get-field], input:checked').each(function(i) {
+        const field = $(this).parents('[data-container=filter-item]').data('filter-field');
+
+        data['filter'][i] = {
+            0: field,
+            1: '=',
+            2: $(this).val(),
+        }
     });
 
     return data;
