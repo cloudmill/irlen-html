@@ -14,7 +14,7 @@ block content
       .container 
         +navigation(page='Профиль')
     section.section.section--last
-      .container 
+      .container(data-tabs-parent='')
         .row
           .row__col
             .tabs.tabs--column
@@ -24,34 +24,39 @@ block content
                 .tabs__item 
                   |Выйти
           .row__col
-            +model-tabs( items = ['Текущие заказы', 'Все заказы'])
-            h2.margin-top.margin-top--xl 
-              |Список заказов пуст
-            .main-page__media.main-page__media--small.margin-top
-              .main-page__media-col 
-                a.main-page__media-link(href="#") 
-                  .main-page__media-container 
-                    img.main-page__media-container(src="assets/images/hero-1.jpg", alt="")
-                  .main-page__media-icon 
-                    +big-arrow-svg.main-page__media-svg
-                .main-page__media-content 
-                  .main-page__media-title 
-                    |Каталог продукции
-                  .main-page__media-text 
-                    |Станки с ЧПУ, ленточнопильные станки, шлифовальные станки, гидравлические прессы и прочее оборудование
-              .main-page__media-col 
-                a.main-page__media-link(href="#") 
-                  .main-page__media-container 
-                    img.main-page__media-container(src="assets/images/hero-2.jpg", alt="")
-                  .main-page__media-icon 
-                    +big-arrow-svg.main-page__media-svg
-                .main-page__media-content 
-                  .main-page__media-title 
-                    |Интернет-магазин
-                  .main-page__media-text 
-                    |Режущий инструмент, вспомогательный инструмент, аксессуары для инструмента и приспособления
-            .section 
-              .profile-page__accordion 
+            +model-tabs( items = ['Текущие заказы', 'Все заказы', 'Пустой'] real=true)
+
+            .profile-orders__item.active(data-tabs-block='')
+              h2.margin-top.margin-top--xl 
+                |Список заказов пуст
+
+            .profile-orders__item(data-tabs-block='')
+              .main-page__media.main-page__media--small.margin-top
+                .main-page__media-col 
+                  a.main-page__media-link(href="#") 
+                    .main-page__media-container 
+                      img.main-page__media-container(src="assets/images/hero-1.jpg", alt="")
+                    .main-page__media-icon 
+                      +big-arrow-svg.main-page__media-svg
+                  .main-page__media-content 
+                    .main-page__media-title 
+                      |Каталог продукции
+                    .main-page__media-text 
+                      |Станки с ЧПУ, ленточнопильные станки, шлифовальные станки, гидравлические прессы и прочее оборудование
+                .main-page__media-col 
+                  a.main-page__media-link(href="#") 
+                    .main-page__media-container 
+                      img.main-page__media-container(src="assets/images/hero-2.jpg", alt="")
+                    .main-page__media-icon 
+                      +big-arrow-svg.main-page__media-svg
+                  .main-page__media-content 
+                    .main-page__media-title 
+                      |Интернет-магазин
+                    .main-page__media-text 
+                      |Режущий инструмент, вспомогательный инструмент, аксессуары для инструмента и приспособления
+            
+            .profile-orders__item(data-tabs-block='')
+              .profile-page__accordion.margin-top
                 .profile-page__accordion-col
                   .profile-page__accordion-label 
                     |Заказ

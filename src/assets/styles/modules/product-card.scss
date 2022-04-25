@@ -35,6 +35,17 @@
     z-index: 0;
 
     display: block;
+
+    @media (min-width: $breakpoint) {
+      padding: 80px 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-height: 175px;
+      }
+    }
   }
 
   &__top {

@@ -278,3 +278,12 @@
     margin-top: 10px;
   }
 }
+
+
+.profile-orders__item {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}

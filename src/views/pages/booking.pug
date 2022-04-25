@@ -40,10 +40,10 @@ block content
         .booking-page__inner 
           +model-tabs(items = ['Физическое лицо', 'Юридическое лицо'] real=true)
         .form.margin-top.margin-top--md
-          .booking-page__form
+          form.booking-page__form(action="/")
             .booking-page__row
               .booking-page__col
-                form.booking-page__block-item.active(action="/" data-tabs-block='')
+                .booking-page__block-item.active(data-tabs-block='')
                   .booking-page__block-row 
                     .booking-page__block-col
                       .form__item
@@ -55,7 +55,7 @@ block content
                     .booking-page__block-col
                       .form__item
                         input.form__input(type="email" placeholder="E-mail*" required)
-                form.booking-page__block-item(action="/" data-tabs-block='')
+                .booking-page__block-item(data-tabs-block='')
                   each item, i in ddata
                     .booking-page__block-row
                       each text in item.items
@@ -71,7 +71,7 @@ block content
                     .booking-page__block-item.active(data-tabs-block='')
                       .booking-page__text
                         |Мы организуем доставку при помощи транспортной компании, стоимость доставки будет включена в цену товара.
-                      form.booking-page__form.margin-top.margin-top--md(action="/") 
+                      .booking-page__form.margin-top.margin-top--md
                         .booking-page__block-row 
                           .booking-page__block-col
                             .form__item
@@ -135,5 +135,7 @@ block content
                     .cart-page__card-caption 
                       |#{data.tooltipText}
                     .cart-page__card-btn 
-                      +button.button--wide 
+                      //- +button.button--wide
+
+                      button.button.button--wide.button--btn(type="submit")
                         |Продолжить оформление

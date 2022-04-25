@@ -56,10 +56,12 @@ block content
               .swiper-container.swiper-container--visible--mobile.swiper-container--slide-width-auto.swiper-container--slide-height-max(data-slider-id='10' data-slider-prev='13' data-slider-next='14')
                 .swiper-wrapper 
                   - for (i = 0; i < 6; i++)
-                    .swiper-slide 
-                      img.instruments-card__section-img(src="assets/images/instrument-slide-1.jpg", alt="")
-                    .swiper-slide 
-                      img.instruments-card__section-img(src="assets/images/instrument-slide-2.jpg", alt="")
+                    .swiper-slide
+                      .instruments-card__img-container
+                        img.instruments-card__section-img(src="assets/images/instrument-slide-1.jpg", alt="")
+                    .swiper-slide
+                      .instruments-card__img-container
+                        img.instruments-card__section-img(src="assets/images/instrument-slide-2.jpg", alt="")
                 .swiper-pagination
             .instruments-card__section-buttons
               +slider-buttons.slider-buttons--small(prev = '13' next = '14')

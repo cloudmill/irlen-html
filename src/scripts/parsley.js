@@ -71,8 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const range = document.querySelectorAll('[data-range]');
 
-  console.log(range);
-
   range.forEach(item => {
 
     const input1 = item.querySelector('[data-range-1]');

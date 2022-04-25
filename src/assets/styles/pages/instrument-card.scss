@@ -1,5 +1,7 @@
 .instruments-card {
 
+  $comp: &;
+
   &__inner {
     margin-bottom: 42px;
     @media (max-width: ($breakpoint - 1px)) {
@@ -101,6 +103,24 @@
     @include fsl(12px, 120%);
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(10px, 120%);
+    }
+  }
+
+  &__img-container {
+    width: 100%;
+    height: 100%;
+
+    @media (min-width: $breakpoint) {
+      padding: 40px 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #{$comp}__section-img {
+      @media (min-width: $breakpoint) {
+        max-height: 360px;
+      }
     }
   }
   &__section-img {
@@ -228,6 +248,15 @@
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
+    }
+  }
+  &__block-image {
+    @media (min-width: $breakpoint) {
+      padding: 80px 0 0 80px;
+
+      img {
+        max-height: 300px;
+      }
     }
   }
   &__block-item {
