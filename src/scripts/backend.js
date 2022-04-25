@@ -1,6 +1,7 @@
 import "parsleyjs";
 
 $(function () {
+    pagen();
     filter();
     showMore();
     snippetSlider();
@@ -16,25 +17,28 @@ function ajaxCallbackErrors(xhr) {
     alert(`error: ${xhr.status}: ${xhr.statusText}`);
 }
 
-window.addEventListener('range_slider_change', function(e) {
-    const container = $(e.detail.container).parents('[data-container=filters]'),
-        filterField = $(e.detail.container).find('.aside__title').text(),
-        filterVal = {
-            '>': e.detail.data[0],
-            '<': e.detail.data[1],
-        },
-        data = getDataForm(container);
+function pagen() {
+    $(document).on('click', '[data-type=pagen]', function() {
+        const container = $(this).parents('[data-container=parent-items]'),
+            itemsContainer = container.find('[data-container=items]'),
+            pageNav = $(this).parents('[data-container=page-nav]');
 
-    data[filterField] = filterVal;
-
-    $(e.detail.container).attr({
-        'data-type': 'get-field',
-        'data-field': filterField,
-        'value': JSON.stringify(filterVal),
+        $.ajax({
+            type: 'GET',
+            url: $(this).data('url'),
+            dataType: 'html',
+            data: {
+                ajax: 'pagen',
+            },
+            success: function(r) {
+                pageNav.remove();
+                itemsContainer.append($(r).find('[data-container=items]').children());
+                container.find('[data-type=append-page-nav]').after($(r).find('[data-container=page-nav]'));
+            },
+            error: ajaxCallbackErrors,
+        });
     });
-
-    console.log(data);
-});
+}
 
 $(document).on('change', '[data-type=filter]', function() {
     const container = $(this).parents('[data-container=filters]'),
