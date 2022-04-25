@@ -817,10 +817,10 @@
 								</div>
 							</div>
 							<div class="form margin-top margin-top--md">
-								<div class="booking-page__form">
+								<form class="booking-page__form" action="/">
 									<div class="booking-page__row">
 										<div class="booking-page__col">
-											<form class="booking-page__block-item active" action="/" data-tabs-block="">
+											<div class="booking-page__block-item active" data-tabs-block="">
 												<div class="booking-page__block-row">
 													<div class="booking-page__block-col">
 														<div class="form__item"><input class="form__input" placeholder="Имя*" required></div>
@@ -834,8 +834,8 @@
 														<div class="form__item"><input class="form__input" type="email" placeholder="E-mail*" required></div>
 													</div>
 												</div>
-											</form>
-											<form class="booking-page__block-item" action="/" data-tabs-block="">
+											</div>
+											<div class="booking-page__block-item" data-tabs-block="">
 												<div class="booking-page__block-row">
 													<div class="booking-page__block-col">
 														<div class="form__item"><input class="form__input" placeholder="Название компании*" required></div>
@@ -876,7 +876,7 @@
 														<div class="form__item"><input class="form__input" placeholder="Должность руководителя*" required></div>
 													</div>
 												</div>
-											</form>
+											</div>
 											<div class="booking-page__title margin-top margin-top--xl">Способ доставки</div>
 											<div class="booking-page__parent" data-tabs-parent="">
 												<div class="margin-top margin-top--md">
@@ -888,7 +888,7 @@
 												<div class="booking-page__block margin-top margin-top--md">
 													<div class="booking-page__block-item active" data-tabs-block="">
 														<div class="booking-page__text">Мы организуем доставку при помощи транспортной компании, стоимость доставки будет включена в цену товара.</div>
-														<form class="booking-page__form margin-top margin-top--md" action="/">
+														<div class="booking-page__form margin-top margin-top--md">
 															<div class="booking-page__block-row">
 																<div class="booking-page__block-col">
 																	<div class="form__item"><input class="form__input" placeholder="Город доставки*" required></div>
@@ -898,7 +898,7 @@
 																</div>
 															</div>
 															<div class="form__item form__item--default"><textarea class="form__textarea" placeholder="Комментарий" required></textarea></div>
-														</form>
+														</div>
 													</div>
 													<div class="booking-page__block-item" data-tabs-block="">
 														<div class="booking-page__block-row">
@@ -978,12 +978,12 @@
 														</div>
 													</div>
 													<div class="cart-page__card-caption">Цена с НДС по курсу ЦБ на 25.06.2021</div>
-													<div class="cart-page__card-btn"><a class="button button--wide" href="#">Продолжить оформление</a></div>
+													<div class="cart-page__card-btn"><button class="button button--wide button--btn" type="submit">Продолжить оформление</button></div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								</form>
 							</div>
 						</div>
 					</section>
