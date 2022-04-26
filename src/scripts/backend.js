@@ -11,6 +11,7 @@ $(function () {
     add2basket();
     basketAction();
     changeDeliveryType();
+    changeUserType();
 });
 
 function ajaxCallbackErrors(xhr) {
@@ -18,7 +19,7 @@ function ajaxCallbackErrors(xhr) {
 }
 
 function pagen() {
-    $(document).on('click', '[data-type=pagen]', function() {
+    $(document).on('click', '[data-type=pagen]', function () {
         const container = $(this).parents('[data-container=parent-items]'),
             itemsContainer = container.find('[data-container=items]'),
             pageNav = $(this).parents('[data-container=page-nav]');
@@ -30,7 +31,7 @@ function pagen() {
             data: {
                 ajax: 'pagen',
             },
-            success: function(r) {
+            success: function (r) {
                 pageNav.remove();
                 itemsContainer.append($(r).find('[data-container=items]').children());
                 container.find('[data-type=append-page-nav]').after($(r).find('[data-container=page-nav]'));
@@ -40,7 +41,7 @@ function pagen() {
     });
 }
 
-$(document).on('change', '[data-type=filter]', function() {
+$(document).on('change', '[data-type=filter]', function () {
     const container = $(this).parents('[data-container=filters]'),
         itemsContainer = $(container.data('link-container')),
         data = getDataForm(container);
@@ -52,21 +53,21 @@ $(document).on('change', '[data-type=filter]', function() {
         url: window.location.href,
         dataType: 'html',
         data: data,
-        success: function(r) {
+        success: function (r) {
             itemsContainer.empty();
             itemsContainer.append($(r).find('[data-container=items]').children());
 
             const enableStyle = {
-                    'opacity': 1,
-                    'pointer-events': 'auto',
-                },
+                'opacity': 1,
+                'pointer-events': 'auto',
+            },
                 disableStyle = {
                     'opacity': 0.5,
                     'pointer-events': 'none',
                 };
 
             let index = 0;
-            container.children().each(function() {
+            container.children().each(function () {
                 const filterBody = $(this).find('[data-type=filter-body]'),
                     filterItemResponse = $(r).find('[data-link-container]').children().eq(index);
 
@@ -77,7 +78,7 @@ $(document).on('change', '[data-type=filter]', function() {
                     const arr = filterItemResponse.find('[data-type=filter]').map((arrI, item) => item.value);
 
                     filterBody.css(enableStyle);
-                    filterBody.find('[data-type=filter]').each(function() {
+                    filterBody.find('[data-type=filter]').each(function () {
                         if (Object.values(arr).includes($(this).val())) {
                             const parent = $(this).parents('[data-type=filter-item]');
 
@@ -101,7 +102,7 @@ function getDataForm(form) {
         'filter': {},
     };
 
-    form.find('[data-type=get-field], input:checked').each(function(i) {
+    form.find('[data-type=get-field], input:checked').each(function (i) {
         const field = $(this).parents('[data-container=filter-item]').data('filter-field');
 
         data['filter'][field] = {
@@ -133,6 +134,31 @@ function changeDeliveryType() {
             });
         }
 
+    });
+}
+
+function changeUserType() {
+    $(document).on("click", "[data-type=change-user-type]", function (e) {
+        e.preventDefault();
+
+        console.log('change user type');
+
+        let thisObj = $(this),
+            value = thisObj.attr('data-value'),
+            parent = $(this).parents("[data-tabs-parent]"),
+            input = parent.find("[data-uf=UF_USER_TYPE]"),
+            blockDel = parent.find("[data-type-del-req=" + value + "]"),
+            blockAdd = parent.find("[data-type-add-req=" + value + "]");
+
+        blockDel.find("[data-type=get-field]").each(function () {
+            $(this).removeAttr('required');
+        });
+
+        blockAdd.find("[data-type=get-field]").each(function () {
+            $(this).attr('required', '');
+        });
+
+        input.val(value);
     });
 }
 
