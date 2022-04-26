@@ -43,9 +43,12 @@ function pagen() {
 $(document).on('change', '[data-type=filter]', function() {
     const container = $(this).parents('[data-container=filters]'),
         itemsContainer = $(container.data('link-container')),
+        preloader = $('.preloader'),
         data = getDataForm(container);
 
     data['ajax'] = 'filter';
+
+    preloader.removeClass('preloader_hidden');
 
     $.ajax({
         type: 'GET',
@@ -53,6 +56,7 @@ $(document).on('change', '[data-type=filter]', function() {
         dataType: 'html',
         data: data,
         success: function(r) {
+            preloader.addClass('preloader_hidden');
             itemsContainer.empty();
             itemsContainer.append($(r).find('[data-container=items]').children());
 
