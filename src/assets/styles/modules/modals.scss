@@ -300,6 +300,10 @@
 
     &:nth-child(1) {
       max-width: 272px;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        width: calc(100% - 65px);
+      }
     }
 
     &:nth-child(2) {
