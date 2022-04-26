@@ -39,10 +39,12 @@ block content
       .container(data-tabs-parent='')
         .booking-page__inner 
           +model-tabs(items = ['Физическое лицо', 'Юридическое лицо'] real=true)
+
         .form.margin-top.margin-top--md
           form.booking-page__form(action="/")
             .booking-page__row
               .booking-page__col
+
                 .booking-page__block-item.active(data-tabs-block='')
                   .booking-page__block-row 
                     .booking-page__block-col
@@ -55,7 +57,24 @@ block content
                     .booking-page__block-col
                       .form__item
                         input.form__input(type="email" placeholder="E-mail*" required)
+
                 .booking-page__block-item(data-tabs-block='')
+
+                  .booking-page__block-row 
+                    .booking-page__block-col
+                      .form__item
+                        input.form__input(type="text" placeholder="Контактное лицо*" required)
+                    .booking-page__block-col
+                      .form__item
+                        input.form__input(type="tel" placeholder="Телефон для связи*" data-mask='phone' required)
+                  .booking-page__block-row
+                    .booking-page__block-col
+                      .form__item
+                        input.form__input(type="email" placeholder="E-mail*" required)
+
+                  .booking-page__title.margin-top--xl
+                    |Реквизиты для выставления счета
+
                   each item, i in ddata
                     .booking-page__block-row
                       each text in item.items
