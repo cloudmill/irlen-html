@@ -442,6 +442,21 @@ function forms() {
                         formResponse.attr('data-response-active', '');
 
                         respMess.html(r.mess);
+
+                        $.ajax({
+                            method: "GET",
+                            url: window.location.href,
+                            data: {
+                                auth: true,
+                            },
+                            success: function (r) {
+                                $(document).find('[data-type=lk-header]').empty();
+                                $(document).find('[data-type=lk-header]').append($(r));
+                            },
+                            error: function (r) {
+                                console.debug(r);
+                            }
+                        });
                     }
                     if (r.type === 'login') {
                         respMess.html(r.mess);
