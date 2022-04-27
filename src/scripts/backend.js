@@ -56,7 +56,7 @@ $(document).on('change', '[data-type=filter]', function () {
         url: window.location.href,
         dataType: 'html',
         data: data,
-        success: function(r) {
+        success: function (r) {
             preloader.addClass('preloader_hidden');
             itemsContainer.empty();
             itemsContainer.append($(r).find('[data-container=items]').children());
@@ -454,8 +454,24 @@ function forms() {
                                 auth: true,
                             },
                             success: function (r) {
+                                console.log(r);
                                 $(document).find('[data-type=lk-header]').empty();
                                 $(document).find('[data-type=lk-header]').append($(r));
+                            },
+                            error: function (r) {
+                                console.debug(r);
+                            }
+                        });
+                        $.ajax({
+                            method: "GET",
+                            url: window.location.href,
+                            data: {
+                                ajax: 1,
+                            },
+                            success: function (r) {
+                                console.log(r);
+                                $(document).find('[data-type=basket-list]').empty();
+                                $(document).find('[data-type=basket-list]').append($(r));
                             },
                             error: function (r) {
                                 console.debug(r);
