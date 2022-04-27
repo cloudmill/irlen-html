@@ -56,14 +56,14 @@ block content
                   .booking-page__block-row 
                     .booking-page__block-col
                       .form__item
-                        input.form__input(type="text" placeholder="Имя*" required)
+                        input.form__input(type="text" placeholder="Имя*" required disabled)
                     .booking-page__block-col
                       .form__item
-                        input.form__input(type="text" placeholder="Телефон*" data-mask='phone'  required)
+                        input.form__input(type="text" placeholder="Телефон*" data-mask='phone' required disabled)
                   .booking-page__block-row
                     .booking-page__block-col
                       .form__item
-                        input.form__input(type="email" placeholder="E-mail*" required)
+                        input.form__input(type="email" placeholder="E-mail*" required disabled)
 
                 .booking-page__block-item(data-tabs-block='')
 
@@ -76,7 +76,7 @@ block content
                         each text in item.items
                           .booking-page__block-col
                             .form__item
-                              input.form__input(type="text" placeholder=text required)
+                              input.form__input(type="text" placeholder=text required disabled)
               .booking-page__title.margin-top.margin-top--xl
                 |Способ доставки
               .booking-page__parent(data-tabs-parent='')
