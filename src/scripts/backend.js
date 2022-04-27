@@ -478,6 +478,12 @@ function forms() {
                             }
                         });
                     }
+                    if (r.type === 'login_auth_entity') {
+                        formParent.attr('data-form-hidden', '');
+                        formResponse.attr('data-response-active', '');
+
+                        respMess.html(r.mess);
+                    }
                     if (r.type === 'login') {
                         respMess.html(r.mess);
                     }
