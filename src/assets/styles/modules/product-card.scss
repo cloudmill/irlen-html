@@ -89,6 +89,7 @@
   }
   
   &__title {
+    display: block;
     margin-top: 4px;
     @include fsl(16px, 110%);
     @media (max-width: ($breakpoint - 1px)) {

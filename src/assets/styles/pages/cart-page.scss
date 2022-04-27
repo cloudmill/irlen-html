@@ -401,6 +401,7 @@
     }
   }
   &__item-text {
+    display: block;
     margin-bottom: 8px;
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 4px;

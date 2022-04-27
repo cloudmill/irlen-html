@@ -57,3 +57,26 @@ const BREAKPOINT = 1280;
     }
   });
 }
+
+// скрытие контролов если один слайд
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const sliderBlocks = document.querySelectorAll('[data-controls-hide]');
+
+  if (sliderBlocks.length) {
+
+    sliderBlocks.forEach(item => {
+
+      const slides = item.querySelectorAll('.swiper-slide');
+      const controls = item.querySelector('[data-controls]');
+
+      if (slides.length < 2) {
+        controls.style.display = 'none';
+      }
+
+    })
+
+  }
+
+})

@@ -77,7 +77,7 @@ block content
     section.instruments-card__section
       .container
         .instruments-card__section-row 
-          .instruments-card__section-col
+          .instruments-card__section-col(data-controls-hide='')
             .instruments-card__section-breadcrumbs 
               .breadcrumbs
                 ul.breadcrumbs__list
@@ -97,7 +97,7 @@ block content
                     .swiper-slide 
                       img.instruments-card__section-img(src="assets/images/instrument-slide-1.jpg", alt="")
                 .swiper-pagination
-            .instruments-card__section-buttons
+            .instruments-card__section-buttons(data-controls='')
               +slider-buttons.slider-buttons--small(prev = '13' next = '14')
           .instruments-card__section-col
             .instruments-card__section-info

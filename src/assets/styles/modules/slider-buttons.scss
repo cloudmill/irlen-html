@@ -3,6 +3,7 @@
   --size: 64px;
 
   display: flex;
+  user-select: none;
 
   &--small {
     --size: 44px;
