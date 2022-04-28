@@ -22,7 +22,10 @@ function pagen() {
     $(document).on('click', '[data-type=pagen]', function () {
         const container = $(this).parents('[data-container=parent-items]'),
             itemsContainer = container.find('[data-container=items]'),
-            pageNav = $(this).parents('[data-container=page-nav]');
+            pageNav = $(this).parents('[data-container=page-nav]'),
+            preloader = $('.preloader');
+
+        preloader.removeClass('preloader_hidden');
 
         $.ajax({
             type: 'GET',
@@ -32,6 +35,7 @@ function pagen() {
                 ajax: 'pagen',
             },
             success: function (r) {
+                preloader.addClass('preloader_hidden');
                 pageNav.remove();
                 itemsContainer.append($(r).find('[data-container=items]').children());
                 container.find('[data-type=append-page-nav]').after($(r).find('[data-container=page-nav]'));
