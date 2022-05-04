@@ -1,5 +1,19 @@
 .model-tabs {
   display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 12px;
+  @media (max-width: ($breakpoint - 1px)) {
+    padding: 0 16px;
+    margin-left: -16px;
+    
+    column-gap: 12px;
+    flex-wrap: nowrap;
+    width: calc(100% + (16px * 2));
+
+    overflow-x: scroll;
+    @include scrollbar-hidden;
+  }
 
   &__item {
     padding-bottom: 12px;
@@ -14,13 +28,6 @@
     font-weight: 500;
     @media (max-width: ($breakpoint - 1px)) {
       @include fsl(14px, 140%);
-    }
-
-    &:not(:first-child) {
-      margin-left: 24px;
-      @media (max-width: ($breakpoint - 1px)) {
-        margin-left: 16px;
-      }
     }
 
     &:hover {

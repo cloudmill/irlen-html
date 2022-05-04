@@ -1,0 +1,81 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/docs-card
+include ../components/tabs
+
+
+block content
+  -
+    var ddata = [
+      {
+        title: 'С направляющими качения',
+        text: 'Общие документы',
+        count: 6,
+        items: ['Корпусные сверла', 'Корпусные фрезы', ]
+      },
+      {
+        title: 'С направляющими качения и противошпинделем',
+        text: 'Каталоги производителя',
+        count: 2,
+        items: ['Токарные пластины MICRONEGA', 'Токарные пластины MICROBORING', 'Токарные державки', 'Державки MICRONEGA', 'Державки MICROBORING', 'Токарные пластины MICROBORING', 'Токарные державки', ]
+      },
+      {
+        title: 'С направляющими качения и осью Y',
+        text: 'Каталоги производителя',
+        count: 4,
+        items: ['Корпусные сверла', 'Корпусные фрезы', ]
+      },
+    ]
+  .docs-page 
+    section.section.section--first 
+      .container 
+        +navigation(page='Документация')
+    section.section
+      .container 
+        .docs-page__row 
+          .docs-page__col
+            +tabs(tabs = ['Оборудование', 'Инструменты'])
+          .docs-page__col
+            .docs-page__selects
+              .docs-page__selects-item 
+                .select-wrapper 
+                  .select
+                    select.select__mobile(name='cat-mob' data-select-mobile='') 
+                      option(value="" selected disabled)
+                        |Выберите категорию
+                      each item in data.selectValues.cat
+                        option(value=item)
+                          |#{item} 
+                    select.select__select(data-select-placeholder='Выберите категорию' style='width: 100%' data-select-control='')
+                      option(value='' disabled selected)
+                      each item in data.selectValues.cat
+                        option(value=item)
+                          |#{item} 
+    section.section 
+      .container 
+        h2
+          |Токарные станки с ЧПУ
+    each item, index in ddata
+      section.section(class=(index === 3 ? "section--last" : ""))
+        .container
+          .docs-page__row 
+            .docs-page__col
+              h3.docs-page__title 
+                |#{item.title}
+              .docs-page__text 
+                |#{item.text}
+            .docs-page__col
+              img.docs-page__image(src="assets/images/docs/docs-2.jpg", alt="")
+          +model-tabs.margin-top.margin-top--md(items = item.items)
+          .grid-container.margin-top.margin-top--md 
+            - for (i = 0; i < item.count; i++)
+              +docs-card
+    section.section.section--default.section--last 
+      .container 
+        .button-show-wrapper
+          .button-show 
+            .button-show__text 
+              |Показать еще
+            .button-show__icon 
+              +arrow-svg.button-show__svg
