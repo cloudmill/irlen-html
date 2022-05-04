@@ -9,19 +9,19 @@ block content
   -
     var ddata = [
       {
-        title: 'С направляющими качения',
+        title: 'OSAWA',
         text: 'Общие документы',
         count: 6,
         items: ['Корпусные сверла', 'Корпусные фрезы', ]
       },
       {
-        title: 'С направляющими качения и противошпинделем',
+        title: 'NIKKOTOOLS',
         text: 'Каталоги производителя',
         count: 2,
         items: ['Токарные пластины MICRONEGA', 'Токарные пластины MICROBORING', 'Токарные державки', 'Державки MICRONEGA', 'Державки MICROBORING', 'Токарные пластины MICROBORING', 'Токарные державки', ]
       },
       {
-        title: 'С направляющими качения и осью Y',
+        title: 'PAGNONI',
         text: 'Каталоги производителя',
         count: 4,
         items: ['Корпусные сверла', 'Корпусные фрезы', ]
@@ -52,16 +52,12 @@ block content
                       each item in data.selectValues.cat
                         option(value=item)
                           |#{item} 
-    section.section 
-      .container 
-        h2
-          |Токарные станки с ЧПУ
     each item, index in ddata
       section.section(class=(index === 3 ? "section--last" : ""))
         .container
           .docs-page__row 
             .docs-page__col
-              h3.docs-page__title 
+              h2.docs-page__title 
                 |#{item.title}
               .docs-page__text 
                 |#{item.text}
