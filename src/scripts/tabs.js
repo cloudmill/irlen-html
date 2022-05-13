@@ -1,61 +1,56 @@
 import {mediaQuery} from './mediaQueries'
 
 export class Tabs {
-  constructor(selector, manual) {
-    this.roots = selector
+  constructor(selector) {
+    this.root = selector
     
-    if (this.roots) {
-      this.rootsTabs = this.roots.querySelectorAll('[data-tabs-item]')
-
-      this.init(manual)
+    if (document.querySelector(this.root)) {
+      this.init()
     }
   }
 
-  init(manual) {
-    this.roots.addEventListener('click', (e) => {
+  init() {
+    window.addEventListener('click', (e) => {
       const target = e.target.closest('[data-tabs-item]')
 
       if (target) {
-        this.setActive(target, manual)
+        this.setActive(target)
       }
     })
   }
 
-  setActive(newItem, manual) {
-    if (manual) {
-      const parent = this.roots.closest('[data-tabs-parent]')
-      this.tabsBlock = parent.querySelectorAll('[data-tabs-block]')
-    }
+  setActive(newItem) {
+    const container = newItem.closest('[data-tabs]')
+    const activeItem = container.querySelector('[data-tabs-item].active')
+    const items = container.querySelectorAll('[data-tabs-item]')
 
-    this.rootsTabs.forEach((item, i) => {
-      if (item !== newItem) {
-        item.classList.remove('active')
-        if (manual) {
-          this.tabsBlock[i].classList.remove('active')
-        }
-      } else {
-        item.classList.add('active');
-        this.scrollIntoView(i)
-        if (manual) {
-          this.tabsBlock[i].classList.add('active')
-        }
+    activeItem.classList.remove('active')
+    newItem.classList.add('active')
+
+    items.forEach((item, i) => {
+      if (item.classList.contains('active')) {
+        this.scrollIntoView(i, items, container)
       }
     })
   }
 
-  scrollIntoView(index) {
+  scrollIntoView(index, items, container) {
     if (!mediaQuery.matches) {
       if (index) {
         let distance = 0;
 
         for (let x = 0; x < index; x++) {
-          distance += this.rootsTabs[x].offsetWidth + this.rootsTabs[x].offsetLeft
+          distance += items[x].offsetWidth + items[x].offsetLeft
         }
 
-        this.roots.scrollLeft = distance / 2
+        container.scrollLeft = distance / 2
       } else {
-        this.roots.scrollLeft = 0
+        container.scrollLeft = 0
       }
     }
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  new Tabs('[data-tabs]')
+})
