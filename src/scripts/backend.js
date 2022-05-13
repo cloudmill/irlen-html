@@ -12,6 +12,7 @@ $(function () {
     basketAction();
     changeDeliveryType();
     changeUserType();
+    tabDocFile();
 });
 
 function ajaxCallbackErrors(xhr) {
@@ -501,6 +502,39 @@ function forms() {
                         formResponse.attr('data-response-active', '');
                     }
                 }
+            },
+            error: function (r) {
+                console.debug(r);
+            }
+        });
+    });
+}
+
+function tabDocFile() {
+    $(document).on("click", "[data-type=js-tab-file]", function (e) {
+        console.log("click tab");
+        e.preventDefault();
+
+        let tab = $(this),
+            tabParent = tab.parents("[data-tabs]"),
+            tabInner = tabParent.siblings("[data-tabs-content]"),
+            sec = tabParent.attr("data-sec"),
+            idFile = tab.attr("data-tabs-item"),
+            id = {
+                idFile,
+                sec
+            };
+
+        $.ajax({
+            type: "GET",
+            url: window.location.href,
+            data: {
+                id: id,
+                sec: sec,
+            },
+            success: function (r) {
+                tabInner.empty();
+                tabInner.append(r);
             },
             error: function (r) {
                 console.debug(r);
