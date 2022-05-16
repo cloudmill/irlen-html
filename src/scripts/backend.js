@@ -329,16 +329,16 @@ function filterChange() {
         e.preventDefault();
 
         let thisObj = $(this),
-            value = thisObj.val();
+            tag = thisObj.val();
 
-        console.log("filter change  " + value);
+        console.log("filter change  " + tag);
 
         $.ajax({
             method: "GET",
             url: window.location.href,
             data: {
                 ajax: 1,
-                value: value,
+                tag: tag,
             },
             success: function (r) {
                 $(document).find('[data-type=items-container-full]').empty();
@@ -518,19 +518,15 @@ function tabDocFile() {
         let tab = $(this),
             tabParent = tab.parents("[data-tabs]"),
             tabInner = tabParent.siblings("[data-tabs-content]"),
-            sec = tabParent.attr("data-sec"),
-            idFile = tab.attr("data-tabs-item"),
-            id = {
-                idFile,
-                sec
-            };
+            idSec = tabParent.attr("data-id"),
+            id = tab.attr("data-tabs-item");
 
         $.ajax({
             type: "GET",
             url: window.location.href,
             data: {
                 id: id,
-                sec: sec,
+                ajaxFile: idSec,
             },
             success: function (r) {
                 tabInner.empty();
