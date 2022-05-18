@@ -1,6 +1,7 @@
 import "parsleyjs";
 
 $(function () {
+    filterReset();
     pagen();
     filter();
     showMore();
@@ -17,6 +18,81 @@ $(function () {
 
 function ajaxCallbackErrors(xhr) {
     alert(`error: ${xhr.status}: ${xhr.statusText}`);
+}
+
+window.filterChangeSuccess = function(domObjects, response) {
+    domObjects.preloader.addClass('preloader_hidden');
+    domObjects.itemsContainer.empty();
+    domObjects.itemsContainer.append(response.find('[data-container=items]').children());
+
+    const enableStyle = {
+            'opacity': 1,
+            'pointer-events': 'auto',
+        },
+        disableStyle = {
+            'opacity': 0.5,
+            'pointer-events': 'none',
+        };
+
+    let index = 0;
+    domObjects.container.children().each(function () {
+        const filterBody = $(this).find('[data-type=filter-body]'),
+            filterItemResponse = response.find('[data-link-container]').children().eq(index);
+
+        if ($(this).find('[data-type=filter-name]').text() !== filterItemResponse.find('[data-type=filter-name]').text()) {
+            filterBody.css(disableStyle);
+            filterBody.find('[data-active]').css(disableStyle);
+        } else {
+            const arr = filterItemResponse.find('[data-type=filter]').map((arrI, item) => item.value);
+
+            filterBody.css(enableStyle);
+            filterBody.find('[data-type=filter]').each(function () {
+                if (Object.values(arr).includes($(this).val())) {
+                    const parent = $(this).parents('[data-type=filter-item]');
+
+                    parent.css(enableStyle);
+                    parent.attr('data-active', true);
+                } else {
+                    $(this).parents('[data-type=filter-item]').css(disableStyle);
+                }
+            });
+
+            index++;
+        }
+    });
+}
+
+function filterReset() {
+    $(document).on('click', '[data-type=filter-reset]', function() {
+        const container = $(this).parents('[data-container=filters]'),
+            itemsContainer = $(container.data('link-container')),
+            preloader = $('.preloader');
+
+        preloader.removeClass('preloader_hidden');
+
+        $.ajax({
+            type: 'GET',
+            url: window.location.href,
+            dataType: 'html',
+            data: {
+                ajax: 'filter',
+            },
+            success: function (r) {
+                container.empty();
+                container.append($(r).find('[data-container=filters]').children());
+
+                window['filterChangeSuccess'](
+                    {
+                        container: container,
+                        itemsContainer: itemsContainer,
+                        preloader: preloader,
+                    },
+                    $(r)
+                );
+            },
+            error: ajaxCallbackErrors,
+        });
+    });
 }
 
 function pagen() {
@@ -62,45 +138,14 @@ $(document).on('change', '[data-type=filter]', function () {
         dataType: 'html',
         data: data,
         success: function (r) {
-            preloader.addClass('preloader_hidden');
-            itemsContainer.empty();
-            itemsContainer.append($(r).find('[data-container=items]').children());
-
-            const enableStyle = {
-                'opacity': 1,
-                'pointer-events': 'auto',
-            },
-                disableStyle = {
-                    'opacity': 0.5,
-                    'pointer-events': 'none',
-                };
-
-            let index = 0;
-            container.children().each(function () {
-                const filterBody = $(this).find('[data-type=filter-body]'),
-                    filterItemResponse = $(r).find('[data-link-container]').children().eq(index);
-
-                if ($(this).find('[data-type=filter-name]').text() !== filterItemResponse.find('[data-type=filter-name]').text()) {
-                    filterBody.css(disableStyle);
-                    filterBody.find('[data-active]').css(disableStyle);
-                } else {
-                    const arr = filterItemResponse.find('[data-type=filter]').map((arrI, item) => item.value);
-
-                    filterBody.css(enableStyle);
-                    filterBody.find('[data-type=filter]').each(function () {
-                        if (Object.values(arr).includes($(this).val())) {
-                            const parent = $(this).parents('[data-type=filter-item]');
-
-                            parent.css(enableStyle);
-                            parent.attr('data-active', true);
-                        } else {
-                            $(this).parents('[data-type=filter-item]').css(disableStyle);
-                        }
-                    });
-
-                    index++;
-                }
-            });
+            window['filterChangeSuccess'](
+                {
+                    container: container,
+                    itemsContainer: itemsContainer,
+                    preloader: preloader,
+                },
+                $(r)
+            );
         },
         error: ajaxCallbackErrors,
     });
