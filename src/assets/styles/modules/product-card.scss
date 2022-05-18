@@ -1,7 +1,9 @@
 .product-card {
   $comp: &;
 
-  // display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   border-radius: 4px;
   overflow: hidden;
@@ -35,6 +37,7 @@
     z-index: 0;
 
     // display: block;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,6 +50,7 @@
       height: 250px;
     }
 
+    padding: 20px 40px;
     @media (min-width: $breakpoint) {
       padding: 80px 40px 20px;
 
