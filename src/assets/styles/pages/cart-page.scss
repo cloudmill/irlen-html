@@ -308,6 +308,7 @@
   }
   &__item-row {
     display: flex;
+    align-items: center;
     @media (max-width: ($breakpoint - 1px)) {
       padding-bottom: 12px;
 
@@ -325,6 +326,8 @@
     flex-shrink: 0;
 
     &:nth-child(1) {
+      padding-right: 20px;
+
       width: calc(#{$col-part-d} * 5);
       @media (max-width: ($breakpoint-xl - 1px)) {
         width: calc(#{$col-part-d} * 4);
@@ -350,6 +353,7 @@
         margin-left: 8px;
         grid-area: D;
       }
+      min-width: 80px;
     }
     &:nth-child(4) {
       margin-left: 40px;
