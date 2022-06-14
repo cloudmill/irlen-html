@@ -21,9 +21,11 @@ function ajaxCallbackErrors(xhr) {
 }
 
 window.filterChangeSuccess = function(domObjects, response) {
+    const linkContainer = $(domObjects.linkContainer);
+
     domObjects.preloader.addClass('preloader_hidden');
-    domObjects.itemsContainer.empty();
-    domObjects.itemsContainer.append(response.find('[data-container=items]').children());
+    linkContainer.empty();
+    linkContainer.append(response.find(domObjects.linkContainer).children());
 
     const enableStyle = {
             'opacity': 1,
@@ -124,7 +126,6 @@ function pagen() {
 
 $(document).on('change', '[data-type=filter]', function () {
     const container = $(this).parents('[data-container=filters]'),
-        itemsContainer = $(container.data('link-container')),
         preloader = $('.preloader'),
         data = getDataForm(container);
 
@@ -141,7 +142,7 @@ $(document).on('change', '[data-type=filter]', function () {
             window['filterChangeSuccess'](
                 {
                     container: container,
-                    itemsContainer: itemsContainer,
+                    linkContainer: container.data('link-container'),
                     preloader: preloader,
                 },
                 $(r)
