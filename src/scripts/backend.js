@@ -67,7 +67,6 @@ window.filterChangeSuccess = function(domObjects, response) {
 function filterReset() {
     $(document).on('click', '[data-type=filter-reset]', function() {
         const container = $(this).parents('[data-container=filters]'),
-            itemsContainer = $(container.data('link-container')),
             preloader = $('.preloader');
 
         preloader.removeClass('preloader_hidden');
@@ -86,7 +85,7 @@ function filterReset() {
                 window['filterChangeSuccess'](
                     {
                         container: container,
-                        itemsContainer: itemsContainer,
+                        linkContainer: container.data('link-container'),
                         preloader: preloader,
                     },
                     $(r)
