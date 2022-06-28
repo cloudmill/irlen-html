@@ -225,15 +225,29 @@ mixin aside
                   .button-show__icon 
                     +arrow-svg.button-show__svg
         .aside__card 
-          .aside__container(data-accordion='') 
-            h5.aside__title 
-              |Тип фрезы, радиокнопки
+          .aside__container(data-accordion='' data-aside-block='') 
+            .aside__top
+              h5.aside__title 
+                |Тип фрезы, радиокнопки
+              .aside__clear.hidden(data-clear-block='')
+                .aside__clear-svg 
+                  +trash-svg 
+                .aside__clear-text 
+                  |Очистить
             ul.aside__list.aside__inner
-              each el, index in ['Неважно' ,'Острая кромка', 'Фаска 45°', 'Фаска 45° + радиус']
+              li.aside__item 
+                .radio 
+                  label.radio__label
+                    input.radio__input(type="radio" name='group1' checked data-radio-default='true')
+                    .radio__circle
+                      +circle-svg.radio__svg
+                    .radio__text 
+                      |Неважно
+              each el, index in ['Острая кромка', 'Фаска 45°', 'Фаска 45° + радиус']
                 li.aside__item 
                   .radio 
                     label.radio__label
-                      input.radio__input(type="radio" name='group1' checked=(index === 0))
+                      input.radio__input(type="radio" name='group1')
                       .radio__circle
                         +circle-svg.radio__svg
                       .radio__text 
@@ -255,10 +269,16 @@ mixin aside
                 .button-show__icon 
                   +arrow-svg.button-show__svg
         if (attributes.range)
-          .aside__card(data-range-block='')
+          .aside__card(data-range-block='' data-aside-block='')
             .aside__container 
-              h5.aside__title 
-                |Диаметр фрезы, мм
+              .aside__top
+                h5.aside__title 
+                  |Диаметр фрезы, мм
+                .aside__clear.hidden(data-clear-block='')
+                  .aside__clear-svg 
+                    +trash-svg 
+                  .aside__clear-text 
+                    |Очистить
               .range.aside__inner
                 .range__top 
                   .range__row(data-range)
@@ -266,18 +286,24 @@ mixin aside
                       label.range__label
                         span.range__text 
                           |от
-                        input.range__input(type="number" min='5' max='10' value='5' data-range-1)
+                        input.range__input(type="number" min='5' max='10' value='5' data-range-1 data-aside-input='')
                     .range__item 
                       label.range__label
                         span.range__text 
                           |до
-                        input.range__input(type="number" min='5' max='10' value='10' data-range-2)
-          .aside__card
+                        input.range__input(type="number" min='5' max='10' value='10' data-range-2 data-aside-input='')
+          .aside__card(data-aside-block='')
             .aside__container 
-              h5.aside__title 
-                |Численное значение, мм
+              .aside__top
+                h5.aside__title 
+                  |Численное значение, мм
+                .aside__clear.hidden(data-clear-block='')
+                  .aside__clear-svg 
+                    +trash-svg 
+                  .aside__clear-text 
+                    |Очистить
               .aside__inner
-                input.form__input.form__input--sm(type="text" value='2000')
+                input.form__input.form__input--sm(type="text" value='2000' data-aside-input='')
       if (attributes.clear)
         .aside__btn
           .clear-button(data-clear-button='')
