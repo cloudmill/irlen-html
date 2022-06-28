@@ -22,12 +22,13 @@ import {mediaQuery} from './mediaQueries'
       });
 
       if (select.is('[data-select-control]')) {
+        const parent = $(this).closest('[data-aside-block]')
+        const btn = parent.find('[data-clear-block]')
 
-        select.one('change', function() {
-          const parent = $(this).closest('[data-select-parent]')
-          const controlled = parent.find('[data-select-controlled]')
-
-          controlled.removeClass('disabled')
+        select.on('change', function() {
+          if (btn.hasClass('hidden')) {
+            btn.removeClass('hidden')
+          }
         })
       }
 

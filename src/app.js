@@ -14,6 +14,7 @@ import 'scripts/parsley.js';
 import 'scripts/anchor-links.js';
 import 'scripts/search.js';
 import 'scripts/map.js';
+import 'scripts/multi-checkbox-select.js';
 import 'scripts/no-transition.js';
 import 'scripts/form-response.js';
 import 'scripts/tabs'
