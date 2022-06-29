@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const input2max = Number(input2.getAttribute('max'));
 
 
-    input1.addEventListener('focusout', () => {
+    input1.addEventListener('change', () => {
       const input1val = Number(input1.value);
 
       input1.closest('.range__label').classList.remove('error');
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
 
-    input2.addEventListener('focusout', () => {
+    input2.addEventListener('change', () => {
       const input1val = Number(input1.value);
       const input2val = Number(input2.value);
 

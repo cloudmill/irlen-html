@@ -8,6 +8,7 @@ $(() => {
     const clearButtons = aside.find('[data-clear-block]')
     const inputs = aside.find('[data-aside-input]')
     const defaultRadio = aside.find('[data-radio-default]')
+    const error = aside.find('.aside__error')
 
     $('[data-clear-button]').on('click', function() {
       checkbox.prop('checked', false).change()
@@ -16,7 +17,7 @@ $(() => {
       inputs.each(function() {
         $(this).val($(this).attr('value')).change()
       })
-
+      error.addClass('hidden')
       defaultRadio.prop('checked', true).change()
     })
 
@@ -49,6 +50,8 @@ $(() => {
 
       if (value !== this.value) {
         btn.removeClass('hidden')
+      } else {
+        btn.addClass('hidden')
       }
     })
 
@@ -74,8 +77,7 @@ $(() => {
       
       if (select.length) {
         select.val(null).trigger('change')
-        // select.html('').select2({data: [
-        //   {id: '', text: ''}]});
+        
         $(this).addClass('hidden')
       }
 
@@ -93,11 +95,49 @@ $(() => {
       if (radioBtn.length) {
         container.find('[data-radio-default]').prop('checked', true).change()
       }
+
+      const inputError = container.find('.aside__error')
+      
+      if (inputError) {
+        inputError.addClass('hidden')
+      }
     })
   }
 })
 
 // select reveal + dynamic options change
 $(() => {
-  const select = $('')
+  const select = $('[data-select-aside]')
+
+  if (select.length) {
+    const dependentSelect = select.closest('[data-aside-block]').find('[data-select-dependent]')
+    
+    function removeOptions() {
+      const options = dependentSelect.find('option')
+      options.each(function() {
+        if ($(this).attr('value')) {
+          $(this).remove()
+        }
+      })
+    }
+
+    select.on('change', function() {
+      if (this.value) {
+        dependentSelect.val(null).trigger('change')
+        removeOptions()
+
+        const arr = JSON.parse($(this.options[this.selectedIndex]).attr('data-options'))
+        arr.forEach(item => {
+          const newOption = new Option(item, item)
+          dependentSelect.append(newOption)
+        })
+
+        dependentSelect.parent().removeClass('disabled')
+      } else {
+        removeOptions()
+        
+        dependentSelect.parent().addClass('disabled')
+      }
+    })
+  }
 })
