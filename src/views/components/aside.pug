@@ -93,9 +93,9 @@ mixin aside
               .aside__select
                 -
                   var items = [
-                    {text: 'ISO2X', options: ['asd', 'qwe',]},
-                    {text: 'ISO3X', options: ['zxc', 'cvbn',]},
-                    {text: 'ISO4X', options: ['123', '456',]}
+                    {text: 'ISO2X', options: '["asd", "qwe"]'},
+                    {text: 'ISO3X', options: '["zxc", "cbe"]'},
+                    {text: 'ISO4X', options: '[123, 456]'}
                   ]
                 .select-wrapper 
                   .select.select--small
@@ -105,23 +105,23 @@ mixin aside
                       each item in data.selectValues.threadSize
                         option(value=item)
                           |#{item} 
-                    select.select__select(data-select-placeholder='Выбрать' style='width: 100%'  data-select-control='')
+                    select.select__select(data-select-placeholder='Выбрать' style='width: 100%'  data-select-control='' data-select-aside='')
                       option(value='' disabled selected)
                       each item in items
-                        option(value=item.text)
+                        option(value=item.text data-options=`${item.options}`)
                           |#{item.text} 
               .aside__char
                 |х
-              .aside__select.disabled
+              .aside__select
                 .select-wrapper 
-                  .select.select--small
+                  .select.select--small.disabled
                     select.select__mobile(name='cat-mob' data-select-mobile=''   data-select-control='') 
                       option(value="" selected disabled)
                         |Выбрать
                       each item in data.selectValues.threadSize
                         option(value=item)
                           |#{item} 
-                    select.select__select(data-select-placeholder='Выбрать' style='width: 100%'   data-select-control='')
+                    select.select__select(data-select-placeholder='Выбрать' style='width: 100%'   data-select-control='' data-select-dependent='')
                       option(value='' disabled selected)
                       //- each item in data.selectValues.threadSize
                       //-   option(value=item)
@@ -309,7 +309,7 @@ mixin aside
                   .aside__clear-text 
                     |Очистить
               .aside__inner
-                input.form__input.form__input--sm(type="text" value='' data-aside-input='')
+                input.form__input.form__input--sm(type="number" value='' data-aside-input='' data-single-input='')
               .aside__error.hidden
                 |Нет товаров с таким значением
       if (attributes.clear)
