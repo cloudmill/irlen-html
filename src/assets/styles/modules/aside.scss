@@ -162,6 +162,13 @@
 
   &__select {
     width: 100%;
+
+    transition: $transition;
+
+    &.disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
   }
 
   &__char {
@@ -230,5 +237,16 @@
     background: $color-white;
     border: 1px solid $color-blue;
     border-top: 1px solid $color-light-gray;
+  }
+
+  &__error {
+    margin-top: 5px;
+
+    color: $color-red;
+    @include fsl(14px, 120%);
+
+    &.hidden {
+      display: none;
+    }
   }
 }
