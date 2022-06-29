@@ -138,14 +138,22 @@ $(document).on('change', '[data-type=filter]', function () {
         dataType: 'html',
         data: data,
         success: function (r) {
-            window['filterChangeSuccess'](
-                {
-                    container: container,
-                    linkContainer: container.data('link-container'),
-                    preloader: preloader,
-                },
-                $(r)
-            );
+            const linkContainer = container.data('link-container'),
+                response = $(r).find(linkContainer).find('[data-container=items]').children().length;
+
+            if (response) {
+                window['filterChangeSuccess'](
+                    {
+                        container: container,
+                        linkContainer: linkContainer,
+                        preloader: preloader,
+                    },
+                    $(r)
+                );
+            } else {
+                container.find('.aside__error, .hidden').removeClass('hidden');
+                preloader.addClass('preloader_hidden');
+            }
         },
         error: ajaxCallbackErrors,
     });
