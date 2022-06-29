@@ -86,27 +86,26 @@ document.addEventListener('DOMContentLoaded', () => {
     input1.addEventListener('change', () => {
       const input1val = Number(input1.value);
 
-      input1.closest('.range__label').classList.remove('error');
+      // input1.closest('.range__label').classList.remove('error');
   
-      if (input1min <= input1val && input1val <= input1max) {
-        input1.closest('.range__label').classList.remove('error');
-      } else {
+      if (input1min >= input1val || input1val >= input1max) {
+        // input1.closest('.range__label').classList.remove('error');
         input1.value = input1min;
-        input1.closest('.range__label').classList.add('error');
+      } else {
+        // input1.closest('.range__label').classList.add('error');
       }
     })
 
     input2.addEventListener('change', () => {
       const input1val = Number(input1.value);
       const input2val = Number(input2.value);
-
-      input2.closest('.range__label').classList.remove('error');
+      // input2.closest('.range__label').classList.remove('error');
   
-      if (input2min <= input2val && input2val <= input2max && input2val >= input1val) {
-        input2.closest('.range__label').classList.remove('error');
-      } else {
+      if (input2min >= input2val || input2val >= input2max || input2val <= input1val) {
+        // input2.closest('.range__label').classList.remove('error');
         input2.value = input2max;
-        input2.closest('.range__label').classList.add('error');
+      } else {
+        // input2.closest('.range__label').classList.add('error');
       }
     })
 

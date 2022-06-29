@@ -48,7 +48,7 @@ $(() => {
       const value = $(this).attr('value')
       const btn = $(this).closest('[data-aside-block]').find('[data-clear-block]')
 
-      if (value !== this.value) {
+      if (+value !== +this.value) {
         btn.removeClass('hidden')
       } else {
         btn.addClass('hidden')
