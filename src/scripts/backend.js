@@ -156,8 +156,13 @@ function getDataForm(form) {
         'filter': {},
     };
 
-    form.find('[data-type=get-field], input:checked').each(function (i) {
-        const field = $(this).parents('[data-container=filter-item]').data('filter-field');
+    form.find('[data-type=get-field], input:checked').each(function () {
+        const thisField = $(this).data('filter-field'),
+            field = thisField ? thisField : $(this).parents('[data-container=filter-item]').data('filter-field');
+
+        if (thisField === '') {
+            return;
+        }
 
         data['filter'][field] = {
             equality: '=',
