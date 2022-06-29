@@ -74,6 +74,8 @@ $(() => {
       
       if (select.length) {
         select.val(null).trigger('change')
+        // select.html('').select2({data: [
+        //   {id: '', text: ''}]});
         $(this).addClass('hidden')
       }
 
@@ -93,4 +95,9 @@ $(() => {
       }
     })
   }
+})
+
+// select reveal + dynamic options change
+$(() => {
+  const select = $('')
 })

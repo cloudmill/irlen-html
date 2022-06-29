@@ -67,49 +67,49 @@ $(() => {
 
 
 
-// document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
-//   const range = document.querySelectorAll('[data-range]');
+  const range = document.querySelectorAll('[data-range]');
 
-//   range.forEach(item => {
+  range.forEach(item => {
 
-//     const input1 = item.querySelector('[data-range-1]');
-//     const input2 = item.querySelector('[data-range-2]');
+    const input1 = item.querySelector('[data-range-1]');
+    const input2 = item.querySelector('[data-range-2]');
 
-//     const input1min = Number(input1.getAttribute('min'));
-//     const input1max = Number(input1.getAttribute('max'));
+    const input1min = Number(input1.getAttribute('min'));
+    const input1max = Number(input1.getAttribute('max'));
 
-//     const input2min = Number(input2.getAttribute('min'));
-//     const input2max = Number(input2.getAttribute('max'));
+    const input2min = Number(input2.getAttribute('min'));
+    const input2max = Number(input2.getAttribute('max'));
 
 
-//     input1.addEventListener('focusout', () => {
-//       const input1val = Number(input1.value);
+    input1.addEventListener('focusout', () => {
+      const input1val = Number(input1.value);
 
-//       input1.closest('.range__label').classList.remove('error');
+      input1.closest('.range__label').classList.remove('error');
   
-//       if (input1min <= input1val && input1val <= input1max) {
-//         input1.closest('.range__label').classList.remove('error');
-//       } else {
-//         input1.value = input1min;
-//         input1.closest('.range__label').classList.add('error');
-//       }
-//     })
+      if (input1min <= input1val && input1val <= input1max) {
+        input1.closest('.range__label').classList.remove('error');
+      } else {
+        input1.value = input1min;
+        input1.closest('.range__label').classList.add('error');
+      }
+    })
 
-//     input2.addEventListener('focusout', () => {
-//       const input1val = Number(input1.value);
-//       const input2val = Number(input2.value);
+    input2.addEventListener('focusout', () => {
+      const input1val = Number(input1.value);
+      const input2val = Number(input2.value);
 
-//       input2.closest('.range__label').classList.remove('error');
+      input2.closest('.range__label').classList.remove('error');
   
-//       if (input2min <= input2val && input2val <= input2max && input2val >= input1val) {
-//         input2.closest('.range__label').classList.remove('error');
-//       } else {
-//         input2.value = input2max;
-//         input2.closest('.range__label').classList.add('error');
-//       }
-//     })
+      if (input2min <= input2val && input2val <= input2max && input2val >= input1val) {
+        input2.closest('.range__label').classList.remove('error');
+      } else {
+        input2.value = input2max;
+        input2.closest('.range__label').classList.add('error');
+      }
+    })
 
-//   })
+  })
 
-// })
+})
