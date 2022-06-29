@@ -24,6 +24,7 @@ window.filterChangeSuccess = function(domObjects, response) {
     const linkContainer = $(domObjects.linkContainer);
 
     domObjects.preloader.addClass('preloader_hidden');
+    domObjects.container.find('.aside__error, .hidden').addClass('hidden');
     linkContainer.empty();
     linkContainer.append(response.find(domObjects.linkContainer).children());
 
