@@ -195,12 +195,15 @@ window.getValue = {
     },
     many: function(elem, field) {
         if (!this.values[field]) {
-            this.values[field] = {};
+            this.values[field] = {
+                equality: 'between',
+                value: {},
+            };
         }
 
         const val = elem.val();
 
-        this.values[field][val] = val;
+        this.values[field].value[elem.data('key')] = val;
 
         return this.values[field];
     },
