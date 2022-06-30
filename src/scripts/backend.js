@@ -176,14 +176,9 @@ function getDataForm(form) {
         const initFunc = $(this).data('init-func');
 
         try {
-            window.getValue[initFunc]($(this));
+            data['filter'][field] = window.getValue[initFunc]($(this), field);
         } catch (e) {
             console.log('У элемента не установлен атрибут init-func', e.message);
-        }
-
-        data['filter'][field] = {
-            equality: '=',
-            value: $(this).val(),
         }
     });
 
@@ -191,7 +186,24 @@ function getDataForm(form) {
 }
 
 window.getValue = {
-    one: elem => elem.val(),
+    values: {},
+    one: elem => {
+        return {
+            equality: '=',
+            value: elem.val(),
+        }
+    },
+    many: function(elem, field) {
+        if (!this.values[field]) {
+            this.values[field] = {};
+        }
+
+        const val = elem.val();
+
+        this.values[field][val] = val;
+
+        return this.values[field];
+    },
 }
 
 function changeDeliveryType() {
