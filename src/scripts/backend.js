@@ -166,6 +166,10 @@ function getDataForm(form) {
     };
 
     form.find('[data-get-field], input:checked').each(function () {
+        if (!$(this).val()) {
+            return;
+        }
+
         const thisField = $(this).data('filter-field'),
             field = thisField ? thisField : $(this).parents('[data-filter-field]').data('filter-field');
 
@@ -176,7 +180,7 @@ function getDataForm(form) {
         const initFunc = $(this).data('init-func');
 
         try {
-            data['filter'][field] = window.getValue[initFunc]($(this), field);
+            data['filter'][field] = window.getValue[initFunc]($(this), field, $(this).data('equality'));
         } catch (e) {
             console.log('У элемента не установлен атрибут init-func', e.message);
         }
@@ -193,17 +197,15 @@ window.getValue = {
             value: elem.val(),
         }
     },
-    many: function(elem, field) {
+    many: function(elem, field, equality) {
         if (!this.values[field]) {
             this.values[field] = {
-                equality: 'between',
+                equality: equality,
                 value: {},
             };
         }
 
-        const val = elem.val();
-
-        this.values[field].value[elem.data('key')] = val;
+        this.values[field].value[elem.data('key')] = elem.val();
 
         return this.values[field];
     },
