@@ -271,9 +271,11 @@
   }
   &__section-list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
     @media (max-width: ($breakpoint - 1px)) {
       display: block;
+      gap: 0;
     }
   }
   &__section-item {

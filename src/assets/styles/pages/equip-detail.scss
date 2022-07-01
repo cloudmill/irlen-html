@@ -79,6 +79,15 @@
       margin-top: 0;
       order: -1;
     }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 360px;
+    @media (max-width: ($breakpoint - 1px)) {
+      max-height: none;
+      height: 165px;
+    }
   }
 
   &__panel {
