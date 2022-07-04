@@ -11,14 +11,16 @@ $(() => {
     const error = aside.find('.aside__error')
 
     $('[data-clear-button]').on('click', function() {
-      checkbox.prop('checked', false).change()
-      selects.val(null).trigger('change')
+      checkbox.prop('checked', false)
+      selects.val(null)
       clearButtons.addClass('hidden')
       inputs.each(function() {
-        $(this).val($(this).attr('value')).change()
+        $(this).val($(this).attr('value'))
       })
       error.addClass('hidden')
-      defaultRadio.prop('checked', true).change()
+      defaultRadio.prop('checked', true)
+
+      window.dispatchEvent(new CustomEvent('clearFilters'));
     })
 
     // reveal single block clear button 
@@ -71,12 +73,12 @@ $(() => {
     $('[data-clear-block]').on('click', function() {
       const container = $(this).closest('[data-aside-block]')
       const boxes = container.find('[data-aside-checkbox]')
-      boxes.prop('checked', false).change()
+      boxes.prop('checked', false)
 
       const select = container.find('.select__select')
       
       if (select.length) {
-        select.val(null).trigger('change')
+        select.val(null)
         
         $(this).addClass('hidden')
       }
@@ -101,6 +103,8 @@ $(() => {
       if (inputError) {
         inputError.addClass('hidden')
       }
+
+      window.dispatchEvent(new CustomEvent('clearFilters'));
     })
   }
 })
@@ -123,7 +127,7 @@ $(() => {
 
     select.on('change', function() {
       if (this.value) {
-        dependentSelect.val(null).trigger('change')
+        dependentSelect.val(null)
         removeOptions()
 
         const arr = JSON.parse($(this.options[this.selectedIndex]).attr('data-options'))

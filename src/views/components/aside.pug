@@ -168,31 +168,32 @@ mixin aside
                   .aside__spoiler-icon 
                     +arrow-svg.aside__spoiler-svg
                 .aside__spoiler-dropdown(data-accordion-dropdown='')
-                  ul.aside__list
-                    li.aside__item 
-                      .checkbox 
-                        label.checkbox__label
-                          input.checkbox__input(type="checkbox" data-aside-checkbox='' data-accordion-checkbox='ISO2X')
-                          .checkbox__box 
-                            +check-svg.checkbox__svg
-                          .checkbox__text 
-                            |ISO2X
-                    li.aside__item 
-                      .checkbox 
-                        label.checkbox__label
-                          input.checkbox__input(type="checkbox" data-aside-checkbox='' data-accordion-checkbox='ISO3X')
-                          .checkbox__box 
-                            +check-svg.checkbox__svg
-                          .checkbox__text 
-                            |ISO3X
-                    li.aside__item 
-                      .checkbox 
-                        label.checkbox__label
-                          input.checkbox__input(type="checkbox" data-aside-checkbox='' data-accordion-checkbox='ISO4X')
-                          .checkbox__box 
-                            +check-svg.checkbox__svg
-                          .checkbox__text 
-                            |ISO4X
+                  ul.aside__spoiler-list
+                    - for (i = 0; i < 9; i++)
+                      li.aside__item 
+                        .checkbox 
+                          label.checkbox__label
+                            input.checkbox__input(type="checkbox" data-aside-checkbox='' data-accordion-checkbox='ISO2X')
+                            .checkbox__box 
+                              +check-svg.checkbox__svg
+                            .checkbox__text 
+                              |ISO2X
+                      li.aside__item 
+                        .checkbox 
+                          label.checkbox__label
+                            input.checkbox__input(type="checkbox" data-aside-checkbox='' data-accordion-checkbox='ISO3X')
+                            .checkbox__box 
+                              +check-svg.checkbox__svg
+                            .checkbox__text 
+                              |ISO3X
+                      li.aside__item 
+                        .checkbox 
+                          label.checkbox__label
+                            input.checkbox__input(type="checkbox" data-aside-checkbox='' data-accordion-checkbox='ISO4X')
+                            .checkbox__box 
+                              +check-svg.checkbox__svg
+                            .checkbox__text 
+                              |ISO4X
         each item in ddata
           .aside__card
             .aside__container(data-accordion='' data-aside-block='') 
