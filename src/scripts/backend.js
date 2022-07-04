@@ -155,7 +155,7 @@ function filters(container) {
                     $(r)
                 );
             } else {
-                container.find('.aside__error, .hidden').removeClass('hidden');
+                container.find('[data-type=error-text]').removeClass('hidden');
                 preloader.addClass('preloader_hidden');
             }
         },
