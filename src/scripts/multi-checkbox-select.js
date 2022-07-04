@@ -30,5 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     })
+
+    window.addEventListener('clearMultiSelect', event => {
+      const text = event.detail.querySelector('[data-accordion-text]')
+      text.textContent = PLACEHOLDER
+    })
   }
 })

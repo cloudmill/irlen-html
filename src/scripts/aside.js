@@ -9,10 +9,11 @@ $(() => {
     const inputs = aside.find('[data-aside-input]')
     const defaultRadio = aside.find('[data-radio-default]')
     const error = aside.find('.aside__error')
+    const multiSelects = aside.find('[data-aside-accordion]')
 
     $('[data-clear-button]').on('click', function() {
       checkbox.prop('checked', false)
-      selects.val(null)
+      selects.val(null).trigger('change')
       clearButtons.addClass('hidden')
       inputs.each(function() {
         $(this).val($(this).attr('value'))
@@ -21,6 +22,14 @@ $(() => {
       defaultRadio.prop('checked', true)
 
       window.dispatchEvent(new CustomEvent('clearFilters'));
+
+      if (multiSelects.length) {
+        multiSelects.each(function() {
+          window.dispatchEvent(new CustomEvent('clearMultiSelect', 
+            {detail: $(this)[0]}
+          ));
+        })
+      }
     })
 
     // reveal single block clear button 
@@ -78,7 +87,7 @@ $(() => {
       const select = container.find('.select__select')
       
       if (select.length) {
-        select.val(null)
+        select.val(null).trigger('change')
         
         $(this).addClass('hidden')
       }
@@ -95,7 +104,7 @@ $(() => {
       const radioBtn = container.find('.radio__input') 
       
       if (radioBtn.length) {
-        container.find('[data-radio-default]').prop('checked', true).change()
+        container.find('[data-radio-default]').prop('checked', true)
       }
 
       const inputError = container.find('.aside__error')
@@ -104,6 +113,15 @@ $(() => {
         inputError.addClass('hidden')
       }
 
+      const multiSelect = container.find('[data-aside-accordion]')
+
+      if (multiSelect.length) {
+        window.dispatchEvent(new CustomEvent('clearMultiSelect', 
+          {detail: multiSelect[0]}
+        ));
+      }
+
+      $(this).addClass('hidden')
       window.dispatchEvent(new CustomEvent('clearFilters'));
     })
   }
