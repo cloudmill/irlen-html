@@ -50,19 +50,25 @@ window.filterChangeSuccess = function(domObjects, response) {
             filterBody.css(disableStyle);
             filterBody.find('[data-active]').css(disableStyle);
         } else {
-            const arr = filterItemResponse.find('[data-type=filter]').map((arrI, item) => item.value);
+            if ($(this).find('select').length) {
+                $(this).find('[data-select-get-field]').each(function() {
+                    // const arr = filterItemResponse.find('')
+                });
+            } else {
+                const arr = filterItemResponse.find('[data-type=filter]').map((arrI, item) => item.value);
 
-            filterBody.css(enableStyle);
-            filterBody.find('[data-type=filter]').each(function () {
-                if (Object.values(arr).includes($(this).val())) {
-                    const parent = $(this).parents('[data-type=filter-item]');
+                filterBody.css(enableStyle);
+                filterBody.find('[data-type=filter]').each(function () {
+                    if (Object.values(arr).includes($(this).val())) {
+                        const parent = $(this).parents('[data-type=filter-item]');
 
-                    parent.css(enableStyle);
-                    parent.attr('data-active', true);
-                } else {
-                    $(this).parents('[data-type=filter-item]').css(disableStyle);
-                }
-            });
+                        parent.css(enableStyle);
+                        parent.attr('data-active', true);
+                    } else {
+                        $(this).parents('[data-type=filter-item]').css(disableStyle);
+                    }
+                });
+            }
 
             index++;
         }
