@@ -56,13 +56,22 @@ $(() => {
     })
 
     inputs.on('change', function() {
-      const value = $(this).attr('value')
       const btn = $(this).closest('[data-aside-block]').find('[data-clear-block]')
 
-      if (+value !== +this.value) {
-        btn.removeClass('hidden')
+      if (this.hasAttribute('data-single-input')) {
+        if (this.value) {
+          btn.removeClass('hidden')
+        } else {
+          btn.addClass('hidden')
+        }
       } else {
-        btn.addClass('hidden')
+        const value = $(this).attr('value')
+  
+        if (+value !== +this.value) {
+          btn.removeClass('hidden')
+        } else {
+          btn.addClass('hidden')
+        }
       }
     })
 
