@@ -211,6 +211,9 @@
   }
   &__spoiler-text {
     @include fsl(14px, 140%);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   &__spoiler-icon {
     margin-left: 10px;
