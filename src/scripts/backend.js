@@ -20,6 +20,10 @@ function ajaxCallbackErrors(xhr) {
     alert(`error: ${xhr.status}: ${xhr.statusText}`);
 }
 
+window.addEventListener('clearFilters', function() {
+    filters($('[data-container=filters]'));
+});
+
 window.filterChangeSuccess = function(domObjects, response) {
     const linkContainer = $(domObjects.linkContainer);
 
@@ -124,9 +128,8 @@ function pagen() {
     });
 }
 
-$(document).on('change', '[data-type=filter]', function () {
-    const container = $(this).parents('[data-container=filters]'),
-        preloader = $('.preloader'),
+function filters(container) {
+    const preloader = $('.preloader'),
         data = getDataForm(container);
 
     data['ajax'] = 'filter';
@@ -158,6 +161,10 @@ $(document).on('change', '[data-type=filter]', function () {
         },
         error: ajaxCallbackErrors,
     });
+}
+
+$(document).on('change', '[data-type=filter]', function() {
+    filters($(this).parents('[data-container=filters]'));
 });
 
 function getDataForm(form) {
