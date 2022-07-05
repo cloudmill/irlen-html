@@ -1,3 +1,40 @@
+export function selectHandler() {
+
+    const select = $('[data-select-aside]')
+  
+    if (select.length) {
+      const dependentSelect = select.closest('[data-aside-block]').find('[data-select-dependent]')
+      
+      function removeOptions() {
+        const options = dependentSelect.find('option')
+        options.each(function() {
+          if ($(this).attr('value')) {
+            $(this).remove()
+          }
+        })
+      }
+  
+      select.on('change', function() {
+        if (this.value) {
+          dependentSelect.val(null)
+          removeOptions()
+  
+          const arr = JSON.parse($(this.options[this.selectedIndex]).attr('data-options'))
+          arr.forEach(item => {
+            const newOption = new Option(item, item)
+            dependentSelect.append(newOption)
+          })
+  
+          dependentSelect.parent().removeClass('disabled')
+        } else {
+          removeOptions()
+          
+          dependentSelect.parent().addClass('disabled')
+        }
+      })
+    }
+}
+
 $(() => {
   const aside = $('.aside')
 
@@ -138,37 +175,5 @@ $(() => {
 
 // select reveal + dynamic options change
 $(() => {
-  const select = $('[data-select-aside]')
-
-  if (select.length) {
-    const dependentSelect = select.closest('[data-aside-block]').find('[data-select-dependent]')
-    
-    function removeOptions() {
-      const options = dependentSelect.find('option')
-      options.each(function() {
-        if ($(this).attr('value')) {
-          $(this).remove()
-        }
-      })
-    }
-
-    select.on('change', function() {
-      if (this.value) {
-        dependentSelect.val(null)
-        removeOptions()
-
-        const arr = JSON.parse($(this.options[this.selectedIndex]).attr('data-options'))
-        arr.forEach(item => {
-          const newOption = new Option(item, item)
-          dependentSelect.append(newOption)
-        })
-
-        dependentSelect.parent().removeClass('disabled')
-      } else {
-        removeOptions()
-        
-        dependentSelect.parent().addClass('disabled')
-      }
-    })
-  }
+  selectHandler()
 })
