@@ -1,10 +1,10 @@
 export function selectHandler() {
 
     const select = $('[data-select-aside]')
-  
+
     if (select.length) {
       const dependentSelect = select.closest('[data-aside-block]').find('[data-select-dependent]')
-      
+
       function removeOptions() {
         const options = dependentSelect.find('option')
         options.each(function() {
@@ -13,29 +13,29 @@ export function selectHandler() {
           }
         })
       }
-  
+
       select.on('change', function() {
         if (this.value) {
           dependentSelect.val(null)
           removeOptions()
-  
+
           const arr = JSON.parse($(this.options[this.selectedIndex]).attr('data-options'))
           arr.forEach(item => {
             const newOption = new Option(item, item)
             dependentSelect.append(newOption)
           })
-  
+
           dependentSelect.parent().removeClass('disabled')
         } else {
           removeOptions()
-          
+
           dependentSelect.parent().addClass('disabled')
         }
       })
     }
 }
 
-$(() => {
+export function aside() {
   const aside = $('.aside')
 
   if (aside.length) {
@@ -62,14 +62,14 @@ $(() => {
 
       if (multiSelects.length) {
         multiSelects.each(function() {
-          window.dispatchEvent(new CustomEvent('clearMultiSelect', 
-            {detail: $(this)[0]}
+          window.dispatchEvent(new CustomEvent('clearMultiSelect',
+              {detail: $(this)[0]}
           ));
         })
       }
     })
 
-    // reveal single block clear button 
+    // reveal single block clear button
     checkbox.on('change', function() {
       const btn = $(this).closest('[data-aside-block]').find('[data-clear-block]')
 
@@ -103,7 +103,7 @@ $(() => {
         }
       } else {
         const value = $(this).attr('value')
-  
+
         if (+value !== +this.value) {
           btn.removeClass('hidden')
         } else {
@@ -131,10 +131,10 @@ $(() => {
       boxes.prop('checked', false)
 
       const select = container.find('.select__select')
-      
+
       if (select.length) {
         select.val(null).trigger('change')
-        
+
         $(this).addClass('hidden')
       }
 
@@ -147,14 +147,14 @@ $(() => {
         $(this).addClass('hidden')
       }
 
-      const radioBtn = container.find('.radio__input') 
-      
+      const radioBtn = container.find('.radio__input')
+
       if (radioBtn.length) {
         container.find('[data-radio-default]').prop('checked', true)
       }
 
       const inputError = container.find('.aside__error')
-      
+
       if (inputError) {
         inputError.addClass('hidden')
       }
@@ -162,8 +162,8 @@ $(() => {
       const multiSelect = container.find('[data-aside-accordion]')
 
       if (multiSelect.length) {
-        window.dispatchEvent(new CustomEvent('clearMultiSelect', 
-          {detail: multiSelect[0]}
+        window.dispatchEvent(new CustomEvent('clearMultiSelect',
+            {detail: multiSelect[0]}
         ));
       }
 
@@ -171,9 +171,11 @@ $(() => {
       window.dispatchEvent(new CustomEvent('clearFilters'));
     })
   }
-})
+}
 
-// select reveal + dynamic options change
 $(() => {
+  aside()
+
+  // select reveal + dynamic options change
   selectHandler()
 })
