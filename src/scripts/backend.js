@@ -52,16 +52,15 @@ window.filterChangeSuccess = function(domObjects, response) {
         } else {
             if ($(this).find('select').length) {
                 $(this).find('[data-select-get-field]').each(function() {
-                    console.log($(this));
                     const arr = filterItemResponse.find('[data-select-get-field] option').map((arrI, item) => item.value);
 
-                    compareValues($(this), arr);
+                    compareValues($(this), 'option', {'item':'thisElem', 'action': 'select'}, arr);
                 });
             } else {
                 const arr = filterItemResponse.find('[data-type=filter]').map((arrI, item) => item.value);
 
                 filterBody.css(enableStyle);
-                compareValues(filterBody, arr);
+                compareValues(filterBody, '[data-type=filter]', {'item':'parent', 'action': 'main'}, arr);
             }
 
             index++;
@@ -69,21 +68,43 @@ window.filterChangeSuccess = function(domObjects, response) {
     });
 }
 
-function compareValues(container, data) {
-    container.find('[data-type=filter]').each(function () {
-        if (Object.values(data).includes($(this).val())) {
-            const parent = $(this).parents('[data-type=filter-item]');
+window.findElem = {
+    parent: elem => elem.parents('[data-type=filter-item]'),
+    thisElem: elem => elem,
+}
 
-            parent.css({
+window.elemStyles = {
+    main: (elem, enable) => {
+        if (enable) {
+            elem.css({
                 'opacity': 1,
                 'pointer-events': 'auto',
             });
-            parent.attr('data-active', true);
+            elem.attr('data-active', true);
         } else {
-            $(this).parents('[data-type=filter-item]').css({
+            elem.css({
                 'opacity': 0.5,
                 'pointer-events': 'none',
             });
+        }
+    },
+    select: (elem, enable) => {
+        if (enable) {
+            elem.removeAttr('disabled');
+        } else {
+            elem.attr('disabled', true);
+        }
+    }
+}
+
+function compareValues(container, itemsSelector, actions, data) {
+    container.find(itemsSelector).each(function () {
+        const itemElem = window.findElem[actions.item]($(this));
+
+        if (Object.values(data).includes($(this).val())) {
+            window.elemStyles[actions.action](itemElem, true);
+        } else {
+            window.elemStyles[actions.action](itemElem, false);
         }
     });
 }
