@@ -1,4 +1,5 @@
 import "parsleyjs";
+import {customSelect2} from './select';
 
 $(function () {
     filterReset();
@@ -126,6 +127,8 @@ function filterReset() {
             success: function (r) {
                 container.empty();
                 container.append($(r).find('[data-container=filters]').children());
+
+                customSelect2(container.find('.select__select'));
 
                 window['filterChangeSuccess'](
                     {
