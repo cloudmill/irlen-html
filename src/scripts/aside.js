@@ -19,11 +19,12 @@ export function selectHandler() {
           dependentSelect.val(null)
           removeOptions()
 
-          const arr = JSON.parse($(this.options[this.selectedIndex]).attr('data-options'))
-          arr.forEach(item => {
-            const newOption = new Option(item, item)
+          const data = JSON.parse($(this.options[this.selectedIndex]).attr('data-options'))
+
+          for (let i in data) {
+            const newOption = new Option(data[i].text, data[i].value)
             dependentSelect.append(newOption)
-          })
+          }
 
           dependentSelect.parent().removeClass('disabled')
         } else {
