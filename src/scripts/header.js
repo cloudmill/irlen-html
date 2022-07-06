@@ -101,9 +101,9 @@ import { mediaQuery } from './mediaQueries'
 
       // header accordion category change
       window.addEventListener('mousemove', event => {
-        const target = $(event.target)
+        const target = $(event.target).closest('[data-category-item]')
 
-        if (target[0].hasAttribute('data-category-item')) {
+        if (target.length) {
           const container = target.closest('[data-header-modal]')
 
           const categoryItems = container.find('[data-category-item]')
