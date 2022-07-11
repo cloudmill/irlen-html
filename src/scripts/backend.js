@@ -218,6 +218,8 @@ function getDataForm(form) {
         'filter': {},
     };
 
+    window.getValue.values = {};
+
     form.find('[data-get-field], input:checked').each(function () {
         if (!$(this).val()) {
             return;
@@ -243,7 +245,6 @@ function getDataForm(form) {
 }
 
 window.getValue = {
-    values: {},
     one: elem => {
         return {
             equality: '=',
