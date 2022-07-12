@@ -263,10 +263,14 @@ window.getValue = {
 
         return this.values[field];
     },
-    custom: (elem, field, equality) => {
+    range: (elem, field, equality) => {
+        const range = elem.data('range');
+
         return {
             equality: equality,
             value: elem.val(),
+            min: range.min,
+            max: range.max,
         }
     }
 }
