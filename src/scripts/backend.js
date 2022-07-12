@@ -263,6 +263,12 @@ window.getValue = {
 
         return this.values[field];
     },
+    custom: (elem, field, equality) => {
+        return {
+            equality: equality,
+            value: elem.val(),
+        }
+    }
 }
 
 function changeDeliveryType() {
