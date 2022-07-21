@@ -10,6 +10,10 @@
     flex-shrink: 0;
     width: calc(#{$col-part-d} * 2);
 
+    &:nth-child(3) {
+      width: 180px;
+    }
+
     &:last-child {
       width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
     }

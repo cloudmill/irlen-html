@@ -7,7 +7,7 @@ mixin accordion
       },
       {
         label: 'Сумма заказа',
-        text: '7 900 ₽'
+        prices: true,
       },
       {
         label: 'Статус',
@@ -20,6 +20,11 @@ mixin accordion
         .accordion__col
           .accordion__text 
             |№0000024582
+          a.accordion__link(href="#")
+            .accordion__link-text 
+              |Страница заказа
+            .accordion__link-icon 
+              +big-arrow-svg.accordion__link-svg
         .accordion__col
           .accordion__text 
             |01.06.2021
@@ -27,8 +32,18 @@ mixin accordion
           .accordion__text 
             |Доставляется
         .accordion__col
-          .accordion__text.desktop
-            |7 900 ₽
+          .desktop
+            .accordion__prices
+              .accordion__prices-item
+                .accordion__prices-price 
+                  |€ 930.42
+                .accordion__prices-label 
+                  |Товаров: 3 шт.
+              .accordion__prices-item
+                .accordion__prices-price 
+                  |$ 980.55
+                .accordion__prices-label 
+                  |Товаров: 12 шт.
           .accordion__icon 
             +arrow-svg.accordion__svg
     .accordion__body(data-accordion-dropdown='')
@@ -37,11 +52,24 @@ mixin accordion
           .accordion__grid-item 
             .accordion__caption 
               |#{item.label}
-            .accordion__text 
-              |#{item.text}
+            if (item.prices)
+              .accordion__prices
+                .accordion__prices-item
+                  .accordion__prices-price 
+                    |€ 930.42
+                  .accordion__prices-label 
+                    |Товаров: 3 шт.
+                .accordion__prices-item
+                  .accordion__prices-price 
+                    |$ 980.55
+                  .accordion__prices-label 
+                    |Товаров: 12 шт.
+            else
+              .accordion__text 
+                |#{item.text}
       .accordion__list
         - for (x = 0; x < 3; x++)
-          .accordion__item 
+          a.accordion__item(href="#")
             .accordion__content-col
               .accordion__image 
                 img(src="assets/images/product.jpg", alt="")
@@ -58,8 +86,3 @@ mixin accordion
               .tooltip
                 .accordion__price.tooltip__row 
                   |₽ 93.42
-                  //- span.tooltip__span
-                    .tooltip__icon 
-                      +tooltip-svg.tooltip__svg
-                //- .tooltip__container   
-                  |#{data.tooltipText}
