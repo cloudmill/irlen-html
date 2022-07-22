@@ -1,4 +1,5 @@
 .profile-page {
+  $comp: &;
 
   &__accordion {
     display: flex;
@@ -193,6 +194,14 @@
     grid-template-columns: repeat(var(--gridCount), 1fr);
     row-gap: var(--rowGap);
     column-gap: var(--colGap);
+
+    &--default {
+      #{$comp}__form-item {
+        &:last-child {
+          grid-column: auto;
+        }
+      }
+    }
   }
   &__form-item {
     position: relative;

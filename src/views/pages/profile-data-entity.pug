@@ -1,0 +1,117 @@
+extends ../layouts/master.pug
+
+include ../components/navigation
+include ../components/tabs
+include ../components/accordion
+include ../components/model-tabs
+
+block header 
+  +header(login = true)
+
+block content 
+  -
+    var ddata = [
+      {
+        type: 'text',
+        label: 'Название компании',
+        value: 'Интерактивное агенство КМ',
+      },
+      {
+        type: 'panel'
+      },
+    ]
+  .profile-page.main-page
+    section.section.section--first 
+      .container 
+        +navigation(page='Профиль')
+    section.section.section--last
+      .container 
+        .row
+          .row__col
+            .tabs.tabs--column
+              .tabs__container
+                .tabs__item.active
+                  |Мои данные
+                .tabs__item 
+                  |Выйти
+          .row__col
+            form.profile-page__form.form.form--disabled(action="/" data-form='') 
+              -
+                var entity = [
+                  {label: 'БИК', type: 'number', value: '044521234'},
+                  {label: 'Корреспонденский счет', type: 'number', value: '30101234500000000225'},
+                  {label: 'Юридический адрес', type: 'text', value: '123456, г. Москва, ул. Подвойского, д. 14,'},
+                  {label: 'Почтовый адрес', type: 'text', value: '123456, г. Москва, ул. Подвойского, д. 14, ...'},
+                  {label: 'Руководитель', type: 'text', value: 'Петров Сергей Петрович'},
+                  {label: 'Рук. действует на основании', type: 'text', value: 'Приказа он назачении'},
+                  {label: 'Должность руководителя', type: 'text', value: 'Генеральный директор'},
+                ]
+              .profile-page__form-col
+                .profile-page__form-grid.profile-page__form-grid--default
+                  .profile-page__form-item
+                    .profile-page__form-label 
+                      |Email
+                    input.form__input(type="email" placeholder='E-mail' value="ksh@cloudmill.ru" required data-parsley-trigger-after-failure="focusout") 
+                  each item in ddata
+                    if (item.type === 'panel')
+                      .profile-page__form-item.mobile
+                        .loyalty-card.loyalty-card--small
+                          .loyalty-card__icon.loyalty-card__icon--start
+                            +warning-svg.loyalty-card__svg
+                          .loyalty-card__content 
+                            .loyalty-card__text 
+                              |Для смены название компании или ИНН позвоните по телефону: #[a.loyalty-card__link(href="tel:8 800 444-60-98") 8 800 444-60-98]
+                    else
+                      .profile-page__form-item
+                        .profile-page__form-label 
+                          |#{item.label}
+                        input.form__input(type=item.type required value = item.value class=(item.label === "Название компании" ? "disabled" : "" ))
+                  .profile-page__form-item
+                    .profile-page__form-label 
+                      |Пароль
+                    input.form__input#password2(type="password" data-parsley-equalto="#passwordAgain2" required value = "zxcqwerty123" data-parsley-minlength="7" data-password='' data-parsley-priority-enabled='false')
+                  .profile-page__form-item
+                    .profile-page__form-label 
+                      |ИНН
+                    input.form__input.disabled(type="text" required value = "789746513")
+                  .profile-page__form-item
+                    .profile-page__form-label 
+                      |Пароль еще раз
+                    input.form__input#passwordAgain2(type="password" data-parsley-equalto="#password2" required value = "zxcqwerty123")
+                  .profile-page__form-item
+                    .profile-page__form-label 
+                      |Телефон
+                    input.form__input(type='text' value='+7 (911) 286-25-63' data-mask='phone')
+                  .profile-page__form-item
+                    .profile-page__form-label 
+                      |КПП
+                    input.form__input(type='number' value='779101001')
+                  .profile-page__form-item
+                    .profile-page__form-label 
+                      |Имя
+                    input.form__input(type='text' value='Кирилл' data-parsley-pattern="[a-zA-Zа-яёА-ЯЁ\\s]+" data-parsley-trigger="input")
+                  each item in entity 
+                    .profile-page__form-item
+                      .profile-page__form-label 
+                        |#{item.label}
+                      input.form__input(type=item.type value=item.value)
+                .profile-page__buttons
+                  .profile-page__button(data-change-button='')
+                    .profile-page__icon 
+                      +change-svg
+                    .profile-page__text 
+                      |Изменить
+                  .profile-page__form-buttons
+                    .profile-page__form-btn
+                      .button.button--small.button--white(data-cancel-button='') 
+                        |Отменить
+                    .profile-page__form-btn
+                      button.button.button--small(data-save-button='')
+                        |Сохранить
+              .profile-page__form-col
+                .loyalty-card.loyalty-card--small
+                  .loyalty-card__icon.loyalty-card__icon--start
+                    +warning-svg.loyalty-card__svg
+                  .loyalty-card__content 
+                    .loyalty-card__text 
+                      |Для смены название компании или ИНН позвоните по телефону: #[br] #[a.loyalty-card__link(href="tel:8 800 444-60-98") 8 800 444-60-98]

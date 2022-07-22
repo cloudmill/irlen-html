@@ -109,6 +109,10 @@
       "page": "[ЛК] данные"
     },
     {
+      "href": "profile-data-entity",
+      "page": "[ЛК] данные юр. лица"
+    },
+    {
       "href": "services",
       "page": "Услуги"
     },
