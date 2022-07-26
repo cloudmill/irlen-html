@@ -599,41 +599,14 @@ function forms() {
                         });
                     }
                     if (r.type === 'login_auth') {
-                        formParent.attr('data-form-hidden', '');
-                        formResponse.attr('data-response-active', '');
+                        if (r.mess) {
+                            formParent.attr('data-form-hidden', '');
+                            formResponse.attr('data-response-active', '');
 
-                        respMess.html(r.mess);
-
-                        $.ajax({
-                            method: "GET",
-                            url: window.location.href,
-                            data: {
-                                auth: true,
-                            },
-                            success: function (r) {
-                                console.log(r);
-                                $(document).find('[data-type=lk-header]').empty();
-                                $(document).find('[data-type=lk-header]').append($(r));
-                            },
-                            error: function (r) {
-                                console.debug(r);
-                            }
-                        });
-                        $.ajax({
-                            method: "GET",
-                            url: window.location.href,
-                            data: {
-                                ajax: 1,
-                            },
-                            success: function (r) {
-                                console.log(r);
-                                $(document).find('[data-type=basket-list]').empty();
-                                $(document).find('[data-type=basket-list]').append($(r));
-                            },
-                            error: function (r) {
-                                console.debug(r);
-                            }
-                        });
+                            respMess.html(r.mess);
+                        } else {
+                            location='/profile/orders/';
+                        }
                     }
                     if (r.type === 'login_auth_entity') {
                         formParent.attr('data-form-hidden', '');
