@@ -621,6 +621,10 @@ function forms() {
                         $(document).find('[data-type=basket-count-lk]').html(r.count);
                         location.href = '/order/?ordersuc=yes&id=' + r.id + '';
                     }
+
+                    if (r.type === 'user exists') {
+                        form.find('[data-uf=UF_EMAIL]').parent().append('<div style="color: red; font-size: 14px; margin-top: 5px;">Email уже зарегистрирован. <a data-fancy-button="1" style="text-decoration: underline; cursor: pointer">Авторизуйтесь</a></div>');
+                    }
                 } else {
                     if (r.success === true) {
                         form.attr('data-form-hidden', '');
