@@ -4,7 +4,7 @@ import {formReset} from './form-reset'
 // fancybox
 {
   $(() => {
-    
+
 
     $.fancybox.defaults.closeExisting = true;
     $.fancybox.defaults.touch = false;
@@ -17,7 +17,7 @@ import {formReset} from './form-reset'
     );
     $.fancybox.defaults.afterClose = formReset;
 
-    $('[data-fancy-button]').on('click', function (event) {
+    $(document).on('click', '[data-fancy-button]', function (event) {
       event.preventDefault();
 
       const button = $(this)
