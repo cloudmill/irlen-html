@@ -1,6 +1,6 @@
 import "parsleyjs";
-import {customSelect2} from './select';
-import {selectHandler, aside} from "./aside";
+import { customSelect2 } from './select';
+import { selectHandler, aside } from "./aside";
 
 $(function () {
     filterReset();
@@ -22,11 +22,11 @@ function ajaxCallbackErrors(xhr) {
     alert(`error: ${xhr.status}: ${xhr.statusText}`);
 }
 
-window.addEventListener('clearFilters', function() {
+window.addEventListener('clearFilters', function () {
     filters($('[data-container=filters]'));
 });
 
-window.filterChangeSuccess = function(domObjects, response) {
+window.filterChangeSuccess = function (domObjects, response) {
     const linkContainer = $(domObjects.linkContainer);
 
     domObjects.preloader.addClass('preloader_hidden');
@@ -35,9 +35,9 @@ window.filterChangeSuccess = function(domObjects, response) {
     linkContainer.append(response.find(domObjects.linkContainer).children());
 
     const enableStyle = {
-            'opacity': 1,
-            'pointer-events': 'auto',
-        },
+        'opacity': 1,
+        'pointer-events': 'auto',
+    },
         disableStyle = {
             'opacity': 0.5,
             'pointer-events': 'none',
@@ -53,16 +53,16 @@ window.filterChangeSuccess = function(domObjects, response) {
             filterBody.find('[data-active]').css(disableStyle);
         } else {
             if ($(this).find('select').length) {
-                $(this).find('[data-select-get-field]').each(function() {
+                $(this).find('[data-select-get-field]').each(function () {
                     const arr = filterItemResponse.find('[data-select-get-field] option').map((arrI, item) => item.value);
 
-                    compareValues($(this), 'option', {'item':'thisElem', 'action': 'select'}, arr);
+                    compareValues($(this), 'option', { 'item': 'thisElem', 'action': 'select' }, arr);
                 });
             } else {
                 const arr = filterItemResponse.find('[data-type=filter]').map((arrI, item) => item.value);
 
                 filterBody.css(enableStyle);
-                compareValues(filterBody, '[data-type=filter]', {'item':'parent', 'action': 'main'}, arr);
+                compareValues(filterBody, '[data-type=filter]', { 'item': 'parent', 'action': 'main' }, arr);
             }
 
             index++;
@@ -112,7 +112,7 @@ function compareValues(container, itemsSelector, actions, data) {
 }
 
 function filterReset() {
-    $(document).on('click', '[data-type=filter-reset]', function() {
+    $(document).on('click', '[data-type=filter-reset]', function () {
         const container = $(this).parents('[data-container=filters]'),
             preloader = $('.preloader');
 
@@ -209,7 +209,7 @@ function filters(container) {
     });
 }
 
-$(document).on('change', '[data-type=filter]', function() {
+$(document).on('change', '[data-type=filter]', function () {
     filters($(this).parents('[data-container=filters]'));
 });
 
@@ -251,7 +251,7 @@ window.getValue = {
             value: elem.val(),
         }
     },
-    many: function(elem, field, equality) {
+    many: function (elem, field, equality) {
         if (!this.values[field]) {
             this.values[field] = {
                 equality: equality,
@@ -605,7 +605,7 @@ function forms() {
 
                             respMess.html(r.mess);
                         } else {
-                            location='/profile/orders/';
+                            location.reload();
                         }
                     }
                     if (r.type === 'login_auth_entity') {
