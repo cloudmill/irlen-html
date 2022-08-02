@@ -23,7 +23,7 @@ function ajaxCallbackErrors(xhr) {
 }
 
 window.addEventListener('clearFilters', function () {
-    filters($('[data-container=filters]'));
+    filters($('[data-type=filter-reset]'));
 });
 
 window.filterChangeSuccess = function (domObjects, response) {
@@ -174,8 +174,9 @@ function pagen() {
     });
 }
 
-function filters(container) {
-    const preloader = $('.preloader'),
+function filters(elem) {
+    const container = elem.parents('[data-container=filters]'),
+        preloader = $('.preloader'),
         data = getDataForm(container);
 
     data['ajax'] = 'filter';
@@ -201,7 +202,7 @@ function filters(container) {
                     $(r)
                 );
             } else {
-                container.find('[data-type=error-text]').removeClass('hidden');
+                elem.parents('[data-container=filter-item]').find('[data-type=error-text]').removeClass('hidden');
                 preloader.addClass('preloader_hidden');
             }
         },
@@ -210,7 +211,7 @@ function filters(container) {
 }
 
 $(document).on('change', '[data-type=filter]', function () {
-    filters($(this).parents('[data-container=filters]'));
+    filters($(this));
 });
 
 function getDataForm(form) {
